@@ -1,0 +1,64 @@
+site_name: Solid-state physics
+site_url: https://example.com/
+
+nav:
+    - Home: index.md
+    - Course particulars: particulars.md
+    - 'Introduction':
+      - 'The Lolz': placeholder.md
+
+
+theme:
+  name: material
+  logo: logo.png
+  favicon: logo.png
+  features:
+    - navigation.expand
+    - navigation.top
+  # custom_dir: overrides
+  palette:
+    - media: "(prefers-color-scheme: light)"
+      scheme: default
+      accent: deep orange
+      primary: red
+      toggle:
+        icon: material/toggle-switch-off-outline
+        name: Switch to dark mode
+    - media: "(prefers-color-scheme: dark)"
+      scheme: slate
+      accent: deep orange
+      primary: red
+      toggle:
+        icon: material/toggle-switch
+        name: Switch to light mode
+  highlightjs: True
+
+# extra_css:
+#   - stylesheets/extra.css
+
+markdown_extensions:
+  - mdx_math:
+      enable_dollar_delimiter: True
+  - toc:
+      permalink: True
+  - admonition
+  - attr_list
+  - pymdownx.details
+  - pymdownx.extra
+  - abbr
+  - footnotes
+  - meta
+
+extra_css:
+  - 'https://use.fontawesome.com/releases/v5.8.1/css/all.css'
+
+extra_javascript:
+  - 'https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.3/MathJax.js?config=TeX-AMS_HTML'
+  - 'https://unpkg.com/thebelab@0.5.0/lib/index.js'
+  - 'scripts/mathjaxhelper.js'
+  - 'scripts/thebelabhelper.js'
+  - 'scripts/x3dom.js'
+
+
+
+copyright: Content prepared and curated by <a href="mailto:andrew.mcculloch@utas.edu.au">A J McCulloch</a>
