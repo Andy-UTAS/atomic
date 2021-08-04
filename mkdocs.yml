@@ -41,6 +41,9 @@ markdown_extensions:
       enable_dollar_delimiter: True
   - toc:
       permalink: True
+  - pymdownx.emoji:
+      emoji_index: !!python/name:materialx.emoji.twemoji
+  - pymdownx.snippets
   - admonition
   - attr_list
   - pymdownx.details

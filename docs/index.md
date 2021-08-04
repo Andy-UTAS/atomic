@@ -2,11 +2,12 @@
 
 This site exists to enhance the distribution of course information and content for the solid-state physics component of [KYA322: Statistical and solid-state physics](https://www.utas.edu.au/courses/cse/units/kya322-statistical-physics-and-solid-state-physics). All official communication will be though [MyLO](https://mylo.utas.edu.au/)[^1].
 
-
 <figure>
   <img src="images/Crocoite.jpg" />
-  <figcaption>A <a href="https://en.wikipedia.org/wiki/Crocoite">Crocoite</a> sample found near <a href="https://www.openstreetmap.org/node/4294351400">Dundas</a> in western-Tasmania</figcaption>
+  <figcaption>A <a href="https://en.wikipedia.org/wiki/Crocoite">Crocoite</a> sample found near <a href="https://www.openstreetmap.org/node/4294351400">Dundas</a> in western-Tasmania. As part of this course, we will investigate the what happens when atoms are no longer considered in isolation, and see that systems of interacting particles can have some pretty incredible outcomes</figcaption>
 </figure>
+
+---
 
 !!! warning "Course expectations: my expectations of you"
 
@@ -16,7 +17,7 @@ This site exists to enhance the distribution of course information and content f
     - Prescribed problems and reading will be undertaken before any content extraction sessions
     - If you are experiencing difficulties, that you will get in contact as soon as is reasonably possible
 
-!!! summary "Course objectives"
+!!! info "Course objectives"
 
     The purpose of this course is to provide an introduction to the world of solid-state physics. At the conclusion of your journey, you should:
 
@@ -39,3 +40,5 @@ This site exists to enhance the distribution of course information and content f
 
 
 [^1]: For the curious traveller, MyLO is The University of Tasmania's learning management system, based on [Brightspace](https://www.d2l.com/higher-education/ LMS) as developed D2L.
+
+--8<-- "includes/abbreviations.md"
