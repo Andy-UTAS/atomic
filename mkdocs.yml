@@ -1,40 +1,49 @@
 site_name: Solid-state physics
-site_url: https://example.com/
+site_url: https://andy-utas.github.io/
 
 nav:
     - Home: index.md
     - Course particulars: particulars.md
-    - 'Introduction':
-      - 'The Lolz': placeholder.md
-
+    - 'An introduction to solid-state physics':
+      - 'The specific heat of solids': 01specificheat.md
+      - 'Electrons in metals': 02emetals.md
+    - 'The structure of materials':
+      - 'Empty content': placeholder.md
+    - 'Solids in one dimension':
+      - 'Empty content': placeholder.md
+    - 'The geometry of solids':
+      - 'Empty content': placeholder.md
+    - 'Electrons in solids':
+      - 'Empty content': placeholder.md
+    - 'Magnetism':
+      - 'Empty content': placeholder.md
+    - Additional resources: additional.md
 
 theme:
   name: material
-  logo: logo.png
-  favicon: logo.png
-  features:
-    - navigation.expand
-    - navigation.top
-  # custom_dir: overrides
   palette:
     - media: "(prefers-color-scheme: light)"
       scheme: default
-      accent: deep orange
+      accent: orange
       primary: red
       toggle:
         icon: material/toggle-switch-off-outline
         name: Switch to dark mode
     - media: "(prefers-color-scheme: dark)"
       scheme: slate
-      accent: deep orange
+      accent: orange
       primary: red
       toggle:
         icon: material/toggle-switch
         name: Switch to light mode
+  logo: logo.png
+  favicon: logo.png
+  features:
+  #  - navigation.expand
+    - navigation.top
   highlightjs: True
+  # custom_dir: overrides # Initially here for banner usage, but this was not very good
 
-# extra_css:
-#   - stylesheets/extra.css
 
 markdown_extensions:
   - mdx_math:
@@ -43,7 +52,9 @@ markdown_extensions:
       permalink: True
   - pymdownx.emoji:
       emoji_index: !!python/name:materialx.emoji.twemoji
-  - pymdownx.snippets
+  - pymdownx.tabbed # Enabeles content tabs
+  - pymdownx.superfences # Enables nesting of code and content in tabs
+  - pymdownx.snippets # Allows for a global list of acronyms
   - admonition
   - attr_list
   - pymdownx.details
@@ -54,6 +65,8 @@ markdown_extensions:
 
 extra_css:
   - 'https://use.fontawesome.com/releases/v5.8.1/css/all.css'
+#  - scripts/custom.css
+#  - stylesheets/extra.css
 
 extra_javascript:
   - 'https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.3/MathJax.js?config=TeX-AMS_HTML'
@@ -61,7 +74,5 @@ extra_javascript:
   - 'scripts/mathjaxhelper.js'
   - 'scripts/thebelabhelper.js'
   - 'scripts/x3dom.js'
-
-
 
 copyright: Content prepared and curated by <a href="mailto:andrew.mcculloch@utas.edu.au">A J McCulloch</a>

@@ -4,7 +4,7 @@ This site exists to enhance the distribution of course information and content f
 
 <figure>
   <img src="images/Crocoite.jpg" />
-  <figcaption>A <a href="https://en.wikipedia.org/wiki/Crocoite">Crocoite</a> sample found near <a href="https://www.openstreetmap.org/node/4294351400">Dundas</a> in western-Tasmania. As part of this course, we will investigate the what happens when atoms are no longer considered in isolation, and see that systems of interacting particles can have some pretty incredible outcomes</figcaption>
+  <figcaption>A <a href="https://en.wikipedia.org/wiki/Crocoite">Crocoite</a> sample found near <a href="https://www.openstreetmap.org/node/4294351400">Dundas</a> in western Tasmania. As part of this course, we will investigate the what happens when atoms are no longer considered in isolation, and see that systems of interacting particles can have some pretty incredible outcomes</figcaption>
 </figure>
 
 ---
