@@ -5,8 +5,10 @@ nav:
     - Home: index.md
     - Course particulars: particulars.md
     - 'An introduction to solid-state physics':
-      - 'The specific heat of solids': 01specificheat.md
-      - 'Electrons in metals': 02emetals.md
+      - 'The specific heat of solids I': 01specificheatI.md
+      - 'The specific heat of solids II': 02specificheatII.md
+      - 'Electrons in metals I': 03emetalsI.md
+      - 'Electrons in metals II': 04emetalsII.md
     - 'The structure of materials':
       - 'Empty content': placeholder.md
     - 'Solids in one dimension':
@@ -44,6 +46,8 @@ theme:
   highlightjs: True
   # custom_dir: overrides # Initially here for banner usage, but this was not very good
 
+plugins:
+    - mkdocs-video
 
 markdown_extensions:
   - mdx_math:
@@ -55,6 +59,9 @@ markdown_extensions:
   - pymdownx.tabbed # Enabeles content tabs
   - pymdownx.superfences # Enables nesting of code and content in tabs
   - pymdownx.snippets # Allows for a global list of acronyms
+  - pymdownx.caret
+  - pymdownx.mark
+  - pymdownx.tilde
   - admonition
   - attr_list
   - pymdownx.details
