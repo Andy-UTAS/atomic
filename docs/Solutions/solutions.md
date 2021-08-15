@@ -238,3 +238,155 @@ $$
 $$
 
 This describes a [Lorentzian](https://en.wikipedia.org/wiki/Spectral_line_shape#Lorentzian).
+
+## Solutions for exercises lecture 4: Sommerfeld model
+
+### Warm-up questions
+  1.
+  $$
+  E = \int \limits_0^{\infty} g(\varepsilon) n_{F}(\beta (\varepsilon - \mu)) \varepsilon \mathrm{d} \varepsilon
+  $$
+
+  2. The electronic heat capacity $C_e$ approaches $3N k_B$.
+
+  3. Thermal smearing is too significant and we can not accurately approximate the fraction of the excited electron with triangles anymore. Thus the Sommerfeld expansion breaks down.
+
+  4. Electrons.
+
+### Exercise 1: potassium
+
+1. Alkali metals mostly have a spherical Fermi surface. Their energy depends only on the magnitude of the Fermi wavevector.
+
+2. Refer to the lecture notes.
+
+3. Electrons are fermions and obey the Pauli exclusion principle. As electrons cannot occupy the same state, they are forced to occupy higher energy states resulting in high Fermi energy and high Fermi temperature.
+
+4.
+$$
+n = \frac{N}{V} = \frac{1}{3 \pi^{2} \hbar^{3}}\left(2 m \varepsilon_{F}\right)^{3 / 2}
+$$
+
+5.
+$$
+n = \frac{\rho N_A Z}{M},
+$$
+where $\rho$ is the density, $N_A$ is the Avogadro's constant, $M$ is molar mass and $Z$ is the valence of potassium atom.
+Comparing total and free electron density, only few electrons are available for conduction which is roughly 1 free electron per potassium atom.
+
+
+### Exercise 3: a hypothetical material
+
+1.
+$$
+E = \int_{0}^{\infty}\varepsilon g(\varepsilon) n_{F}(\beta (\varepsilon - \mu)) \textrm{d} \varepsilon = 2.10^{10}eV^{-\frac{3}{2}}  \int_{0}^{\infty}\frac{\varepsilon^{\frac{3}{2}}}{e^\frac{\varepsilon-5.2}{k_BT}+1} \textrm{d} \varepsilon
+$$
+
+2.
+$$
+E = \frac{4}{5} (5.2)^{\frac{5}{2}} 10^{10} eV
+$$
+
+3.
+$$
+\begin{align}
+E(T)-E(T=0) &= \frac{\pi^2}{6}(k_B T)^2\frac{\partial}{\partial \varepsilon}\left(\varepsilon g(\varepsilon)\right)\bigg|_{\varepsilon=\varepsilon _F}\\
+&\approx 8.356 10^8 eV
+\end{align}
+$$
+
+5.
+
+$C_v = 1.6713.10^6 eV/K$
+
+4, 6.
+
+```python
+mu = 5.2
+kB = 8.617343e-5
+T = 1000 #kelvin
+
+import numpy as np
+from scipy import integrate
+
+np.seterr(over='ignore')
+
+# Fermi-Dirac distribution
+def f(E, T):
+    return 1 / (np.exp((E - mu)/(kB*T)) + 1)
+
+# Density of states
+def g(E):
+    return 2e10 * np.sqrt(E)
+
+#integration function
+def integral(E, T):
+    return f(E, T)*g(E)*E
+
+## Solve integral numerically using scipy's integrate
+dE = integrate.quad(integral, 0, 1e1, args=(T))[0] - 0.8e10 * 5.2**(5./2)
+
+dT = 0.001
+dEplus = integrate.quad(integral, 0, 1e1, args=(T+dT))[0] - 0.8e10 * 5.2**(5./2)
+dEmin = integrate.quad(integral, 0, 1e1, args=(T-dT))[0] - 0.8e10 * 5.2**(5./2)
+
+CV = (dEplus - dEmin) / (2*dT);
+
+print(f'dE = {dE:.4e} eV')
+print(f'Cv = {CV:.4e} eV/K')
+```
+Check the source code written in python for solving integral using midpoint rule.
+
+### Exercise 3: graphene
+
+1.
+
+```python
+import numpy as np
+import matplotlib.pyplot as plt
+x = np.linspace(-1, 1, 100)
+fig, ax = plt.subplots(figsize=(7, 5))
+ax.plot(x, x, 'b')
+ax.plot(x,-x, 'b')
+
+ax.spines['left'].set_position('center')
+ax.spines['bottom'].set_position(('data', 0.0))
+
+# Eliminate upper and right axes
+ax.spines['right'].set_color('none')
+ax.spines['top'].set_color('none')
+
+ax.set_xticks([])
+ax.set_yticks([])
+
+ax.set_xlabel(r'$\mid \vec k \mid$', fontsize=14)
+ax.set_ylabel(r'$\varepsilon$', fontsize=18, rotation='horizontal')
+ax.yaxis.set_label_coords(0.5,1)
+ax.xaxis.set_label_coords(1.0, 0.49)
+```
+
+2.The DOS for the positive energies is given by
+$$
+g(\varepsilon) = 2_s 2_v 2 \pi \left(\frac{L}{2 \pi}\right)^2 \frac{\varepsilon}{c^2},
+$$
+where $2_s$ is the spin degeneracy and $2_v$ is the valley degeneracy.
+If we account for the negative energies as well, we obtain
+$$
+g(\varepsilon) = 2_s 2_v 2 \pi \left(\frac{L}{2 \pi}\right)^2 \frac{|\varepsilon|}{c^2}.
+$$
+
+3.$g(\varepsilon)$ vs $\varepsilon$ is a linear plot. Here, the region marked by $-k_B T$ is a triangle whose area gives the number of electrons that can be excited:
+$$
+\begin{align}
+n_{ex} &= \frac{1}{2} g(-k_B T) k_B T\\
+&= \frac{L^2 k_B^2T^2}{\pi c^2}.
+\end{align}
+$$
+From this it follows that the energy difference is given by
+$$
+E(T) - E_0 = \frac{L^2 k_B^3T^3}{\pi c^2}.
+$$
+
+4.
+$$
+C_v(T) = \frac{\partial E}{\partial T} = \frac{3L^2k_B^3T^2}{\pi c^2}
+$$

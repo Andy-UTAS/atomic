@@ -2,7 +2,7 @@
 
 ## Introduction
 
-![](../images/03_metal.jpg)
+![](../images/03_metals.jpg)
 
 Metals are awesome, and this has long been known. People have been drawn to their shininess since the first chunks of the stuff were found, and it mustn't have been long before it was realised that they were different to other materials. To nail down exactly what is the difference would take some time (of order 10,000 years!) but it boils down to metals being conductive, and this comes from the ability of electrons in the material to move more freely. It turns out that one can apply a somewhat crude kinetic theory to understand the transport of electrons in metals, in the same way kinetic theory can be used to understand the transport of gasses.
 
@@ -178,6 +178,11 @@ $$
 which was close to the measured values of the Lorenz number (within a factor of 2 or so), and given there had never been any explanation at all for this behaviour, this result served was hailed as a major accomplishment.
 
 #### The Peltier effect
+
+<figure>
+  <img src="../images/03_peltier.jpg">
+  <figcaption> A stack of peltier (thermoelectric cooling) devices can be used for highly-effective heat transfer </figcaption>
+</figure>
 
 Aside from being amazingly cool, we look at the Peltier effect to see that whilst the model well predicts the Lorenz number, this is actually somewhat of a fluke. The _Peltier effect_ arises when a current flows through a material, as that current necessarily transports heat. The Peltier coefficient is defined by
 

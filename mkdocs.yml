@@ -9,10 +9,10 @@ nav:
       - 'The specific heat of solids II': 02specificheatII.md
       - 'Electrons in metals I': 03emetalsI.md
       - 'Electrons in metals II': 04emetalsII.md
-    - 'The structure of materials':
-      - 'Empty content': placeholder.md
-    - 'Solids in one dimension':
-      - 'Empty content': placeholder.md
+    - Chemistry 101: 05chemistry.md
+    - 'One-dimensional solids':
+      - 'The tight binding model': 06tightbinding.md
+      - 'The diatomic chain': 07diatomic.md
     - 'The geometry of solids':
       - 'Empty content': placeholder.md
     - 'Electrons in solids':
@@ -47,7 +47,8 @@ theme:
   # custom_dir: overrides # Initially here for banner usage, but this was not very good
 
 plugins:
-    - mkdocs-video
+  - mkdocs-video
+  - search
 
 markdown_extensions:
   - mdx_math:
