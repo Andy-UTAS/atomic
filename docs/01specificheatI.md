@@ -12,8 +12,13 @@ We embark on our journey by starting at the nexus of the known and unknown, name
     * Quantum mechanics: energy spectrum of the harmonic oscillator
     * Statistical physics: the partition function, equipartition theorem
 
-!!! info  "Text reference"
+!!! note  "Text reference"
     The material covered here is discussed in section(s) $\S 2.1$ of [The Oxford Solid State Basics](https://global.oup.com/academic/product/the-oxford-solid-state-basics-9780199680771?cc=au&lang=en&)
+
+!!! info "Computational content"
+
+    The Jupyter notebook associated with this section can be accessed by clicking the icon below:
+    [<i class="fab fa-python fa-5x"></i>](https://jove2021.cloud.edu.au/hub/user-redirect/git-pull?repo=https%3A%2F%2Fgithub.com%2FAndy-UTAS%2FSolid-state&urlpath=tree%2FSolid-state%2F01specificheatI.ipynb&branch=master){ .md-button .md-button--primary class="text-center" style="margin-left: 45%"}
 
 ---
 

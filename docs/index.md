@@ -13,8 +13,9 @@ This site exists to enhance the distribution of course information and content f
 
     Solid-state physics is where the rubber meets the road: abstract concepts will be applied in an effort to model realistic and complex systems. There are delights are to be had, but like most truly rewarding endeavours, said delights do not come for free. In undertaking this course, it is expected that:
 
-    - You will view the content download sessions __outside__ of scheduled lecture times
-    - Prescribed problems and reading will be undertaken before any content extraction sessions
+    - You will view the video content __before__ any scheduled face-to-face sessions
+    - Prescribed problems and reading will be undertaken before any face-to-face sessions
+    - You will attend all face-to-face sessions, and actively contribute to discussions and problem solving
     - If you are experiencing difficulties, that you will get in contact as soon as is reasonably possible
 
 !!! info "Course objectives"

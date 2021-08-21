@@ -13,8 +13,13 @@ The kinetic theory of Drude was a great first step in trying to answer the quest
     * Statistical mechanics: familiarity with Fermi-Dirac statistics
     * Quantum mechanics: Wavefunction of a free (unbound) electron
 
-!!! info  "Text reference"
+!!! note  "Text reference"
     The material covered here is discussed in section(s) $\S 4$ of [The Oxford Solid State Basics](https://global.oup.com/academic/product/the-oxford-solid-state-basics-9780199680771?cc=au&lang=en&)
+
+!!! info "Computational content"
+
+    The Jupyter notebook associated with this section can be accessed by clicking the icon below:
+    [<i class="fab fa-python fa-5x"></i>](https://jove2021.cloud.edu.au/hub/user-redirect/git-pull?repo=https%3A%2F%2Fgithub.com%2FAndy-UTAS%2FSolid-state&urlpath=tree%2FSolid-state%2F04metalsII.ipynb&branch=master){ .md-button .md-button--primary class="text-center" style="margin-left: 45%"}
 
 ---
 
@@ -327,7 +332,7 @@ Using this expansion, find the difference between the total energy of the electr
 5. Calculate the heat capacity for $T = 1000 \, \mathrm{K}$ in eV/K.
 6. Numerically compute the heat capacity by approximating the derivative of energy difference found in 4 with respect to $T$. To this end, make use of the fact that $$\frac{dy}{dx}=\lim_{\Delta x \to 0} \frac{y(x + \Delta x) - y(x - \Delta x)}{2 \Delta x}.$$ Compare your result with 5.
 
-### Exercise 4: graphene
+### Exercise 3: graphene
 One of the most famous recently discovered materials is [graphene](https://en.wikipedia.org/wiki/Graphene). It consists of carbon atoms arranged in a 2D honeycomb structure.
 In this exercise, we will focus on the electrons in bulk graphene. Unlike in metals, electrons in graphene cannot be treated as 'free'.
 However, close to the Fermi level, the dispersion relation can be approximated by a linear relation:

@@ -3,7 +3,7 @@
 This page is the space for additional resources which may prove to be of some use and/or interest for curious individuals.
 
 !!! info "Websites"
-    - [Open Solid State Notes](https://solidstate.quantumtinkerer.tudelft.nl/) from [Delft University of Technology](https://www.tudelft.nl/en/): a site after my own heart, given the usage of the same [reference text](particulars/#subject-matter) and the same [static site generator](https://www.mkdocs.org/). Moreover, the open-source nature of their project has proven to be an invaluable resource in providing ideas and aiding content production.
+    - [Open Solid State Notes](https://solidstate.quantumtinkerer.tudelft.nl/) from [Delft University of Technology](https://www.tudelft.nl/en/): a site after my own heart, given the usage of the same [reference text](particulars/#subject-matter) and the same [static site generator](https://www.mkdocs.org/). Moreover, the open-source nature of their project ([CC BY-SA 4.0](https://creativecommons.org/licenses/by-sa/4.0/legalcode)) is the reason much of the content here exists. 2021 is the first year that this course will run, and the dutiful preparation of content of a high calibre has allowed for reproduction of content, with edits running the gamut from a light to touch to utter destruction. 
     - [Britney Spears' Guide to Semiconductor Physics](http://britneyspears.ac/lasers.htm): a relic of the time. A viral website before the phrase existed, the site does not hold up to modern standards - especially in light of the recent details of the singer's probate conservatorship - but sports surprisingly high-quality quality content relating to semiconductors, especially semiconductor lasers.
 
 !!! info "Texts"

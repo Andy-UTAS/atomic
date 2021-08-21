@@ -14,8 +14,13 @@ Metals are awesome, and this has long been known. People have been drawn to thei
     * Mechanics: Construct and solve equations of motion
     * Thermal physics: Kinetic theory of gases
 
-!!! info  "Text reference"
+!!! note  "Text reference"
     The material covered here is discussed in section(s) $\S 3$ of [The Oxford Solid State Basics](https://global.oup.com/academic/product/the-oxford-solid-state-basics-9780199680771?cc=au&lang=en&)
+
+!!! info "Computational content"
+
+    The Jupyter notebook associated with this section can be accessed by clicking the icon below:
+    [<i class="fab fa-python fa-5x"></i>](https://jove2021.cloud.edu.au/hub/user-redirect/git-pull?repo=https%3A%2F%2Fgithub.com%2FAndy-UTAS%2FSolid-state&urlpath=tree%2FSolid-state%2F03metalsI.ipynb&branch=master){ .md-button .md-button--primary class="text-center" style="margin-left: 45%"}
 
 ---
 
@@ -40,7 +45,7 @@ It is also important to bake in the difference between neutral atoms or molecule
 
 Even under these simplistic assumptions, the trajectory of the electrons is hard to calculate. As you will have seen elsewhere, with random scattering events, each trajectory is very different. A simple animation below shows several example trajectories, which are markedly different:
 
-![type:video](../images/03_electron-scattering.mp4)
+![type:video](../images/03_scattering.mp4)
 
 ### Equations of motion
 
@@ -63,7 +68,7 @@ $$
 \begin{aligned}
 m\mathbf{v}(t+dt)  &= [m\mathbf{v}(t) + F dt]\left(1 - \frac{dt}{\tau}\right) + 0⋅\frac{dt}{\tau} \\
   &= [m\mathbf{v}(t) + \mathbf{F} dt] \left(1 - \frac{dt}{\tau}\right) \\
-                  &= m\mathbf{v}(t) + dt [\mathbf{F} - m\frac{\mathbf{v(t)}}{\tau}] - \frac{\mathbf{F}}{\tau} dt^2
+                  &= m\mathbf{v}(t) + dt \left[\mathbf{F} - m\frac{\mathbf{v(t)}}{\tau}\right] - \frac{\mathbf{F}}{\tau} dt^2
 \end{aligned}
 $$
 We now neglect the term proportional to $dt²$ (it vanishes when $dt → 0$).
@@ -101,7 +106,7 @@ such that $ρ=1/\sigma$.
 
 Let us now consider the case where both and electric field $\mathbf{E}$ and magnetic field $\mathbf{B}$ are non-zero. Imagine a conductor with a current $I$ flowing perpendicular to an external magnetic field $\mathbf{B}$ as shown below:
 
-![](../images/03_Hall-effect.jpg)
+![](../images/03_Hall-effect.png)
 
 Looking at the equations of motion:
 
@@ -135,7 +140,7 @@ where $R_H=-1/ne$ is the *Hall coefficient*. So by measuring the Hall voltage an
 
 While most materials have $R_\mathrm{H}<0$, interestingly some materials are found to have $R_\mathrm{H}>0$.
 
-??? question "What would be the implications of a negative hall coefficient?"
+??? question "3.1 What would be the implications of a negative hall coefficient?"
 
     With the density is negative, or that the charge carrier has a positive charge and thus not an electron.
 

@@ -1,0 +1,1080 @@
+
+<!doctype html>
+<html lang="en" class="no-js">
+  <head>
+    
+      <meta charset="utf-8">
+      <meta name="viewport" content="width=device-width,initial-scale=1">
+      
+      
+      
+      
+        <link rel="canonical" href="https://andy-utas.github.io/06tightbinding/">
+      
+      <link rel="icon" href="../logo.png">
+      <meta name="generator" content="mkdocs-1.2.2, mkdocs-material-7.2.2">
+    
+    
+      
+        <title>The tight binding model - Solid-state physics</title>
+      
+    
+    
+      <link rel="stylesheet" href="../assets/stylesheets/main.1118c9be.min.css">
+      
+        
+        <link rel="stylesheet" href="../assets/stylesheets/palette.ba0d045b.min.css">
+        
+      
+    
+    
+    
+      
+        
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto:300,400,400i,700%7CRoboto+Mono&display=fallback">
+        <style>:root{--md-text-font-family:"Roboto";--md-code-font-family:"Roboto Mono"}</style>
+      
+    
+    
+    
+      <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.8.1/css/all.css">
+    
+      <link rel="stylesheet" href="../stylesheets/extra.css">
+    
+    
+      
+
+
+    
+    
+  </head>
+  
+  
+    
+    
+      
+    
+    
+    
+    
+    <body dir="ltr" data-md-color-scheme="default" data-md-color-primary="red" data-md-color-accent="orange">
+  
+    
+    <script>function __prefix(e){return new URL("..",location).pathname+"."+e}function __get(e,t=localStorage){return JSON.parse(t.getItem(__prefix(e)))}</script>
+    
+      <script>var palette=__get("__palette");if(null!==palette&&"object"==typeof palette.color)for(var key in palette.color)document.body.setAttribute("data-md-color-"+key,palette.color[key])</script>
+    
+    <input class="md-toggle" data-md-toggle="drawer" type="checkbox" id="__drawer" autocomplete="off">
+    <input class="md-toggle" data-md-toggle="search" type="checkbox" id="__search" autocomplete="off">
+    <label class="md-overlay" for="__drawer"></label>
+    <div data-md-component="skip">
+      
+        
+        <a href="#the-tight-binding-model" class="md-skip">
+          Skip to content
+        </a>
+      
+    </div>
+    <div data-md-component="announce">
+      
+    </div>
+    
+      <header class="md-header" data-md-component="header">
+  <nav class="md-header__inner md-grid" aria-label="Header">
+    <a href=".." title="Solid-state physics" class="md-header__button md-logo" aria-label="Solid-state physics" data-md-component="logo">
+      
+  <img src="../logo.png" alt="logo">
+
+    </a>
+    <label class="md-header__button md-icon" for="__drawer">
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M3 6h18v2H3V6m0 5h18v2H3v-2m0 5h18v2H3v-2z"/></svg>
+    </label>
+    <div class="md-header__title" data-md-component="header-title">
+      <div class="md-header__ellipsis">
+        <div class="md-header__topic">
+          <span class="md-ellipsis">
+            Solid-state physics
+          </span>
+        </div>
+        <div class="md-header__topic" data-md-component="header-topic">
+          <span class="md-ellipsis">
+            
+              The tight binding model
+            
+          </span>
+        </div>
+      </div>
+    </div>
+    
+      <form class="md-header__option" data-md-component="palette">
+        
+          
+          
+          <input class="md-option" data-md-color-media="(prefers-color-scheme: light)" data-md-color-scheme="default" data-md-color-primary="red" data-md-color-accent="orange"  aria-label="Switch to dark mode"  type="radio" name="__palette" id="__palette_1">
+          
+            <label class="md-header__button md-icon" title="Switch to dark mode" for="__palette_2" hidden>
+              <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M7 10a2 2 0 0 1 2 2 2 2 0 0 1-2 2 2 2 0 0 1-2-2 2 2 0 0 1 2-2m10-3a5 5 0 0 1 5 5 5 5 0 0 1-5 5H7a5 5 0 0 1-5-5 5 5 0 0 1 5-5h10M7 9a3 3 0 0 0-3 3 3 3 0 0 0 3 3h10a3 3 0 0 0 3-3 3 3 0 0 0-3-3H7z"/></svg>
+            </label>
+          
+        
+          
+          
+          <input class="md-option" data-md-color-media="(prefers-color-scheme: dark)" data-md-color-scheme="slate" data-md-color-primary="red" data-md-color-accent="orange"  aria-label="Switch to light mode"  type="radio" name="__palette" id="__palette_2">
+          
+            <label class="md-header__button md-icon" title="Switch to light mode" for="__palette_1" hidden>
+              <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M17 7H7a5 5 0 0 0-5 5 5 5 0 0 0 5 5h10a5 5 0 0 0 5-5 5 5 0 0 0-5-5m0 8a3 3 0 0 1-3-3 3 3 0 0 1 3-3 3 3 0 0 1 3 3 3 3 0 0 1-3 3z"/></svg>
+            </label>
+          
+        
+      </form>
+    
+    
+    
+      <label class="md-header__button md-icon" for="__search">
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.516 6.516 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5z"/></svg>
+      </label>
+      
+<div class="md-search" data-md-component="search" role="dialog">
+  <label class="md-search__overlay" for="__search"></label>
+  <div class="md-search__inner" role="search">
+    <form class="md-search__form" name="search">
+      <input type="text" class="md-search__input" name="query" aria-label="Search" placeholder="Search" autocapitalize="off" autocorrect="off" autocomplete="off" spellcheck="false" data-md-component="search-query" required>
+      <label class="md-search__icon md-icon" for="__search">
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.516 6.516 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5z"/></svg>
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11h12z"/></svg>
+      </label>
+      <nav class="md-search__options" aria-label="Search">
+        
+        <button type="reset" class="md-search__icon md-icon" aria-label="Clear" tabindex="-1">
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M19 6.41 17.59 5 12 10.59 6.41 5 5 6.41 10.59 12 5 17.59 6.41 19 12 13.41 17.59 19 19 17.59 13.41 12 19 6.41z"/></svg>
+        </button>
+      </nav>
+      
+    </form>
+    <div class="md-search__output">
+      <div class="md-search__scrollwrap" data-md-scrollfix>
+        <div class="md-search-result" data-md-component="search-result">
+          <div class="md-search-result__meta">
+            Initializing search
+          </div>
+          <ol class="md-search-result__list"></ol>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+    
+    
+  </nav>
+</header>
+    
+    <div class="md-container" data-md-component="container">
+      
+      
+        
+      
+      <main class="md-main" data-md-component="main">
+        <div class="md-main__inner md-grid">
+          
+            
+              
+              <div class="md-sidebar md-sidebar--primary" data-md-component="sidebar" data-md-type="navigation" >
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+
+
+<nav class="md-nav md-nav--primary" aria-label="Navigation" data-md-level="0">
+  <label class="md-nav__title" for="__drawer">
+    <a href=".." title="Solid-state physics" class="md-nav__button md-logo" aria-label="Solid-state physics" data-md-component="logo">
+      
+  <img src="../logo.png" alt="logo">
+
+    </a>
+    Solid-state physics
+  </label>
+  
+  <ul class="md-nav__list" data-md-scrollfix>
+    
+      
+      
+      
+
+  
+  
+  
+    <li class="md-nav__item">
+      <a href=".." class="md-nav__link">
+        Home
+      </a>
+    </li>
+  
+
+    
+      
+      
+      
+
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../particulars/" class="md-nav__link">
+        Course particulars
+      </a>
+    </li>
+  
+
+    
+      
+      
+      
+
+  
+  
+  
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+      
+        <input class="md-nav__toggle md-toggle" data-md-toggle="__nav_3" type="checkbox" id="__nav_3" >
+      
+      <label class="md-nav__link" for="__nav_3">
+        An introduction to solid-state physics
+        <span class="md-nav__icon md-icon"></span>
+      </label>
+      <nav class="md-nav" aria-label="An introduction to solid-state physics" data-md-level="1">
+        <label class="md-nav__title" for="__nav_3">
+          <span class="md-nav__icon md-icon"></span>
+          An introduction to solid-state physics
+        </label>
+        <ul class="md-nav__list" data-md-scrollfix>
+          
+            
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../01specificheatI/" class="md-nav__link">
+        The specific heat of solids I
+      </a>
+    </li>
+  
+
+          
+            
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../02specificheatII/" class="md-nav__link">
+        The specific heat of solids II
+      </a>
+    </li>
+  
+
+          
+            
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../03emetalsI/" class="md-nav__link">
+        Electrons in metals I
+      </a>
+    </li>
+  
+
+          
+            
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../04emetalsII/" class="md-nav__link">
+        Electrons in metals II
+      </a>
+    </li>
+  
+
+          
+        </ul>
+      </nav>
+    </li>
+  
+
+    
+      
+      
+      
+
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../05chemistry/" class="md-nav__link">
+        Chemistry 101
+      </a>
+    </li>
+  
+
+    
+      
+      
+      
+
+  
+  
+    
+  
+  
+    
+    <li class="md-nav__item md-nav__item--active md-nav__item--nested">
+      
+      
+        <input class="md-nav__toggle md-toggle" data-md-toggle="__nav_5" type="checkbox" id="__nav_5" checked>
+      
+      <label class="md-nav__link" for="__nav_5">
+        One-dimensional solids
+        <span class="md-nav__icon md-icon"></span>
+      </label>
+      <nav class="md-nav" aria-label="One-dimensional solids" data-md-level="1">
+        <label class="md-nav__title" for="__nav_5">
+          <span class="md-nav__icon md-icon"></span>
+          One-dimensional solids
+        </label>
+        <ul class="md-nav__list" data-md-scrollfix>
+          
+            
+  
+  
+    
+  
+  
+    <li class="md-nav__item md-nav__item--active">
+      
+      <input class="md-nav__toggle md-toggle" data-md-toggle="toc" type="checkbox" id="__toc">
+      
+      
+        
+      
+      
+        <label class="md-nav__link md-nav__link--active" for="__toc">
+          The tight binding model
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <a href="./" class="md-nav__link md-nav__link--active">
+        The tight binding model
+      </a>
+      
+        
+<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
+  
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Table of contents
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#introduction" class="md-nav__link">
+    Introduction
+  </a>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+      
+    </li>
+  
+
+          
+            
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../07diatomic/" class="md-nav__link">
+        The diatomic chain
+      </a>
+    </li>
+  
+
+          
+        </ul>
+      </nav>
+    </li>
+  
+
+    
+      
+      
+      
+
+  
+  
+  
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+      
+        <input class="md-nav__toggle md-toggle" data-md-toggle="__nav_6" type="checkbox" id="__nav_6" >
+      
+      <label class="md-nav__link" for="__nav_6">
+        The geometry of solids
+        <span class="md-nav__icon md-icon"></span>
+      </label>
+      <nav class="md-nav" aria-label="The geometry of solids" data-md-level="1">
+        <label class="md-nav__title" for="__nav_6">
+          <span class="md-nav__icon md-icon"></span>
+          The geometry of solids
+        </label>
+        <ul class="md-nav__list" data-md-scrollfix>
+          
+            
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../placeholder/" class="md-nav__link">
+        Empty content
+      </a>
+    </li>
+  
+
+          
+        </ul>
+      </nav>
+    </li>
+  
+
+    
+      
+      
+      
+
+  
+  
+  
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+      
+        <input class="md-nav__toggle md-toggle" data-md-toggle="__nav_7" type="checkbox" id="__nav_7" >
+      
+      <label class="md-nav__link" for="__nav_7">
+        Electrons in solids
+        <span class="md-nav__icon md-icon"></span>
+      </label>
+      <nav class="md-nav" aria-label="Electrons in solids" data-md-level="1">
+        <label class="md-nav__title" for="__nav_7">
+          <span class="md-nav__icon md-icon"></span>
+          Electrons in solids
+        </label>
+        <ul class="md-nav__list" data-md-scrollfix>
+          
+            
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../placeholder/" class="md-nav__link">
+        Empty content
+      </a>
+    </li>
+  
+
+          
+        </ul>
+      </nav>
+    </li>
+  
+
+    
+      
+      
+      
+
+  
+  
+  
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+      
+        <input class="md-nav__toggle md-toggle" data-md-toggle="__nav_8" type="checkbox" id="__nav_8" >
+      
+      <label class="md-nav__link" for="__nav_8">
+        Magnetism
+        <span class="md-nav__icon md-icon"></span>
+      </label>
+      <nav class="md-nav" aria-label="Magnetism" data-md-level="1">
+        <label class="md-nav__title" for="__nav_8">
+          <span class="md-nav__icon md-icon"></span>
+          Magnetism
+        </label>
+        <ul class="md-nav__list" data-md-scrollfix>
+          
+            
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../placeholder/" class="md-nav__link">
+        Empty content
+      </a>
+    </li>
+  
+
+          
+        </ul>
+      </nav>
+    </li>
+  
+
+    
+      
+      
+      
+
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../additional/" class="md-nav__link">
+        Additional resources
+      </a>
+    </li>
+  
+
+    
+  </ul>
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+            
+              
+              <div class="md-sidebar md-sidebar--secondary" data-md-component="sidebar" data-md-type="toc" >
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
+  
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Table of contents
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#introduction" class="md-nav__link">
+    Introduction
+  </a>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+          
+          <div class="md-content" data-md-component="content">
+            <article class="md-content__inner md-typeset">
+              
+                
+                
+                <h1 id="the-tight-binding-model">The tight binding model<a class="headerlink" href="#the-tight-binding-model" title="Permanent link">&para;</a></h1>
+<div class="admonition danger">
+<p class="admonition-title">Unbaked</p>
+<p>The content here is still very much under development. Please come back soon!</p>
+</div>
+<h2 id="introduction">Introduction<a class="headerlink" href="#introduction" title="Permanent link">&para;</a></h2>
+<p><img alt="" src="../images/04_iron.jpg" /></p>
+<p>The kinetic theory of Drude was a great first step in trying to answer the question "metals, how do they work?", but it was clear from the outset that there were problems with the theory. But with the discovery of the Pauli exclusion principle, it seemed only logical that with the inclusion of <em>the</em> fundamental property of the electrons, life would improve. Indeed it does...</p>
+<div class="admonition danger">
+<p class="admonition-title">Expected competencies</p>
+<p>It is assumed that you have familiarity with the following concepts/techniques:</p>
+<ul>
+<li>Statistical mechanics: familiarity with Fermi-Dirac statistics</li>
+<li>Quantum mechanics: Wavefunction of a free (unbound) electron</li>
+</ul>
+</div>
+<div class="admonition info">
+<p class="admonition-title">Text reference</p>
+<p>The material covered here is discussed in section(s) <script type="math/tex">\S 4</script> of <a href="https://global.oup.com/academic/product/the-oxford-solid-state-basics-9780199680771?cc=au&amp;lang=en&amp;">The Oxford Solid State Basics</a></p>
+</div>
+<hr />
+<h1 id="electrons-and-phonons-in-1d">Electrons and phonons in 1D<a class="headerlink" href="#electrons-and-phonons-in-1d" title="Permanent link">&para;</a></h1>
+<p><em>(based on chapters 9.1-9.3 &amp; 11.1-11.3 of the book)</em></p>
+<div class="admonition success">
+<p class="admonition-title">Expected prior knowledge</p>
+<p>Before the start of this lecture, you should be able to:</p>
+<ul>
+<li>Derive Newton's equations of motion of a triatomic chain (previous lecture).</li>
+<li>Write down the dispersion relation of phonons in the Debye model.</li>
+<li>Express complex exponentials through trigonometric functions and vice versa.</li>
+<li>Apply Taylor expansion trigonometric functions.</li>
+<li>Take derivatives inverse trigonometric functions.</li>
+</ul>
+</div>
+<div class="admonition summary">
+<p class="admonition-title">Learning goals</p>
+<p>After this lecture you will be able to:</p>
+<ul>
+<li>Formulate the equations of motion of electrons and phonons in 1D.</li>
+<li>Derive the dispersion relation from the equations of motion.</li>
+<li>Derive the group velocity, effective mass, and density of states from the dispersion relation.</li>
+</ul>
+</div>
+<p>Last lecture:</p>
+<ul>
+<li>Vibrational modes of few-atom chains (analyzed using Newton's equations)</li>
+<li>Orbital energies of electrons in few-atom chains (analyzed using LCAOs)</li>
+</ul>
+<p>This lecture:</p>
+<ul>
+<li>Phonons and electrons in chains of infinitely many atoms.</li>
+<li>Main idea: use <em>periodicity</em> in space, similar to periodicity in time</li>
+</ul>
+<p>To emphasize the similarities and the differences between electrons and phonons, we will deal with both types of particles at once.</p>
+<h2 id="equations-of-motion">Equations of motion<a class="headerlink" href="#equations-of-motion" title="Permanent link">&para;</a></h2>
+<h3 id="phonons">Phonons<a class="headerlink" href="#phonons" title="Permanent link">&para;</a></h3>
+<p><img alt="" src="figures/phonons2.svg" /></p>
+<p>In the Debye model, we assumed that the dispersion relation is strictly linear in <script type="math/tex">k</script>.
+Now is the time to revisit this assumption.
+To do that, let us consider a 1D homogeneous chain of atoms.
+We assume that the atoms in the chain interact only with their nearest neighbors through a harmonic potential, like we derived in the <a href="6_bonds_and_spectra.md">previous lecture</a>.
+In other words, we model the atoms as point masses connected by identical springs.</p>
+<p>We denote the displacement of atom <script type="math/tex">n</script> from equilibrium by <script type="math/tex">u_n</script>. Within this convention, Newton's equation of motion for the <script type="math/tex">n</script>-th atom is given by:</p>
+<p>
+<script type="math/tex; mode=display">
+m \ddot{u}_n = -\kappa (u_n - u_{n-1}) -\kappa (u_n - u_{n+1}).
+</script>
+</p>
+<p>We use the periodic boundary conditions just like we did in the Sommerfield model.
+The boundary conditions imply that in a system of size <script type="math/tex">L = Na</script>, we have <script type="math/tex">u_N = u_0</script>.</p>
+<h3 id="electrons">Electrons<a class="headerlink" href="#electrons" title="Permanent link">&para;</a></h3>
+<p>The following figure shows the interatomic potential with atoms placed at <script type="math/tex">x_k = ka</script> with <script type="math/tex">k \in \mathbb{Z}</script>:</p>
+<div class="highlight"><pre><span></span><code><span class="n">x</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">linspace</span><span class="p">(</span><span class="mf">0.001</span><span class="p">,</span> <span class="mi">3</span><span class="p">,</span> <span class="mi">200</span><span class="p">)</span>
+
+<span class="n">fig</span><span class="p">,</span> <span class="n">ax</span> <span class="o">=</span> <span class="n">pyplot</span><span class="o">.</span><span class="n">subplots</span><span class="p">(</span><span class="mi">1</span><span class="p">,</span> <span class="mi">1</span><span class="p">)</span>
+<span class="n">ax</span><span class="o">.</span><span class="n">plot</span><span class="p">(</span><span class="n">x</span><span class="p">,</span> <span class="mf">1.2</span><span class="o">-</span><span class="mi">1</span><span class="o">/</span><span class="n">np</span><span class="o">.</span><span class="n">abs</span><span class="p">(</span><span class="n">np</span><span class="o">.</span><span class="n">sin</span><span class="p">(</span><span class="n">np</span><span class="o">.</span><span class="n">pi</span> <span class="o">*</span> <span class="n">x</span><span class="p">))</span><span class="o">**</span><span class="p">(</span><span class="mi">1</span><span class="o">/</span><span class="mi">2</span><span class="p">))</span>
+<span class="n">ax</span><span class="o">.</span><span class="n">set_ylim</span><span class="p">(</span><span class="o">-.</span><span class="mi">7</span><span class="p">,</span> <span class="o">.</span><span class="mi">5</span><span class="p">)</span>
+<span class="n">ax</span><span class="o">.</span><span class="n">set_xlabel</span><span class="p">(</span><span class="s2">&quot;$x$&quot;</span><span class="p">)</span>
+<span class="n">ax</span><span class="o">.</span><span class="n">set_ylabel</span><span class="p">(</span><span class="s2">&quot;$U(x)$&quot;</span><span class="p">)</span>
+<span class="n">ax</span><span class="o">.</span><span class="n">set_xticks</span><span class="p">([</span><span class="o">-.</span><span class="mi">05</span><span class="p">,</span> <span class="mi">1</span><span class="p">,</span> <span class="mi">2</span><span class="p">])</span>
+<span class="n">ax</span><span class="o">.</span><span class="n">set_xticklabels</span><span class="p">([</span><span class="s2">&quot;$0$&quot;</span><span class="p">,</span> <span class="s2">&quot;$a$&quot;</span><span class="p">,</span> <span class="s2">&quot;$2a$&quot;</span><span class="p">])</span>
+
+<span class="n">draw_classic_axes</span><span class="p">(</span><span class="n">ax</span><span class="p">)</span>
+</code></pre></div>
+<p>Similarly to the triatomic system case, we formulate the molecular orbital via the LCAO model:
+<script type="math/tex; mode=display">
+\vert \Psi \rangle = \sum_n \phi_n |n \rangle.
+</script>
+We assume only nearest-neighbor hopping <script type="math/tex">-t</script> and an on-site energy <script type="math/tex">E_0</script>.
+The coupled Schrödinger equation of the <script type="math/tex">|n \rangle</script> orbital is:
+<script type="math/tex; mode=display">
+E \phi_n = E_0 \phi_n - t \phi_{n+1} - t \phi_{n-1}.
+</script>
+</p>
+<p>Again, the periodic boundary conditions imply <script type="math/tex">\phi_N = \phi_0</script>.</p>
+<p>We now have the equations of motion of both phonons and electrons.
+All that remains is to solve them.</p>
+<h3 id="key-idea-for-solving-these-equations">Key idea for solving these equations<a class="headerlink" href="#key-idea-for-solving-these-equations" title="Permanent link">&para;</a></h3>
+<p>In order to solve the equations of motion, we need to come up with a reasonable guess.
+If we take a look at the equations of motion, we see that they are the same for all atoms.
+To be specific, the structure of the equations is the same no matter what value of <script type="math/tex">n</script> we choose.
+Since these equations define the solutions, we reason that the solutions should also be independent of the choice of <script type="math/tex">n</script>.
+As a result, we assume a plane wave solution, also called a <em>plane wave ansatz</em>, with the same amplitude for each atom.
+In the case of phonons, we obtain
+<script type="math/tex; mode=display">
+u_n = Ae^{i \omega t - i k x_n},
+</script>
+and the ansatz for electrons is given similarly by
+<script type="math/tex; mode=display">
+\phi_n = Be^{i E t/\hbar - i k x_n}.
+</script>
+We wrote <script type="math/tex">x_n=na</script> and we wrote the time-dependent solution of the Schrödinger equation to emphasize the similarity between the two systems.</p>
+<p>We already know that the periodic boundary conditions only allow plane waves with <script type="math/tex">k</script> being a multiple of <script type="math/tex">2\pi/L</script>.
+In the case of the electron system, periodic boundary conditions give <script type="math/tex">\phi_0 = \phi_N</script>, which results in</p>
+<p>
+<script type="math/tex; mode=display">
+1 = e^{ik0} = e^{ikNa}.
+</script>
+</p>
+<p>The above equation defines the allowed values of <script type="math/tex">k</script>:
+<script type="math/tex; mode=display">
+k = \frac{2 \pi p}{Na}, \quad \text{with} p \in \mathbb{Z}.
+</script>
+</p>
+<p>We use the quantized values of <script type="math/tex">k</script> in our plane wave ansatz: <script type="math/tex">e^{ikx_n} = e^{i p \frac{2\pi}{Na} n a} = e^{i \frac{2 \pi n p}{N}}</script>.
+We notice something interesting if we investigate the case of <script type="math/tex">p→p+N</script>.
+In this case, the plane wave ansatz becomes <script type="math/tex">e^{i \frac{2\pi n(p+N)}{N}} = e^{i \frac{2\pi np}{N} + i2\pi n} = e^{i \frac{2\pi np}{N}}</script>, which is exactly the same solution.
+Counting the number of inequivalent plane waves, we find exactly <script type="math/tex">N</script> different solutions in total.
+All that is left is to find the energy of each solution!</p>
+<p>The reason why solutions with different values of <script type="math/tex">k</script> are identical is <a href="https://en.wikipedia.org/wiki/Aliasing#Sampling_sinusoidal_functions">aliasing</a>: because the plane wave is only defined at discrete positions, acquiring a phase factor of <script type="math/tex">2π</script> between two atoms is equivalent to nothing happening:</p>
+<div class="highlight"><pre><span></span><code><span class="n">x</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">linspace</span><span class="p">(</span><span class="o">-.</span><span class="mi">2</span><span class="p">,</span> <span class="mf">2.8</span><span class="p">,</span> <span class="mi">500</span><span class="p">)</span>
+<span class="n">fig</span><span class="p">,</span> <span class="n">ax</span> <span class="o">=</span> <span class="n">pyplot</span><span class="o">.</span><span class="n">subplots</span><span class="p">()</span>
+<span class="n">ax</span><span class="o">.</span><span class="n">plot</span><span class="p">(</span><span class="n">x</span><span class="p">,</span> <span class="n">np</span><span class="o">.</span><span class="n">cos</span><span class="p">(</span><span class="n">pi</span><span class="o">*</span><span class="p">(</span><span class="n">x</span><span class="p">)),</span> <span class="n">label</span><span class="o">=</span><span class="sa">r</span><span class="s1">&#39;$k=\pi/a$&#39;</span><span class="p">)</span>
+<span class="n">ax</span><span class="o">.</span><span class="n">plot</span><span class="p">(</span><span class="n">x</span><span class="p">,</span> <span class="n">np</span><span class="o">.</span><span class="n">cos</span><span class="p">(</span><span class="mi">3</span><span class="o">*</span><span class="n">pi</span><span class="o">*</span><span class="p">(</span><span class="n">x</span><span class="p">)),</span> <span class="n">label</span><span class="o">=</span><span class="sa">r</span><span class="s1">&#39;$k=3\pi/a$&#39;</span><span class="p">)</span>
+<span class="n">ax</span><span class="o">.</span><span class="n">plot</span><span class="p">(</span><span class="n">x</span><span class="p">,</span> <span class="n">np</span><span class="o">.</span><span class="n">cos</span><span class="p">(</span><span class="mi">5</span><span class="o">*</span><span class="n">pi</span><span class="o">*</span><span class="p">(</span><span class="n">x</span><span class="p">)),</span> <span class="n">label</span><span class="o">=</span><span class="sa">r</span><span class="s1">&#39;$k=5\pi/a$&#39;</span><span class="p">)</span>
+<span class="n">sites</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">arange</span><span class="p">(</span><span class="mi">3</span><span class="p">)</span>
+<span class="n">ax</span><span class="o">.</span><span class="n">scatter</span><span class="p">(</span><span class="n">sites</span><span class="p">,</span> <span class="n">np</span><span class="o">.</span><span class="n">cos</span><span class="p">(</span><span class="n">pi</span><span class="o">*</span><span class="p">(</span><span class="n">sites</span><span class="p">)),</span> <span class="n">c</span><span class="o">=</span><span class="s1">&#39;k&#39;</span><span class="p">,</span> <span class="n">s</span><span class="o">=</span><span class="mi">64</span><span class="p">,</span> <span class="n">zorder</span><span class="o">=</span><span class="mi">5</span><span class="p">)</span>
+<span class="n">ax</span><span class="o">.</span><span class="n">set_xlabel</span><span class="p">(</span><span class="s1">&#39;$x$&#39;</span><span class="p">)</span>
+<span class="n">ax</span><span class="o">.</span><span class="n">set_ylabel</span><span class="p">(</span><span class="s1">&#39;$u_n$&#39;</span><span class="p">)</span>
+<span class="n">ax</span><span class="o">.</span><span class="n">set_xlim</span><span class="p">((</span><span class="o">-.</span><span class="mi">1</span><span class="p">,</span> <span class="mf">3.2</span><span class="p">))</span>
+<span class="n">ax</span><span class="o">.</span><span class="n">set_ylim</span><span class="p">((</span><span class="o">-</span><span class="mf">1.3</span><span class="p">,</span> <span class="mf">1.3</span><span class="p">))</span>
+<span class="n">ax</span><span class="o">.</span><span class="n">legend</span><span class="p">(</span><span class="n">loc</span><span class="o">=</span><span class="s1">&#39;lower right&#39;</span><span class="p">)</span>
+<span class="n">draw_classic_axes</span><span class="p">(</span><span class="n">ax</span><span class="p">)</span>
+<span class="n">ax</span><span class="o">.</span><span class="n">annotate</span><span class="p">(</span><span class="n">s</span><span class="o">=</span><span class="s1">&#39;&#39;</span><span class="p">,</span> <span class="n">xy</span><span class="o">=</span><span class="p">(</span><span class="mi">0</span><span class="p">,</span> <span class="o">-</span><span class="mf">1.1</span><span class="p">),</span> <span class="n">xytext</span><span class="o">=</span><span class="p">(</span><span class="mi">1</span><span class="p">,</span> <span class="o">-</span><span class="mf">1.1</span><span class="p">),</span>
+            <span class="n">arrowprops</span><span class="o">=</span><span class="nb">dict</span><span class="p">(</span><span class="n">arrowstyle</span><span class="o">=</span><span class="s1">&#39;&lt;-&gt;&#39;</span><span class="p">,</span> <span class="n">shrinkA</span><span class="o">=</span><span class="mi">0</span><span class="p">,</span> <span class="n">shrinkB</span><span class="o">=</span><span class="mi">0</span><span class="p">))</span>
+<span class="n">ax</span><span class="o">.</span><span class="n">text</span><span class="p">(</span><span class="o">.</span><span class="mi">5</span><span class="p">,</span> <span class="o">-</span><span class="mf">1.25</span><span class="p">,</span> <span class="s1">&#39;$a$&#39;</span><span class="p">,</span> <span class="n">ha</span><span class="o">=</span><span class="s1">&#39;center&#39;</span><span class="p">);</span>
+</code></pre></div>
+<details class="question"><summary>How many different solutions did we expect to find?</summary><p>We have a system with <script type="math/tex">N</script> degrees of freedom (either <script type="math/tex">u_n</script> or <script type="math/tex">\phi_n</script>), and therefore we expect <script type="math/tex">N</script> normal modes (or eigenstates).</p>
+</details>
+<h2 id="solving-the-equations-of-motion">Solving the equations of motion<a class="headerlink" href="#solving-the-equations-of-motion" title="Permanent link">&para;</a></h2>
+<h3 id="phonons_1">Phonons<a class="headerlink" href="#phonons_1" title="Permanent link">&para;</a></h3>
+<p>We substitute the plane wave ansatz into the equations of motion:
+<script type="math/tex; mode=display">
+-m \omega^2 A e^{i\omega t - ikx_n} = \kappa A  e^{i\omega t}(-2 e^{-ikx_n} + e^{-ikx_n+ika}+ e^{-ikx_n-ika}).
+</script>
+</p>
+<p>Searching for solutions with <script type="math/tex">A \neq 0</script> we obtain
+<script type="math/tex; mode=display">
+-m \omega^2 = \kappa (-2 + e^{ika}+ e^{-ika})=\kappa [-2 + 2\cos(ka)].
+</script>
+</p>
+<p>Or after a further simplification:
+<script type="math/tex; mode=display">
+\omega = \sqrt{\frac{2\kappa}{m}}\sqrt{1-\cos(ka)}= 2\sqrt{\frac{\kappa}{m}}|\sin(ka/2)|,
+</script>
+where we substituted <script type="math/tex">1-\cos(x) = 2\sin^2(x/2)</script>.</p>
+<p>We arrive at the phonon dispersion relation shown below.</p>
+<div class="highlight"><pre><span></span><code><span class="n">k</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">linspace</span><span class="p">(</span><span class="o">-</span><span class="mi">2</span><span class="o">*</span><span class="n">pi</span><span class="p">,</span> <span class="mi">6</span><span class="o">*</span><span class="n">pi</span><span class="p">,</span> <span class="mi">500</span><span class="p">)</span>
+<span class="n">fig</span><span class="p">,</span> <span class="n">ax</span> <span class="o">=</span> <span class="n">pyplot</span><span class="o">.</span><span class="n">subplots</span><span class="p">()</span>
+
+<span class="n">pyplot</span><span class="o">.</span><span class="n">plot</span><span class="p">(</span><span class="n">k</span><span class="p">,</span> <span class="n">np</span><span class="o">.</span><span class="n">abs</span><span class="p">(</span><span class="n">np</span><span class="o">.</span><span class="n">sin</span><span class="p">(</span><span class="n">k</span><span class="o">/</span><span class="mi">2</span><span class="p">)))</span>
+
+<span class="n">ax</span><span class="o">.</span><span class="n">set_ylim</span><span class="p">(</span><span class="n">bottom</span><span class="o">=</span><span class="mi">0</span><span class="p">,</span> <span class="n">top</span><span class="o">=</span><span class="mf">1.2</span><span class="p">)</span>
+<span class="n">ax</span><span class="o">.</span><span class="n">set_xlabel</span><span class="p">(</span><span class="s1">&#39;$ka$&#39;</span><span class="p">)</span>
+<span class="n">ax</span><span class="o">.</span><span class="n">set_ylabel</span><span class="p">(</span><span class="sa">r</span><span class="s1">&#39;$\omega$&#39;</span><span class="p">)</span>
+<span class="n">pyplot</span><span class="o">.</span><span class="n">xticks</span><span class="p">(</span><span class="nb">list</span><span class="p">(</span><span class="mi">2</span><span class="o">*</span><span class="n">pi</span><span class="o">*</span><span class="n">np</span><span class="o">.</span><span class="n">arange</span><span class="p">(</span><span class="o">-</span><span class="mi">1</span><span class="p">,</span> <span class="mi">4</span><span class="p">))</span> <span class="o">+</span> <span class="p">[</span><span class="o">-</span><span class="n">pi</span><span class="p">,</span> <span class="n">pi</span><span class="p">],</span>
+              <span class="p">[</span><span class="sa">r</span><span class="s1">&#39;$-2\pi$&#39;</span><span class="p">,</span> <span class="s1">&#39;$0$&#39;</span><span class="p">,</span> <span class="sa">r</span><span class="s1">&#39;$2\pi$&#39;</span><span class="p">,</span> <span class="sa">r</span><span class="s1">&#39;$4\pi$&#39;</span><span class="p">,</span> <span class="sa">r</span><span class="s1">&#39;$6\pi$&#39;</span><span class="p">,</span>
+               <span class="sa">r</span><span class="s1">&#39;$-\pi$&#39;</span><span class="p">,</span> <span class="sa">r</span><span class="s1">&#39;$\pi$&#39;</span><span class="p">])</span>
+<span class="n">pyplot</span><span class="o">.</span><span class="n">yticks</span><span class="p">([</span><span class="mi">1</span><span class="p">],</span> <span class="p">[</span><span class="sa">r</span><span class="s1">&#39;$2\sqrt{\frac{\kappa}</span><span class="si">{m}</span><span class="s1">}$&#39;</span><span class="p">])</span>
+<span class="n">pyplot</span><span class="o">.</span><span class="n">vlines</span><span class="p">([</span><span class="o">-</span><span class="n">pi</span><span class="p">,</span> <span class="n">pi</span><span class="p">],</span> <span class="mi">0</span><span class="p">,</span> <span class="mf">1.1</span><span class="p">,</span> <span class="n">linestyles</span><span class="o">=</span><span class="s1">&#39;dashed&#39;</span><span class="p">)</span>
+<span class="n">pyplot</span><span class="o">.</span><span class="n">hlines</span><span class="p">([</span><span class="mi">1</span><span class="p">],</span> <span class="o">.</span><span class="mi">1</span><span class="o">*</span><span class="n">pi</span><span class="p">,</span> <span class="mf">1.3</span><span class="o">*</span><span class="n">pi</span><span class="p">,</span> <span class="n">linestyles</span><span class="o">=</span><span class="s1">&#39;dashed&#39;</span><span class="p">)</span>
+<span class="n">draw_classic_axes</span><span class="p">(</span><span class="n">ax</span><span class="p">);</span>
+<span class="c1"># ax.annotate(s=&#39;&#39;, xy=(-pi, -.15), xytext=(pi, -.15),</span>
+<span class="c1">#             arrowprops=dict(arrowstyle=&#39;&lt;-&gt;&#39;, shrinkA=0, shrinkB=0))</span>
+<span class="c1"># ax.text(0, -.25, &#39;1st Brillouin zone&#39;, ha=&#39;center&#39;)</span>
+<span class="c1"># ax.set_ylim(bottom=-.3);</span>
+</code></pre></div>
+<p>The periodicity of the dispersion relation is a consequence of what we observed before: since plane waves with <script type="math/tex">k</script>-vectors differing by <script type="math/tex">2π/a</script> are exactly the same, the repeated periods of the dispersion relation describe the same plane waves.</p>
+<h4 id="comparison-to-the-debye-model">Comparison to the Debye model<a class="headerlink" href="#comparison-to-the-debye-model" title="Permanent link">&para;</a></h4>
+<p><strong>Sound velocity:</strong> At small <script type="math/tex">k</script>, <script type="math/tex">\sin(ka/2)\approx ka/2</script>. Therefore <script type="math/tex">\omega \approx \sqrt{\kappa/m} k a = v_sk</script>, with <script type="math/tex">v_s</script> the sound velocity.
+We therefore justify the linear dispersion approximation in the Debye model!</p>
+<p><strong>Cut-off frequency:</strong></p>
+<p>The Debye model introduces the cutoff frequency <script type="math/tex">\omega_D</script> to limit the number of phonon modes, and does not identify the origin of the cutoff.
+Now because of the finite number of plane waves, the integration over the <script type="math/tex">k</script>-space has a finite size: <script type="math/tex">\sum_p → \frac{L}{2\pi}\int_{-\pi/a}^{\pi/a}dk</script>.
+This automatically gives us a maximal frequency without additional assumptions.</p>
+<h3 id="electrons_1">Electrons<a class="headerlink" href="#electrons_1" title="Permanent link">&para;</a></h3>
+<p>Once again we substitute the plane wave ansatz into the equations of motion:</p>
+<p>
+<script type="math/tex; mode=display">
+E Ae^{iEt/\hbar-ikna} = E_0 Ae^{iEt/\hbar-ikna} - t Ae^{iEt/\hbar-ik(n+1)a} - t Ae^{iEt/\hbar-ik(n-1)a},
+</script>
+</p>
+<p>Again, we are not interested in a trivial solution, hence we assume <script type="math/tex">A \neq 0</script> and thus
+<script type="math/tex; mode=display">
+E = E_0 -te^{-ika} -te^{ika} = E_0 - 2t\cos(ka),
+</script>
+which gives us the dispersion relation below.</p>
+<div class="highlight"><pre><span></span><code><span class="n">pyplot</span><span class="o">.</span><span class="n">figure</span><span class="p">()</span>
+<span class="n">k</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">linspace</span><span class="p">(</span><span class="o">-</span><span class="n">pi</span><span class="p">,</span> <span class="n">pi</span><span class="p">,</span> <span class="mi">300</span><span class="p">)</span>
+<span class="n">pyplot</span><span class="o">.</span><span class="n">plot</span><span class="p">(</span><span class="n">k</span><span class="p">,</span> <span class="o">-</span><span class="n">np</span><span class="o">.</span><span class="n">cos</span><span class="p">(</span><span class="n">k</span><span class="p">))</span>
+<span class="n">pyplot</span><span class="o">.</span><span class="n">xlabel</span><span class="p">(</span><span class="s1">&#39;$ka$&#39;</span><span class="p">);</span> <span class="n">pyplot</span><span class="o">.</span><span class="n">ylabel</span><span class="p">(</span><span class="s1">&#39;$E$&#39;</span><span class="p">)</span>
+<span class="n">pyplot</span><span class="o">.</span><span class="n">xticks</span><span class="p">([</span><span class="o">-</span><span class="n">pi</span><span class="p">,</span> <span class="mi">0</span><span class="p">,</span> <span class="n">pi</span><span class="p">],</span> <span class="p">[</span><span class="sa">r</span><span class="s1">&#39;$-\pi$&#39;</span><span class="p">,</span> <span class="mi">0</span><span class="p">,</span> <span class="sa">r</span><span class="s1">&#39;$\pi$&#39;</span><span class="p">])</span>
+<span class="n">pyplot</span><span class="o">.</span><span class="n">yticks</span><span class="p">([</span><span class="o">-</span><span class="mi">1</span><span class="p">,</span> <span class="mi">0</span><span class="p">,</span> <span class="mi">1</span><span class="p">],</span> <span class="p">[</span><span class="s1">&#39;$E_0-2t$&#39;</span><span class="p">,</span> <span class="s1">&#39;$E_0$&#39;</span><span class="p">,</span> <span class="s1">&#39;$E_0+2t$&#39;</span><span class="p">]);</span>
+</code></pre></div>
+<p>We see that the electron dispersion consists of a <em>band</em> of allowed energies <script type="math/tex">E_0 -2t < E < E_0 + 2t</script>.
+That particles occupy bands of allowed energies is why a dispersion relation is also often called a <em>band structure</em>.
+Due to the spin degeneracy, each band has 2<script type="math/tex">N</script> possible states if we consider a system with <script type="math/tex">N</script> atoms.</p>
+<p>If each atom contains 2 electrons and a single orbital, all the states in the band must be occupied by electrons.
+Because all the available states are occupied, there is always exactly the same number of electrons moving in the positive direction, as there are in the negative.
+Hence, no matter what we do, our system is incapable of conducting electrons, and therefore we have derived the existence of insulators!</p>
+<p>Let us also compare the electron band structure with the free electron model.
+Focusing on the dispersion relation close to the band bottom at <script type="math/tex">k=0</script>, we approximate the energy as
+<script type="math/tex; mode=display">
+E \approx E_0 - 2t + t (ka)^2.
+</script>
+</p>
+<p>If we compare this to the dispersion relation <script type="math/tex">E=\hbar k^2/2m</script> of the free electrons model, we see that the band structure is similar, but the lowest available energy is <script type="math/tex">E_0-2t</script> instead of <script type="math/tex">0</script>, and the electrons behave as if they had a different mass <script type="math/tex">m^*=\hbar^2/2ta^2</script>.</p>
+<h3 id="group-velocity-effective-mass-density-of-states">Group velocity, effective mass, density of states<a class="headerlink" href="#group-velocity-effective-mass-density-of-states" title="Permanent link">&para;</a></h3>
+<p><em>(here we only discuss electrons; for phonons everything is the same except for replacing <script type="math/tex">E = \hbar \omega</script>)</em></p>
+<p>Let us think what happens if we apply an external electric field to the crystal:</p>
+<div class="highlight"><pre><span></span><code><span class="n">x</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">linspace</span><span class="p">(</span><span class="mf">0.001</span><span class="p">,</span> <span class="mi">3</span><span class="p">,</span> <span class="mi">200</span><span class="p">)</span>
+
+<span class="n">fig</span><span class="p">,</span> <span class="n">ax</span> <span class="o">=</span> <span class="n">pyplot</span><span class="o">.</span><span class="n">subplots</span><span class="p">(</span><span class="mi">1</span><span class="p">,</span> <span class="mi">1</span><span class="p">)</span>
+<span class="n">ax</span><span class="o">.</span><span class="n">plot</span><span class="p">(</span><span class="n">x</span><span class="p">,</span> <span class="mf">1.2</span><span class="o">-</span><span class="mi">1</span><span class="o">/</span><span class="n">np</span><span class="o">.</span><span class="n">abs</span><span class="p">(</span><span class="n">np</span><span class="o">.</span><span class="n">sin</span><span class="p">(</span><span class="n">np</span><span class="o">.</span><span class="n">pi</span> <span class="o">*</span> <span class="n">x</span><span class="p">))</span><span class="o">**</span><span class="p">(</span><span class="mi">1</span><span class="o">/</span><span class="mi">2</span><span class="p">)</span> <span class="o">+</span> <span class="o">.</span><span class="mi">2</span> <span class="o">*</span> <span class="p">(</span><span class="n">x</span> <span class="o">-</span> <span class="mf">1.5</span><span class="p">))</span>
+<span class="n">ax</span><span class="o">.</span><span class="n">plot</span><span class="p">(</span><span class="n">x</span><span class="p">,</span> <span class="o">.</span><span class="mi">2</span> <span class="o">*</span> <span class="p">(</span><span class="n">x</span> <span class="o">-</span> <span class="mf">0.25</span><span class="p">),</span> <span class="s1">&#39;--&#39;</span><span class="p">)</span>
+<span class="n">ax</span><span class="o">.</span><span class="n">set_ylim</span><span class="p">(</span><span class="o">-.</span><span class="mi">7</span><span class="p">,</span> <span class="o">.</span><span class="mi">5</span><span class="p">)</span>
+<span class="n">ax</span><span class="o">.</span><span class="n">set_xlabel</span><span class="p">(</span><span class="s2">&quot;$x$&quot;</span><span class="p">)</span>
+<span class="n">ax</span><span class="o">.</span><span class="n">set_ylabel</span><span class="p">(</span><span class="s2">&quot;$U(x)$&quot;</span><span class="p">)</span>
+<span class="n">ax</span><span class="o">.</span><span class="n">set_xticks</span><span class="p">([</span><span class="o">-.</span><span class="mi">05</span><span class="p">,</span> <span class="mi">1</span><span class="p">,</span> <span class="mi">2</span><span class="p">])</span>
+<span class="n">ax</span><span class="o">.</span><span class="n">set_xticklabels</span><span class="p">([</span><span class="s2">&quot;$0$&quot;</span><span class="p">,</span> <span class="s2">&quot;$a$&quot;</span><span class="p">,</span> <span class="s2">&quot;$2a$&quot;</span><span class="p">])</span>
+
+<span class="n">draw_classic_axes</span><span class="p">(</span><span class="n">ax</span><span class="p">)</span>
+</code></pre></div>
+<p>The full Hamiltonian of the system is</p>
+<p>
+<script type="math/tex; mode=display">
+H = \frac{p^2}{2m} + U_\textrm{atomic}(x) + e \mathcal{E} x,
+</script>
+where <script type="math/tex">U_\textrm{atomic}</script> is the potential created by the nuclei, and <script type="math/tex">\mathcal{E}</script> the electric field.</p>
+<p>A typical electric field is much smaller than the interatomic potential, and therefore we can start by obtaining the dispersion relation <script type="math/tex">E(k)</script> without electric field (by applying the LCAO method), and then solve
+<script type="math/tex; mode=display"> H = E(k) + e\mathcal{E}x.</script>
+</p>
+<p>To derive how particles with an arbitrary dispersion relation move, we recall the <a href="https://en.wikipedia.org/wiki/Hamiltonian_mechanics">Hamilton's equations</a> for particle velocity <script type="math/tex">v</script> and force <script type="math/tex">F</script>:</p>
+<p>
+<script type="math/tex; mode=display">\begin{aligned}
+v \equiv \frac{dr}{dt} &= \frac{\partial H(p, r)}{\partial p}\\
+F \equiv \frac{dp}{dt} &= -\frac{\partial H(p, r)}{\partial r}.
+\end{aligned}</script>
+</p>
+<p>Substituting <script type="math/tex">p = \hbar k</script> into the first equation we arrive to the expression for the electron <strong>group velocity</strong> <script type="math/tex">v \equiv \hbar^{-1}\partial E/\partial k</script>.
+From the second equation we obtain that the force acting on electron in a band stays <script type="math/tex">-e\mathcal{E}</script>, which in turn gives results in the acceleration
+<script type="math/tex; mode=display">
+\frac{dv}{dt} = \frac{∂v}{∂p}\frac{dp}{dt} = F/m.
+</script>
+Comparing this expression with <script type="math/tex">dv/dt = F/m</script>, we arrive to the <strong>effective mass</strong>:
+<script type="math/tex; mode=display">
+m^* \equiv \left(\frac{∂v}{∂p}\right)^{-1} = \left(\frac{∂²E}{∂p²}\right)^{-1} = ħ²\left(\frac{∂²E}{∂k²}\right)^{-1}.
+</script>
+</p>
+<p>The group velocity describes how quickly electrons with a certain <script type="math/tex">k</script>-vector move, while the effective mass describes how hard they are to accelerate by applying external force.</p>
+<p>By using the dispersion relation we derived earlier, we obtain the effective mass like this:</p>
+<div class="highlight"><pre><span></span><code><span class="n">pyplot</span><span class="o">.</span><span class="n">figure</span><span class="p">(</span><span class="n">figsize</span><span class="o">=</span><span class="p">(</span><span class="mi">8</span><span class="p">,</span> <span class="mi">5</span><span class="p">))</span>
+<span class="n">k</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">linspace</span><span class="p">(</span><span class="o">-</span><span class="n">pi</span><span class="p">,</span> <span class="n">pi</span><span class="p">,</span> <span class="mi">300</span><span class="p">)</span>
+<span class="n">meff</span> <span class="o">=</span> <span class="mi">1</span><span class="o">/</span><span class="n">np</span><span class="o">.</span><span class="n">cos</span><span class="p">(</span><span class="n">k</span><span class="p">)</span>
+<span class="n">color</span> <span class="o">=</span> <span class="nb">list</span><span class="p">(</span><span class="n">matplotlib</span><span class="o">.</span><span class="n">rcParams</span><span class="p">[</span><span class="s1">&#39;axes.prop_cycle&#39;</span><span class="p">])[</span><span class="mi">0</span><span class="p">][</span><span class="s1">&#39;color&#39;</span><span class="p">]</span>
+<span class="n">pyplot</span><span class="o">.</span><span class="n">plot</span><span class="p">(</span><span class="n">k</span><span class="p">[</span><span class="n">meff</span> <span class="o">&gt;</span> <span class="mi">0</span><span class="p">],</span> <span class="n">meff</span><span class="p">[</span><span class="n">meff</span> <span class="o">&gt;</span> <span class="mi">0</span><span class="p">],</span> <span class="n">c</span><span class="o">=</span><span class="n">color</span><span class="p">)</span>
+<span class="n">pyplot</span><span class="o">.</span><span class="n">plot</span><span class="p">(</span><span class="n">k</span><span class="p">[</span><span class="n">meff</span> <span class="o">&lt;</span> <span class="mi">0</span><span class="p">],</span> <span class="n">meff</span><span class="p">[</span><span class="n">meff</span> <span class="o">&lt;</span> <span class="mi">0</span><span class="p">],</span> <span class="n">c</span><span class="o">=</span><span class="n">color</span><span class="p">)</span>
+<span class="n">pyplot</span><span class="o">.</span><span class="n">ylim</span><span class="p">(</span><span class="o">-</span><span class="mi">5</span><span class="p">,</span> <span class="mi">5</span><span class="p">)</span>
+<span class="n">pyplot</span><span class="o">.</span><span class="n">xlabel</span><span class="p">(</span><span class="s1">&#39;$ka$&#39;</span><span class="p">);</span> <span class="n">pyplot</span><span class="o">.</span><span class="n">ylabel</span><span class="p">(</span><span class="s1">&#39;$m^*$&#39;</span><span class="p">)</span>
+<span class="n">pyplot</span><span class="o">.</span><span class="n">xticks</span><span class="p">([</span><span class="o">-</span><span class="n">pi</span><span class="p">,</span> <span class="mi">0</span><span class="p">,</span> <span class="n">pi</span><span class="p">],</span> <span class="p">[</span><span class="sa">r</span><span class="s1">&#39;$-\pi$&#39;</span><span class="p">,</span> <span class="mi">0</span><span class="p">,</span> <span class="sa">r</span><span class="s1">&#39;$\pi$&#39;</span><span class="p">]);</span>
+</code></pre></div>
+<p>Notice that the effective mass can be negative, which implies the electrons accelerate in the direction opposite to the applied force.</p>
+<h3 id="density-of-states">Density of states<a class="headerlink" href="#density-of-states" title="Permanent link">&para;</a></h3>
+<p>The DOS is the number of states per unit energy. In 1D we have
+<script type="math/tex; mode=display">g(E) = \frac{L}{2\pi}\sum |dk/dE| = \frac{L}{2\pi}\sum |v|^{-1}</script>
+</p>
+<p>The sum goes over all possible values of <script type="math/tex">k</script> and spin which have the same energy <script type="math/tex">E</script>.
+If we are working in two or more dimensions, we must integrate over the values of <script type="math/tex">k</script> with the same energy.
+Also take note that for energies below <script type="math/tex">E_0 - 2t</script> or above <script type="math/tex">E_0 + 2t</script>, there are no values of <script type="math/tex">k</script> with that energy, so there is nothing to sum over.</p>
+<p>Once again, starting from
+<script type="math/tex; mode=display"> E = E_0 - 2t \cos(ka), </script>
+we get
+<script type="math/tex; mode=display">
+ka = \pm\arccos[(E - E_0) / 2t],
+</script>
+and
+<script type="math/tex; mode=display">
+|v| ^{-1} = \left|\frac{dk}{dE} \right| = \frac{1}{a}\frac{1}{\sqrt{4t^2 - (E - E_0)^2}}.
+</script>
+You can get to this result immediately if you remember the derivative of arccosine. Otherwise you need to go the long way: compute <script type="math/tex">dE/dk</script> as a function of <script type="math/tex">k</script>, express <script type="math/tex">k</script> through <script type="math/tex">E</script> as we did above, and take the inverse.</p>
+<p>We now add together the contributions of the positive and the negative momenta as well both spin orientations, and arrive to the density of states
+<script type="math/tex; mode=display">
+g(E) = \frac{L}{2\pi}\frac{4}{a}\frac{1}{\sqrt{4t^2 - (E - E_0)^2}}.
+</script>
+A quick check: when the energy is close to the bottom of the band, <script type="math/tex">E = E_0 - 2t + \delta E</script>, we get <script type="math/tex">g(E) \propto \delta E^{-1/2}</script>, as we expect in 1D.</p>
+<p>The process of calculating the DOS at a given energy <script type="math/tex">E</script> of a spin-independent Hamiltonian is done systematically with the following steps:</p>
+<ol>
+<li>At a given energy <script type="math/tex">E</script>, determine <em>all</em> of the values of <script type="math/tex">k</script> which correspond to that <script type="math/tex">E</script> using the dispersion relation.</li>
+<li>Compute <script type="math/tex">\rvert dk / dE \rvert</script>. Do this either by writing <script type="math/tex">k</script> as a (multi-valued) function of <script type="math/tex">E</script> and differentiating, or by computing <script type="math/tex">(dE / dk)^{-1}</script>.</li>
+<li>Sum or integrate <script type="math/tex">dk / dE</script> over the allowed values of <script type="math/tex">k</script> found in 1 and multiply by any degeneracies (spin/polarization).</li>
+<li>Multiply by spin degeneracy.</li>
+</ol>
+<p>If the Hamiltonian depends on spin, then there is no spin degeneracy and the spin number <script type="math/tex">s</script> must be treated in the same way as <script type="math/tex">k</script>.</p>
+<h2 id="summary">Summary<a class="headerlink" href="#summary" title="Permanent link">&para;</a></h2>
+<ul>
+<li>By using plane waves in real space as an Ansatz we found all normal modes and energies for phonons and electrons in 1D</li>
+<li>Computing dispersion relations explains the problems we listed before (need for cutoff, lack of scattering with every single atom, existence of insulators).</li>
+<li>Electrons and phonons have a complicated nonlinear relation between momentum and velocity (<strong>group velocity</strong>), effective mass, and density of states.</li>
+</ul>
+<h2 id="exercises">Exercises<a class="headerlink" href="#exercises" title="Permanent link">&para;</a></h2>
+<h3 id="warm-up-questions">Warm-up questions<a class="headerlink" href="#warm-up-questions" title="Permanent link">&para;</a></h3>
+<ol>
+<li>Compare the expression of the effective mass with Newton's second law. Do you observe any similarities?</li>
+<li>Check the units of the group velocity. Is it what you expect?</li>
+<li>Do the same for the effective mass.</li>
+<li>Calculate the effective mass of the free-electron dispersion relation. Is this what was expected?</li>
+<li>Under what condition is the effective mass the same for each electron?</li>
+</ol>
+<h3 id="exercise-1-lattice-vibrations">Exercise 1: Lattice vibrations<a class="headerlink" href="#exercise-1-lattice-vibrations" title="Permanent link">&para;</a></h3>
+<ol>
+<li>From the dispersion relation of a 1D monatomic chain given in the lecture notes, calculate the group velocity <script type="math/tex">v_g</script>.</li>
+<li>Using the group veolcity found above, calculate the density of states <script type="math/tex">g(\omega)</script>.</li>
+<li>Sketch them.</li>
+<li>From the 1D dispersion relation <script type="math/tex">\omega(k)</script> in the picture below, sketch the group velocity <script type="math/tex">v_g(k)</script> and the density of states <script type="math/tex">g(\omega)</script>.</li>
+</ol>
+<p><img alt="" src="figures/NNNdispersion.svg" /></p>
+<h3 id="exercise-2-vibrational-heat-capacity-of-a-1d-monatomic-chain">Exercise 2: Vibrational heat capacity of a 1D monatomic chain<a class="headerlink" href="#exercise-2-vibrational-heat-capacity-of-a-1d-monatomic-chain" title="Permanent link">&para;</a></h3>
+<ol>
+<li>Give the total energy <script type="math/tex">U</script> of a 1D monatomic chain as an integral expression.
+To do so, first derive the density of states from the phonon dispersion relation derived in the lecture notes.</li>
+<li>Give an integral expression for the heat capacity <script type="math/tex">C</script>.</li>
+<li>Compute the heat capacity numerically, using e.g. Python.</li>
+<li>Do the same for <script type="math/tex">C</script> in the Debye model and compare the two.
+What differences do you see?</li>
+</ol>
+<h3 id="exercise-3-next-nearest-neighbors-chain">Exercise 3: Next-nearest neighbors chain<a class="headerlink" href="#exercise-3-next-nearest-neighbors-chain" title="Permanent link">&para;</a></h3>
+<p>Consider electrons in a 1D atomic chain again:</p>
+<div class="highlight"><pre><span></span><code><span class="n">x</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">linspace</span><span class="p">(</span><span class="mf">0.001</span><span class="p">,</span> <span class="mi">3</span><span class="p">,</span> <span class="mi">200</span><span class="p">)</span>
+
+<span class="n">fig</span><span class="p">,</span> <span class="n">ax</span> <span class="o">=</span> <span class="n">pyplot</span><span class="o">.</span><span class="n">subplots</span><span class="p">(</span><span class="mi">1</span><span class="p">,</span> <span class="mi">1</span><span class="p">)</span>
+<span class="n">ax</span><span class="o">.</span><span class="n">plot</span><span class="p">(</span><span class="n">x</span><span class="p">,</span> <span class="mf">1.2</span><span class="o">-</span><span class="mi">1</span><span class="o">/</span><span class="n">np</span><span class="o">.</span><span class="n">abs</span><span class="p">(</span><span class="n">np</span><span class="o">.</span><span class="n">sin</span><span class="p">(</span><span class="n">np</span><span class="o">.</span><span class="n">pi</span> <span class="o">*</span> <span class="n">x</span><span class="p">))</span><span class="o">**</span><span class="p">(</span><span class="mi">1</span><span class="o">/</span><span class="mi">2</span><span class="p">))</span>
+<span class="n">ax</span><span class="o">.</span><span class="n">set_ylim</span><span class="p">(</span><span class="o">-.</span><span class="mi">7</span><span class="p">,</span> <span class="o">.</span><span class="mi">5</span><span class="p">)</span>
+<span class="n">ax</span><span class="o">.</span><span class="n">set_xlabel</span><span class="p">(</span><span class="s2">&quot;$x$&quot;</span><span class="p">)</span>
+<span class="n">ax</span><span class="o">.</span><span class="n">set_ylabel</span><span class="p">(</span><span class="s2">&quot;$U(x)$&quot;</span><span class="p">)</span>
+<span class="n">ax</span><span class="o">.</span><span class="n">set_xticks</span><span class="p">([</span><span class="o">-.</span><span class="mi">05</span><span class="p">,</span> <span class="mi">1</span><span class="p">,</span> <span class="mi">2</span><span class="p">])</span>
+<span class="n">ax</span><span class="o">.</span><span class="n">set_xticklabels</span><span class="p">([</span><span class="s2">&quot;$0$&quot;</span><span class="p">,</span> <span class="s2">&quot;$a$&quot;</span><span class="p">,</span> <span class="s2">&quot;$2a$&quot;</span><span class="p">])</span>
+
+<span class="n">draw_classic_axes</span><span class="p">(</span><span class="n">ax</span><span class="p">)</span>
+</code></pre></div>
+<p>Let's expand the one-dimensional chain model by extending the range of the interaction further than the nearest neighbors:</p>
+<p>
+<script type="math/tex; mode=display"> \langle \phi_n | H | \phi_{n+2}\rangle \equiv -t' ≠ 0.</script>
+</p>
+<ol>
+<li>
+<p>Write down the new Schrödinger equation for this system.</p>
+<details class="hint"><summary>hint</summary><p>There are now two more terms in the equation: <script type="math/tex">-t' \phi_{n-2} - t' \phi_{n+2}</script>.</p>
+</details>
+</li>
+<li>
+<p>Solve the Schrödinger equation to find the dispersion relation <script type="math/tex">E(k)</script>.</p>
+<details class="hint"><summary>hint</summary><p>Use the same Ansatz as for the nearest neighbors case: <script type="math/tex"> \phi_n = \phi_0 \exp(ikna) </script>.</p>
+</details>
+</li>
+<li>
+<p>Calculate the effective mass <script type="math/tex">m^*</script>.</p>
+</li>
+<li>Sketch the effective mass as a function of <script type="math/tex">k</script> for the cases <script type="math/tex">t=2t'</script>,<script type="math/tex">t=4t'</script> and <script type="math/tex">t=10t'</script>.</li>
+</ol>
+                
+              
+              
+                
+
+
+              
+            </article>
+          </div>
+        </div>
+        
+          <a href="#" class="md-top md-icon" data-md-component="top" data-md-state="hidden">
+            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M13 20h-2V8l-5.5 5.5-1.42-1.42L12 4.16l7.92 7.92-1.42 1.42L13 8v12z"/></svg>
+            Back to top
+          </a>
+        
+      </main>
+      
+        
+<footer class="md-footer">
+  
+    <nav class="md-footer__inner md-grid" aria-label="Footer">
+      
+        
+        <a href="../05chemistry/" class="md-footer__link md-footer__link--prev" aria-label="Previous: Chemistry 101" rel="prev">
+          <div class="md-footer__button md-icon">
+            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11h12z"/></svg>
+          </div>
+          <div class="md-footer__title">
+            <div class="md-ellipsis">
+              <span class="md-footer__direction">
+                Previous
+              </span>
+              Chemistry 101
+            </div>
+          </div>
+        </a>
+      
+      
+        
+        <a href="../07diatomic/" class="md-footer__link md-footer__link--next" aria-label="Next: The diatomic chain" rel="next">
+          <div class="md-footer__title">
+            <div class="md-ellipsis">
+              <span class="md-footer__direction">
+                Next
+              </span>
+              The diatomic chain
+            </div>
+          </div>
+          <div class="md-footer__button md-icon">
+            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M4 11v2h12l-5.5 5.5 1.42 1.42L19.84 12l-7.92-7.92L10.5 5.5 16 11H4z"/></svg>
+          </div>
+        </a>
+      
+    </nav>
+  
+  <div class="md-footer-meta md-typeset">
+    <div class="md-footer-meta__inner md-grid">
+      <div class="md-footer-copyright">
+        
+          <div class="md-footer-copyright__highlight">
+            Content prepared and curated by <a href="mailto:andrew.mcculloch@utas.edu.au">A J McCulloch</a>
+          </div>
+        
+        Made with
+        <a href="https://squidfunk.github.io/mkdocs-material/" target="_blank" rel="noopener">
+          Material for MkDocs
+        </a>
+        
+      </div>
+      
+    </div>
+  </div>
+</footer>
+      
+    </div>
+    <div class="md-dialog" data-md-component="dialog">
+      <div class="md-dialog__inner md-typeset"></div>
+    </div>
+    <script id="__config" type="application/json">{"base": "..", "features": ["navigation.top"], "translations": {"clipboard.copy": "Copy to clipboard", "clipboard.copied": "Copied to clipboard", "search.config.lang": "en", "search.config.pipeline": "trimmer, stopWordFilter", "search.config.separator": "[\\s\\-]+", "search.placeholder": "Search", "search.result.placeholder": "Type to start searching", "search.result.none": "No matching documents", "search.result.one": "1 matching document", "search.result.other": "# matching documents", "search.result.more.one": "1 more on this page", "search.result.more.other": "# more on this page", "search.result.term.missing": "Missing", "select.version.title": "Select version"}, "search": "../assets/javascripts/workers/search.709b4209.min.js", "version": null}</script>
+    
+    
+      <script src="../assets/javascripts/bundle.2b46852b.min.js"></script>
+      
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.3/MathJax.js?config=TeX-AMS_HTML"></script>
+      
+        <script src="https://unpkg.com/thebelab@0.5.0/lib/index.js"></script>
+      
+        <script src="../scripts/mathjaxhelper.js"></script>
+      
+        <script src="../scripts/thebelabhelper.js"></script>
+      
+        <script src="../scripts/x3dom.js"></script>
+      
+    
+  </body>
+</html>

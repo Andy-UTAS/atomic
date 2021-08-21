@@ -17,8 +17,13 @@ Our journey thus far has been considering the basic properties of solids, and ou
     * Quantum mechanics: the Schrödinger equation, wavefunction of the Hydrogen atom
     * Mathematics: linear algebra
 
-!!! info  "Text reference"
+!!! note  "Text reference"
     The material covered here is discussed in section(s) $\S 5, 6.3$ of [The Oxford Solid State Basics](https://global.oup.com/academic/product/the-oxford-solid-state-basics-9780199680771?cc=au&lang=en&)
+
+!!! info "Computational content"
+
+    The Jupyter notebook associated with this section can be accessed by clicking the icon below:
+    [<i class="fab fa-python fa-5x"></i>](https://jove2021.cloud.edu.au/hub/user-redirect/git-pull?repo=https%3A%2F%2Fgithub.com%2FAndy-UTAS%2FSolid-state&urlpath=tree%2FSolid-state%2F05chemistry.ipynb&branch=master){ .md-button .md-button--primary class="text-center" style="margin-left: 45%"}
 
 ---
 

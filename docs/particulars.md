@@ -8,7 +8,7 @@ The solid-state component of the course will run for seven weeks, beginning in w
 
     The content covered in this course is complicated, and without the frim bedrock of requisite knowledge and associated competencies, attempts to construct additional structures may be compromised. It is critical that one is comfortable with the following:
 
-    - The principles and machinery of quantum mechanics. Explicitly, an understanding of how physical systems and their evolution are modelled using the Schrödinger equation, along with a fluency in common examples (e.g. particle in a box, the Hydrogen atom), and a vague familiarity with Dirac notation is assumed.
+    - The principles and machinery of quantum mechanics. Explicitly, an understanding of how physical systems and their evolution are modelled using the Schrödinger equation, along with a fluency in common examples (e.g. particle in a box, harmonic oscillator, the hydrogen atom), and a vague familiarity with Dirac notation is assumed.
     - Thermodynamic quantities and concepts abound, with statistical mechanics looming large in the background. Conveniently, you have just completed a course in statistical mechanics, but it will be assumed that you are comfortable with the content
 
     It is my intention that you will be required to call upon many of the other tools from the toolbox that you have been developing during your studies, with the explicit aim of further honing these tools, and maybe adding a few to the kit.
@@ -45,13 +45,15 @@ with approximately one week devoted to each topic, but with the natural ebb and 
 ??? abstract "_Content download_"
 
     A brief summary of the topics discussed in the _content download_ sessions is shown below:
-    
+
     | Video       | Topic(s) discussed                   |
     | ----------- | ------------------------------------ |
-    | w0v01       | Introduction: solid-state physics information  |
-    | w1v01       | Specific heat of solids  |
-    | w1v02       | The Drude model |
-    | w1v03       | The Sommerfeld model |
+    | w0v1        | An introduction to solid-state physics |
+    | w1v1        | The Einstein model of solids  |
+    | w1v2        | The Debye model of solids  |
+    | w1v3        | The Drude model of metals |
+    | w2v1        | The Sommerfeld free-electron model |
+    | w2v2        | Chemistry 101 |
 
 ---
 
@@ -59,7 +61,7 @@ with approximately one week devoted to each topic, but with the natural ebb and 
 
 <figure>
   <img src="../images/zelda.png">
-  <figcaption> You are not on this journey alone: there are many avenues available to you to help you on the journey. Depending on your inclination to play antiquated video games, you may recognise this as a scene from <a href="https://en.wikipedia.org/wiki/The_Legend_of_Zelda">The Legend of Zelda</a>.</figcaption>
+  <figcaption> You are not on this journey alone: there are many avenues available to you to help you on the journey (depending on your inclination to play antiquated video games, you may recognise this as a scene from <a href="https://en.wikipedia.org/wiki/The_Legend_of_Zelda">The Legend of Zelda</a>).</figcaption>
 </figure>
 
 ### "_We are all in this together_"
@@ -72,10 +74,14 @@ The course materials as consumed through the _content download_ components are n
 
 As part of the course, it will be expected that you perform calculation and computations. You are welcome to do this in which ever language you prefer, but it is __strongly__ recommended that you use `Python`, and indeed, this is the only language that will be supported. In order to ensure equitable and easy access to Python computing resources, a [Jupyter Notebook](https://jupyter.org/) server has been established, which allows for one to write and execute code via a web browser. The server is named Jove[^1], and access is through the [JupyterHub portal](https://jove2021.cloud.edu.au/). You will need to create an account to start using the server, but beyond this is should be click and go.
 
-Materials and exercises may be deployed directly to Jove via Binder
-
-Should you have a machine upon which you already have, or you wish to deploy, your own instance of `Python`, this is perfectly acceptable, but note that you will have to manually import and distributed materials into Jupyter. As it stands, there would be no requirement for any packages not included in the [Anaconda](https://www.anaconda.com/products/individual) distribution.
+Should you have a machine upon which you already have, or you wish to deploy, your own instance of `Python`, this is perfectly acceptable, but note that you will have to manually import the distributed materials into Jupyter. This can be effectively accomplished using the [clone functionality of GitHub](https://docs.github.com/en/github/creating-cloning-and-archiving-repositories/cloning-a-repository-from-github/cloning-a-repository) as  this is where the [course content](https://github.com/Andy-UTAS/Solid-state) is hosted.
 
 [^1]: For those wondering, [Jove is an alternate name](https://en.wikipedia.org/wiki/Jupiter_(mythology)) for the Roman god Jupiter.
+
+---
+
+## Bug catcher
+
+Finally, this is more of a request than anything else, but should you find any errors in the content - this site, the distributed notebooks, the content download sessions, whatever - please let me know so I can correct the content, which is a major boon for everyone involved. Thanks!
 
 --8<-- "includes/abbreviations.md"

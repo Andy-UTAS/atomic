@@ -17,8 +17,13 @@ The kinetic theory of Drude was a great first step in trying to answer the quest
     * Statistical mechanics: familiarity with Fermi-Dirac statistics
     * Quantum mechanics: Wavefunction of a free (unbound) electron
 
-!!! info  "Text reference"
+!!! note  "Text reference"
     The material covered here is discussed in section(s) $\S 4$ of [The Oxford Solid State Basics](https://global.oup.com/academic/product/the-oxford-solid-state-basics-9780199680771?cc=au&lang=en&)
+
+!!! info "Computational content"
+
+    The Jupyter notebook associated with this section can be accessed by clicking the icon below:
+    [<i class="fab fa-python fa-5x"></i>](#){ .md-button .md-button--primary class="text-center" style="margin-left: 45%"}
 
 ---
 
