@@ -819,9 +819,14 @@
 <li>Mathematics: periodic boundary conditions, spherical coordinates</li>
 </ul>
 </div>
-<div class="admonition info">
+<div class="admonition note">
 <p class="admonition-title">Text reference</p>
 <p>The material covered here is discussed in section(s) <script type="math/tex">\S 2.2</script> of <a href="https://global.oup.com/academic/product/the-oxford-solid-state-basics-9780199680771?cc=au&amp;lang=en&amp;">The Oxford Solid State Basics</a></p>
+</div>
+<div class="admonition info">
+<p class="admonition-title">Computational content</p>
+<p>The Jupyter notebook associated with this section can be accessed by clicking the icon below:
+<a class="text-center" href="https://jove2021.cloud.edu.au/hub/user-redirect/git-pull?repo=https%3A%2F%2Fgithub.com%2FAndy-UTAS%2FSolid-state&amp;urlpath=tree%2FSolid-state%2F02specificheatII.ipynb&amp;branch=master" style="margin-left: 45%"><i class="fab fa-python fa-5x"></i></a></p>
 </div>
 <hr />
 <h2 id="shortcomings-of-the-einstein-model">Shortcomings of the Einstein model<a class="headerlink" href="#shortcomings-of-the-einstein-model" title="Permanent link">&para;</a></h2>
@@ -832,7 +837,7 @@
 </figure>
 
 <p>Indeed, it was known that at low temperatures, the heat capacity displayed cubic behaviour, that is <script type="math/tex">C \propto T^3</script>.</p>
-<details class="question"><summary>Using the provided data !<em>Link the data</em>! for the heat capacity of silver, verify the cubic behaviour of the heat capacity at low temperatures. Ensure to include you code.</summary><div class="highlight"><pre><span></span><code><span class="c1"># Import the data from the supplied .csv file</span>
+<details class="question"><summary>2.1 Using the <a href="https://jove2021.cloud.edu.au/hub/user-redirect/git-pull?repo=https%3A%2F%2Fgithub.com%2FAndy-UTAS%2FSolid-state&amp;urlpath=tree%2FSolid-state%2FHeat_capacity_Ag.csv&amp;branch=master">provided data</a> for the heat capacity of silver, verify the cubic behaviour of the heat capacity at low temperatures. Ensure to include you code.</summary><div class="highlight"><pre><span></span><code><span class="c1"># Import the data from the supplied .csv file</span>
 <span class="n">data</span> <span class="o">=</span> <span class="n">pd</span><span class="o">.</span><span class="n">read_csv</span><span class="p">(</span><span class="s1">&#39;Heat_capacity_Ag.csv&#39;</span><span class="p">)</span>
 <span class="n">data</span> <span class="o">=</span> <span class="n">data</span><span class="p">[</span><span class="n">data</span><span class="p">[</span><span class="s1">&#39;T&#39;</span><span class="p">]</span><span class="o">&lt;</span><span class="mi">25</span><span class="p">]</span> <span class="c1"># take only the low-termperature data</span>
 
@@ -866,7 +871,7 @@
   <figcaption> The heat capacity of silver at low temperature, <script type="math/tex">T<25~\mathrm{K}</script>, follows well a cubic relationship in temperature.</figcaption>
 </figure></p>
 </details>
-<details class="question"><summary>How does <script type="math/tex">C</script> predicted by the Einstein model behave at low <script type="math/tex">T</script>?</summary><p>From the Einstein model, we have</p>
+<details class="question"><summary>2.2 How does <script type="math/tex">C</script> predicted by the Einstein model behave at low <script type="math/tex">T</script>?</summary><p>From the Einstein model, we have</p>
 <p>
 <script type="math/tex; mode=display">
 C = 3k_{\mathrm{B}}(\beta\hbar\omega)^2\frac{\exp(\beta\hbar\omega)}{(\exp(\beta\hbar\omega)-1)^2}
@@ -896,7 +901,7 @@ C = 3k_{\mathrm{B}}(\beta\hbar\omega)^2\frac{\exp(\beta\hbar\omega)}{(\exp(\beta
 </script>
 </p>
 <p>which is very similar to the equivalent expression from Einstein's treatment, other than the sum over wavevectors. It is also interesting to note that the oscillation modes also obey Bose statistics - we shall discuss this more later.</p>
-<details class="question"><summary>From Where does the factor of 3 in the above expression originate?</summary><p>The factor 3 comes from the three possible normal modes of polarization for each wavevector <script type="math/tex">\mathbf{k}</script>.</p>
+<details class="question"><summary>2.3 From Where does the factor of 3 in the above expression originate?</summary><p>The factor 3 comes from the three possible normal modes of polarization for each wavevector <script type="math/tex">\mathbf{k}</script>.</p>
 </details>
 <p>To reiterate where we are and where we are going: instead of having <script type="math/tex">3N</script> oscillators with the same frequency <script type="math/tex">\omega_0</script>, we now have <script type="math/tex">3N</script> possible vibrational modes with frequencies depending on <script type="math/tex">\textbf{k}</script> through the dispersion relation <script type="math/tex">\omega(\mathbf{k}) = v_s|\mathbf{k}|</script>. But the question is now, how do we evaluate the above expression? And there are a few natural questions that arise from what we have done thus far:</p>
 <ul>
@@ -1048,7 +1053,7 @@ C = \frac{\partial \langle E\rangle}{\partial T} = N k_\mathrm{B} \frac{(k_\math
 </script>
 </p>
 <p>which produces the desired <script type="math/tex">T^3</script> dependence, but critically, and unlike the result of Einstein, does not have any free parameters rather only requiring knowledge material density and the sound velocity.</p>
-<details class="question"><summary>What is the physical reason for the difference in the low-temperature behaviour of <script type="math/tex">C</script> for the Einstein and Debye models?</summary><p>In the Einstein model, once the temperature was below the energy associated with the oscillator, there was no capacity for the heat to absorb heat. In contrast, in the Debye model, there exist vibrational modes of the solid do have the capacity to absorb heat.</p>
+<details class="question"><summary>2.4 What is the physical reason for the difference in the low-temperature behaviour of <script type="math/tex">C</script> for the Einstein and Debye models?</summary><p>In the Einstein model, once the temperature was below the energy associated with the oscillator, there was no capacity for the heat to absorb heat. In contrast, in the Debye model, there exist vibrational modes of the solid do have the capacity to absorb heat.</p>
 </details>
 <h3 id="debyes-interpolation-the-duct-tape-solution">Debye's interpolation (the duct-tape solution)<a class="headerlink" href="#debyes-interpolation-the-duct-tape-solution" title="Permanent link">&para;</a></h3>
 <p>Debye successfully constructed a model which quantised the vibrational modes of solids to accurately predict the low-temperature behaviour of the heat capacity. Unfortunately, the model produces a <script type="math/tex">T^3</script> dependence for all <script type="math/tex">T</script>, not just low temperature and thus does not recover the Dulong-Petit law at high temperature. Debye understood the problem arose from allowing an infinite number of modes, with an implication that there are more modes of oscillation than atoms in the system. The "quick fix" for this - which will be revisited with rigour later in the course - to ensure that there are only as many oscillation modes as there are degrees of freedom is to introduce a cutoff frequency <script type="math/tex">\omega_{\textrm{cutoff}}</script> such that the total number of oscillation modes equates to the <script type="math/tex">3N</script>, the number of normal modes in an 3-dimension material. This manifests in the following way:</p>
@@ -1063,7 +1068,7 @@ C = \frac{\partial \langle E\rangle}{\partial T} = N k_\mathrm{B} \frac{(k_\math
 \langle E \rangle = \int_0^{\omega_{\textrm{cutoff}}} \textrm{d} \omega ~ g(\omega)~\hbar\omega ~ n_{\textrm{B}}(\beta\hbar\omega) + E_{ZP}
 </script>
 </p>
-<details class="question"><summary>Verify that the expected high-temperature behaviour for <script type="math/tex">C</script> is recovered when using Debye's interpolation</summary><p>For high temperature:</p>
+<details class="question"><summary>2.5 Verify that the expected high-temperature behaviour for <script type="math/tex">C</script> is recovered when using Debye's interpolation</summary><p>For high temperature:</p>
 <p>
 <script type="math/tex; mode=display">
 n_{\textrm{B}}(\beta\hbar\omega) = \frac{1}{\exp(\beta\hbar\omega)-1} \to \frac{k_{\textrm{B}}T}{\hbar\omega}
@@ -1077,7 +1082,7 @@ n_{\textrm{B}}(\beta\hbar\omega) = \frac{1}{\exp(\beta\hbar\omega)-1} \to \frac{
 </p>
 <p>which by design returns <script type="math/tex">3 k_{\textrm{B}} T N</script>, which is exactly the Dulong-Petit law.</p>
 </details>
-<details class="question"><summary>Explicitly evaluate the cutoff frequency, and express the solution in terms of the Debye frequency</summary><p>An educated guess would probably land you in the correct spot: given the arbitrary definition of the Debye frequency, it is likely that <script type="math/tex">\omega_{\textrm{cutoff}} = \omega_d</script>. Let's have a look:</p>
+<details class="question"><summary>2.6 Explicitly evaluate the cutoff frequency, and express the solution in terms of the Debye frequency</summary><p>An educated guess would probably land you in the correct spot: given the arbitrary definition of the Debye frequency, it is likely that <script type="math/tex">\omega_{\textrm{cutoff}} = \omega_d</script>. Let's have a look:</p>
 <p>
 <script type="math/tex; mode=display">
 3N = \int_0^{\omega_{\textrm{cutoff}}} \textrm{d} \omega ~ g(\omega) = 9N \int_0^{\omega_{\textrm{cutoff}}} \textrm{d} \omega ~ \frac{\omega^2}{\omega_d^3} = 3N \frac{\omega_{\textrm{cutoff}}^3}{\omega_d^3}

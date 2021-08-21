@@ -847,9 +847,14 @@
 <li>Thermal physics: Kinetic theory of gases</li>
 </ul>
 </div>
-<div class="admonition info">
+<div class="admonition note">
 <p class="admonition-title">Text reference</p>
 <p>The material covered here is discussed in section(s) <script type="math/tex">\S 3</script> of <a href="https://global.oup.com/academic/product/the-oxford-solid-state-basics-9780199680771?cc=au&amp;lang=en&amp;">The Oxford Solid State Basics</a></p>
+</div>
+<div class="admonition info">
+<p class="admonition-title">Computational content</p>
+<p>The Jupyter notebook associated with this section can be accessed by clicking the icon below:
+<a class="text-center" href="https://jove2021.cloud.edu.au/hub/user-redirect/git-pull?repo=https%3A%2F%2Fgithub.com%2FAndy-UTAS%2FSolid-state&amp;urlpath=tree%2FSolid-state%2F03metalsI.ipynb&amp;branch=master" style="margin-left: 45%"><i class="fab fa-python fa-5x"></i></a></p>
 </div>
 <hr />
 <h2 id="the-kinetic-theory-of-gases-electrons">The kinetic theory of <del>gases</del> electrons<a class="headerlink" href="#the-kinetic-theory-of-gases-electrons" title="Permanent link">&para;</a></h2>
@@ -872,7 +877,7 @@ V = I ρ \frac{l}{A} ⇒ E = ρ j,
 <li>Electrons are charged particles with charge <script type="math/tex">-e</script>, and consequently they respond to electric and magnetic fields through the Lorentz force (<script type="math/tex">\mathbf{F}=-e\left(\mathbf{E}+\mathbf{v}×\mathbf{B}\right)</script>)</li>
 </ul>
 <p>Even under these simplistic assumptions, the trajectory of the electrons is hard to calculate. As you will have seen elsewhere, with random scattering events, each trajectory is very different. A simple animation below shows several example trajectories, which are markedly different:</p>
-<p><iframe src="../images/03_electron-scattering.mp4" style="position: relative; width: 100%; height: 22.172vw" frameborder="0" allowfullscreen></iframe></p>
+<p><iframe src="../images/03_scattering.mp4" style="position: relative; width: 100%; height: 22.172vw" frameborder="0" allowfullscreen></iframe></p>
 <h3 id="equations-of-motion">Equations of motion<a class="headerlink" href="#equations-of-motion" title="Permanent link">&para;</a></h3>
 <p>Keep in your mind that our goal is to find electric current density <script type="math/tex">j</script>. Each electron with charge <script type="math/tex">-e</script> and velocity <script type="math/tex">\mathbf{v}</script> carries current <script type="math/tex">-e\mathbf{v}</script>. Therefore, if the electron density is <script type="math/tex">n</script>, the <em>average</em> current they carry is <script type="math/tex">-ne⟨\mathbf{v}⟩</script>. Thus, our goal shifts to compute the <em>average</em> velocity. Underpinning this calculation is idea that although it is difficult to calculate the motion of an individual electron, computing the average motion of the electrons is a much more tractable task.</p>
 <p>For convenience from now on, we will omit the average brackets, and write <script type="math/tex">\mathbf{v}</script> instead of <script type="math/tex">⟨\mathbf{v}⟩</script>.
@@ -892,7 +897,7 @@ To find the average velocity, we take a weighted average of these two groups of 
 \begin{aligned}
 m\mathbf{v}(t+dt)  &= [m\mathbf{v}(t) + F dt]\left(1 - \frac{dt}{\tau}\right) + 0⋅\frac{dt}{\tau} \\
   &= [m\mathbf{v}(t) + \mathbf{F} dt] \left(1 - \frac{dt}{\tau}\right) \\
-                  &= m\mathbf{v}(t) + dt [\mathbf{F} - m\frac{\mathbf{v(t)}}{\tau}] - \frac{\mathbf{F}}{\tau} dt^2
+                  &= m\mathbf{v}(t) + dt \left[\mathbf{F} - m\frac{\mathbf{v(t)}}{\tau}\right] - \frac{\mathbf{F}}{\tau} dt^2
 \end{aligned}
 </script>
 We now neglect the term proportional to <script type="math/tex">dt²</script> (it vanishes when <script type="math/tex">dt → 0</script>).
@@ -924,7 +929,7 @@ Observe that the first term on the right-hand side has the same form as a drag f
 <p>such that <script type="math/tex">ρ=1/\sigma</script>.</p>
 <h3 id="the-hall-effect">The Hall effect<a class="headerlink" href="#the-hall-effect" title="Permanent link">&para;</a></h3>
 <p>Let us now consider the case where both and electric field <script type="math/tex">\mathbf{E}</script> and magnetic field <script type="math/tex">\mathbf{B}</script> are non-zero. Imagine a conductor with a current <script type="math/tex">I</script> flowing perpendicular to an external magnetic field <script type="math/tex">\mathbf{B}</script> as shown below:</p>
-<p><img alt="" src="../images/03_Hall-effect.jpg" /></p>
+<p><img alt="" src="../images/03_Hall-effect.png" /></p>
 <p>Looking at the equations of motion:</p>
 <p>
 <script type="math/tex; mode=display">
@@ -953,7 +958,7 @@ m\frac{d\mathbf{v}}{dt} = -m\frac{\mathbf{v}}{τ} - e(\mathbf{E} + \mathbf{v}\ti
 </p>
 <p>where <script type="math/tex">R_H=-1/ne</script> is the <em>Hall coefficient</em>. So by measuring the Hall voltage and knowing the electron charge, we can determine the density of free electrons in a material.</p>
 <p>While most materials have <script type="math/tex">R_\mathrm{H}<0</script>, interestingly some materials are found to have <script type="math/tex">R_\mathrm{H}>0</script>.</p>
-<details class="question"><summary>What would be the implications of a negative hall coefficient?</summary><p>With the density is negative, or that the charge carrier has a positive charge and thus not an electron.</p>
+<details class="question"><summary>3.1 What would be the implications of a negative hall coefficient?</summary><p>With the density is negative, or that the charge carrier has a positive charge and thus not an electron.</p>
 </details>
 <h3 id="thermal-transport">Thermal transport<a class="headerlink" href="#thermal-transport" title="Permanent link">&para;</a></h3>
 <p>Given that Drude had cobbled together a kinetic theory for electrons, he decided that it was worthwhile to keep going, and make predictions about the properties of the "gas" in the same way as Boltzmann.</p>
