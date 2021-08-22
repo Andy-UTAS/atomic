@@ -42,16 +42,16 @@ A rough outline of the course is as follows:
 
 with approximately one week devoted to each topic, but with the natural ebb and flow ultimately dictating the timeline.
 
-??? abstract "_Content download_"
+??? abstract "_Content download_: table of contents"
 
     A brief summary of the topics discussed in the _content download_ sessions is shown below:
 
     | Video       | Topic(s) discussed                   |
     | ----------- | ------------------------------------ |
-    | w0v1        | An introduction to solid-state physics |
-    | w1v1        | The Einstein model of solids  |
-    | w1v2        | The Debye model of solids  |
-    | w1v3        | The Drude model of metals |
+    | [w0v01](https://echo360.net.au/media/869c549b-1931-4270-b435-943f3b155385/public) | An introduction to solid-state physics |
+    | [w1v01](https://echo360.net.au/media/54d72d00-5a24-49a3-bbc4-babd903c46c9/public) | The Einstein model of solids  |
+    | [w1v2](https://echo360.net.au/media/e2bdac93-c9a4-4839-a691-dc9af24ee1b8/public) | The Debye model of solids  |
+    | [w1v3](https://echo360.net.au/media/7253bad5-f5e9-4540-8fb5-8e693fddf613/public) | The Drude model of metals |
     | w2v1        | The Sommerfeld free-electron model |
     | w2v2        | Chemistry 101 |
 

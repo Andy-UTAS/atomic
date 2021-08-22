@@ -1,8 +1,8 @@
 # The tight binding model
 
-!!! danger  "Unbaked"
+!!! warning  "Cooking in progress"
 
-    The content here is still very much under development. Please come back soon!
+    The content here is actively being developed; anything before this massage is "safe" and after this is "unsafe".
 
 ## Introduction
 

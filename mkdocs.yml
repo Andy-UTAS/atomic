@@ -14,11 +14,20 @@ nav:
       - 'The tight binding model': 06tightbinding.md
       - 'The diatomic chain': 07diatomic.md
     - 'The geometry of solids':
-      - 'Empty content': placeholder.md
+      - 'Crystal structure': placeholder.md
+      - 'Diffraction': placeholder.md
     - 'Electrons in solids':
+      - 'Bloch theorem': placeholder.md
+      - 'Band structure': placeholder.md
+    - Semiconductors:
+      - 'Semiconductors 101': placeholder.md
+      - 'Doping and devices': placeholder.md
+    - Magnetism:
       - 'Empty content': placeholder.md
-    - 'Magnetism':
-      - 'Empty content': placeholder.md
+    - Cool stuff:
+      - 'Topological insulators': placeholder.md
+      - 'Superconductors': placeholder.md
+      - 'Quantum simulators': placeholder.md
     - Additional resources: additional.md
 
 theme:
