@@ -325,11 +325,11 @@ The question that one must ask: was it worth it? Well, let's look at the Debye m
 ## Conclusions
 
 1. The Debye model assumes that atoms in materials move in a collective fashion, described by quantized normal modes with a dispersion relation $\omega = v_s|\mathbf{k}|$.
-2. The phonon modes have a constant density of $(L/2\pi)^3$ in the reciprocal / $k$-space.
+2. The oscillation modes have a constant density of $(L/2\pi)^3$ in the reciprocal / $k$-space.
 3. The total energy and heat capacity are obtained by integrating the contribution of the individual modes over $k$-space.
 4. The density of states $g(\omega)$ is the number of states per frequency. With a dispersion relation $ω = v_s|\mathbf{k}|$, $g(\omega)$ is proportional to $\omega^2$ for a 3D bosonic system.
-5. At low temperatures the phonon heat capacity is proportional to $T^3$.
-6. Phonon modes only exist up until the Debye frequency $\omega_D$, after which there are no modes in the system.
+5. At low temperatures the heat capacity due to oscillations is proportional to $T^3$.
+6. Modes of oscillation exist only up until the Debye frequency $\omega_D$, after which there are no modes in the system.
 
 ---
 
@@ -345,21 +345,16 @@ What is the material-dependent parameter that plays a similar role in the Debye 
 4. Derive an expression for the shortest possible wavelength in the Debye model it in terms of the interatomic distance $a$.
 Hint: assume that the number of atoms is given by $N=V/a^3$. Discuss if the answer is reasonable.
 
-### Exercise 1: Debye model: concepts
+### Exercise 1: Debye model - concepts
 
 Consider the probability to find an atom of a 1D solid that originally had a position $x$ at a displacement $\delta x$ shown below:
 
 ![](../images/02_Debye_ex1.svg)
 
   1. Describe which $k$-states are occupied. Explain your answer.
-
-??? hint
-
-    There are two $k$-states which contain a phonon.
-
   2. Describe the concept of $k$-space. What momenta are allowed in a 2D system with dimensions $L\times L$?
   3. Explain the concept of density of states.
-  4. Calculate the phonon density of states $g(\omega)$ of a 3D, 2D and 1D solid with linear dispersion $\omega=v_s|\mathbf{k}|$.
+  4. Calculate the density of states $g(\omega)$ for oscillations of a 3D, 2D and 1D solid with linear dispersion $\omega=v_s|\mathbf{k}|$.
 
 ###  Exercise 2: Debye model in 2D
 
@@ -367,14 +362,13 @@ Consider the probability to find an atom of a 1D solid that originally had a pos
 2. Determine the energy of a two-dimensional solid as a function of $T$ using the Debye approximation.
 You do not have to solve the integral.
 3. Calculate the heat capacity in the high $T$ limit.
-4. At low $T$, show that $C_V=KT^{n}$. Find $n$. Express $K$ as an indefinite integral (similarly to what done during the lecture)[^3].
+4. At low $T$, show that $C_V=KT^{n}$. Find $n$. Express $K$ as an indefinite integral (similarly to what done during the lecture).
 
 
-###  Exercise 3: Different phonon modes
-*(adapted from ex 2.6a of "The Oxford Solid State Basics" by S.Simon)*
+###  Exercise 3: Different oscillation modes
+*(adapted from exercise 2.6a of [The Oxford Solid State Basics](https://global.oup.com/academic/product/the-oxford-solid-state-basics-9780199680771?cc=au&lang=en&))*
 
-During the lecture we derived the low-temperature heat capacity assuming that all the phonons have the same sound velocity $v$.
-In reality the longitudinal and transverse modes have different sound velocities (see [Wikipedia](https://en.wikipedia.org/wiki/Sound#Longitudinal_and_transverse_waves) for an illustration of different sound wave types).
+During the lecture we derived the low-temperature heat capacity assuming that all the modes of oscillation have the same sound velocity $v$. In reality, the longitudinal and transverse modes have different sound velocities (see [Wikipedia](https://en.wikipedia.org/wiki/Sound#Longitudinal_and_transverse_waves) for an illustration of different sound wave types).
 
 Assume that there are two types of excitations:
 
@@ -382,12 +376,12 @@ Assume that there are two types of excitations:
 * Two transverse modes with $\omega = v_\bot |k|$
 
 <!-- Separate a bullet list from enumeration; fixes a markdown rendering bug -->
-1. Write down the total energy of phonons in this material *(hint: use the same reasoning as in the [Lithium exercise](../01specificheatI/#exercise-1-total-heat-capacity-of-a-diatomic-material))*.
+1. Write down the total energy of oscillations in this material.
 2. Verify that at high $T$ you reproduce the Dulong-Petit law.
-3. Compute the behavior of heat capacity at low $T$.
+3. Compute the behaviour of heat capacity at low $T$.
 
 ### Exercise 4: Anisotropic sound velocities
-*(adapted from ex 2.6b of "The Oxford Solid State Basics" by S.Simon)*
+*(adapted from exercise 2.6b of [The Oxford Solid State Basics](https://global.oup.com/academic/product/the-oxford-solid-state-basics-9780199680771?cc=au&lang=en&))*
 
 Suppose now that the velocity is anisotropic ($v_x \neq v_y \neq v_z$) and $\omega = \sqrt{v_x^2 k_x^2 + v_y^2 k_y^2 + v_z^2 k_z^2}$. How does this change the Debye result for the heat capacity?
 

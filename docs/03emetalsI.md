@@ -272,7 +272,7 @@ Consider an electron in free space experiencing a magnetic field $\mathbf{B}$ al
   1. Calculate the Drude scattering time $τ$ at room temperature.
   2. Assuming that electrons move with the thermal velocity $\langle v \rangle = \sqrt{\frac{8k_BT}{\pi m}}$, calculate the electron mean free path $\lambda$, defined as the average distance an electron travels in between scattering events.
   3. The Drude model assumes that $\lambda$ is independent of temperature. How does the electrical resistivity $ρ$ depend on temperature under this assumption? Sketch $ρ(T)$.
-  5. Compare your sketch of $ρ(T)$ with that in the lecture notes. In what respect do they differ? Discuss possible reasons for differences.
+  5. The empirical observation known as Matthiessen's Rule states that $ρ(T) \propto T$. Discuss this result with reference to your answer above.
 
 ### Exercise 4: The Hall conductivity matrix and the Hall coefficient
 We apply a magnetic field $\bf B$ along the $z$-direction to a current carrying 2D sample in the xy plane. In this situation, the electric field $\mathbf{E}$ is related to the current density $\mathbf{j}$ by the resistivity matrix:

@@ -5,7 +5,7 @@
 ### Preliminary provocations
 
   1. $C = 2k_B$.
-  2. ![](/images/01_Ex_0_2.svg)
+  2. ![](../images/01_Ex_0_2.svg)
 
 ### Exercise 1: Total heat capacity of a diatomic material
   1. Use the formula $\omega = \sqrt{\frac{k}{m}}$.
@@ -28,24 +28,26 @@
   C = \frac{N_{^6Li}}{N}C_{^6Li} + \frac{N_{^7Li}}{N}C_{^7Li},
   $$
 
+---
+
 ## Solutions for _The specific heat of solids II_ exercises
 
 ### Preliminary provocations
   1. The polarization is related to the direction of the amplitudes of the waves with respect to the direction of the wave.
   In 3D, there are only 3 different amplitude directions possible.
-  2.
-  $$
-  \int k_x k_y \rightarrow \int_{0}^{2\pi} \mathrm{d} \theta \int_{0}^{\infty} k \mathrm{d} k = 2\pi \int_{0}^{\infty} k \mathrm{d} k
-  $$
+  2. One can convert the integral as follows:
+    $$
+    \int k_x k_y \rightarrow \int_{0}^{2\pi} \mathrm{d} \theta \int_{0}^{\infty} k \mathrm{d} k = 2\pi \int_{0}^{\infty} k \mathrm{d} k
+    $$
   3. The Debye frequency $\omega_D$.
-  4. The wavelength is of the order of the interatomic spacing:
+  4. From the definition of the Debye frequency, one can calculate that the wavelength is of the order of the interatomic spacing:
   $$
   \lambda = (\frac{4}{3}\pi)^{1/3} a.
   $$
 
-### Exercise 1: Debye model: concepts.
+### Exercise 1: Debye model - concepts.
 
-  1. $k = \frac{4\pi}{L}$ and $k = -\frac{4\pi}{L}$.  
+  1. It is clear that $n=4$, and thus $k = \frac{2 \pi n}{L} = \pm \frac{4\pi}{L}$.  
   2.
   3. The number of states per $k$ or per frequency.
   4.
@@ -72,7 +74,7 @@
   3. High temperature implies $\beta \rightarrow 0$, hence $E = \frac{L^2}{\pi v^2\hbar^2\beta^3}\frac{(\beta\hbar\omega_D)^2}{2} + C$, and then $C = \frac{k_BL^2\omega^2_D}{2\pi v^2} = 2Nk_B$. We've used the value for $\omega_D$ calculated from $2N = \int_{0}^{\omega_D}g(\omega)d\omega$.
   4. In the low temperature limit we have that $\beta \rightarrow \infty$, hence $E \approx \frac{L^2}{\pi v^2\hbar^2\beta^3}\int_{0}^{\infty}\frac{x^2}{e^{x} - 1}dx + C = \frac{2\zeta(3)L^2}{\pi v^2\hbar^2\beta^3} + C$. Finally $C = \frac{6\zeta(3)k^3_BL^2}{\pi v^2\hbar^2}T^2$. We used the fact that $\int_{0}^{\infty}\frac{x^2}{e^{x} - 1}dx = 2\zeta(3)$ where $\zeta$ is the Riemann zeta function.
 
-###  Exercise 3: Different phonon modes.
+###  Exercise 3: Different oscillation modes.
 
   1. $$
   g(\omega) = \sum_{\text{polarizations}}\frac{dN}{dk}\frac{dk}{d\omega} = \left(\frac{L}{2\pi}\right)^3\sum_{\text{polarizations}}4\pi k^2\frac{dk}{d\omega} = \frac{L^3}{2\pi^2}\left(\frac{2}{v_\perp^3} + \frac{1}{v_\parallel^3}\right)\omega^2
@@ -87,7 +89,10 @@
 ### Exercise 4: Anisotropic sound velocities.
 
   $$
-  E = 3\left(\frac{L}{2\pi}\right)^3\int d^3k\hbar\omega(\mathbf{k})\left(n_B(\beta\hbar\omega(\mathbf{k})) + \frac{1}{2}\right) = 3\left(\frac{L}{2\pi}\right)^3\frac{1}{v_xv_yv_z}\int d^3\kappa\frac{\hbar\kappa}{e^{\beta\hbar\kappa} - 1} + C,
+  \begin{align}
+  E & = 3\left(\frac{L}{2\pi}\right)^3\int d^3k\hbar\omega(\mathbf{k})\left(n_B(\beta\hbar\omega(\mathbf{k})) + \frac{1}{2}\right) \\
+  & = 3\left(\frac{L}{2\pi}\right)^3\frac{1}{v_xv_yv_z}\int d^3\kappa\frac{\hbar\kappa}{e^{\beta\hbar\kappa} - 1} + C,
+  \end{align}
   $$
 
   where we used the substitutions $\kappa_x = k_xv_x,\kappa_y = k_yv_y, \kappa_z = k_zv_z$. Finally
@@ -98,24 +103,42 @@
 
   hence $C = \frac{\partial E}{\partial T} = \frac{6k_B^4L^3T^3}{\pi^2\hbar^3}\frac{1}{v_xv_yv_z}\int_0^{\beta\hbar\kappa_D} dx\frac{x^3}{e^{x} - 1}$. We see that the result is similar to the one with the linear dispersion, the only difference is the factor $1/v_xv_yv_z$ instead of $1/v^3$.
 
+---
+
 ## Solutions for _Electrons in metals I_ exercises
+
+### Preliminary provocations
+
+  1. How does the resistance of a purely 2D material depend on its size?
+  2. Check that the units of mobility and the Hall coefficient are correct.  
+     (As you should always do!)
+  3. Explain why the scattering times due to different types of scattering events add up in a reciprocal way.
 
 ### Exercise 1: Extracting quantities from basic Hall measurements
 
-  1. Hall voltage is measured across the sample width. Hence,
+We apply a magnetic field $\bf B$ along the $z$-direction to a planar (two-dimensional) sample that sits in the $xy$ plane. The sample has width $W$ in the $y$-direction, length $L$ in the $x$-direction and we apply a current $I$ along the $x$-direction.
 
-    $$
-    V_H = -\int_{0}^{W} E_ydy
-    $$
+??? question "What is the relation between the electric field and the electric potential?"
+    $V_b - V_a = -\int_{\Gamma} \mathbf{E} \cdot d\mathbf{\ell}$ if $\Gamma$ is a path from $a$ to $b$.
 
-    where $E_y = -v_xB$.
+  1. Suppose we measure a Hall voltage $V_H$. Express the Hall resistance $R_{xy} = V_H/I$ as a function of magnetic field. Does $R_{xy}$ depend on the geometry of the sample? Also express $R_{xy}$ in terms of the Hall coefficient $R_H$.
 
-    $R_{xy}$ = $-\frac{B}{ne}$, so it does not depend on the sample geometry.
+  Hall voltage is measured across the sample width. Hence,
 
+  $$
+  V_H = -\int_{0}^{W} E_ydy
+  $$
 
-  2. If hall resistance and magnetic field are known, the charge density is calculated from $R_{xy} = -\frac{B}{ne}$. As $V_x = -\frac{I_x}{ne}B$, a stronger field makes Hall voltages easier to measure.
+  where $E_y = -v_xB$.
 
-  3.
+  $R_{xy}$ = $-\frac{B}{ne}$, so it does not depend on the sample geometry.
+
+  2. Assuming we control the magnetic field $\mathbf{B}$, what quantity can we extract from a measurement of the Hall resistance? Would a large or a small magnetic field give a Hall voltage that is easier to measure?
+
+    If hall resistance and magnetic field are known, the charge density is calculated from $R_{xy} = -\frac{B}{ne}$. As $V_x = -\frac{I_x}{ne}B$, a stronger field makes Hall voltages easier to measure.
+
+  3. Express the longitudinal resistance $R=V/I$, where $V$ is the voltage difference over the sample along the $x$ direction, in terms of the longitudinal resistivity $ρ_{xx}$. Suppose we extracted $n$ from a measurement of the Hall resistance, what quantity can we extract from a measurement of the longitudinal resistance? Does the result depend on the geometry of the sample?
+
   $$
   R_{xx} = \frac{\rho_{xx}L}{W}
   $$
