@@ -381,7 +381,7 @@
         
           <li class="md-nav__item">
   <a href="#exercise-1-debye-model-concepts" class="md-nav__link">
-    Exercise 1: Debye model: concepts
+    Exercise 1: Debye model - concepts
   </a>
   
 </li>
@@ -394,8 +394,8 @@
 </li>
         
           <li class="md-nav__item">
-  <a href="#exercise-3-different-phonon-modes" class="md-nav__link">
-    Exercise 3: Different phonon modes
+  <a href="#exercise-3-different-oscillation-modes" class="md-nav__link">
+    Exercise 3: Different oscillation modes
   </a>
   
 </li>
@@ -908,7 +908,7 @@
         
           <li class="md-nav__item">
   <a href="#exercise-1-debye-model-concepts" class="md-nav__link">
-    Exercise 1: Debye model: concepts
+    Exercise 1: Debye model - concepts
   </a>
   
 </li>
@@ -921,8 +921,8 @@
 </li>
         
           <li class="md-nav__item">
-  <a href="#exercise-3-different-phonon-modes" class="md-nav__link">
-    Exercise 3: Different phonon modes
+  <a href="#exercise-3-different-oscillation-modes" class="md-nav__link">
+    Exercise 3: Different oscillation modes
   </a>
   
 </li>
@@ -1244,11 +1244,11 @@ n_{\textrm{B}}(\beta\hbar\omega) = \frac{1}{\exp(\beta\hbar\omega)-1} \to \frac{
 <h2 id="conclusions">Conclusions<a class="headerlink" href="#conclusions" title="Permanent link">&para;</a></h2>
 <ol>
 <li>The Debye model assumes that atoms in materials move in a collective fashion, described by quantized normal modes with a dispersion relation <script type="math/tex">\omega = v_s|\mathbf{k}|</script>.</li>
-<li>The phonon modes have a constant density of <script type="math/tex">(L/2\pi)^3</script> in the reciprocal / <script type="math/tex">k</script>-space.</li>
+<li>The oscillation modes have a constant density of <script type="math/tex">(L/2\pi)^3</script> in the reciprocal / <script type="math/tex">k</script>-space.</li>
 <li>The total energy and heat capacity are obtained by integrating the contribution of the individual modes over <script type="math/tex">k</script>-space.</li>
 <li>The density of states <script type="math/tex">g(\omega)</script> is the number of states per frequency. With a dispersion relation <script type="math/tex">ω = v_s|\mathbf{k}|</script>, <script type="math/tex">g(\omega)</script> is proportional to <script type="math/tex">\omega^2</script> for a 3D bosonic system.</li>
-<li>At low temperatures the phonon heat capacity is proportional to <script type="math/tex">T^3</script>.</li>
-<li>Phonon modes only exist up until the Debye frequency <script type="math/tex">\omega_D</script>, after which there are no modes in the system.</li>
+<li>At low temperatures the heat capacity due to oscillations is proportional to <script type="math/tex">T^3</script>.</li>
+<li>Modes of oscillation exist only up until the Debye frequency <script type="math/tex">\omega_D</script>, after which there are no modes in the system.</li>
 </ol>
 <hr />
 <h2 id="exercises">Exercises<a class="headerlink" href="#exercises" title="Permanent link">&para;</a></h2>
@@ -1262,18 +1262,14 @@ What is the material-dependent parameter that plays a similar role in the Debye 
 <li>Derive an expression for the shortest possible wavelength in the Debye model it in terms of the interatomic distance <script type="math/tex">a</script>.
 Hint: assume that the number of atoms is given by <script type="math/tex">N=V/a^3</script>. Discuss if the answer is reasonable.</li>
 </ol>
-<h3 id="exercise-1-debye-model-concepts">Exercise 1: Debye model: concepts<a class="headerlink" href="#exercise-1-debye-model-concepts" title="Permanent link">&para;</a></h3>
+<h3 id="exercise-1-debye-model-concepts">Exercise 1: Debye model - concepts<a class="headerlink" href="#exercise-1-debye-model-concepts" title="Permanent link">&para;</a></h3>
 <p>Consider the probability to find an atom of a 1D solid that originally had a position <script type="math/tex">x</script> at a displacement <script type="math/tex">\delta x</script> shown below:</p>
 <p><img alt="" src="../images/02_Debye_ex1.svg" /></p>
 <ol>
 <li>Describe which <script type="math/tex">k</script>-states are occupied. Explain your answer.</li>
-</ol>
-<details class="hint"><summary>Hint</summary><p>There are two <script type="math/tex">k</script>-states which contain a phonon.</p>
-</details>
-<ol>
 <li>Describe the concept of <script type="math/tex">k</script>-space. What momenta are allowed in a 2D system with dimensions <script type="math/tex">L\times L</script>?</li>
 <li>Explain the concept of density of states.</li>
-<li>Calculate the phonon density of states <script type="math/tex">g(\omega)</script> of a 3D, 2D and 1D solid with linear dispersion <script type="math/tex">\omega=v_s|\mathbf{k}|</script>.</li>
+<li>Calculate the density of states <script type="math/tex">g(\omega)</script> for oscillations of a 3D, 2D and 1D solid with linear dispersion <script type="math/tex">\omega=v_s|\mathbf{k}|</script>.</li>
 </ol>
 <h3 id="exercise-2-debye-model-in-2d">Exercise 2: Debye model in 2D<a class="headerlink" href="#exercise-2-debye-model-in-2d" title="Permanent link">&para;</a></h3>
 <ol>
@@ -1281,12 +1277,11 @@ Hint: assume that the number of atoms is given by <script type="math/tex">N=V/a^
 <li>Determine the energy of a two-dimensional solid as a function of <script type="math/tex">T</script> using the Debye approximation.
 You do not have to solve the integral.</li>
 <li>Calculate the heat capacity in the high <script type="math/tex">T</script> limit.</li>
-<li>At low <script type="math/tex">T</script>, show that <script type="math/tex">C_V=KT^{n}</script>. Find <script type="math/tex">n</script>. Express <script type="math/tex">K</script> as an indefinite integral (similarly to what done during the lecture)[^3].</li>
+<li>At low <script type="math/tex">T</script>, show that <script type="math/tex">C_V=KT^{n}</script>. Find <script type="math/tex">n</script>. Express <script type="math/tex">K</script> as an indefinite integral (similarly to what done during the lecture).</li>
 </ol>
-<h3 id="exercise-3-different-phonon-modes">Exercise 3: Different phonon modes<a class="headerlink" href="#exercise-3-different-phonon-modes" title="Permanent link">&para;</a></h3>
-<p><em>(adapted from ex 2.6a of "The Oxford Solid State Basics" by S.Simon)</em></p>
-<p>During the lecture we derived the low-temperature heat capacity assuming that all the phonons have the same sound velocity <script type="math/tex">v</script>.
-In reality the longitudinal and transverse modes have different sound velocities (see <a href="https://en.wikipedia.org/wiki/Sound#Longitudinal_and_transverse_waves">Wikipedia</a> for an illustration of different sound wave types).</p>
+<h3 id="exercise-3-different-oscillation-modes">Exercise 3: Different oscillation modes<a class="headerlink" href="#exercise-3-different-oscillation-modes" title="Permanent link">&para;</a></h3>
+<p><em>(adapted from exercise 2.6a of <a href="https://global.oup.com/academic/product/the-oxford-solid-state-basics-9780199680771?cc=au&amp;lang=en&amp;">The Oxford Solid State Basics</a>)</em></p>
+<p>During the lecture we derived the low-temperature heat capacity assuming that all the modes of oscillation have the same sound velocity <script type="math/tex">v</script>. In reality, the longitudinal and transverse modes have different sound velocities (see <a href="https://en.wikipedia.org/wiki/Sound#Longitudinal_and_transverse_waves">Wikipedia</a> for an illustration of different sound wave types).</p>
 <p>Assume that there are two types of excitations:</p>
 <ul>
 <li>One longitudinal mode with <script type="math/tex">\omega = v_\parallel |k|</script>
@@ -1296,12 +1291,12 @@ In reality the longitudinal and transverse modes have different sound velocities
 </ul>
 <!-- Separate a bullet list from enumeration; fixes a markdown rendering bug -->
 <ol>
-<li>Write down the total energy of phonons in this material <em>(hint: use the same reasoning as in the <a href="../01specificheatI/#exercise-1-total-heat-capacity-of-a-diatomic-material">Lithium exercise</a>)</em>.</li>
+<li>Write down the total energy of oscillations in this material.</li>
 <li>Verify that at high <script type="math/tex">T</script> you reproduce the Dulong-Petit law.</li>
-<li>Compute the behavior of heat capacity at low <script type="math/tex">T</script>.</li>
+<li>Compute the behaviour of heat capacity at low <script type="math/tex">T</script>.</li>
 </ol>
 <h3 id="exercise-4-anisotropic-sound-velocities">Exercise 4: Anisotropic sound velocities<a class="headerlink" href="#exercise-4-anisotropic-sound-velocities" title="Permanent link">&para;</a></h3>
-<p><em>(adapted from ex 2.6b of "The Oxford Solid State Basics" by S.Simon)</em></p>
+<p><em>(adapted from exercise 2.6b of <a href="https://global.oup.com/academic/product/the-oxford-solid-state-basics-9780199680771?cc=au&amp;lang=en&amp;">The Oxford Solid State Basics</a>)</em></p>
 <p>Suppose now that the velocity is anisotropic (<script type="math/tex">v_x \neq v_y \neq v_z</script>) and <script type="math/tex">\omega = \sqrt{v_x^2 k_x^2 + v_y^2 k_y^2 + v_z^2 k_z^2}</script>. How does this change the Debye result for the heat capacity?</p>
 <details class="hint"><summary>Hint</summary><p>Write down the total energy as an integral over <script type="math/tex">k</script>, then change the integration variables so that the spherical symmetry of the integrand is restored.</p>
 </details>
