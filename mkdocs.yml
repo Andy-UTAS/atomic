@@ -4,27 +4,28 @@ site_url: https://andy-utas.github.io/
 nav:
     - Home: index.md
     - Course particulars: particulars.md
-    - 'An introduction to solid-state physics':
-      - 'The specific heat of solids I': 01specificheatI.md
-      - 'The specific heat of solids II': 02specificheatII.md
-      - 'Electrons in metals I': 03emetalsI.md
-      - 'Electrons in metals II': 04emetalsII.md
-    - Chemistry 101: 05chemistry.md
-    - 'One-dimensional solids':
-      - 'The tight binding model': 06tightbinding.md
-      - 'The diatomic chain': 07diatomic.md
-    - 'The geometry of solids':
+    - '1: An introduction to solid-state physics':
+      - '1.1: The specific heat of solids I': 1-intoduction/1-1-specificheatI.md
+      - '1.2: The specific heat of solids II': 1-intoduction/1-2-specificheatII.md
+      - '1.3: Electrons in metals I': 1-intoduction/1-3-emetalsI.md
+      - '1.4: Electrons in metals II': 1-intoduction/1-4-emetalsII.md
+    - '2: Chemistry 101': 2-chemistry/2-1-chemistry.md
+    - '3: One-dimensional solids':
+      - '3.1: Vibrations': 3-1d/3-1-vibrations.md
+      - '3.2: The tight binding model': placeholder.md # 3-1d/3-2-tightbinding.md
+      - '3.3: The diatomic chain': placeholder.md # 3-1d/3-3-diatomic.md
+    - '4: The geometry of solids':
       - 'Crystal structure': placeholder.md
       - 'Diffraction': placeholder.md
-    - 'Electrons in solids':
+    - '5: Electrons in solids':
       - 'Bloch theorem': placeholder.md
       - 'Band structure': placeholder.md
-    - Semiconductors:
+    - '6: Semiconductors':
       - 'Semiconductors 101': placeholder.md
       - 'Doping and devices': placeholder.md
-    - Magnetism:
+    - '7: Magnetism':
       - 'Empty content': placeholder.md
-    - Cool stuff:
+    - '8: Cool stuff':
       - 'Topological insulators': placeholder.md
       - 'Superconductors': placeholder.md
       - 'Quantum simulators': placeholder.md
