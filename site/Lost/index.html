@@ -361,8 +361,8 @@
   
   
     <li class="md-nav__item">
-      <a href="../placeholder/" class="md-nav__link">
-        3.2: The tight binding model
+      <a href="../3-1d/3-2-diatomic/" class="md-nav__link">
+        3.2: The diatomic chain
       </a>
     </li>
   
@@ -374,7 +374,7 @@
   
     <li class="md-nav__item">
       <a href="../placeholder/" class="md-nav__link">
-        3.3: The diatomic chain
+        3.3: The tight binding model
       </a>
     </li>
   
@@ -783,6 +783,13 @@
           <li class="md-nav__item">
   <a href="#exercise-1-linear-triatomic-molecule" class="md-nav__link">
     Exercise 1: Linear triatomic molecule
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#exercise-2-the-peierls-transition" class="md-nav__link">
+    Exercise 2: the Peierls transition
   </a>
   
 </li>
@@ -1319,6 +1326,32 @@ The nature of this deviation is the subject of the next lecture!</p>
 </ol>
 <details class="hint"><summary>Hint</summary><p>Compare your answers with <a href="https://en.wikipedia.org/wiki/Triatomic_molecule">Wikipedia</a>.</p>
 </details>
+<hr />
+<p>From Diatomic solids</p>
+<h3 id="exercise-2-the-peierls-transition">Exercise 2: the Peierls transition<a class="headerlink" href="#exercise-2-the-peierls-transition" title="Permanent link">&para;</a></h3>
+<p>In the previous lecture, we have derived the electronic band structure of an 1D, equally spaced atomic chain. Such chains, however, are in fact not stable and the equal spacing will be distorted. This is also known as the <a href="https://en.wikipedia.org/wiki/Peierls_transition">Peierls transition</a>.</p>
+<p>The spacing of the distorted chain alternates between two different distances and this also causes the hopping energy to alternate between <script type="math/tex">t_1</script> and <script type="math/tex">t_2</script>. We further set the onsite energies of the atoms to <script type="math/tex">\epsilon</script>. The situation is depicted in the figure below.</p>
+<p><img alt="" src="figures/peierls_transition.svg" /></p>
+<p>Due to the alternating hopping energies, we must treat two consecutive atoms as two different orbitals (<script type="math/tex">|n,1⟩</script> and <script type="math/tex">|n,2 ⟩</script> in the figure) from the same unit cell. The corresponding <abbr title="Linear Combination of Atomic Orbitals">LCAO</abbr> of this chain is given by
+<script type="math/tex; mode=display">
+\left|\Psi \right\rangle = \sum_n \left(\phi_n \left| n,1 \right\rangle + \psi_n \left| n,2 \right\rangle\right)
+</script>
+As usual, we assume that all these atomic orbitals are orthogonal to each other.</p>
+<ol>
+<li>Indicate the length of the unit cell <script type="math/tex">a</script> in the figure.</li>
+<li>
+<p>Using the Schrödinger equation, write the equations of motion of the electrons.</p>
+<details class="hint"><summary>Hint</summary><p>To this end, find expressions for <script type="math/tex">E \left< n,1 \vert \Psi \right> = \left< n,1 \right| H \left|\Psi \right></script> and <script type="math/tex">E \left< n,2 \vert \Psi \right> = \left< n,2 \right| H \left|\Psi \right></script>.</p>
+</details>
+</li>
+<li>
+<p>Using the trial solutions <script type="math/tex">\phi_n = \phi_0 e^{ikna}</script> and <script type="math/tex">\psi_n = \psi_0 e^{ikna}</script>, show that the Schödinger equation can be written in matrix form: <script type="math/tex; mode=display">\begin{pmatrix} \epsilon & t_1 + t_2 e^{-i k a} \\  t_1 + t_2 e^{i k a}  & \epsilon \end{pmatrix} \begin{pmatrix} \phi_0 \\ \psi_0 \end{pmatrix} = E \begin{pmatrix} \phi_0 \\ \psi_0 \end{pmatrix}.</script>
+</p>
+</li>
+<li>Derive the dispersion relation of this Hamiltonian. Does it look like the figure of the band structure shown on the <a href="https://en.wikipedia.org/wiki/Peierls_transition#/media/File:Peierls_instability_after.jpg">Wikipedia page</a>? Does it reduce to the 1D, equally spaced atomic chain if <script type="math/tex">t_1 = t_2</script>?</li>
+<li>Find an expression of the group velocity <script type="math/tex">v(k)</script> and effective mass <script type="math/tex">m^*(k)</script> of both bands.</li>
+<li>Derive an expression for the density of states <script type="math/tex">g(E)</script> of the entire band structure and make a plot of it. Does your result makes sense when considering the band structure?</li>
+</ol>
 <hr />
 <h2 id="conclusions_1">Conclusions<a class="headerlink" href="#conclusions_1" title="Permanent link">&para;</a></h2>
 <hr />

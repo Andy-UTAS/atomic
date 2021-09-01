@@ -538,6 +538,35 @@ The nature of this deviation is the subject of the next lecture!
 
 ---
 
+
+From Diatomic solids
+
+### Exercise 2: the Peierls transition
+In the previous lecture, we have derived the electronic band structure of an 1D, equally spaced atomic chain. Such chains, however, are in fact not stable and the equal spacing will be distorted. This is also known as the [Peierls transition](https://en.wikipedia.org/wiki/Peierls_transition).
+
+The spacing of the distorted chain alternates between two different distances and this also causes the hopping energy to alternate between $t_1$ and $t_2$. We further set the onsite energies of the atoms to $\epsilon$. The situation is depicted in the figure below.
+
+![](figures/peierls_transition.svg)
+
+Due to the alternating hopping energies, we must treat two consecutive atoms as two different orbitals ($|n,1⟩$ and $|n,2 ⟩$ in the figure) from the same unit cell. The corresponding LCAO of this chain is given by
+$$
+\left|\Psi \right\rangle = \sum_n \left(\phi_n \left| n,1 \right\rangle + \psi_n \left| n,2 \right\rangle\right)
+$$
+As usual, we assume that all these atomic orbitals are orthogonal to each other.
+
+1. Indicate the length of the unit cell $a$ in the figure.
+2. Using the Schrödinger equation, write the equations of motion of the electrons.
+
+    ??? hint
+        To this end, find expressions for $E \left< n,1 \vert \Psi \right> = \left< n,1 \right| H \left|\Psi \right>$ and $E \left< n,2 \vert \Psi \right> = \left< n,2 \right| H \left|\Psi \right>$.
+
+3. Using the trial solutions $\phi_n = \phi_0 e^{ikna}$ and $\psi_n = \psi_0 e^{ikna}$, show that the Schödinger equation can be written in matrix form: $$\begin{pmatrix} \epsilon & t_1 + t_2 e^{-i k a} \\  t_1 + t_2 e^{i k a}  & \epsilon \end{pmatrix} \begin{pmatrix} \phi_0 \\ \psi_0 \end{pmatrix} = E \begin{pmatrix} \phi_0 \\ \psi_0 \end{pmatrix}.$$
+4. Derive the dispersion relation of this Hamiltonian. Does it look like the figure of the band structure shown on the [Wikipedia page](https://en.wikipedia.org/wiki/Peierls_transition#/media/File:Peierls_instability_after.jpg)? Does it reduce to the 1D, equally spaced atomic chain if $t_1 = t_2$?
+5. Find an expression of the group velocity $v(k)$ and effective mass $m^*(k)$ of both bands.
+6. Derive an expression for the density of states $g(E)$ of the entire band structure and make a plot of it. Does your result makes sense when considering the band structure?
+
+---
+
 ## Conclusions
 
 ---

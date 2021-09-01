@@ -24,7 +24,7 @@ it is the content in this, and the following sections, about which they are aski
 !!! info "Computational content"
 
     The Jupyter notebook associated with this section can be accessed by clicking the icon below:
-    [<i class="fab fa-python fa-5x"></i>](https://jove2021.cloud.edu.au/hub/user-redirect/git-pull?repo=https%3A%2F%2Fgithub.com%2FAndy-UTAS%2FSolid-state&urlpath=tree%2FSolid-state%2F06vibrations.ipynb&branch=master){ .md-button .md-button--primary class="text-center" style="margin-left: 45%"}
+    [<i class="fab fa-python fa-5x"></i>](https://jove2021.cloud.edu.au/hub/user-redirect/git-pull?repo=https%3A%2F%2Fgithub.com%2FAndy-UTAS%2FSolid-state&urlpath=tree%2FSolid-state%2F3-1-vibrations.ipynb&branch=master){ .md-button .md-button--primary class="text-center" style="margin-left: 45%"}
 
     A program used to visualise oscillations in one dimension (``chainplot`` as written by [Mike Glazer](https://www.amg122.com/programs/#xl_xr_page_index)) can be downloaded [here](http://www-thphys.physics.ox.ac.uk/people/SteveSimon/condmat2015/chainplot.zip)
 
@@ -254,7 +254,7 @@ $$
 and subsequently restricts the possible values of $k$:
 
 $$
-k = \frac{2\pi q}{N a} = \frac{2\pi q}{L} \textrm{ where } q \in \mathbb{Q}.
+k = \frac{2\pi q}{N a} = \frac{2\pi q}{L} \textrm{ where } q \in \mathbb{Z}.
 $$
 
 This is exactly as we saw with the [Debye model](1-intoduction\1-3-emetalsI.md), where the imposition of periodic boundary conditions discretised reciprocal space. There we saw that points were equally spaced with a separation of $2\pi/L$, which in this case is equivalent to $2\pi/Na$. Now, to count all the modes, we can simply compute the ration of the possible values of $k$ by the spacing between modes. As discussed above, we need only consider the Brillouin zone, as the modes are periodic in $k$ with a period of $2\pi/a$, therefore the number of modes is

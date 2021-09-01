@@ -1,317 +1,255 @@
 # The diatomic chain
 
-!!! danger  "Unbaked"
-
-    The content here is still very much under development. Please come back soon!
+Vibrations in one-dimension with extra pizzazz.
 
 ## Introduction
 
-![](../images/04_iron.jpg)
+![](images/3-2-chain.jpg)
 
-The kinetic theory of Drude was a great first step in trying to answer the question "metals, how do they work?", but it was clear from the outset that there were problems with the theory. But with the discovery of the Pauli exclusion principle, it seemed only logical that with the inclusion of _the_ fundamental property of the electrons, life would improve. Indeed it does...
+Modelling a solid as an [infinite one-dimensional chain of identical atoms](3-1d/3-1-vibrations.md) went a long way to
+
+  * Accurately predicting the observed behaviour of solids whilst both incorporating ideas from previous models, and reconciling many of their shortcomings
+  * Providing a microscopic picture of what is going on, both in a classical and quantum mechanical sense
+
+Unfortunately for us, not everything is an infinite 1D chain of the same atom. In order to make our model more realistic and more broadly applicable, we are going to make some changes: let's look at an infinite one-dimensional chain of identical _pairs_ of atoms.
 
 !!! danger  "Expected competencies"
 
     It is assumed that you have familiarity with the following concepts/techniques:
 
-    * Statistical mechanics: familiarity with Fermi-Dirac statistics
-    * Quantum mechanics: Wavefunction of a free (unbound) electron
+    * Mathematics: Eigenvalue equations
 
 !!! note  "Text reference"
-    The material covered here is discussed in section(s) $\S 4$ of [The Oxford Solid State Basics](https://global.oup.com/academic/product/the-oxford-solid-state-basics-9780199680771?cc=au&lang=en&)
+    The material covered here is discussed in section(s) $\S 10$ of [The Oxford Solid State Basics](https://global.oup.com/academic/product/the-oxford-solid-state-basics-9780199680771?cc=au&lang=en&)
 
 !!! info "Computational content"
 
     The Jupyter notebook associated with this section can be accessed by clicking the icon below:
-    [<i class="fab fa-python fa-5x"></i>](#){ .md-button .md-button--primary class="text-center" style="margin-left: 45%"}
+    [<i class="fab fa-python fa-5x"></i>](https://jove2021.cloud.edu.au/hub/user-redirect/git-pull?repo=https%3A%2F%2Fgithub.com%2FAndy-UTAS%2FSolid-state&urlpath=tree%2FSolid-state%2F3-2-diatomic.ipynb&branch=master){ .md-button .md-button--primary class="text-center" style="margin-left: 45%"}
+
+    A program used to visualise oscillations in one dimension (``chainplot`` as written by [Mike Glazer](https://www.amg122.com/programs/#xl_xr_page_index)) can be downloaded [here](http://www-thphys.physics.ox.ac.uk/people/SteveSimon/condmat2015/chainplot.zip)
 
 ---
 
-_(based on chapters 10-11 of the book)_
+## Expanding the circle of concern
 
-!!! success "Expected prior knowledge"
+In the [previous](3-1d/3-1-vibrations.md), we modelled vibrations in a solid using a one-dimensional homogeneous chain of atoms. The model gave us insight into the vibrational modes of a solid, and in the quantum mechanical case precipitated the identification of phonons, quanta of vibrations. To expand our model to include more solids, we shall consider a chain of atoms with two distinct particles, but the method we use here is applicable to the inclusion of more particles and interactions. In the case of a diatomic system, the masses of each of the constituent atoms can be different ($m_1$ and $m_2$), but as can the harmonic potential between the atoms ($\kappa_1$ and $\kappa_2$). Following the text, we are going to consider the case of identical masses but varying spring constants as the algebra is ever so slightly simpler, and the qualitative behaviour we are trying to observe is present in all cases. A schematic of the system in shown below:
 
-    Before the start of this lecture, you should be able to:
+![](images/3-2-diatomic-model.png)
 
-    - Write down equations of motion and the LCAO Hamiltonian (similar to the previous lectures)
-    - Solve an eigenvalue problem
+The first observation to make is that the repeated pattern, that is, the _unit cell_ is not longer just one atom, but rather to length which characterises the periodicity is now $2a$. We note that within this unit cell, there two degrees of freedom, namely the position of particle $x$ and particle $y$, which are distinguished by their relative location to harmonic potentials with force constants $\kappa_1$ and $\kappa_2$ as illustrated above. This is in contrast to the monatomic chain model, whereby there was one degree of freedom per unit cell.
 
-!!! summary "Learning goals"
+### Equations of motion
 
-    After this lecture you will be able to:
-
-    - formulate equations of motion for electrons or phonons in 1D, with multiple degrees of freedom per unit cell.
-    - solve these equations to arrive at the dispersion relation.
-    - derive the group velocity and density of states from the dispersion relation.
-    - explain what happens with the band structure when the periodicity of the lattice is increased or reduced.
-
-### More degrees of freedom per unit cell:
-In the last lecture, we modeled phonons through a 1D homogeneous chain of atoms.
-The model gave us insight into phonons and justified the crude approximations of the Debye model.
-Despite the model's usefulness, we are not always able to model problems as a *homogeneous* chain.
-Therefore, let us tackle a slightly more general problem.
-Consider a chain of atoms with two masses, $m_1$ and $m_2$.
-In our chain, an atom with mass $m_1$ is always followed by an atom of mass $m_2$ and vice versa.
-Similar to before, the atoms interact via a harmonic potential with spring constant $κ$.
-![](figures/phonons5.svg)
-
-In the last lecture, we solved the homogenous chain problem by identifying its high level of symmetry.
-However, the problem here is not as symmetric.
-We need to re-think and generalize our ansatz.
-
-First we identify a pattern that does repeat: an atom with mass $m_1$ followed by one with mass $m_2$.
-This is called a **unit cell** (the smallest repeated element of the system)
-
-We now label all degrees of freedom in a unit cell.
-The two atoms in a unit cell have displacements $u_{1,n}$ and $u_{2,n}$, where the first index specifies the atom number within the unit cell and the second the unit cell number.
-In our choice of unit cell, atom 1 has mass $m_1$ and atom 2 has mass $m_2$.
-
-Having specified the degrees of freedom, let's write down the equations of motion:
+Following a similar path as the monatomic case, we begin be writing the equations of motion:
 
 $$
 \begin{aligned}
-m_1\ddot{u}_{1,n}&=κ(u_{2,n}-2u_{1,n}+u_{2,n-1})\\
-m_2\ddot{u}_{2,n}&=κ(u_{1, n} - 2u_{2,n}+u_{1,n+1}).
+m (\ddot{\delta x_n}) & = \kappa_2 (\delta y_{n} - \delta x_{n}) + \kappa_1 (\delta y_{n-1} - \delta x_{n}) \\
+m (\ddot{\delta y_n}) & = \kappa_1 (\delta x_{n+1} - \delta y_{n}) + \kappa_2 (\delta x_{n} - \delta y_{n})
 \end{aligned}
 $$
 
-The new ansatz is conceptually the same as before: all unit cells should behave the same up to a phase factor:
+and employing the same intuition as last time, namely that we expect wave solutions that should have unit cells oscillating at the same frequency, we seek solutions of the form:
 
 $$
 \begin{pmatrix}
-u_{1,n}\\
-u_{2,n}
+\delta x_n\\
+\delta y_n
 \end{pmatrix} =
-e^{iω t - ik na}
+e^{i\omega t - ik na}
 \begin{pmatrix}
-A_{1}\\
-A_{2}
+A_{x}\\
+A_{y}
 \end{pmatrix}.
 $$
 
-Substituting this ansatz into the equations of motion (and assuming that the solution is nontrivial) we end up with an eigenvalue problem:
-$$ω^2
+When these solutions are deployed, one obtains the matrix equation
+
+$$
+m\omega^2\begin{pmatrix}
+A_x\\
+A_y
+\end{pmatrix} =
 \begin{pmatrix}
-m_1 & 0 \\ 0 & m_2
+\kappa_1 + \kappa_2 & -\kappa_2 - \kappa_1 e^{ika}\\
+-\kappa_2 - \kappa_1 e^{-ika} & \kappa_1 + \kappa_2
 \end{pmatrix}
 \begin{pmatrix}
-A_{1} \\ A_{2}
-\end{pmatrix} = κ
-\begin{pmatrix}
-2 & -1 - e^{ika} \\ -1-e^{-ika} & 2
+A_x\\
+A_y
 \end{pmatrix}
-\begin{pmatrix}
-A_{1}\\ A_{2}
-\end{pmatrix},$$
-with eigenfrequencies:
-$$ω^2=\frac{κ(m_1+m_2)}{m_1m_2}\pm κ\left\{\left(\frac{m_1+m_2}{m_1m_2}\right)^2-\frac{4}{m_1m_2}\sin^2\left(\frac{1}{2}ka\right)\right\}^{\frac{1}{2}}$$
+$$
 
-Looking at the eigenvectors we see that for every $k$ there are now two values of $ω$: one corresponding to in-phase motion (–) and anti-phase (+).
+??? question "3.2.1: Explicitly verify that the trail solutions lead to the above matrix equation"
 
-<!---
-Should we mention that we choose omega > 0?
---->
+<!-- This is tedious but straightforward:
 
-```python
-def dispersion_2m(k, kappa=1, M=1.4, m=1, acoustic=True):
-    Mm = M*m
-    m_harm = (M + m) / Mm
-    root = kappa * np.sqrt(m_harm**2 - 4*np.sin(k/2)**2 / Mm)
-    if acoustic:
-        root *= -1
-    return np.sqrt(kappa*m_harm + root)
+$$
+\begin{align}
+m (\ddot{\delta x_n}) & = -m \omega^2 A_x e^{i\omega t-ikna} \\
+& = \kappa_2 A_y e^{i\omega t-ikna} + \kappa_1 A_y e^{i\omega t-ik(n-1)a} - (\kappa_1 + \kappa_2) A_x e^{i\omega t-ikna} \\
+m (\ddot{\delta y_n}) & = -m \omega^2 A_y e^{i\omega t-ikna} \\
+& = \kappa_1 A_x e^{i\omega t-ik(n+1)a} + \kappa_2 A_x e^{i\omega t-ika} - (\kappa_1 + \kappa_2) A_y e^{i\omega t-ikna}
+\end{align}
+$$
 
-# TODO: Add panels with eigenvectors
-k = np.linspace(-2*pi, 6*pi, 300)
-fig, ax = pyplot.subplots()
-ax.plot(k, dispersion_2m(k, acoustic=False), label='optical')
-ax.plot(k, dispersion_2m(k), label='acoustic')
-ax.set_xlabel('$ka$')
-ax.set_ylabel(r'$ω$')
-pyplot.xticks([-pi, 0, pi], [r'$-\pi$', '$0$', r'$\pi$'])
-pyplot.yticks([], [])
-pyplot.vlines([-pi, pi], 0, 2.2, linestyles='dashed')
-pyplot.legend()
-pyplot.xlim(-1.75*pi, 3.5*pi)
-pyplot.ylim(bottom=0)
-draw_classic_axes(ax)
-ax.annotate(s='', xy=(-pi, -.3), xytext=(pi, -.3),
-            arrowprops=dict(arrowstyle='<->', shrinkA=0, shrinkB=0))
-ax.text(0, -.55, '1st Brillouin zone', ha='center');
-#draw_classic_axes(ax, xlabeloffset=.2)
-```
-The figure above shows a plot of the eigenfrequencies as a function of $ka$.
-Just like last time, the plot is periodic in $k$, with $k$-values which differ by a multiple of $2 \pi / a$ corresponding to the same solution.
-Therefore we only look at the $k$-values between $k - \pi / a$ and $k + \pi / a$.
-This range (in between the dashed lines) is called the first **Brillouin zone**, and functions as a unit cell in reciprocal space.
-The Brillouin zone will be explained in more detail in the lecture about X-ray diffraction.
+which after dividing through by the exponential becomes
 
-Unlike the simple atomic chain, the dispersion relation now has two branches (or bands).
-The reason an additional branch appears in the solution is due to the 2 degrees of freedom per unit cell.
-If we had started with 3 different atoms, the eigenvalue problem would contain 3 equation, so that there would be three eigenfrequencies per $k$ and the dispersion relation would have 3 branches.
+$$
+\begin{align}
+-m \omega^2 A_x & = \kappa_2 A_y + \kappa_1 A_y e^{i\omega t-ik1a} - (\kappa_1 + \kappa_2) A_x \\
+-m \omega^2 A_x & = \kappa_2 A_y + \kappa_1 A_y e^{i\omega t-ik1a} - (\kappa_1 + \kappa_2) A_x
+\end{align}
+$$
 
-The lower branch is called _acoustic_ because its linear dispersion near $ω=0$ matches the behavior of regular sound waves.
-The upper branch is the _optical branch_ because it can cross with the (linear) dispersion relation of photons, allowing these phonons to efficiently emit and absorb photons.
+which when expressed in matrix form is as required. -->
 
-Like before, the phonon group velocity is $v=\textrm{d}ω/\textrm{d}k$, and the density of states is $g(ω)=\textrm{d}N/\textrm{d}ω = \frac{L}{2π} ∑| \textrm{d}k/\textrm{d} ω|$.
-The sum goes over all states at a given energy.
-In this case, the sum ensures we include the contribution to the DOS from both the positive and negative momenta.
-Since the energy of this system is symmetric with respect to momentum reversal, the sum only introduces a factor of 2.
+This is an eigenvalue equation, and this can be solved in the usual way to obtain
 
-An intuitive way to visualize the density of states $g(ω)$ is to consider it a histogram of the samples drawn from the dispersion relation $ω(k)$:
+$$
+\omega_\pm^2 = \frac{\kappa_1+\kappa_2}{m} \pm \sqrt{\frac{(\kappa_1+\kappa_2)^2 - 4\kappa_1\kappa_2\sin^2(ka/2)}{m^2}}
+$$
 
-```python
-matplotlib.rcParams['font.size'] = 24
-k = np.linspace(-.25*pi, 1.5*pi, 300)
-k_dos = np.linspace(0, pi, 20)
-fig, (ax, ax2) = pyplot.subplots(ncols=2, sharey=True, figsize=(10, 5))
-ax.plot(k, dispersion_2m(k, acoustic=False), label='optical')
-ax.plot(k, dispersion_2m(k), label='acoustic')
-ax.vlines(k_dos, 0, dispersion_2m(k_dos, acoustic=False),
-          colors=(0.5, 0.5, 0.5, 0.5))
-ax.hlines(
-    np.hstack((dispersion_2m(k_dos, acoustic=False), dispersion_2m(k_dos))),
-    np.hstack((k_dos, k_dos)),
-    1.8*pi,
-    colors=(0.5, 0.5, 0.5, 0.5)
-)
-ax.set_xlabel('$ka$')
-ax.set_ylabel(r'$ω$')
-ax.set_xticks([0, pi])
-ax.set_xticklabels(['$0$', r'$\pi$'])
-ax.set_yticks([])
-ax.set_yticklabels([])
-ax.set_xlim(-pi/4, 2*pi)
-ax.set_ylim((0, dispersion_2m(0, acoustic=False) + .2))
-draw_classic_axes(ax, xlabeloffset=.2)
+??? question "3.2.2: Solve the eigenvalue equation and verify the result for $\omega_\pm$"
 
-k = np.linspace(0, pi, 1000)
-omegas = np.hstack((
-    dispersion_2m(k, acoustic=False), dispersion_2m(k)
-))
-ax2.hist(omegas, orientation='horizontal', bins=75)
-ax2.set_xlabel(r'$g(ω)$')
-ax2.set_ylabel(r'$ω$')
+<!-- Subtracting the eigenvalue $m\omega^2$ from the diagonal elements of the matrix and then solving when the determinant evaluates to zero:
 
-# Truncate the singularity in the DOS
-max_x = ax2.get_xlim()[1]
-ax2.set_xlim((0, max_x/2))
-draw_classic_axes(ax2, xlabeloffset=.1)
-matplotlib.rcParams['font.size'] = 16
-```
+$$
+\begin{align}
+0 & =
+\begin{vmatrix}
+\kappa_1 + \kappa_2 - m\omega^2 & -\kappa_2 - \kappa_1 e^{ika}\\
+-\kappa_2 - \kappa_1 e^{-ika} & \kappa_1 + \kappa_2 - m\omega^2
+\end{vmatrix} \\
+& = |\kappa_1 + \kappa_2 - m\omega^2 |^2 - |\kappa_2 + \kappa_1 e^{ika}|^2.
+\end{align}
+$$
 
-Note that $g(ω)$ is generally plotted along the vertical axis and $ω$ along the horizontal axis – the right plot above is just to demonstrate the relation between the dispersion and the DOS. The singularities in $g(ω)$ at the bottom and top of each branch are called _van Hove singularities_.
+Then we identify the solutions must satisfy
 
-### Consistency check with 1 atom per cell
-To check if our result is consistent with the previous lecture, we examine what happens when we take $m_1\rightarrow m_2$.
-Physically, the system is then exactly the same as the 1D monatomic chain, so we would want our solutions to also be the same.
-But at first glance the two solutions seem very different: the solution with one atom has only one band, but the solution with two atoms has two bands.
+$$
+m\omega^2 = (\kappa_1 + \kappa_2) \pm |\kappa_1 + \kappa_2 e^{ika}|.
+$$
 
-To reconcile the two pictures, let's plot two unit cells in reciprocal space.
+From here, we write the absolute value
 
-```python
-k = np.linspace(0, 2*pi, 300)
-k_dos = np.linspace(0, pi, 20)
-fig, ax = pyplot.subplots()
-ax.plot(k, dispersion_2m(k, acoustic=False), label='optical')
-ax.plot(k, dispersion_2m(k), label='acoustic')
-omega_max = dispersion_2m(0, acoustic=False)
-ax.plot(k, omega_max * np.sin(k/4), label='equal masses')
-ax.set_xlabel('$ka$')
-ax.set_ylabel(r'$ω$')
-ax.set_xticks([0, pi, 2*pi])
-ax.set_xticklabels(['$0$', r'$\pi/2a$', r'$\pi/a$'])
-ax.set_yticks([])
-ax.set_yticklabels([])
-ax.set_xlim(-pi/8, 2*pi+.4)
-ax.set_ylim((0, dispersion_2m(0, acoustic=False) + .2))
-ax.legend(loc='lower right')
-pyplot.vlines([pi, 2*pi], 0, 2.2, linestyles='dashed')
-draw_classic_axes(ax, xlabeloffset=.2)
-```
-We must be careful when considering the lattice constant $a$.
-In the 1D monatomic chain, $a$ was the distance between two neighbouring atoms, but in our diatomic chain $a$ is the size of the unit cell, which is twice as big.
-Therefore we take the size of our unit cell in the diatomic case to be $2a$, so the physical systems are the same.
+$$
+\begin{align}
+|\kappa_1 + \kappa_2 e^{ika}| & = \sqrt{(\kappa_1 + \kappa_2 e^{ika})(\kappa_1 + \kappa_2 e^{-ika})} \\
+& = \sqrt{(\kappa_1^2 + \kappa_2^2 + 2\kappa_1\kappa_2\cos(ka)}
+\end{align}
+$$
 
-Looking at the graph we see that doubling the lattice constant "folds" the band structure on itself.
-There are then $2$ possible values of $ω$ for each $k$, creating the $2$ branches of the non-periodic system.
-We can look at the graph in two distinct ways:
-We can consider the green line (monatomic chain solution). Its Brillouin zone extends from $0$ to $\pi / a$.
-Alternatively, we consider the orange and blue lines together. In this case, the Brillouin zone is smaller ranging from $0$ to $\pi / 2a$ (because of the larger lattice constant).
+and so
 
-Despite the two band structures look different, the density of states only changes very little: when $m_1 ≈ m_2$ only the states near the band touching point slightly move in frequency.
+$$
+\begin{align}
+m\omega\pm^2 & = \kappa_1+\kappa_2 \pm \sqrt{(\kappa_1^2 + \kappa_2^2 + 2\kappa_1\kappa_2\cos(ka)} \\
+& = \kappa_1+\kappa_2 \pm \sqrt{(\kappa_1^2 + \kappa_2^2 + 4\kappa_1\kappa_2\sin^2(ka/2)}
+\end{align}
+$$
 
-## Summary
+which is the desired result. -->
 
-* By using plane waves in real space as an ansatz, we found all normal modes of an atom chain with two different atoms. (Just like in the case of 1 degree of freedom per unit cell).
-* The density of states can be derived graphically from the dispersion relation.
-* The dispersion relation of a system with period $a$ in real space is periodic with period $2\pi/a$ in $k$-space.
-* In a system with more than one degree of freedom per unit cell we need to consider independent amplitudes for each degree of freedom, and we get multiple bands.
-* Systems with different band structures can have the same density of states.
+### Dispersion
+
+Immediately we notice that as compared to the monatomic chain, there are now two modes of oscillation for each value of $k$, and we denote the frequencies associated with the modes $\omega_{\pm}$, as shown in the plot below:
+
+![](images/3-2-dispersion.svg)
+
+Looking at the associated eigenvectors, we can see that these frequencies correspond to in-phase ($\omega_-$) and out-of-phase ($\omega_+$) motion. Just like last time, the plot is periodic in $k$ with values of $k$ shifted by $2 \pi / a$ corresponding to the same solution, and therefore look only at the unique values of $k$, that is, those in the Brillouin zone, shown below:
+
+![](images/3-2-brillouin.svg)
+
+One may ask why the second branch appears, which is an good question, and is understood as with a diatomic system, we have added a second degree of freedom per unit cell. Indeed, had we a unit cell with 3 atoms, that is 3 degrees of freedom, we would find that there are three branches, or three frequencies, for each value of $k$.
+
+Looking at the $\omega_-$ mode, we notice that as $k \rightarrow 0$, the dispersion relationship is linear. In this regime, the modes behave like sound waves (i.e. $\omega = v |k|$) and consequently, the mode is referred to as the _acoustic mode_. On the other hand, modes which intersect with optical dispersion modes (i.e. $\omega = c|k|$) are referred to as _optical modes_.
+
+??? question  "3.2.3: Plot the dispersion modes, along with an optical dispersion curve for visible light. What are the implications intersecting curves?"
+
+We can look at the behaviour of the curves at specific values of $k$, for example at the zone boundary, $\omega_{+}(\pi/a) = \sqrt{2\kappa_1/m}$ and $\omega_{+}(\pi/a) = \sqrt{2\kappa_2/m}$. At this point, it is useful to consider the idea of an _extended_ Brillouin zone: the Brillouin zone houses all unique values of $k$, but in this case, there are multiple frequencies for each value of $k$. By extending the Brillouin zone, unfolding the higher-order mode(s) out to a the neighbouring unit cell in reciprocal space, we can obtain a plot which was unique frequencies for each $k$. A plot illustrating the extended scheme is shown below:
+
+![](images/3-2-extended.svg)
+
+But why would we do this? Well, consider the case of $\kappa_1 \approx \kappa_2$ and the limit of $\kappa_1 = \kappa_2$. We can clearly observe an "opening" between the bands which depends on the values of $\kappa_1$ and $\kappa_2$, but physically, what would one expect to happen when $\kappa_1 = \kappa_2 = \kappa$?
+
+??? question  "3.2.4: Make a prediction for what will be the consequences of setting $\kappa_1 = \kappa_2$ and how this relates to the monatomic chain."
+
+    Hopefully it is clear that with identical spring constants, we are back at the case of a monatomic chain. In the case of the band splitting, this will go to zero as the difference between $\kappa_1$ and $\kappa_2$ goes to zero:
+
+    ![](images/3-2-di-to-mon.svg)
+
+    But now we have a bit of a quandary, namely, in order to capture all unique values of $k$, we now have a plot Brillouin zone that runs from $-2\pi/a$ to $2\pi/a$ (see above), whereas previously this ran from $-\pi/a$ to $\pi/a$. Any what about our number of states?
+
+    The solution comes in the recognition that in the diatomic case, one has a unit cell length of $a$, which is $2 \times a_\mathrm{monatomic}$, so the "true" Brillouin zone for the monatomic chain extents from $-\pi/a_\mathrm{monatomic}$ to $\pi/a_\mathrm{monatomic}$ which is equivalent to $-2\pi/a$ to $2\pi/a$. Similarly, the number of atoms per unit cell as changed from 2 to 1, meaning that everything doesn't fall apart. YAY!
+
+### Density of states
+
+As we have seen previously, the density of states is $g(\omega)\textrm{d}\omega = \textrm{d}N$ and thus
+
+$$
+g(\omega) = \frac{\textrm{d}N}{\textrm{d}\omega} = \frac{L}{2\pi} \sum | \textrm{d}k/\textrm{d} \omega|
+$$
+
+where sum goes over all states at a given energy. In this case, we must ensure that we include the contribution to the DoS from both the positive and negative momenta. Since the energy of this system is symmetric with respect to $k$, this sum will simply introduce a factor of 2. In an attempt to build an intuition for visualising and understanding the density of states, it is possible to think of the DoS as a histogram of the energy samples drawn from the dispersion relation $ω(k)$. Remember that by enforcing periodic boundary conditions on our system, we discretise $k$ space with equally spaced points separated by distance $2\pi/L$.
+
+
+
+---
+
+## Conclusions
+
+  * The normal modes of a diatomic chain of atoms were found by once again intuiting that plane waves in real would be a well-suited solution
+  * Systems with more than one degree of freedom per unit cell result in independent oscillation amplitudes for each degree of freedom, leading to multiple bands
+  * The density of states can be derived graphically from the dispersion relation
+
+---
 
 ## Exercises
+### Preliminary provocations
+  1. Verify that the expression for $\omega^2$ is always positive. Why is this important?
+  2. When calculating the DOS, we only look at the first Brillouin zone. Why?
 
-### Warm-up questions
-1. Verify that the expression for $ω^2$ is always positive. Why is this important?
-2. Work out the expression of $ω^2$ in the case $m_1 = m_2$. Compare this to the solution for the monatomic chain.
-3. When calculating the DOS, we only look at the first Brillouin zone. Why?
+### Exercise 1: analysing the diatomic vibrating chain
+  As we have shown, the normal modes of oscillation of a diatomic chain occur at frequencies:
 
-### Exercise 1: analyzing the diatomic vibrating chain
-As we have derived, the eigenfreqencies of a diatomic vibrating chain with 2 different masses are:
+  $$
+  \omega_\pm^2 = \frac{\kappa_1+\kappa_2}{m} \pm \sqrt{\frac{(\kappa_1+\kappa_2)^2 - 4\kappa_1\kappa_2\sin^2(ka/2)}{m^2}}
+  $$
 
-$$ω^2=\frac{κ(m_1+m_2)}{m_1m_2}\pm κ\left\{\left(\frac{m_1+m_2}{m_1m_2}\right)^2-\frac{4}{m_1m_2}\sin^2\left(\frac{1}{2}ka\right)\right\}^{\frac{1}{2}},$$
+  where the plus sign corresponds to the optical branch and the minus sign to the acoustic branch.
 
-where the plus sign corresponds to the optical branch and the minus sign to the acoustic branch.
+??? hint
 
-1. Find the magnitude of the group velocity near $k=0$ for the _acoustic_ branch.
+    The final form of $\omega_\pm$ as given is not always the most useful: sometimes the complex exponential form - see 3.2.2 - can make life easier
 
-    ??? hint
-        Make use of a Taylor expansion.
+  1. Find the magnitude of the group velocity near $k=0$ for the _acoustic_ branch.
+  2. Show that the group velocity at $k=0$ for the _optical_ branch is zero.
+  3. Derive an expression of the density of states $g(ω)$ for the _acoustic_ branch and small $k$. Make use of your expression of the group velocity in 1. Compare this expression with that of the derived density of states from [exercise 1](1-intoduction/1-2-specificheatII/#exercise-1-debye-model-concepts) of the Debye lecture.
 
-2. Show that the group velocity at $k=0$ for the _optical_ branch is zero.
-3. Derive an expression of the density of states $g(ω)$ for the _acoustic_ branch and small $k$. Make use of your expression of the group velocity in 1.
-Compare this expression with that of the derived density of states from [exercise 1](2_debye_model/#exercise-1-debye-model-concepts) of the Debye lecture.
+### Exercise 2: atomic chain with 3 different spring constants
+Suppose we have a vibrating 1D atomic chain with 3 different spring constants alternating like $\kappa_ 1$, $\kappa_2$, $\kappa_3$, $\kappa_1$, etc. All the atoms in the chain have an equal mass $m$.
 
-### Exercise 2: the Peierls transition
-In the previous lecture, we have derived the electronic band structure of an 1D, equally spaced atomic chain. Such chains, however, are in fact not stable and the equal spacing will be distorted. This is also known as the [Peierls transition](https://en.wikipedia.org/wiki/Peierls_transition).
+??? hint
 
-The spacing of the distorted chain alternates between two different distances and this also causes the hopping energy to alternate between $t_1$ and $t_2$. We further set the onsite energies of the atoms to $\epsilon$. The situation is depicted in the figure below.
+    To solve the eigenvalue problem quickly, make use of the fact that the mass-spring matrix in that case commutes with the matrix
 
-![](figures/peierls_transition.svg)
+    $$
+    X = \begin{pmatrix} 0 & 0 & 1 \\ 0 & 1 & 0 \\ 1 & 0 & 0 \end{pmatrix}.
+    $$
 
-Due to the alternating hopping energies, we must treat two consecutive atoms as two different orbitals ($|n,1⟩$ and $|n,2 ⟩$ in the figure) from the same unit cell. The corresponding LCAO of this chain is given by
-$$
-\left|\Psi \right\rangle = \sum_n \left(\phi_n \left| n,1 \right\rangle + \psi_n \left| n,2 \right\rangle\right)
-$$
-As usual, we assume that all these atomic orbitals are orthogonal to each other.
-
-1. Indicate the length of the unit cell $a$ in the figure.
-2. Using the Schrödinger equation, write the equations of motion of the electrons.
-
-    ??? hint
-        To this end, find expressions for $E \left< n,1 \vert \Psi \right> = \left< n,1 \right| H \left|\Psi \right>$ and $E \left< n,2 \vert \Psi \right> = \left< n,2 \right| H \left|\Psi \right>$.
-
-3. Using the trial solutions $\phi_n = \phi_0 e^{ikna}$ and $\psi_n = \psi_0 e^{ikna}$, show that the Schödinger equation can be written in matrix form: $$\begin{pmatrix} \epsilon & t_1 + t_2 e^{-i k a} \\  t_1 + t_2 e^{i k a}  & \epsilon \end{pmatrix} \begin{pmatrix} \phi_0 \\ \psi_0 \end{pmatrix} = E \begin{pmatrix} \phi_0 \\ \psi_0 \end{pmatrix}.$$
-4. Derive the dispersion relation of this Hamiltonian. Does it look like the figure of the band structure shown on the [Wikipedia page](https://en.wikipedia.org/wiki/Peierls_transition#/media/File:Peierls_instability_after.jpg)? Does it reduce to the 1D, equally spaced atomic chain if $t_1 = t_2$?
-5. Find an expression of the group velocity $v(k)$ and effective mass $m^*(k)$ of both bands.
-6. Derive an expression for the density of states $g(E)$ of the entire band structure and make a plot of it. Does your result makes sense when considering the band structure?
-
-### Exercise 3: atomic chain with 3 different spring constants
-Suppose we have a vibrating 1D atomic chain with 3 different spring constants alternating like $\kappa_ 1$, $\kappa_2$, $\kappa_3$, $\kappa_1$, etc. All the the atoms in the chain have an equal mass $m$.
+    What can be said about eigenvectors of two matrices that commute?
 
 1. Make a sketch of this chain and indicate the length of the unit cell $a$ in this sketch.
 2. Derive the equations of motion for this chain.
-3. By filling in the trial solutions into the equations of motion (which should be similar to Ansazt used in the lecture), show that the eigenvalue problem is
+3. By filling in the trial solutions into the equations of motion (which should be similar to those used in the dual spring constants case), show that the eigenvalue problem is
    $$
-   \omega^2 \mathbf{u} = \frac{1}{m}
+   \omega^2 \begin{pmatrix} A_1 \\ A_2 \\ A_3 \end{pmatrix} = \frac{1}{m}
    \begin{pmatrix} \kappa_1 + \kappa_ 3 &  -\kappa_ 1 & -\kappa_ 3 e^{i k a} \\
    -\kappa_ 1 & \kappa_1+\kappa_2 & -\kappa_ 2 \\
    -\kappa_ 3 e^{-i k a} & -\kappa_2 & \kappa_2 + \kappa_ 3
-   \end{pmatrix} \mathbf{u}
+   \end{pmatrix} \begin{pmatrix} A_1 \\ A_2 \\ A_3 \end{pmatrix}
    $$
 4. In general, the eigenvalue problem above cannot be solved analytically, and can only be solved in specific cases. Find the eigenvalues $ω^2$ when $k a = \pi$ and $\kappa_1 = κ_2 = q$.
-
-    ??? hint
-        To solve the eigenvalue problem quickly, make use of the fact that the mass-spring matrix in that case commutes with the matrix $$ X = \begin{pmatrix} 0 & 0 & 1 \\ 0 & 1 & 0 \\ 1 & 0 & 0 \end{pmatrix}. $$ What can be said about eigenvectors of two matrices that commute?
-
 5. What will happen to the periodicity of the band structure if $\kappa_ 1 = \kappa_ 2 = \kappa_3$?

@@ -1,4 +1,5 @@
 *[DoF]: Degrees of Freedom
+*[DoS]: Density of States
 *[LCAO]: Linear Combination of Atomic Orbitals
 *[NMR]: Nuclear Magnetic Resonance
 *[ODE]: Ordinary-Differential Equation

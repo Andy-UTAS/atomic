@@ -42,18 +42,45 @@ A rough outline of the course is as follows:
 
 with approximately one week devoted to each topic, but with the natural ebb and flow ultimately dictating the timeline.
 
+#### The notes
+
+The notes are designed to be consumed in concert to the video content, with certain aspects highlighted differently in the different media, and in extreme cases with different paths used to arrive at the same destination. One of my aims is to expose you to different ways of thinking about problems, not just have the same method and then just "press play".
+
+!!! danger  "Expected competencies"
+
+Content has been constructed with the assumption that the material is consumed sequentially, with sections often explicitly relying on results from previous work. I have also to placed _expected competency_ markers at the beginning of each section, outlining knowledge that I expect you to have seen in other areas of study, and importantly, **these are cumulative** from section to section.
+
+!!! note  "Text reference"
+
+You will also encounter _text references_ at the beginning of each section, relating to the relevant content in the course text [The Oxford Solid State Basics](https://global.oup.com/academic/product/the-oxford-solid-state-basics-9780199680771?cc=au&lang=en&).
+
+!!! info "Computational content"
+
+Computational content, which is normally just the jupyter notebook associated with the section, also appears at the top of the page, but may also contain links to other software or pertinent computational material.
+
+#### The videos
+
+The video content is hosted on [Echo360](https://echo360.net.au/) and is available only to those enrolled at the University of Tasmania, and is best accessed through the course [MyLO page](https://mylo.utas.edu.au/d2l/le/content/463489/Home).
+
 ??? abstract "_Content download_: table of contents"
+
+    !!! note "Timestamps"
+
+        Timestamps detailing the topics discussed for each video are available in the video descriptions, but can be accessed in the table below
 
     A brief summary of the topics discussed in the _content download_ sessions is shown below:
 
-    | Video       | Topic(s) discussed                   |
+    | Video       | Topic (click for details and timestamps)                   |
     | ----------- | ------------------------------------ |
     | [w0v01](https://echo360.net.au/media/869c549b-1931-4270-b435-943f3b155385/public) | An introduction to solid-state physics |
     | [w1v01](https://echo360.net.au/media/54d72d00-5a24-49a3-bbc4-babd903c46c9/public) | The Einstein model of solids  |
-    | [w1v2](https://echo360.net.au/media/e2bdac93-c9a4-4839-a691-dc9af24ee1b8/public) | The Debye model of solids  |
-    | [w1v3](https://echo360.net.au/media/7253bad5-f5e9-4540-8fb5-8e693fddf613/public) | The Drude model of metals |
-    | w2v1        | The Sommerfeld free-electron model |
-    | w2v2        | Chemistry 101 |
+    | [w1v02](https://echo360.net.au/media/e2bdac93-c9a4-4839-a691-dc9af24ee1b8/public) | The Debye model of solids  |
+    | [w1v03](https://echo360.net.au/media/7253bad5-f5e9-4540-8fb5-8e693fddf613/public) | The Drude model of metals |
+    | [w2v01](https://echo360.net.au/media/9491b718-25c6-4123-b757-9bc31211b228/public) | The Sommerfeld free-electron model |
+    | [w2v02](https://echo360.net.au/media/f19fdb45-3a0f-4556-b02c-7ce29e061592/public)  | Chemistry 101 |
+    | w3v01  | The 1D harmonic chain |
+    | w3v02  | The diatomic chain |
+    | w3v03  | The tight-binding model |
 
 ---
 
