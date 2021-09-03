@@ -290,7 +290,7 @@ The matrix is thus defined by two parameters, the __onsite energy__ which gives 
 
 In the definition above, we have that $\psi_{+}$ is symmetric and $|\psi_{-}\rangle$ is antisymmetric, so from the _node theorem_, we can immediately identify that $E_+ < E_-$, or in a previous terminology, $\psi_{+}$ is the bonding state and $|\psi_{-}\rangle$ is the antibonding state. From the expression for the energy of the states $E_{\pm} = \varepsilon_0 + V_{\textrm{cross}} \mp t$ by decreasing the interatomic distance, the two atoms get closer and the atomic orbitals have more overlap, resulting in an increased hopping $t$. Assuming a hopping factor similar in form the potential, we can plot the energies $E_{\pm} $as a function of the inter-atomic distance $\Delta x$:
 
-![](images/05_separation)
+![](images/05_separation.svg)
 
 When an electron occupies the state $|\psi_+\rangle$, the atoms attract (or *bond*) because the total energy is lowered. With an electron in the $|\psi_{-}\rangle$ state, the molecular energy increases with decreasing interatomic distance and thus the atoms repel each other. Therefore, if each atom has a single electron in the outermost shell, these atoms attract because the bonding orbital hosts two electrons with opposite spins.
 On the other hand, if each atom has 0 or 2 electrons in the outermost shell, the net force from the bonding and antibonding orbitals cancels out, but Coulomb repulsion remains.

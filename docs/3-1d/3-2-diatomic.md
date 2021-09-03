@@ -194,7 +194,7 @@ $$
 
 where sum goes over all states at a given energy. In this case, we must ensure that we include the contribution to the DoS from both the positive and negative momenta. Since the energy of this system is symmetric with respect to $k$, this sum will simply introduce a factor of 2. In an attempt to build an intuition for visualising and understanding the density of states, it is possible to think of the DoS as a histogram of the energy samples drawn from the dispersion relation $ω(k)$. Remember that by enforcing periodic boundary conditions on our system, we discretise $k$ space with equally spaced points separated by distance $2\pi/L$.
 
-
+![](images/3-2-dos.svg)
 
 ---
 

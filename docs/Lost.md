@@ -567,12 +567,110 @@ As usual, we assume that all these atomic orbitals are orthogonal to each other.
 
 ---
 
-## Conclusions
+## Tight binding
+
+### Group velocity, effective mass, density of states
+
+*(here we only discuss electrons; for phonons everything is the same except for replacing $E = \hbar \omega$)*
+
+Let us think what happens if we apply an external electric field to the crystal:
+
+```python
+x = np.linspace(0.001, 3, 200)
+
+fig, ax = pyplot.subplots(1, 1)
+ax.plot(x, 1.2-1/np.abs(np.sin(np.pi * x))**(1/2) + .2 * (x - 1.5))
+ax.plot(x, .2 * (x - 0.25), '--')
+ax.set_ylim(-.7, .5)
+ax.set_xlabel("$x$")
+ax.set_ylabel("$U(x)$")
+ax.set_xticks([-.05, 1, 2])
+ax.set_xticklabels(["$0$", "$a$", "$2a$"])
+
+draw_classic_axes(ax)
+```
+
+The full Hamiltonian of the system is
+
+$$
+H = \frac{p^2}{2m} + U_\textrm{atomic}(x) + e \mathcal{E} x,
+$$
+where $U_\textrm{atomic}$ is the potential created by the nuclei, and $\mathcal{E}$ the electric field.
+
+A typical electric field is much smaller than the interatomic potential, and therefore we can start by obtaining the dispersion relation $E(k)$ without electric field (by applying the LCAO method), and then solve
+$$ H = E(k) + e\mathcal{E}x.$$
+
+To derive how particles with an arbitrary dispersion relation move, we recall the [Hamilton's equations](https://en.wikipedia.org/wiki/Hamiltonian_mechanics) for particle velocity $v$ and force $F$:
+
+$$\begin{aligned}
+v \equiv \frac{dr}{dt} &= \frac{\partial H(p, r)}{\partial p}\\
+F \equiv \frac{dp}{dt} &= -\frac{\partial H(p, r)}{\partial r}.
+\end{aligned}$$
+
+Substituting $p = \hbar k$ into the first equation we arrive to the expression for the electron **group velocity** $v \equiv \hbar^{-1}\partial E/\partial k$.
+From the second equation we obtain that the force acting on electron in a band stays $-e\mathcal{E}$, which in turn gives results in the acceleration
+$$
+\frac{dv}{dt} = \frac{∂v}{∂p}\frac{dp}{dt} = F/m.
+$$
+Comparing this expression with $dv/dt = F/m$, we arrive to the **effective mass**:
+$$
+m^* \equiv \left(\frac{∂v}{∂p}\right)^{-1} = \left(\frac{∂²E}{∂p²}\right)^{-1} = ħ²\left(\frac{∂²E}{∂k²}\right)^{-1}.
+$$
+
+The group velocity describes how quickly electrons with a certain $k$-vector move, while the effective mass describes how hard they are to accelerate by applying external force.
+
+By using the dispersion relation we derived earlier, we obtain the effective mass like this:
+
+```python
+pyplot.figure(figsize=(8, 5))
+k = np.linspace(-pi, pi, 300)
+meff = 1/np.cos(k)
+color = list(matplotlib.rcParams['axes.prop_cycle'])[0]['color']
+pyplot.plot(k[meff > 0], meff[meff > 0], c=color)
+pyplot.plot(k[meff < 0], meff[meff < 0], c=color)
+pyplot.ylim(-5, 5)
+pyplot.xlabel('$ka$'); pyplot.ylabel('$m^*$')
+pyplot.xticks([-pi, 0, pi], [r'$-\pi$', 0, r'$\pi$']);
+```
+
+Notice that the effective mass can be negative, which implies the electrons accelerate in the direction opposite to the applied force.
+
+### Density of states
+
+The DOS is the number of states per unit energy. In 1D we have
+$$g(E) = \frac{L}{2\pi}\sum |dk/dE| = \frac{L}{2\pi}\sum |v|^{-1}$$
+
+The sum goes over all possible values of $k$ and spin which have the same energy $E$.
+If we are working in two or more dimensions, we must integrate over the values of $k$ with the same energy.
+Also take note that for energies below $E_0 - 2t$ or above $E_0 + 2t$, there are no values of $k$ with that energy, so there is nothing to sum over.
+
+Once again, starting from
+$$ E = E_0 - 2t \cos(ka), $$
+we get
+$$
+ka = \pm\arccos[(E - E_0) / 2t],
+$$
+and
+$$
+|v| ^{-1} = \left|\frac{dk}{dE} \right| = \frac{1}{a}\frac{1}{\sqrt{4t^2 - (E - E_0)^2}}.
+$$
+You can get to this result immediately if you remember the derivative of arccosine. Otherwise you need to go the long way: compute $dE/dk$ as a function of $k$, express $k$ through $E$ as we did above, and take the inverse.
+
+We now add together the contributions of the positive and the negative momenta as well both spin orientations, and arrive to the density of states
+$$
+g(E) = \frac{L}{2\pi}\frac{4}{a}\frac{1}{\sqrt{4t^2 - (E - E_0)^2}}.
+$$
+A quick check: when the energy is close to the bottom of the band, $E = E_0 - 2t + \delta E$, we get $g(E) \propto \delta E^{-1/2}$, as we expect in 1D.
+
+The process of calculating the DOS at a given energy $E$ of a spin-independent Hamiltonian is done systematically with the following steps:
+
+1. At a given energy $E$, determine *all* of the values of $k$ which correspond to that $E$ using the dispersion relation.
+2. Compute $\rvert dk / dE \rvert$. Do this either by writing $k$ as a (multi-valued) function of $E$ and differentiating, or by computing $(dE / dk)^{-1}$.
+3. Sum or integrate $dk / dE$ over the allowed values of $k$ found in 1 and multiply by any degeneracies (spin/polarization).
+4. Multiply by spin degeneracy.
+
+If the Hamiltonian depends on spin, then there is no spin degeneracy and the spin number $s$ must be treated in the same way as $k$.
 
 ---
-
-## Exercises
-
-### Preliminary provocations
 
 --8<-- "includes/abbreviations.md"
