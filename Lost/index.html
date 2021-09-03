@@ -373,7 +373,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../placeholder/" class="md-nav__link">
+      <a href="../3-1d/3-3-tightbinding/" class="md-nav__link">
         3.3: The tight binding model
       </a>
     </li>
@@ -800,23 +800,23 @@
 </li>
       
         <li class="md-nav__item">
-  <a href="#conclusions_1" class="md-nav__link">
-    Conclusions
+  <a href="#tight-binding" class="md-nav__link">
+    Tight binding
   </a>
   
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#exercises_1" class="md-nav__link">
-    Exercises
-  </a>
-  
-    <nav class="md-nav" aria-label="Exercises">
+    <nav class="md-nav" aria-label="Tight binding">
       <ul class="md-nav__list">
         
           <li class="md-nav__item">
-  <a href="#preliminary-provocations_1" class="md-nav__link">
-    Preliminary provocations
+  <a href="#group-velocity-effective-mass-density-of-states" class="md-nav__link">
+    Group velocity, effective mass, density of states
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#density-of-states" class="md-nav__link">
+    Density of states
   </a>
   
 </li>
@@ -1353,10 +1353,94 @@ As usual, we assume that all these atomic orbitals are orthogonal to each other.
 <li>Derive an expression for the density of states <script type="math/tex">g(E)</script> of the entire band structure and make a plot of it. Does your result makes sense when considering the band structure?</li>
 </ol>
 <hr />
-<h2 id="conclusions_1">Conclusions<a class="headerlink" href="#conclusions_1" title="Permanent link">&para;</a></h2>
+<h2 id="tight-binding">Tight binding<a class="headerlink" href="#tight-binding" title="Permanent link">&para;</a></h2>
+<h3 id="group-velocity-effective-mass-density-of-states">Group velocity, effective mass, density of states<a class="headerlink" href="#group-velocity-effective-mass-density-of-states" title="Permanent link">&para;</a></h3>
+<p><em>(here we only discuss electrons; for phonons everything is the same except for replacing <script type="math/tex">E = \hbar \omega</script>)</em></p>
+<p>Let us think what happens if we apply an external electric field to the crystal:</p>
+<div class="highlight"><pre><span></span><code><span class="n">x</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">linspace</span><span class="p">(</span><span class="mf">0.001</span><span class="p">,</span> <span class="mi">3</span><span class="p">,</span> <span class="mi">200</span><span class="p">)</span>
+
+<span class="n">fig</span><span class="p">,</span> <span class="n">ax</span> <span class="o">=</span> <span class="n">pyplot</span><span class="o">.</span><span class="n">subplots</span><span class="p">(</span><span class="mi">1</span><span class="p">,</span> <span class="mi">1</span><span class="p">)</span>
+<span class="n">ax</span><span class="o">.</span><span class="n">plot</span><span class="p">(</span><span class="n">x</span><span class="p">,</span> <span class="mf">1.2</span><span class="o">-</span><span class="mi">1</span><span class="o">/</span><span class="n">np</span><span class="o">.</span><span class="n">abs</span><span class="p">(</span><span class="n">np</span><span class="o">.</span><span class="n">sin</span><span class="p">(</span><span class="n">np</span><span class="o">.</span><span class="n">pi</span> <span class="o">*</span> <span class="n">x</span><span class="p">))</span><span class="o">**</span><span class="p">(</span><span class="mi">1</span><span class="o">/</span><span class="mi">2</span><span class="p">)</span> <span class="o">+</span> <span class="o">.</span><span class="mi">2</span> <span class="o">*</span> <span class="p">(</span><span class="n">x</span> <span class="o">-</span> <span class="mf">1.5</span><span class="p">))</span>
+<span class="n">ax</span><span class="o">.</span><span class="n">plot</span><span class="p">(</span><span class="n">x</span><span class="p">,</span> <span class="o">.</span><span class="mi">2</span> <span class="o">*</span> <span class="p">(</span><span class="n">x</span> <span class="o">-</span> <span class="mf">0.25</span><span class="p">),</span> <span class="s1">&#39;--&#39;</span><span class="p">)</span>
+<span class="n">ax</span><span class="o">.</span><span class="n">set_ylim</span><span class="p">(</span><span class="o">-.</span><span class="mi">7</span><span class="p">,</span> <span class="o">.</span><span class="mi">5</span><span class="p">)</span>
+<span class="n">ax</span><span class="o">.</span><span class="n">set_xlabel</span><span class="p">(</span><span class="s2">&quot;$x$&quot;</span><span class="p">)</span>
+<span class="n">ax</span><span class="o">.</span><span class="n">set_ylabel</span><span class="p">(</span><span class="s2">&quot;$U(x)$&quot;</span><span class="p">)</span>
+<span class="n">ax</span><span class="o">.</span><span class="n">set_xticks</span><span class="p">([</span><span class="o">-.</span><span class="mi">05</span><span class="p">,</span> <span class="mi">1</span><span class="p">,</span> <span class="mi">2</span><span class="p">])</span>
+<span class="n">ax</span><span class="o">.</span><span class="n">set_xticklabels</span><span class="p">([</span><span class="s2">&quot;$0$&quot;</span><span class="p">,</span> <span class="s2">&quot;$a$&quot;</span><span class="p">,</span> <span class="s2">&quot;$2a$&quot;</span><span class="p">])</span>
+
+<span class="n">draw_classic_axes</span><span class="p">(</span><span class="n">ax</span><span class="p">)</span>
+</code></pre></div>
+<p>The full Hamiltonian of the system is</p>
+<p>
+<script type="math/tex; mode=display">
+H = \frac{p^2}{2m} + U_\textrm{atomic}(x) + e \mathcal{E} x,
+</script>
+where <script type="math/tex">U_\textrm{atomic}</script> is the potential created by the nuclei, and <script type="math/tex">\mathcal{E}</script> the electric field.</p>
+<p>A typical electric field is much smaller than the interatomic potential, and therefore we can start by obtaining the dispersion relation <script type="math/tex">E(k)</script> without electric field (by applying the <abbr title="Linear Combination of Atomic Orbitals">LCAO</abbr> method), and then solve
+<script type="math/tex; mode=display"> H = E(k) + e\mathcal{E}x.</script>
+</p>
+<p>To derive how particles with an arbitrary dispersion relation move, we recall the <a href="https://en.wikipedia.org/wiki/Hamiltonian_mechanics">Hamilton's equations</a> for particle velocity <script type="math/tex">v</script> and force <script type="math/tex">F</script>:</p>
+<p>
+<script type="math/tex; mode=display">\begin{aligned}
+v \equiv \frac{dr}{dt} &= \frac{\partial H(p, r)}{\partial p}\\
+F \equiv \frac{dp}{dt} &= -\frac{\partial H(p, r)}{\partial r}.
+\end{aligned}</script>
+</p>
+<p>Substituting <script type="math/tex">p = \hbar k</script> into the first equation we arrive to the expression for the electron <strong>group velocity</strong> <script type="math/tex">v \equiv \hbar^{-1}\partial E/\partial k</script>.
+From the second equation we obtain that the force acting on electron in a band stays <script type="math/tex">-e\mathcal{E}</script>, which in turn gives results in the acceleration
+<script type="math/tex; mode=display">
+\frac{dv}{dt} = \frac{∂v}{∂p}\frac{dp}{dt} = F/m.
+</script>
+Comparing this expression with <script type="math/tex">dv/dt = F/m</script>, we arrive to the <strong>effective mass</strong>:
+<script type="math/tex; mode=display">
+m^* \equiv \left(\frac{∂v}{∂p}\right)^{-1} = \left(\frac{∂²E}{∂p²}\right)^{-1} = ħ²\left(\frac{∂²E}{∂k²}\right)^{-1}.
+</script>
+</p>
+<p>The group velocity describes how quickly electrons with a certain <script type="math/tex">k</script>-vector move, while the effective mass describes how hard they are to accelerate by applying external force.</p>
+<p>By using the dispersion relation we derived earlier, we obtain the effective mass like this:</p>
+<div class="highlight"><pre><span></span><code><span class="n">pyplot</span><span class="o">.</span><span class="n">figure</span><span class="p">(</span><span class="n">figsize</span><span class="o">=</span><span class="p">(</span><span class="mi">8</span><span class="p">,</span> <span class="mi">5</span><span class="p">))</span>
+<span class="n">k</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">linspace</span><span class="p">(</span><span class="o">-</span><span class="n">pi</span><span class="p">,</span> <span class="n">pi</span><span class="p">,</span> <span class="mi">300</span><span class="p">)</span>
+<span class="n">meff</span> <span class="o">=</span> <span class="mi">1</span><span class="o">/</span><span class="n">np</span><span class="o">.</span><span class="n">cos</span><span class="p">(</span><span class="n">k</span><span class="p">)</span>
+<span class="n">color</span> <span class="o">=</span> <span class="nb">list</span><span class="p">(</span><span class="n">matplotlib</span><span class="o">.</span><span class="n">rcParams</span><span class="p">[</span><span class="s1">&#39;axes.prop_cycle&#39;</span><span class="p">])[</span><span class="mi">0</span><span class="p">][</span><span class="s1">&#39;color&#39;</span><span class="p">]</span>
+<span class="n">pyplot</span><span class="o">.</span><span class="n">plot</span><span class="p">(</span><span class="n">k</span><span class="p">[</span><span class="n">meff</span> <span class="o">&gt;</span> <span class="mi">0</span><span class="p">],</span> <span class="n">meff</span><span class="p">[</span><span class="n">meff</span> <span class="o">&gt;</span> <span class="mi">0</span><span class="p">],</span> <span class="n">c</span><span class="o">=</span><span class="n">color</span><span class="p">)</span>
+<span class="n">pyplot</span><span class="o">.</span><span class="n">plot</span><span class="p">(</span><span class="n">k</span><span class="p">[</span><span class="n">meff</span> <span class="o">&lt;</span> <span class="mi">0</span><span class="p">],</span> <span class="n">meff</span><span class="p">[</span><span class="n">meff</span> <span class="o">&lt;</span> <span class="mi">0</span><span class="p">],</span> <span class="n">c</span><span class="o">=</span><span class="n">color</span><span class="p">)</span>
+<span class="n">pyplot</span><span class="o">.</span><span class="n">ylim</span><span class="p">(</span><span class="o">-</span><span class="mi">5</span><span class="p">,</span> <span class="mi">5</span><span class="p">)</span>
+<span class="n">pyplot</span><span class="o">.</span><span class="n">xlabel</span><span class="p">(</span><span class="s1">&#39;$ka$&#39;</span><span class="p">);</span> <span class="n">pyplot</span><span class="o">.</span><span class="n">ylabel</span><span class="p">(</span><span class="s1">&#39;$m^*$&#39;</span><span class="p">)</span>
+<span class="n">pyplot</span><span class="o">.</span><span class="n">xticks</span><span class="p">([</span><span class="o">-</span><span class="n">pi</span><span class="p">,</span> <span class="mi">0</span><span class="p">,</span> <span class="n">pi</span><span class="p">],</span> <span class="p">[</span><span class="sa">r</span><span class="s1">&#39;$-\pi$&#39;</span><span class="p">,</span> <span class="mi">0</span><span class="p">,</span> <span class="sa">r</span><span class="s1">&#39;$\pi$&#39;</span><span class="p">]);</span>
+</code></pre></div>
+<p>Notice that the effective mass can be negative, which implies the electrons accelerate in the direction opposite to the applied force.</p>
+<h3 id="density-of-states">Density of states<a class="headerlink" href="#density-of-states" title="Permanent link">&para;</a></h3>
+<p>The DOS is the number of states per unit energy. In 1D we have
+<script type="math/tex; mode=display">g(E) = \frac{L}{2\pi}\sum |dk/dE| = \frac{L}{2\pi}\sum |v|^{-1}</script>
+</p>
+<p>The sum goes over all possible values of <script type="math/tex">k</script> and spin which have the same energy <script type="math/tex">E</script>.
+If we are working in two or more dimensions, we must integrate over the values of <script type="math/tex">k</script> with the same energy.
+Also take note that for energies below <script type="math/tex">E_0 - 2t</script> or above <script type="math/tex">E_0 + 2t</script>, there are no values of <script type="math/tex">k</script> with that energy, so there is nothing to sum over.</p>
+<p>Once again, starting from
+<script type="math/tex; mode=display"> E = E_0 - 2t \cos(ka), </script>
+we get
+<script type="math/tex; mode=display">
+ka = \pm\arccos[(E - E_0) / 2t],
+</script>
+and
+<script type="math/tex; mode=display">
+|v| ^{-1} = \left|\frac{dk}{dE} \right| = \frac{1}{a}\frac{1}{\sqrt{4t^2 - (E - E_0)^2}}.
+</script>
+You can get to this result immediately if you remember the derivative of arccosine. Otherwise you need to go the long way: compute <script type="math/tex">dE/dk</script> as a function of <script type="math/tex">k</script>, express <script type="math/tex">k</script> through <script type="math/tex">E</script> as we did above, and take the inverse.</p>
+<p>We now add together the contributions of the positive and the negative momenta as well both spin orientations, and arrive to the density of states
+<script type="math/tex; mode=display">
+g(E) = \frac{L}{2\pi}\frac{4}{a}\frac{1}{\sqrt{4t^2 - (E - E_0)^2}}.
+</script>
+A quick check: when the energy is close to the bottom of the band, <script type="math/tex">E = E_0 - 2t + \delta E</script>, we get <script type="math/tex">g(E) \propto \delta E^{-1/2}</script>, as we expect in 1D.</p>
+<p>The process of calculating the DOS at a given energy <script type="math/tex">E</script> of a spin-independent Hamiltonian is done systematically with the following steps:</p>
+<ol>
+<li>At a given energy <script type="math/tex">E</script>, determine <em>all</em> of the values of <script type="math/tex">k</script> which correspond to that <script type="math/tex">E</script> using the dispersion relation.</li>
+<li>Compute <script type="math/tex">\rvert dk / dE \rvert</script>. Do this either by writing <script type="math/tex">k</script> as a (multi-valued) function of <script type="math/tex">E</script> and differentiating, or by computing <script type="math/tex">(dE / dk)^{-1}</script>.</li>
+<li>Sum or integrate <script type="math/tex">dk / dE</script> over the allowed values of <script type="math/tex">k</script> found in 1 and multiply by any degeneracies (spin/polarization).</li>
+<li>Multiply by spin degeneracy.</li>
+</ol>
+<p>If the Hamiltonian depends on spin, then there is no spin degeneracy and the spin number <script type="math/tex">s</script> must be treated in the same way as <script type="math/tex">k</script>.</p>
 <hr />
-<h2 id="exercises_1">Exercises<a class="headerlink" href="#exercises_1" title="Permanent link">&para;</a></h2>
-<h3 id="preliminary-provocations_1">Preliminary provocations<a class="headerlink" href="#preliminary-provocations_1" title="Permanent link">&para;</a></h3>
                 
               
               
