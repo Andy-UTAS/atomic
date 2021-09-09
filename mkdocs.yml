@@ -14,9 +14,10 @@ nav:
       - '3.1: Vibrations': 3-1d/3-1-vibrations.md
       - '3.2: The diatomic chain': 3-1d/3-2-diatomic.md
       - '3.3: The tight binding model': 3-1d/3-3-tightbinding.md
-    - '4: The geometry of solids':
-      - 'Crystal structure': placeholder.md
-      - 'Diffraction': placeholder.md
+    - '4: Crystallography':
+      - 'Crystals': 4-crystal/4-1-realspace.md
+      - 'Crystals in reciprocal space': 4-crystal/4-2-kspace.md
+      - 'Diffraction': 4-crystal/4-3-diffraction.md
     - '5: Electrons in solids':
       - 'Bloch theorem': placeholder.md
       - 'Band structure': placeholder.md

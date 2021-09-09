@@ -78,9 +78,12 @@ The video content is hosted on [Echo360](https://echo360.net.au/) and is availab
     | [w1v03](https://echo360.net.au/media/7253bad5-f5e9-4540-8fb5-8e693fddf613/public) | The Drude model of metals |
     | [w2v01](https://echo360.net.au/media/9491b718-25c6-4123-b757-9bc31211b228/public) | The Sommerfeld free-electron model |
     | [w2v02](https://echo360.net.au/media/f19fdb45-3a0f-4556-b02c-7ce29e061592/public)  | Chemistry 101 |
-    | w3v01  | The 1D harmonic chain |
-    | w3v02  | The diatomic chain |
-    | w3v03  | The tight-binding model |
+    | [w3v01](https://echo360.net.au/media/d836fd83-6d43-4702-9cf0-dbd820bfcbe0/public)  | The 1D harmonic chain |
+    | [w3v02](https://echo360.net.au/media/97f94b59-947a-4f14-84df-1e91e8f01ddd/public)  | The quantum chain |
+    | [w3v03](https://echo360.net.au/media/74883cca-458e-476b-8a99-2a2c3ef0ca40/public)  | The diatomic chain |
+    | w4v01 | The tight-binding model |
+    | w4v02 | Real-space crystal structure |
+    | w4v03 | Reciprocal-space crystal structure |
 
 ---
 
