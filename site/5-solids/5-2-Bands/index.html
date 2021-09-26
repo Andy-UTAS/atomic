@@ -1,0 +1,1236 @@
+
+<!doctype html>
+<html lang="en" class="no-js">
+  <head>
+    
+      <meta charset="utf-8">
+      <meta name="viewport" content="width=device-width,initial-scale=1">
+      
+      
+      
+      
+        <link rel="canonical" href="https://andy-utas.github.io/5-solids/5-2-Bands/">
+      
+      <link rel="icon" href="../../logo.png">
+      <meta name="generator" content="mkdocs-1.2.2, mkdocs-material-7.2.2">
+    
+    
+      
+        <title>Band structure - Solid-state physics</title>
+      
+    
+    
+      <link rel="stylesheet" href="../../assets/stylesheets/main.1118c9be.min.css">
+      
+        
+        <link rel="stylesheet" href="../../assets/stylesheets/palette.ba0d045b.min.css">
+        
+      
+    
+    
+    
+      
+        
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto:300,400,400i,700%7CRoboto+Mono&display=fallback">
+        <style>:root{--md-text-font-family:"Roboto";--md-code-font-family:"Roboto Mono"}</style>
+      
+    
+    
+    
+      <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.8.1/css/all.css">
+    
+      <link rel="stylesheet" href="../../stylesheets/extra.css">
+    
+    
+      
+
+
+    
+    
+  </head>
+  
+  
+    
+    
+      
+    
+    
+    
+    
+    <body dir="ltr" data-md-color-scheme="default" data-md-color-primary="red" data-md-color-accent="orange">
+  
+    
+    <script>function __prefix(e){return new URL("../..",location).pathname+"."+e}function __get(e,t=localStorage){return JSON.parse(t.getItem(__prefix(e)))}</script>
+    
+      <script>var palette=__get("__palette");if(null!==palette&&"object"==typeof palette.color)for(var key in palette.color)document.body.setAttribute("data-md-color-"+key,palette.color[key])</script>
+    
+    <input class="md-toggle" data-md-toggle="drawer" type="checkbox" id="__drawer" autocomplete="off">
+    <input class="md-toggle" data-md-toggle="search" type="checkbox" id="__search" autocomplete="off">
+    <label class="md-overlay" for="__drawer"></label>
+    <div data-md-component="skip">
+      
+        
+        <a href="#band-structure" class="md-skip">
+          Skip to content
+        </a>
+      
+    </div>
+    <div data-md-component="announce">
+      
+    </div>
+    
+      <header class="md-header" data-md-component="header">
+  <nav class="md-header__inner md-grid" aria-label="Header">
+    <a href="../.." title="Solid-state physics" class="md-header__button md-logo" aria-label="Solid-state physics" data-md-component="logo">
+      
+  <img src="../../logo.png" alt="logo">
+
+    </a>
+    <label class="md-header__button md-icon" for="__drawer">
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M3 6h18v2H3V6m0 5h18v2H3v-2m0 5h18v2H3v-2z"/></svg>
+    </label>
+    <div class="md-header__title" data-md-component="header-title">
+      <div class="md-header__ellipsis">
+        <div class="md-header__topic">
+          <span class="md-ellipsis">
+            Solid-state physics
+          </span>
+        </div>
+        <div class="md-header__topic" data-md-component="header-topic">
+          <span class="md-ellipsis">
+            
+              Band structure
+            
+          </span>
+        </div>
+      </div>
+    </div>
+    
+      <form class="md-header__option" data-md-component="palette">
+        
+          
+          
+          <input class="md-option" data-md-color-media="(prefers-color-scheme: light)" data-md-color-scheme="default" data-md-color-primary="red" data-md-color-accent="orange"  aria-label="Switch to dark mode"  type="radio" name="__palette" id="__palette_1">
+          
+            <label class="md-header__button md-icon" title="Switch to dark mode" for="__palette_2" hidden>
+              <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M7 10a2 2 0 0 1 2 2 2 2 0 0 1-2 2 2 2 0 0 1-2-2 2 2 0 0 1 2-2m10-3a5 5 0 0 1 5 5 5 5 0 0 1-5 5H7a5 5 0 0 1-5-5 5 5 0 0 1 5-5h10M7 9a3 3 0 0 0-3 3 3 3 0 0 0 3 3h10a3 3 0 0 0 3-3 3 3 0 0 0-3-3H7z"/></svg>
+            </label>
+          
+        
+          
+          
+          <input class="md-option" data-md-color-media="(prefers-color-scheme: dark)" data-md-color-scheme="slate" data-md-color-primary="red" data-md-color-accent="orange"  aria-label="Switch to light mode"  type="radio" name="__palette" id="__palette_2">
+          
+            <label class="md-header__button md-icon" title="Switch to light mode" for="__palette_1" hidden>
+              <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M17 7H7a5 5 0 0 0-5 5 5 5 0 0 0 5 5h10a5 5 0 0 0 5-5 5 5 0 0 0-5-5m0 8a3 3 0 0 1-3-3 3 3 0 0 1 3-3 3 3 0 0 1 3 3 3 3 0 0 1-3 3z"/></svg>
+            </label>
+          
+        
+      </form>
+    
+    
+    
+      <label class="md-header__button md-icon" for="__search">
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.516 6.516 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5z"/></svg>
+      </label>
+      
+<div class="md-search" data-md-component="search" role="dialog">
+  <label class="md-search__overlay" for="__search"></label>
+  <div class="md-search__inner" role="search">
+    <form class="md-search__form" name="search">
+      <input type="text" class="md-search__input" name="query" aria-label="Search" placeholder="Search" autocapitalize="off" autocorrect="off" autocomplete="off" spellcheck="false" data-md-component="search-query" required>
+      <label class="md-search__icon md-icon" for="__search">
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.516 6.516 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5z"/></svg>
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11h12z"/></svg>
+      </label>
+      <nav class="md-search__options" aria-label="Search">
+        
+        <button type="reset" class="md-search__icon md-icon" aria-label="Clear" tabindex="-1">
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M19 6.41 17.59 5 12 10.59 6.41 5 5 6.41 10.59 12 5 17.59 6.41 19 12 13.41 17.59 19 19 17.59 13.41 12 19 6.41z"/></svg>
+        </button>
+      </nav>
+      
+    </form>
+    <div class="md-search__output">
+      <div class="md-search__scrollwrap" data-md-scrollfix>
+        <div class="md-search-result" data-md-component="search-result">
+          <div class="md-search-result__meta">
+            Initializing search
+          </div>
+          <ol class="md-search-result__list"></ol>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+    
+    
+  </nav>
+</header>
+    
+    <div class="md-container" data-md-component="container">
+      
+      
+        
+      
+      <main class="md-main" data-md-component="main">
+        <div class="md-main__inner md-grid">
+          
+            
+              
+              <div class="md-sidebar md-sidebar--primary" data-md-component="sidebar" data-md-type="navigation" >
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+
+
+<nav class="md-nav md-nav--primary" aria-label="Navigation" data-md-level="0">
+  <label class="md-nav__title" for="__drawer">
+    <a href="../.." title="Solid-state physics" class="md-nav__button md-logo" aria-label="Solid-state physics" data-md-component="logo">
+      
+  <img src="../../logo.png" alt="logo">
+
+    </a>
+    Solid-state physics
+  </label>
+  
+  <ul class="md-nav__list" data-md-scrollfix>
+    
+      
+      
+      
+
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../.." class="md-nav__link">
+        Home
+      </a>
+    </li>
+  
+
+    
+      
+      
+      
+
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../particulars/" class="md-nav__link">
+        Course particulars
+      </a>
+    </li>
+  
+
+    
+      
+      
+      
+
+  
+  
+  
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+      
+        <input class="md-nav__toggle md-toggle" data-md-toggle="__nav_3" type="checkbox" id="__nav_3" >
+      
+      <label class="md-nav__link" for="__nav_3">
+        1: An introduction to solid-state physics
+        <span class="md-nav__icon md-icon"></span>
+      </label>
+      <nav class="md-nav" aria-label="1: An introduction to solid-state physics" data-md-level="1">
+        <label class="md-nav__title" for="__nav_3">
+          <span class="md-nav__icon md-icon"></span>
+          1: An introduction to solid-state physics
+        </label>
+        <ul class="md-nav__list" data-md-scrollfix>
+          
+            
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../1-intoduction/1-1-specificheatI/" class="md-nav__link">
+        1.1: The specific heat of solids I
+      </a>
+    </li>
+  
+
+          
+            
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../1-intoduction/1-2-specificheatII/" class="md-nav__link">
+        1.2: The specific heat of solids II
+      </a>
+    </li>
+  
+
+          
+            
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../1-intoduction/1-3-emetalsI/" class="md-nav__link">
+        1.3: Electrons in metals I
+      </a>
+    </li>
+  
+
+          
+            
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../1-intoduction/1-4-emetalsII/" class="md-nav__link">
+        1.4: Electrons in metals II
+      </a>
+    </li>
+  
+
+          
+        </ul>
+      </nav>
+    </li>
+  
+
+    
+      
+      
+      
+
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../2-chemistry/2-1-chemistry/" class="md-nav__link">
+        2: Chemistry 101
+      </a>
+    </li>
+  
+
+    
+      
+      
+      
+
+  
+  
+  
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+      
+        <input class="md-nav__toggle md-toggle" data-md-toggle="__nav_5" type="checkbox" id="__nav_5" >
+      
+      <label class="md-nav__link" for="__nav_5">
+        3: One-dimensional solids
+        <span class="md-nav__icon md-icon"></span>
+      </label>
+      <nav class="md-nav" aria-label="3: One-dimensional solids" data-md-level="1">
+        <label class="md-nav__title" for="__nav_5">
+          <span class="md-nav__icon md-icon"></span>
+          3: One-dimensional solids
+        </label>
+        <ul class="md-nav__list" data-md-scrollfix>
+          
+            
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../3-1d/3-1-vibrations/" class="md-nav__link">
+        3.1: Vibrations
+      </a>
+    </li>
+  
+
+          
+            
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../3-1d/3-2-diatomic/" class="md-nav__link">
+        3.2: The diatomic chain
+      </a>
+    </li>
+  
+
+          
+            
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../3-1d/3-3-tightbinding/" class="md-nav__link">
+        3.3: The tight binding model
+      </a>
+    </li>
+  
+
+          
+        </ul>
+      </nav>
+    </li>
+  
+
+    
+      
+      
+      
+
+  
+  
+  
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+      
+        <input class="md-nav__toggle md-toggle" data-md-toggle="__nav_6" type="checkbox" id="__nav_6" >
+      
+      <label class="md-nav__link" for="__nav_6">
+        4: Crystallography
+        <span class="md-nav__icon md-icon"></span>
+      </label>
+      <nav class="md-nav" aria-label="4: Crystallography" data-md-level="1">
+        <label class="md-nav__title" for="__nav_6">
+          <span class="md-nav__icon md-icon"></span>
+          4: Crystallography
+        </label>
+        <ul class="md-nav__list" data-md-scrollfix>
+          
+            
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../4-crystal/4-1-realspace/" class="md-nav__link">
+        Crystals
+      </a>
+    </li>
+  
+
+          
+            
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../4-crystal/4-2-kspace/" class="md-nav__link">
+        Crystals in reciprocal space
+      </a>
+    </li>
+  
+
+          
+            
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../4-crystal/4-3-scattering/" class="md-nav__link">
+        Scattering
+      </a>
+    </li>
+  
+
+          
+        </ul>
+      </nav>
+    </li>
+  
+
+    
+      
+      
+      
+
+  
+  
+    
+  
+  
+    
+    <li class="md-nav__item md-nav__item--active md-nav__item--nested">
+      
+      
+        <input class="md-nav__toggle md-toggle" data-md-toggle="__nav_7" type="checkbox" id="__nav_7" checked>
+      
+      <label class="md-nav__link" for="__nav_7">
+        5: Electrons in solids
+        <span class="md-nav__icon md-icon"></span>
+      </label>
+      <nav class="md-nav" aria-label="5: Electrons in solids" data-md-level="1">
+        <label class="md-nav__title" for="__nav_7">
+          <span class="md-nav__icon md-icon"></span>
+          5: Electrons in solids
+        </label>
+        <ul class="md-nav__list" data-md-scrollfix>
+          
+            
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../5-1-Bloch/" class="md-nav__link">
+        The nearly free electron model
+      </a>
+    </li>
+  
+
+          
+            
+  
+  
+    
+  
+  
+    <li class="md-nav__item md-nav__item--active">
+      
+      <input class="md-nav__toggle md-toggle" data-md-toggle="toc" type="checkbox" id="__toc">
+      
+      
+        
+      
+      
+        <label class="md-nav__link md-nav__link--active" for="__toc">
+          Band structure
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <a href="./" class="md-nav__link md-nav__link--active">
+        Band structure
+      </a>
+      
+        
+<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
+  
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Table of contents
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#introduction" class="md-nav__link">
+    Introduction
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#band-structure_1" class="md-nav__link">
+    Band structure
+  </a>
+  
+    <nav class="md-nav" aria-label="Band structure">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#a-simple-requirement-for-insulators" class="md-nav__link">
+    A simple requirement for insulators
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#fermi-surface-using-a-nearly-free-electron-model" class="md-nav__link">
+    Fermi surface using a nearly free electron model
+  </a>
+  
+    <nav class="md-nav" aria-label="Fermi surface using a nearly free electron model">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#light-absorption" class="md-nav__link">
+    Light absorption
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#summary" class="md-nav__link">
+    Summary
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#exercises" class="md-nav__link">
+    Exercises
+  </a>
+  
+    <nav class="md-nav" aria-label="Exercises">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#exercise-1-3d-fermi-surfaces" class="md-nav__link">
+    Exercise 1: 3D Fermi surfaces
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#exercise-2-tight-binding-in-2d" class="md-nav__link">
+    Exercise 2: Tight-binding in 2D
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#exercise-3-nearly-free-electron-model-in-2d" class="md-nav__link">
+    Exercise 3: Nearly-free Electron model in 2D
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+      
+    </li>
+  
+
+          
+        </ul>
+      </nav>
+    </li>
+  
+
+    
+      
+      
+      
+
+  
+  
+  
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+      
+        <input class="md-nav__toggle md-toggle" data-md-toggle="__nav_8" type="checkbox" id="__nav_8" >
+      
+      <label class="md-nav__link" for="__nav_8">
+        6: Semiconductors
+        <span class="md-nav__icon md-icon"></span>
+      </label>
+      <nav class="md-nav" aria-label="6: Semiconductors" data-md-level="1">
+        <label class="md-nav__title" for="__nav_8">
+          <span class="md-nav__icon md-icon"></span>
+          6: Semiconductors
+        </label>
+        <ul class="md-nav__list" data-md-scrollfix>
+          
+            
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../6-semiconductors/6-1-semiconductors/" class="md-nav__link">
+        Semiconductors 101
+      </a>
+    </li>
+  
+
+          
+            
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../6-semiconductors/6-2-doping/" class="md-nav__link">
+        Doping and devices
+      </a>
+    </li>
+  
+
+          
+        </ul>
+      </nav>
+    </li>
+  
+
+    
+      
+      
+      
+
+  
+  
+  
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+      
+        <input class="md-nav__toggle md-toggle" data-md-toggle="__nav_9" type="checkbox" id="__nav_9" >
+      
+      <label class="md-nav__link" for="__nav_9">
+        7: Magnetism
+        <span class="md-nav__icon md-icon"></span>
+      </label>
+      <nav class="md-nav" aria-label="7: Magnetism" data-md-level="1">
+        <label class="md-nav__title" for="__nav_9">
+          <span class="md-nav__icon md-icon"></span>
+          7: Magnetism
+        </label>
+        <ul class="md-nav__list" data-md-scrollfix>
+          
+            
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../placeholder/" class="md-nav__link">
+        Empty content
+      </a>
+    </li>
+  
+
+          
+        </ul>
+      </nav>
+    </li>
+  
+
+    
+      
+      
+      
+
+  
+  
+  
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+      
+        <input class="md-nav__toggle md-toggle" data-md-toggle="__nav_10" type="checkbox" id="__nav_10" >
+      
+      <label class="md-nav__link" for="__nav_10">
+        8: Cool stuff
+        <span class="md-nav__icon md-icon"></span>
+      </label>
+      <nav class="md-nav" aria-label="8: Cool stuff" data-md-level="1">
+        <label class="md-nav__title" for="__nav_10">
+          <span class="md-nav__icon md-icon"></span>
+          8: Cool stuff
+        </label>
+        <ul class="md-nav__list" data-md-scrollfix>
+          
+            
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../placeholder/" class="md-nav__link">
+        Topological insulators
+      </a>
+    </li>
+  
+
+          
+            
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../placeholder/" class="md-nav__link">
+        Superconductors
+      </a>
+    </li>
+  
+
+          
+            
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../placeholder/" class="md-nav__link">
+        Quantum simulators
+      </a>
+    </li>
+  
+
+          
+        </ul>
+      </nav>
+    </li>
+  
+
+    
+      
+      
+      
+
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../additional/" class="md-nav__link">
+        Additional resources
+      </a>
+    </li>
+  
+
+    
+  </ul>
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+            
+              
+              <div class="md-sidebar md-sidebar--secondary" data-md-component="sidebar" data-md-type="toc" >
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
+  
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Table of contents
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#introduction" class="md-nav__link">
+    Introduction
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#band-structure_1" class="md-nav__link">
+    Band structure
+  </a>
+  
+    <nav class="md-nav" aria-label="Band structure">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#a-simple-requirement-for-insulators" class="md-nav__link">
+    A simple requirement for insulators
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#fermi-surface-using-a-nearly-free-electron-model" class="md-nav__link">
+    Fermi surface using a nearly free electron model
+  </a>
+  
+    <nav class="md-nav" aria-label="Fermi surface using a nearly free electron model">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#light-absorption" class="md-nav__link">
+    Light absorption
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#summary" class="md-nav__link">
+    Summary
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#exercises" class="md-nav__link">
+    Exercises
+  </a>
+  
+    <nav class="md-nav" aria-label="Exercises">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#exercise-1-3d-fermi-surfaces" class="md-nav__link">
+    Exercise 1: 3D Fermi surfaces
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#exercise-2-tight-binding-in-2d" class="md-nav__link">
+    Exercise 2: Tight-binding in 2D
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#exercise-3-nearly-free-electron-model-in-2d" class="md-nav__link">
+    Exercise 3: Nearly-free Electron model in 2D
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+          
+          <div class="md-content" data-md-component="content">
+            <article class="md-content__inner md-typeset">
+              
+                
+                
+                <h1 id="band-structure">Band structure<a class="headerlink" href="#band-structure" title="Permanent link">&para;</a></h1>
+<h2 id="introduction">Introduction<a class="headerlink" href="#introduction" title="Permanent link">&para;</a></h2>
+<p><img alt="" src="" /></p>
+<div class="admonition danger">
+<p class="admonition-title">Expected competencies</p>
+<p>It is assumed that you have familiarity with the following concepts/techniques:</p>
+<ul>
+<li>Write down the dispersion and wavefunction of an electron in free space (solving the Schrödinger equation).</li>
+<li>Describe how the periodicity of a band structure (= dispersion) is related to the reciprocal lattice.</li>
+<li>Write down a Fourier series representation of a periodic function.</li>
+<li>Diagonalize a 2x2 matrix (i.e., find its eigenvalues and eigenfunctions).</li>
+</ul>
+</div>
+<div class="admonition note">
+<p class="admonition-title">Text reference</p>
+<p>The material covered here is discussed in section(s) <script type="math/tex">\S 16</script> of <a href="https://global.oup.com/academic/product/the-oxford-solid-state-basics-9780199680771?cc=au&amp;lang=en&amp;">The Oxford Solid State Basics</a></p>
+</div>
+<div class="admonition info">
+<p class="admonition-title">Computational content</p>
+<p>The Jupyter notebook associated with this section can be accessed by clicking the icon below:
+<a class="text-center" href="#" style="margin-left: 45%"><i class="fab fa-python fa-5x"></i></a></p>
+</div>
+<hr />
+<h2 id="band-structure_1">Band structure<a class="headerlink" href="#band-structure_1" title="Permanent link">&para;</a></h2>
+<p>How are material properties related to the band structure?</p>
+<p>For a material to be a conductor, there should be available electron states at the Fermi level. Otherwise all the states are occupied, and all the currents cancel out.</p>
+<p>A band structure of a 1D material may look similar to this:</p>
+<p><img alt="" src="figures/band_structure_sketch.svg" /></p>
+<p>We see several <strong>energy bands</strong> that may be separated by a <strong>band gap</strong> or overlapping.</p>
+<p>When the Fermi level lies in the band gap, the material is called a semiconductor (or dielectric or insulator). When the Fermi level lies within a band, it is a conductor (metal).</p>
+<h3 id="a-simple-requirement-for-insulators">A simple requirement for insulators<a class="headerlink" href="#a-simple-requirement-for-insulators" title="Permanent link">&para;</a></h3>
+<p>In an insulator every single band is either completely filled or completely empty.</p>
+<p>What determines if an energy band if fully occupied or only partly? To answer this we need to know the number of available states within an energy band, and the number of electrons in the system. We can find the number of states in a band by integrating the density of states <script type="math/tex">g(E)</script>, but this is hard. Fortunately, we can easily see how many states there are in an energy band by counting the number of <script type="math/tex">k</script>-states in the first Brillouin zone.  </p>
+<p>For a single band:</p>
+<p>
+<script type="math/tex; mode=display"> N_{states} = 2 \frac{L^3}{(2\pi)^3} \int_{BZ} dk_x dk_y dk_z  = 2 L^3 / a^3 </script>
+</p>
+<p>Here, <script type="math/tex">L^3/a^3</script> is the number of unit cells in the system, so we see that a single band has room for 2 electrons per unit cell (the factor 2 comes from the spin).</p>
+<p>We come to the important rule:</p>
+<blockquote>
+<p>Any material with an odd number of electrons per unit cell is a metal.</p>
+</blockquote>
+<p>If the material has an even number of electrons per unit cell it may be a semiconductor, but only if the bands are not overlapping (see the figure above). For example: Si, Ge, Sn all have 4 valence electrons. Si (silicon, band gap 1.14 eV) and Ge (germanium, band gap 0.67 eV) are semiconductors, Sn (tin) is a metal. <strong>Interesting feature: the heaviest material is a metal, why?</strong></p>
+<h2 id="fermi-surface-using-a-nearly-free-electron-model">Fermi surface using a nearly free electron model<a class="headerlink" href="#fermi-surface-using-a-nearly-free-electron-model" title="Permanent link">&para;</a></h2>
+<p>Sequence of steps (same procedure as in 1D, but harder because of the need to imagine a 2D dispersion relation):</p>
+<ol>
+<li>Compute <script type="math/tex">k_f</script> using the free electron model (remember this is our starting point).</li>
+<li>Plot the free electron model Fermi surface and the Brillouin zones.</li>
+<li>Apply the perturbation where the Fermi surface crosses the Brillouin zone (due to avoided level crossings).</li>
+</ol>
+<p>The resulting band structure looks like this (in the extended Brillouin zone scheme):</p>
+<div class="highlight"><pre><span></span><code><span class="k">def</span> <span class="nf">E</span><span class="p">(</span><span class="n">k_x</span><span class="p">,</span> <span class="n">k_y</span><span class="p">):</span>
+    <span class="n">delta</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">array</span><span class="p">([</span><span class="o">-</span><span class="mi">2</span><span class="o">*</span><span class="n">pi</span><span class="p">,</span> <span class="mi">0</span><span class="p">,</span> <span class="mi">2</span><span class="o">*</span><span class="n">pi</span><span class="p">])</span>
+    <span class="n">H</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">diag</span><span class="p">(</span>
+        <span class="p">((</span><span class="n">k_x</span> <span class="o">+</span> <span class="n">delta</span><span class="p">)[:,</span> <span class="n">np</span><span class="o">.</span><span class="n">newaxis</span><span class="p">]</span><span class="o">**</span><span class="mi">2</span>
+        <span class="o">+</span> <span class="p">(</span><span class="n">k_y</span> <span class="o">+</span> <span class="n">delta</span><span class="p">)[</span><span class="n">np</span><span class="o">.</span><span class="n">newaxis</span><span class="p">]</span><span class="o">**</span><span class="mi">2</span><span class="p">)</span><span class="o">.</span><span class="n">flatten</span><span class="p">()</span>
+    <span class="p">)</span>
+    <span class="k">return</span> <span class="nb">tuple</span><span class="p">(</span><span class="n">np</span><span class="o">.</span><span class="n">linalg</span><span class="o">.</span><span class="n">eigvalsh</span><span class="p">(</span><span class="n">H</span> <span class="o">+</span> <span class="mi">5</span><span class="p">)[:</span><span class="mi">3</span><span class="p">])</span>
+
+<span class="n">E</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">vectorize</span><span class="p">(</span><span class="n">E</span><span class="p">,</span> <span class="n">otypes</span><span class="o">=</span><span class="p">(</span><span class="nb">float</span><span class="p">,</span> <span class="nb">float</span><span class="p">,</span> <span class="nb">float</span><span class="p">))</span>
+
+<span class="n">momenta</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">linspace</span><span class="p">(</span><span class="o">-</span><span class="mi">2</span><span class="o">*</span><span class="n">pi</span><span class="p">,</span> <span class="mi">2</span><span class="o">*</span><span class="n">pi</span><span class="p">,</span> <span class="mi">100</span><span class="p">)</span>
+<span class="n">kx</span><span class="p">,</span> <span class="n">ky</span> <span class="o">=</span> <span class="n">momenta</span><span class="p">[:,</span> <span class="n">np</span><span class="o">.</span><span class="n">newaxis</span><span class="p">],</span> <span class="n">momenta</span><span class="p">[</span><span class="n">np</span><span class="o">.</span><span class="n">newaxis</span><span class="p">,</span> <span class="p">:]</span>
+<span class="n">bands</span> <span class="o">=</span> <span class="n">E</span><span class="p">(</span><span class="n">kx</span><span class="p">,</span> <span class="n">ky</span><span class="p">)</span>
+
+<span class="c1"># Extended Brillouin zone scheme</span>
+<span class="n">pad</span> <span class="o">=</span> <span class="o">.</span><span class="mi">3</span>
+<span class="n">first_BZ</span> <span class="o">=</span> <span class="p">((</span><span class="nb">abs</span><span class="p">(</span><span class="n">kx</span><span class="p">)</span> <span class="o">&lt;</span> <span class="n">pi</span> <span class="o">+</span> <span class="n">pad</span><span class="p">)</span> <span class="o">&amp;</span> <span class="p">(</span><span class="nb">abs</span><span class="p">(</span><span class="n">ky</span><span class="p">)</span> <span class="o">&lt;</span> <span class="n">pi</span> <span class="o">+</span> <span class="n">pad</span><span class="p">))</span>
+<span class="n">second_BZ</span> <span class="o">=</span> <span class="p">(</span>
+    <span class="p">((</span><span class="nb">abs</span><span class="p">(</span><span class="n">kx</span><span class="p">)</span> <span class="o">&gt;</span> <span class="n">pi</span> <span class="o">-</span> <span class="n">pad</span><span class="p">)</span> <span class="o">|</span> <span class="p">(</span><span class="nb">abs</span><span class="p">(</span><span class="n">ky</span><span class="p">)</span> <span class="o">&gt;</span> <span class="n">pi</span> <span class="o">-</span> <span class="n">pad</span><span class="p">))</span>
+    <span class="o">&amp;</span> <span class="p">((</span><span class="nb">abs</span><span class="p">(</span><span class="n">kx</span> <span class="o">+</span> <span class="n">ky</span><span class="p">)</span> <span class="o">&lt;</span> <span class="mi">2</span><span class="o">*</span><span class="n">pi</span> <span class="o">+</span> <span class="n">pad</span><span class="p">)</span> <span class="o">&amp;</span> <span class="p">(</span><span class="nb">abs</span><span class="p">(</span><span class="n">kx</span> <span class="o">-</span> <span class="n">ky</span><span class="p">)</span> <span class="o">&lt;</span> <span class="mi">2</span><span class="o">*</span><span class="n">pi</span> <span class="o">+</span> <span class="n">pad</span><span class="p">))</span>
+<span class="p">)</span>
+<span class="n">third_BZ</span> <span class="o">=</span> <span class="p">(</span>
+    <span class="p">(</span><span class="nb">abs</span><span class="p">(</span><span class="n">kx</span> <span class="o">+</span> <span class="n">ky</span><span class="p">)</span> <span class="o">&gt;</span> <span class="mi">2</span><span class="o">*</span><span class="n">pi</span> <span class="o">-</span> <span class="n">pad</span><span class="p">)</span> <span class="o">|</span> <span class="p">(</span><span class="nb">abs</span><span class="p">(</span><span class="n">kx</span> <span class="o">-</span> <span class="n">ky</span><span class="p">)</span> <span class="o">&gt;</span> <span class="mi">2</span><span class="o">*</span><span class="n">pi</span> <span class="o">-</span> <span class="n">pad</span><span class="p">)</span>
+<span class="p">)</span>
+
+<span class="n">bands</span><span class="p">[</span><span class="mi">0</span><span class="p">][</span><span class="o">~</span><span class="n">first_BZ</span><span class="p">]</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">nan</span>
+<span class="n">bands</span><span class="p">[</span><span class="mi">1</span><span class="p">][</span><span class="o">~</span><span class="n">second_BZ</span><span class="p">]</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">nan</span>
+<span class="c1">#bands[2][~third_BZ] = np.nan</span>
+
+<span class="c1"># Actually plotting</span>
+
+<span class="n">fig</span> <span class="o">=</span> <span class="n">go</span><span class="o">.</span><span class="n">Figure</span><span class="p">(</span>
+    <span class="n">data</span> <span class="o">=</span> <span class="p">[</span>
+        <span class="n">go</span><span class="o">.</span><span class="n">Surface</span><span class="p">(</span>
+            <span class="n">z</span><span class="o">=</span><span class="n">band</span> <span class="o">/</span> <span class="mi">5</span><span class="p">,</span>
+            <span class="c1"># colorscale=color,</span>
+            <span class="n">opacity</span><span class="o">=</span><span class="n">opacity</span><span class="p">,</span>
+            <span class="n">showscale</span><span class="o">=</span><span class="kc">False</span><span class="p">,</span>
+            <span class="n">hoverinfo</span><span class="o">=</span><span class="s1">&#39;none&#39;</span><span class="p">,</span>
+            <span class="n">colorscale</span><span class="o">=</span><span class="s1">&#39;Reds&#39;</span><span class="p">,</span>
+            <span class="n">x</span><span class="o">=</span><span class="n">momenta</span><span class="p">,</span>
+            <span class="n">y</span><span class="o">=</span><span class="n">momenta</span><span class="p">,</span>
+        <span class="p">)</span>
+        <span class="k">for</span> <span class="n">band</span><span class="p">,</span> <span class="n">opacity</span>
+        <span class="ow">in</span> <span class="nb">zip</span><span class="p">(</span><span class="n">bands</span><span class="p">[:</span><span class="mi">2</span><span class="p">],</span>
+               <span class="c1"># [&#39;#cf483d&#39;, &#39;#3d88cf&#39;],</span>
+               <span class="p">(</span><span class="mi">1</span><span class="p">,</span> <span class="mf">0.9</span><span class="p">))</span>
+    <span class="p">],</span>
+    <span class="n">layout</span> <span class="o">=</span> <span class="n">go</span><span class="o">.</span><span class="n">Layout</span><span class="p">(</span>
+        <span class="n">title</span><span class="o">=</span><span class="s1">&#39;Nearly free electrons in 2D&#39;</span><span class="p">,</span>
+        <span class="n">autosize</span><span class="o">=</span><span class="kc">True</span><span class="p">,</span>
+        <span class="n">hovermode</span><span class="o">=</span><span class="kc">False</span><span class="p">,</span>
+        <span class="n">margin</span><span class="o">=</span><span class="nb">dict</span><span class="p">(</span>
+            <span class="n">t</span><span class="o">=</span><span class="mi">50</span><span class="p">,</span>
+            <span class="n">l</span><span class="o">=</span><span class="mi">20</span><span class="p">,</span>
+            <span class="n">r</span><span class="o">=</span><span class="mi">20</span><span class="p">,</span>
+            <span class="n">b</span><span class="o">=</span><span class="mi">50</span><span class="p">,</span>
+        <span class="p">),</span>
+        <span class="n">scene</span><span class="o">=</span><span class="nb">dict</span><span class="p">(</span>
+            <span class="n">yaxis</span><span class="o">=</span><span class="p">{</span><span class="s2">&quot;title&quot;</span><span class="p">:</span> <span class="s2">&quot;k_y&quot;</span><span class="p">},</span>
+            <span class="n">xaxis</span><span class="o">=</span><span class="p">{</span><span class="s2">&quot;title&quot;</span><span class="p">:</span> <span class="s2">&quot;k_x&quot;</span><span class="p">},</span>
+            <span class="n">zaxis</span><span class="o">=</span><span class="p">{</span><span class="s2">&quot;title&quot;</span><span class="p">:</span> <span class="s2">&quot;E&quot;</span><span class="p">},</span>
+        <span class="p">)</span>
+    <span class="p">)</span>
+<span class="p">)</span>
+<span class="n">py</span><span class="o">.</span><span class="n">iplot</span><span class="p">(</span><span class="n">fig</span><span class="p">,</span> <span class="n">show_link</span><span class="o">=</span><span class="kc">False</span><span class="p">)</span>
+</code></pre></div>
+<p>Observe that the top of the first band is above the bottom of the lowest band. Therefore if <script type="math/tex">V</script> is sufficiently weak, the material can be conducting even with 2 electrons per unit cell!</p>
+<p>A larger <script type="math/tex">V</script> makes the Fermi surface more distorted and eventually makes the material insulating.
+Let's compare the almost parabolic dispersion of the nearly free electron model with a tight-binding model in 2D.</p>
+<p>We now have a dispersion relation <script type="math/tex">E = E_0 - 2t(\cos k_x a + \cos k_y a)</script>, which looks like this:</p>
+<div class="highlight"><pre><span></span><code><span class="n">momenta</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">linspace</span><span class="p">(</span><span class="o">-</span><span class="n">pi</span><span class="p">,</span> <span class="n">pi</span><span class="p">,</span> <span class="mi">100</span><span class="p">)</span>
+<span class="n">kx</span><span class="p">,</span> <span class="n">ky</span> <span class="o">=</span> <span class="n">momenta</span><span class="p">[:,</span> <span class="n">np</span><span class="o">.</span><span class="n">newaxis</span><span class="p">],</span> <span class="n">momenta</span><span class="p">[</span><span class="n">np</span><span class="o">.</span><span class="n">newaxis</span><span class="p">,</span> <span class="p">:]</span>
+<span class="n">energies</span> <span class="o">=</span> <span class="o">-</span><span class="n">np</span><span class="o">.</span><span class="n">cos</span><span class="p">(</span><span class="n">kx</span><span class="p">)</span> <span class="o">-</span> <span class="n">np</span><span class="o">.</span><span class="n">cos</span><span class="p">(</span><span class="n">ky</span><span class="p">)</span>
+<span class="n">fig</span> <span class="o">=</span> <span class="n">go</span><span class="o">.</span><span class="n">Figure</span><span class="p">(</span>
+    <span class="n">data</span> <span class="o">=</span> <span class="p">[</span>
+        <span class="n">go</span><span class="o">.</span><span class="n">Surface</span><span class="p">(</span>
+            <span class="n">z</span><span class="o">=</span><span class="n">energies</span><span class="p">,</span>
+            <span class="c1"># colorscale=&#39;#3d88cf&#39;,</span>
+            <span class="n">opacity</span><span class="o">=</span><span class="mi">1</span><span class="p">,</span>
+            <span class="n">showscale</span><span class="o">=</span><span class="kc">False</span><span class="p">,</span>
+            <span class="n">hoverinfo</span><span class="o">=</span><span class="s1">&#39;none&#39;</span><span class="p">,</span>
+            <span class="n">x</span><span class="o">=</span><span class="n">momenta</span><span class="p">,</span>
+            <span class="n">y</span><span class="o">=</span><span class="n">momenta</span><span class="p">,</span>
+        <span class="p">)</span>
+    <span class="p">],</span>
+    <span class="n">layout</span> <span class="o">=</span> <span class="n">go</span><span class="o">.</span><span class="n">Layout</span><span class="p">(</span>
+        <span class="n">title</span><span class="o">=</span><span class="s1">&#39;Tight-binding in 2D&#39;</span><span class="p">,</span>
+        <span class="n">autosize</span><span class="o">=</span><span class="kc">True</span><span class="p">,</span>
+        <span class="n">hovermode</span><span class="o">=</span><span class="kc">False</span><span class="p">,</span>
+        <span class="n">margin</span><span class="o">=</span><span class="nb">dict</span><span class="p">(</span>
+            <span class="n">t</span><span class="o">=</span><span class="mi">50</span><span class="p">,</span>
+            <span class="n">l</span><span class="o">=</span><span class="mi">20</span><span class="p">,</span>
+            <span class="n">r</span><span class="o">=</span><span class="mi">20</span><span class="p">,</span>
+            <span class="n">b</span><span class="o">=</span><span class="mi">50</span><span class="p">,</span>
+        <span class="p">),</span>
+        <span class="n">scene</span><span class="o">=</span><span class="nb">dict</span><span class="p">(</span>
+            <span class="n">yaxis</span><span class="o">=</span><span class="p">{</span><span class="s2">&quot;title&quot;</span><span class="p">:</span> <span class="s2">&quot;k_y&quot;</span><span class="p">},</span>
+            <span class="n">xaxis</span><span class="o">=</span><span class="p">{</span><span class="s2">&quot;title&quot;</span><span class="p">:</span> <span class="s2">&quot;k_x&quot;</span><span class="p">},</span>
+            <span class="n">zaxis</span><span class="o">=</span><span class="p">{</span><span class="s2">&quot;title&quot;</span><span class="p">:</span> <span class="s2">&quot;E&quot;</span><span class="p">},</span>
+        <span class="p">)</span>
+    <span class="p">)</span>
+<span class="p">)</span>
+<span class="n">py</span><span class="o">.</span><span class="n">iplot</span><span class="p">(</span><span class="n">fig</span><span class="p">,</span> <span class="n">show_link</span><span class="o">=</span><span class="kc">False</span><span class="p">)</span>
+</code></pre></div>
+<h3 id="light-absorption">Light absorption<a class="headerlink" href="#light-absorption" title="Permanent link">&para;</a></h3>
+<p>Photons of external light can be reflected, transmitted, or absorbed by the material. Absorption, in turn requires energy transfer from the photon to electrons. In a filled band there are no available states where energy could be transferred (that's why insulators may be transparent).</p>
+<p>When transition between two bands becomes possible due to photons having high energy, the absorption increases in a step-like fashion, see the sketch below for germanium.</p>
+<p><img alt="" src="figures/adsorption.svg" /></p>
+<p>Here <script type="math/tex">E'_G\approx 0.9eV</script> and <script type="math/tex">E_G\approx 0.8 eV</script>. The two visible steps are due to the special band structure of Ge:</p>
+<p><img alt="" src="figures/direct_indirect.svg" /></p>
+<p>The band structure has two band gaps: <em>direct</em>, the band gap at <script type="math/tex">k=0</script>, <script type="math/tex">E'_G</script> and <em>indirect</em> gap <script type="math/tex">E_G</script> at any <script type="math/tex">k</script>. In Ge <script type="math/tex">E_G < E'_G</script>, and therefore it is an <em>indirect band gap semiconductor</em>. Silicon also has an indirect band gap. Direct band gap materials are for example GaAs and InAs.</p>
+<p>Photons carry very little momentum and a very high energy since <script type="math/tex">E = c \hbar k</script> and <script type="math/tex">c</script> is large. Therefore to excite electrons at <script type="math/tex">E_G</script>, despite a lower photon energy is sufficient, there is not enough momentum. Then an extra phonon is required. Phonons may have a very large momentum at room temperature, and a very low energy since atomic mass is much higher than electron mass.</p>
+<p>A joint absorbtion of a photon and a phonon collision may excite an electron across an indirect band gap, however this process is much less efficient, and therefore materials with an indirect bandgap are much worse for optics applications (light emitting diodes, light sensors, etc).</p>
+<h2 id="summary">Summary<a class="headerlink" href="#summary" title="Permanent link">&para;</a></h2>
+<ul>
+<li>Each band can host two electrons per unit cell, therefore a material with an odd number of electrons is a metal; that with an even number of electrons may be an insulator.</li>
+<li>Light absorption is a tool to measure the band gap, and it distinguishes <strong>direct</strong> from <strong>indirect</strong> band gaps.</li>
+</ul>
+<h2 id="exercises">Exercises<a class="headerlink" href="#exercises" title="Permanent link">&para;</a></h2>
+<h3 id="exercise-1-3d-fermi-surfaces">Exercise 1: 3D Fermi surfaces<a class="headerlink" href="#exercise-1-3d-fermi-surfaces" title="Permanent link">&para;</a></h3>
+<p>Using the <a href="../fermi_surfaces">periodic table</a> of the Fermi surfaces (or the static images at https://www.phys.ufl.edu/fermisurface/ if 3D does not work for you), answer the following questions:</p>
+<ol>
+<li>Find 4 elements that are well described by the nearly-free electron model and 4 that are poorly described by it.</li>
+<li>Is the Fermi surface of lithium or potassium better described by the free electron model? What about nearly-free electron model? Why?</li>
+<li>Do you expect a crystal with a simple cubic lattice and monovalent atoms to be conducting?</li>
+<li>What Fermi surface shape would you expect the <a href="https://en.wikipedia.org/wiki/Sodium_chloride">NaCl crystal</a> to have? Explain your answer using both the atomic valences and the optical properties of this crystal.</li>
+</ol>
+<h3 id="exercise-2-tight-binding-in-2d">Exercise 2: Tight-binding in 2D<a class="headerlink" href="#exercise-2-tight-binding-in-2d" title="Permanent link">&para;</a></h3>
+<p>Consider a rectangular lattice with lattice constants <script type="math/tex">a_x</script> and <script type="math/tex">a_y</script>.
+Suppose the hopping parameters in the two corresponding directions to be <script type="math/tex">-t_1</script> and <script type="math/tex">-t_2</script>.
+Consider a single orbital per atom and only nearest-neighbour interactions.</p>
+<ol>
+<li>Write down a 2D tight-binding Schrödinger equation (expand to 2D the results of 1D).</li>
+<li>Formulate the Bloch ansatz for the wave function.</li>
+<li>Calculate the dispersion relation of this model.</li>
+<li>What Fermi surface shape would this model have if the atoms are monovalent?</li>
+<li>What Fermi surface shape would it have if the number of electrons per atom is much smaller than 1?</li>
+</ol>
+<h3 id="exercise-3-nearly-free-electron-model-in-2d">Exercise 3: Nearly-free Electron model in 2D<a class="headerlink" href="#exercise-3-nearly-free-electron-model-in-2d" title="Permanent link">&para;</a></h3>
+<p><em>(based on exercise 15.4 of the book)</em></p>
+<p>Suppose we have a square lattice with lattice constant <script type="math/tex">a</script>, with a periodic potential given by <script type="math/tex">V(x,y)=2V_{10}(\cos(2\pi x/a)+\cos(2\pi y/a))+4V_{11}\cos(2 \pi x/a)\cos(2 \pi y/a)</script>.</p>
+<ol>
+<li>
+<p>Use the Nearly-free electron model to find the energy of state <script type="math/tex">\mathbf{q}=(\pi/a, 0)</script>.</p>
+<details class="hint"><summary>Hint</summary><p>This is analogous to the 1D case: the states that interact have <script type="math/tex">k</script>-vectors <script type="math/tex">(\pi/a,0)</script> and <script type="math/tex">(-\pi/a,0)</script>; (<script type="math/tex">\psi_{+}\sim e^{i\pi x /a}</script> ; <script type="math/tex">\psi_{-}\sim e^{-i\pi x /a}</script>).</p>
+</details>
+</li>
+<li>
+<p>Let's now study the more complicated case of  state <script type="math/tex">\mathbf{q}=(\pi/a,\pi/a)</script>. How many <script type="math/tex">k</script>-points have the same energy? Which ones?</p>
+</li>
+<li>Write down the nearly free electron model Hamiltonian near this point.</li>
+<li>Find its eigenvalues.</li>
+</ol>
+                
+              
+              
+                
+
+
+              
+            </article>
+          </div>
+        </div>
+        
+          <a href="#" class="md-top md-icon" data-md-component="top" data-md-state="hidden">
+            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M13 20h-2V8l-5.5 5.5-1.42-1.42L12 4.16l7.92 7.92-1.42 1.42L13 8v12z"/></svg>
+            Back to top
+          </a>
+        
+      </main>
+      
+        
+<footer class="md-footer">
+  
+    <nav class="md-footer__inner md-grid" aria-label="Footer">
+      
+        
+        <a href="../5-1-Bloch/" class="md-footer__link md-footer__link--prev" aria-label="Previous: The nearly free electron model" rel="prev">
+          <div class="md-footer__button md-icon">
+            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11h12z"/></svg>
+          </div>
+          <div class="md-footer__title">
+            <div class="md-ellipsis">
+              <span class="md-footer__direction">
+                Previous
+              </span>
+              The nearly free electron model
+            </div>
+          </div>
+        </a>
+      
+      
+        
+        <a href="../../6-semiconductors/6-1-semiconductors/" class="md-footer__link md-footer__link--next" aria-label="Next: Semiconductors 101" rel="next">
+          <div class="md-footer__title">
+            <div class="md-ellipsis">
+              <span class="md-footer__direction">
+                Next
+              </span>
+              Semiconductors 101
+            </div>
+          </div>
+          <div class="md-footer__button md-icon">
+            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M4 11v2h12l-5.5 5.5 1.42 1.42L19.84 12l-7.92-7.92L10.5 5.5 16 11H4z"/></svg>
+          </div>
+        </a>
+      
+    </nav>
+  
+  <div class="md-footer-meta md-typeset">
+    <div class="md-footer-meta__inner md-grid">
+      <div class="md-footer-copyright">
+        
+          <div class="md-footer-copyright__highlight">
+            Content prepared and curated by <a href="mailto:andrew.mcculloch@utas.edu.au">A J McCulloch</a>
+          </div>
+        
+        Made with
+        <a href="https://squidfunk.github.io/mkdocs-material/" target="_blank" rel="noopener">
+          Material for MkDocs
+        </a>
+        
+      </div>
+      
+    </div>
+  </div>
+</footer>
+      
+    </div>
+    <div class="md-dialog" data-md-component="dialog">
+      <div class="md-dialog__inner md-typeset"></div>
+    </div>
+    <script id="__config" type="application/json">{"base": "../..", "features": ["navigation.top"], "translations": {"clipboard.copy": "Copy to clipboard", "clipboard.copied": "Copied to clipboard", "search.config.lang": "en", "search.config.pipeline": "trimmer, stopWordFilter", "search.config.separator": "[\\s\\-]+", "search.placeholder": "Search", "search.result.placeholder": "Type to start searching", "search.result.none": "No matching documents", "search.result.one": "1 matching document", "search.result.other": "# matching documents", "search.result.more.one": "1 more on this page", "search.result.more.other": "# more on this page", "search.result.term.missing": "Missing", "select.version.title": "Select version"}, "search": "../../assets/javascripts/workers/search.709b4209.min.js", "version": null}</script>
+    
+    
+      <script src="../../assets/javascripts/bundle.2b46852b.min.js"></script>
+      
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.3/MathJax.js?config=TeX-AMS_HTML"></script>
+      
+        <script src="https://unpkg.com/thebelab@0.5.0/lib/index.js"></script>
+      
+        <script src="../../scripts/mathjaxhelper.js"></script>
+      
+        <script src="../../scripts/thebelabhelper.js"></script>
+      
+        <script src="../../scripts/x3dom.js"></script>
+      
+    
+  </body>
+</html>

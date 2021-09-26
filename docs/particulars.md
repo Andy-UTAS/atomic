@@ -48,25 +48,21 @@ The notes are designed to be consumed in concert to the video content, with cert
 
 !!! danger  "Expected competencies"
 
-Content has been constructed with the assumption that the material is consumed sequentially, with sections often explicitly relying on results from previous work. I have also to placed _expected competency_ markers at the beginning of each section, outlining knowledge that I expect you to have seen in other areas of study, and importantly, **these are cumulative** from section to section.
+    Content has been constructed with the assumption that the material is consumed sequentially, with sections often explicitly relying on results from previous work. I have also to placed _expected competency_ markers at the beginning of each section, outlining knowledge that I expect you to have seen in other areas of study, and importantly, **these are cumulative** from section to section.
 
 !!! note  "Text reference"
 
-You will also encounter _text references_ at the beginning of each section, relating to the relevant content in the course text [The Oxford Solid State Basics](https://global.oup.com/academic/product/the-oxford-solid-state-basics-9780199680771?cc=au&lang=en&).
+    You will also encounter _text references_ at the beginning of each section, relating to the relevant content in the course text [The Oxford Solid State Basics](https://global.oup.com/academic/product/the-oxford-solid-state-basics-9780199680771?cc=au&lang=en&).
 
 !!! info "Computational content"
 
-Computational content, which is normally just the jupyter notebook associated with the section, also appears at the top of the page, but may also contain links to other software or pertinent computational material.
+    Computational content, which is normally just the jupyter notebook associated with the section, also appears at the top of the page, but may also contain links to other software or pertinent computational material.
 
 #### The videos
 
 The video content is hosted on [Echo360](https://echo360.net.au/) and is available only to those enrolled at the University of Tasmania, and is best accessed through the course [MyLO page](https://mylo.utas.edu.au/d2l/le/content/463489/Home).
 
 ??? abstract "_Content download_: table of contents"
-
-    !!! note "Timestamps"
-
-        Timestamps detailing the topics discussed for each video are available in the video descriptions, but can be accessed in the table below
 
     A brief summary of the topics discussed in the _content download_ sessions is shown below:
 
@@ -81,9 +77,18 @@ The video content is hosted on [Echo360](https://echo360.net.au/) and is availab
     | [w3v01](https://echo360.net.au/media/d836fd83-6d43-4702-9cf0-dbd820bfcbe0/public)  | The 1D harmonic chain |
     | [w3v02](https://echo360.net.au/media/97f94b59-947a-4f14-84df-1e91e8f01ddd/public)  | The quantum chain |
     | [w3v03](https://echo360.net.au/media/74883cca-458e-476b-8a99-2a2c3ef0ca40/public)  | The diatomic chain |
-    | w4v01 | The tight-binding model |
-    | w4v02 | Real-space crystal structure |
-    | w4v03 | Reciprocal-space crystal structure |
+    | [w4v01](https://echo360.net.au/media/c8f15462-67ba-4750-ac1a-5b3a236c73b1/public) | The tight binding model |
+    | [w4v02](https://echo360.net.au/media/68464290-10ca-4f5a-92f1-68d842f6e900/public) | Crystals |
+    | [w4v03](https://echo360.net.au/media/0d2d4946-5d42-4bb8-b3da-b57882be1f1c/public) | Crystals in three dimensions |
+    | [w5v01](https://echo360.net.au/media/8e3737b2-7b07-4857-a368-482ab1ac639a/public) | The reciprocal lattice (part I) |
+    | [w5v02](https://echo360.net.au/media/3972a157-587f-49b8-a308-edf0d17e15d8/public) | The reciprocal lattice (part II) |
+    | [w5v03](https://echo360.net.au/media/ab6c99c0-7958-4f9e-af81-4712aef64c7d/public) | Scattering (part I) |
+    | [w5v04](https://echo360.net.au/media/c4e058a1-d7e5-4312-b1cc-1caaa9ee3f73/public) | Scattering (part II) |
+    | [w6v01](https://echo360.net.au/media/2a8e919b-742c-4a2f-8849-d7b8affe7d1e/public) | Scattering (part III) |
+
+    !!! note "Timestamps"
+
+        Timestamps detailing the topics discussed for each video are available in the video descriptions.
 
 ---
 

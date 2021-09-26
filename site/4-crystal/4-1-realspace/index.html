@@ -644,8 +644,8 @@
   
   
     <li class="md-nav__item">
-      <a href="../4-3-diffraction/" class="md-nav__link">
-        Diffraction
+      <a href="../4-3-scattering/" class="md-nav__link">
+        Scattering
       </a>
     </li>
   
@@ -686,8 +686,8 @@
   
   
     <li class="md-nav__item">
-      <a href="../../placeholder/" class="md-nav__link">
-        Bloch theorem
+      <a href="../../5-solids/5-1-Bloch/" class="md-nav__link">
+        The nearly free electron model
       </a>
     </li>
   
@@ -698,7 +698,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../placeholder/" class="md-nav__link">
+      <a href="../../5-solids/5-2-Bands/" class="md-nav__link">
         Band structure
       </a>
     </li>
@@ -740,7 +740,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../placeholder/" class="md-nav__link">
+      <a href="../../6-semiconductors/6-1-semiconductors/" class="md-nav__link">
         Semiconductors 101
       </a>
     </li>
@@ -752,7 +752,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../placeholder/" class="md-nav__link">
+      <a href="../../6-semiconductors/6-2-doping/" class="md-nav__link">
         Doping and devices
       </a>
     </li>
@@ -1120,6 +1120,7 @@
 <p class="admonition-title">Computational content</p>
 <p>The Jupyter notebook associated with this section can be accessed by clicking the icon below:
 <a class="text-center" href="https://jove2021.cloud.edu.au/hub/user-redirect/git-pull?repo=https%3A%2F%2Fgithub.com%2FAndy-UTAS%2FSolid-state&amp;urlpath=tree%2FSolid-state%2F4-1-crystals.ipynb&amp;branch=master" style="margin-left: 45%"><i class="fab fa-python fa-5x"></i></a></p>
+<p>The Voronoi diagram generator can be accessed <a href="http://cfbrasz.github.io/Voronoi.html">here</a></p>
 </div>
 <hr />
 <h2 id="crystal-classification">Crystal classification<a class="headerlink" href="#crystal-classification" title="Permanent link">&para;</a></h2>
@@ -1177,7 +1178,8 @@ iii) A lattice is an infinite set of vectors where the addition of any two vecto
 <p class="admonition-title">Definition: unit cell</p>
 <p>A unit cell is a region of space such that when many identical units are stacked together it tiles (completely fills) all of space and reconstructs the full structure</p>
 </div>
-<p>{% include images/4-1-simple_lattice.html %}</p>
+<object type="text/html" data="../images/4-1-simple_lattice.html"  frameborder="0" width=650 height=650 class=center></object>
+
 <p>In the case of a 3D lattice, we need to choose three linearly independent lattice vectors and thus the unit cell will be a volume instead of an area. If the chosen unit cell only contains a single lattice point, this is called a <strong>primitive unit cell</strong>. The lattice vectors which construct the primitive unit cell are called <strong>primitive lattice vectors</strong>. Because the primitive unit cell is constructed out of a set of linearly independent primitive lattice vectors, the primitive unit cell can be repeated infinitely many times to map out the entire lattice!</p>
 <p>The unit cell, which was conveniently chosen in panel <code>B</code>, defines a primitive unit cell. At first glance it might seem that there are four lattice point inside the primitive unit cell instead of one; however, each point only occupies the lattice by one quarter. Therefore, there is exactly <script type="math/tex">4 \times \frac{1}{4} = 1</script> lattice point in the unit cell and is thus it is a primitive unit cell!</p>
 <p>As previously mentioned, the choice of the primitive lattice vectors is <em>not</em> unique. For example, we could have easily chosen another set of lattice vectors - as shown in panel <code>C</code> - which produce primitive unit cells.

@@ -27,6 +27,8 @@ Our journey to this point has seen our initial, somewhat crude models of solids 
     The Jupyter notebook associated with this section can be accessed by clicking the icon below:
     [<i class="fab fa-python fa-5x"></i>](https://jove2021.cloud.edu.au/hub/user-redirect/git-pull?repo=https%3A%2F%2Fgithub.com%2FAndy-UTAS%2FSolid-state&urlpath=tree%2FSolid-state%2F4-1-crystals.ipynb&branch=master){ .md-button .md-button--primary class="text-center" style="margin-left: 45%"}
 
+    The Voronoi diagram generator can be accessed [here](http://cfbrasz.github.io/Voronoi.html)
+
 ---
 
 ## Crystal classification
@@ -96,7 +98,7 @@ A vector connecting any two lattice points is called a **lattice vector**. Suppo
 
     A unit cell is a region of space such that when many identical units are stacked together it tiles (completely fills) all of space and reconstructs the full structure
 
-{% include images/4-1-simple_lattice.html %}
+<object type="text/html" data="../images/4-1-simple_lattice.html"  frameborder="0" width=650 height=650 class=center></object>
 
 In the case of a 3D lattice, we need to choose three linearly independent lattice vectors and thus the unit cell will be a volume instead of an area. If the chosen unit cell only contains a single lattice point, this is called a **primitive unit cell**. The lattice vectors which construct the primitive unit cell are called **primitive lattice vectors**. Because the primitive unit cell is constructed out of a set of linearly independent primitive lattice vectors, the primitive unit cell can be repeated infinitely many times to map out the entire lattice!
 

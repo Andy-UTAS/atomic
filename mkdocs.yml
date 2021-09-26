@@ -17,13 +17,13 @@ nav:
     - '4: Crystallography':
       - 'Crystals': 4-crystal/4-1-realspace.md
       - 'Crystals in reciprocal space': 4-crystal/4-2-kspace.md
-      - 'Diffraction': 4-crystal/4-3-diffraction.md
+      - 'Scattering': 4-crystal/4-3-scattering.md
     - '5: Electrons in solids':
-      - 'Bloch theorem': placeholder.md
-      - 'Band structure': placeholder.md
+      - 'The nearly free electron model': 5-solids/5-1-Bloch.md
+      - 'Band structure': 5-solids/5-2-Bands.md
     - '6: Semiconductors':
-      - 'Semiconductors 101': placeholder.md
-      - 'Doping and devices': placeholder.md
+      - 'Semiconductors 101': 6-semiconductors/6-1-semiconductors.md
+      - 'Doping and devices': 6-semiconductors/6-2-doping.md
     - '7: Magnetism':
       - 'Empty content': placeholder.md
     - '8: Cool stuff':
