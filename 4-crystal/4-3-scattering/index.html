@@ -9,14 +9,14 @@
       
       
       
-        <link rel="canonical" href="https://andy-utas.github.io/4-crystal/4-3-diffraction/">
+        <link rel="canonical" href="https://andy-utas.github.io/4-crystal/4-3-scattering/">
       
       <link rel="icon" href="../../logo.png">
       <meta name="generator" content="mkdocs-1.2.2, mkdocs-material-7.2.2">
     
     
       
-        <title>Diffraction - Solid-state physics</title>
+        <title>Scattering - Solid-state physics</title>
       
     
     
@@ -71,7 +71,7 @@
     <div data-md-component="skip">
       
         
-        <a href="#the-tight-binding-model" class="md-skip">
+        <a href="#scattering" class="md-skip">
           Skip to content
         </a>
       
@@ -100,7 +100,7 @@
         <div class="md-header__topic" data-md-component="header-topic">
           <span class="md-ellipsis">
             
-              Diffraction
+              Scattering
             
           </span>
         </div>
@@ -451,12 +451,12 @@
       
       
         <label class="md-nav__link md-nav__link--active" for="__toc">
-          Diffraction
+          Scattering
           <span class="md-nav__icon md-icon"></span>
         </label>
       
       <a href="./" class="md-nav__link md-nav__link--active">
-        Diffraction
+        Scattering
       </a>
       
         
@@ -478,59 +478,33 @@
     Introduction
   </a>
   
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#tight-binding" class="md-nav__link">
-    Tight binding
-  </a>
-  
-    <nav class="md-nav" aria-label="Tight binding">
+    <nav class="md-nav" aria-label="Introduction">
       <ul class="md-nav__list">
         
           <li class="md-nav__item">
-  <a href="#a-triatomic-molecule" class="md-nav__link">
-    A triatomic molecule
-  </a>
-  
-    <nav class="md-nav" aria-label="A triatomic molecule">
-      <ul class="md-nav__list">
-        
-          <li class="md-nav__item">
-  <a href="#number-cruncher" class="md-nav__link">
-    Number cruncher
-  </a>
-  
-</li>
-        
-      </ul>
-    </nav>
-  
-</li>
-        
-      </ul>
-    </nav>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#an-infinite-chain" class="md-nav__link">
-    An infinite chain
-  </a>
-  
-    <nav class="md-nav" aria-label="An infinite chain">
-      <ul class="md-nav__list">
-        
-          <li class="md-nav__item">
-  <a href="#solving-the-tight-binding-chain" class="md-nav__link">
-    Solving the tight-binding chain
+  <a href="#reciprocal-lattice-laue-conditions" class="md-nav__link">
+    Reciprocal lattice: Laue conditions
   </a>
   
 </li>
         
           <li class="md-nav__item">
-  <a href="#filling-bands" class="md-nav__link">
-    Filling bands
+  <a href="#structure-factor" class="md-nav__link">
+    Structure factor
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#non-primitive-unit-cell" class="md-nav__link">
+    Non-primitive unit cell
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#powder-diffraction" class="md-nav__link">
+    Powder Diffraction
   </a>
   
 </li>
@@ -563,8 +537,15 @@
 </li>
         
           <li class="md-nav__item">
-  <a href="#exercise-1-the-next-nearest-neighbour-chain" class="md-nav__link">
-    Exercise 1: The next-nearest neighbour chain
+  <a href="#exercise-3-x-ray-scattering-in-2d" class="md-nav__link">
+    Exercise 3: X-ray scattering in 2D
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#exercise-4-structure-factors-and-powder-diffraction" class="md-nav__link">
+    Exercise 4: Structure factors and powder diffraction
   </a>
   
 </li>
@@ -617,8 +598,8 @@
   
   
     <li class="md-nav__item">
-      <a href="../../placeholder/" class="md-nav__link">
-        Bloch theorem
+      <a href="../../5-solids/5-1-Bloch/" class="md-nav__link">
+        The nearly free electron model
       </a>
     </li>
   
@@ -629,7 +610,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../placeholder/" class="md-nav__link">
+      <a href="../../5-solids/5-2-Bands/" class="md-nav__link">
         Band structure
       </a>
     </li>
@@ -671,7 +652,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../placeholder/" class="md-nav__link">
+      <a href="../../6-semiconductors/6-1-semiconductors/" class="md-nav__link">
         Semiconductors 101
       </a>
     </li>
@@ -683,7 +664,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../placeholder/" class="md-nav__link">
+      <a href="../../6-semiconductors/6-2-doping/" class="md-nav__link">
         Doping and devices
       </a>
     </li>
@@ -849,59 +830,33 @@
     Introduction
   </a>
   
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#tight-binding" class="md-nav__link">
-    Tight binding
-  </a>
-  
-    <nav class="md-nav" aria-label="Tight binding">
+    <nav class="md-nav" aria-label="Introduction">
       <ul class="md-nav__list">
         
           <li class="md-nav__item">
-  <a href="#a-triatomic-molecule" class="md-nav__link">
-    A triatomic molecule
-  </a>
-  
-    <nav class="md-nav" aria-label="A triatomic molecule">
-      <ul class="md-nav__list">
-        
-          <li class="md-nav__item">
-  <a href="#number-cruncher" class="md-nav__link">
-    Number cruncher
-  </a>
-  
-</li>
-        
-      </ul>
-    </nav>
-  
-</li>
-        
-      </ul>
-    </nav>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#an-infinite-chain" class="md-nav__link">
-    An infinite chain
-  </a>
-  
-    <nav class="md-nav" aria-label="An infinite chain">
-      <ul class="md-nav__list">
-        
-          <li class="md-nav__item">
-  <a href="#solving-the-tight-binding-chain" class="md-nav__link">
-    Solving the tight-binding chain
+  <a href="#reciprocal-lattice-laue-conditions" class="md-nav__link">
+    Reciprocal lattice: Laue conditions
   </a>
   
 </li>
         
           <li class="md-nav__item">
-  <a href="#filling-bands" class="md-nav__link">
-    Filling bands
+  <a href="#structure-factor" class="md-nav__link">
+    Structure factor
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#non-primitive-unit-cell" class="md-nav__link">
+    Non-primitive unit cell
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#powder-diffraction" class="md-nav__link">
+    Powder Diffraction
   </a>
   
 </li>
@@ -934,8 +889,15 @@
 </li>
         
           <li class="md-nav__item">
-  <a href="#exercise-1-the-next-nearest-neighbour-chain" class="md-nav__link">
-    Exercise 1: The next-nearest neighbour chain
+  <a href="#exercise-3-x-ray-scattering-in-2d" class="md-nav__link">
+    Exercise 3: X-ray scattering in 2D
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#exercise-4-structure-factors-and-powder-diffraction" class="md-nav__link">
+    Exercise 4: Structure factors and powder diffraction
   </a>
   
 </li>
@@ -958,281 +920,232 @@
               
                 
                 
-                <h1 id="the-tight-binding-model">The tight binding model<a class="headerlink" href="#the-tight-binding-model" title="Permanent link">&para;</a></h1>
-<p>One-dimensional chains have been doing well, so why stop?</p>
+                <h1 id="scattering">Scattering<a class="headerlink" href="#scattering" title="Permanent link">&para;</a></h1>
 <h2 id="introduction">Introduction<a class="headerlink" href="#introduction" title="Permanent link">&para;</a></h2>
 <p><img alt="" src="../images/4-3-diffractionheader.jpg" /></p>
-<p>The model of Sommerfeld saw the Fermionic nature of electrons cemented in Drude's kinetic theory of electrons, but as we saw in our discussion of <a href="../../2-chemistry/2-1-chemistry">chemistry</a>, electrons tend not to be free, but rather occupy states as governed by surrounding nuclei. It is from this point that we aim to marry our discussion of bonding theory in the LCAO framework with our recent progress on modelling solids in one dimension.  </p>
 <div class="admonition danger">
 <p class="admonition-title">Expected competencies</p>
 <p>It is assumed that you have familiarity with the following concepts/techniques:</p>
 <ul>
-<li>Solid-state physics: 1D model of a solid, LCAO</li>
+<li>Wave mechanics: diffraction</li>
+<li>Mathematics: The Fourier transform</li>
 </ul>
 </div>
 <div class="admonition note">
 <p class="admonition-title">Text reference</p>
-<p>The material covered here is discussed in section(s) <script type="math/tex">\S 11</script> of <a href="https://global.oup.com/academic/product/the-oxford-solid-state-basics-9780199680771?cc=au&amp;lang=en&amp;">The Oxford Solid State Basics</a></p>
+<p>The material covered here is discussed in section(s) <script type="math/tex">\S 14</script> of <a href="https://global.oup.com/academic/product/the-oxford-solid-state-basics-9780199680771?cc=au&amp;lang=en&amp;">The Oxford Solid State Basics</a></p>
 </div>
 <div class="admonition info">
 <p class="admonition-title">Computational content</p>
 <p>The Jupyter notebook associated with this section can be accessed by clicking the icon below:
-<a class="text-center" href="https://jove2021.cloud.edu.au/hub/user-redirect/git-pull?repo=https%3A%2F%2Fgithub.com%2FAndy-UTAS%2FSolid-state&amp;urlpath=tree%2FSolid-state%2F3-3-tightbinding.ipynb&amp;branch=master" style="margin-left: 45%"><i class="fab fa-python fa-5x"></i></a></p>
+<a class="text-center" href="https://jove2021.cloud.edu.au/hub/user-redirect/git-pull?repo=https%3A%2F%2Fgithub.com%2FAndy-UTAS%2FSolid-state&amp;urlpath=tree%2FSolid-state%2F4-3-scattering.ipynb&amp;branch=master" style="margin-left: 45%"><i class="fab fa-python fa-5x"></i></a></p>
 </div>
 <hr />
-<h2 id="tight-binding">Tight binding<a class="headerlink" href="#tight-binding" title="Permanent link">&para;</a></h2>
-<p>In our discussion of covalent bonding, we were able to obtain a solution to the Schrödinger equation using the variational method in the framework known as <a href="../../2-chemistry/2-1-chemistry#the-linear-combination-of-atomic-orbitals-lcao">LCAO</a>. We are going to apply the same framework to an infinite chain of atoms, but before we do this, we are going to consider a gentle extension to the simple 2 atom case that we originally considered.</p>
-<h3 id="a-triatomic-molecule">A triatomic molecule<a class="headerlink" href="#a-triatomic-molecule" title="Permanent link">&para;</a></h3>
-<p>Let us consider a one-dimensional triatomic system as illustrated below:  </p>
-<p><img alt="" src="images/3-3-triatomic.png" /></p>
-<p>We are going to make the exact same assumptions that we made when we formulated LCAO, namely we are looking at a frozen molecule (no vibrations) with fixed nuclear positions (the Born-Oppenheimer approximation). We assume that the atoms are identical, and the electrons are tightly bound to a given nucleus so that we have</p>
+<h3 id="reciprocal-lattice-laue-conditions">Reciprocal lattice: Laue conditions<a class="headerlink" href="#reciprocal-lattice-laue-conditions" title="Permanent link">&para;</a></h3>
+<p>Reciprocal lattice manifests directly in the diffraction experiments.
+A diffraction experiment uses the crystal as a target and scatters high energy particles (X-rays, neutrons, or electrons) off of it.
+As a result of interference between mutiple waves, the scattered radiation reveals the reciprocal lattice of the crystal.
+In order to find the relationship between the incoming wave and the scattered one, let us consider a lattice of atoms separated by a lattice vector <script type="math/tex">\mathbf{R}</script>.
+An incoming wave with wave vector <script type="math/tex">\mathbf{k}</script> is incident upon the lattice.
+After scattering, the outgoing wave's wave vector is <script type="math/tex">\mathbf{k'}</script>.
+We assume that the atomic scattering is elastic (does not cause an energy loss), such that <script type="math/tex">|\mathbf{k'}|=|\mathbf{k}|</script>.
+Below we present a simple sketch of two different atoms scattering an incoming wave.</p>
+<p><img alt="" src="../images/scattering.svg" /></p>
+<p>Observe that the bottom ray travels a larger distance compared to the upper ray.
+The difference in distance results in a relative phase shift between the rays <script type="math/tex">\Delta \phi</script>.
+With a bit of geometry, we find that the extra distance traveled by the lower ray relative to the upper one is</p>
 <p>
 <script type="math/tex; mode=display">
-(\hat{K} + \hat{V}_n)|n\rangle = \epsilon_\textrm{atomic} |n\rangle
+x_{\mathrm{extra}} = \Delta x_1+\Delta x_2 = \cos(\theta) \lvert R \rvert + \cos(\theta') \lvert R \rvert.
 </script>
 </p>
-<p>where <script type="math/tex">\hat{K}</script> is the usual kinetic energy operator, <script type="math/tex">\hat{V}_n</script> is the potential due to the nucleus <script type="math/tex">n</script> and <script type="math/tex">\epsilon</script> is the energy of the bound electronic state. We again make the crude approximate that our orbitals are orthogonal<sup id="fnref:1"><a class="footnote-ref" href="#fn:1">1</a></sup>, such that</p>
-<p>
-<script type="math/tex; mode=display">
-\langle i|j\rangle = \delta_{i,j}.
-</script>
-</p>
-<p>Now, we can do exactly what we did for a diatomic molecule, namely, consider the trail wavefunction:</p>
-<p>
-<script type="math/tex; mode=display">
-\vert \psi \rangle = \varphi_1 |1\rangle + \varphi_2 |2\rangle + \varphi_3 |3\rangle.
-</script>
-</p>
-<p>By performing the exact same logic and mathematics we arrive at the matrix equation</p>
-<p>
-<script type="math/tex; mode=display">
-E \begin{pmatrix}
-\varphi_1 \\ \varphi_2 \\ \varphi_3
-\end{pmatrix} =
-\begin{pmatrix}
-\epsilon_0 & -t & 0 \\
--t & \epsilon_0 & -t \\
-0 & -t & \epsilon_0
-\end{pmatrix}
-\begin{pmatrix}
-\varphi_1 \\ \varphi_2 \\ \varphi_3.
-\end{pmatrix}
-</script>
-</p>
-<p>where <script type="math/tex">\epsilon_0 = \epsilon_\textrm{atomic} + V_0</script> with <script type="math/tex">V_0 =  \sum_{m \ne j} \langle m | V_j | m \rangle</script> the energy shift due to the presence of all other nuclei. It is assumed that hopping occurs only between the nearest neighbours such that</p>
-<p>
-<script type="math/tex; mode=display">
-\langle1|H|2\rangle = \langle2|H|3\rangle = -t.
-</script>
-</p>
-<details class="question"><summary>3.3.1: Apply the exact same logic and mathematics to arrive at the above matrix equation</summary></details>
-<p>Obtaining solutions to such a problem can be unwieldy, but fortunately, we have the perfect tool for the job.</p>
-<h4 id="number-cruncher">Number cruncher<a class="headerlink" href="#number-cruncher" title="Permanent link">&para;</a></h4>
-<p>We can use our computational toolkit to solve for the eigenvalues of a matrix. For example, with <script type="math/tex">\epsilon_0 = 2</script> and <script type="math/tex">t=1</script>, we find that the eigenvalues for the matrix above are approximately <script type="math/tex">(0.59, 2.00, 3.41)</script>. But what use is this? Well, let's look at a simple case of varying <script type="math/tex">t</script>.</p>
-<details class="question"><summary>3.3.2: Make a plot of the energy eigenvalues as a function of <script type="math/tex">t</script> running from <script type="math/tex">(0, \epsilon)</script> and interpret your result. Ensure to include your code.</summary></details>
-<!-- Using the definitions that already exist in this section's notebook, one can do something like the following
-
-<div class="highlight"><pre><span></span><code><span class="n">eigen</span> <span class="o">=</span> <span class="p">[]</span> <span class="c1"># Initalise a list for the eigenvalues</span>
-<span class="n">tvals</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">linspace</span><span class="p">(</span><span class="mi">0</span><span class="p">,</span><span class="mi">2</span><span class="p">,</span><span class="mi">20</span><span class="p">)</span> <span class="c1"># Make an array for the values of t to be plotted</span>
-
-<span class="c1"># Retrieve the eigenvalues at different values of t</span>
-<span class="k">for</span> <span class="n">tv</span> <span class="ow">in</span> <span class="n">tvals</span><span class="p">:</span>
-    <span class="n">ei</span> <span class="o">=</span> <span class="n">DOS_finite_electron_chain</span><span class="p">(</span><span class="mi">3</span><span class="p">,</span> <span class="n">t</span> <span class="o">=</span> <span class="n">tv</span><span class="p">)</span> <span class="c1"># Get the eigenvalues</span>
-    <span class="n">eigen</span><span class="o">.</span><span class="n">append</span><span class="p">(</span><span class="n">ei</span><span class="p">)</span> <span class="c1"># Add the values to the list</span>
-<span class="n">toplot</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">transpose</span><span class="p">(</span><span class="n">eigen</span><span class="p">)</span> <span class="c1"># Transpose the list to get a list of arrays for each eigenstate</span>
-
-<span class="c1"># Make the plot</span>
-<span class="n">fig</span><span class="p">,</span> <span class="n">ax</span> <span class="o">=</span> <span class="n">plt</span><span class="o">.</span><span class="n">subplots</span><span class="p">(</span><span class="mi">1</span><span class="p">,</span> <span class="mi">1</span><span class="p">)</span>
-
-<span class="n">labs</span> <span class="o">=</span> <span class="p">[</span><span class="s1">&#39;$E_+$&#39;</span><span class="p">,</span><span class="s1">&#39;$E_0$&#39;</span><span class="p">,</span><span class="s1">&#39;$E_-$&#39;</span><span class="p">]</span> <span class="c1"># Set a label for each plot</span>
-<span class="k">for</span> <span class="n">n</span><span class="p">,</span> <span class="n">en</span> <span class="ow">in</span> <span class="nb">enumerate</span><span class="p">(</span><span class="n">toplot</span><span class="p">):</span>
-    <span class="n">ax</span><span class="o">.</span><span class="n">plot</span><span class="p">(</span><span class="n">tvals</span><span class="p">,</span> <span class="n">en</span><span class="p">,</span> <span class="n">label</span> <span class="o">=</span> <span class="n">labs</span><span class="p">[</span><span class="n">n</span><span class="p">])</span>
-
-<span class="c1"># Make the plot pretty</span>
-<span class="n">ax</span><span class="o">.</span><span class="n">set_xlabel</span><span class="p">(</span><span class="s2">&quot;$t$&quot;</span><span class="p">)</span>
-<span class="n">ax</span><span class="o">.</span><span class="n">set_ylabel</span><span class="p">(</span><span class="s2">&quot;$E$&quot;</span><span class="p">)</span>
-<span class="n">ax</span><span class="o">.</span><span class="n">set_title</span><span class="p">(</span><span class="s1">&#39;Energy eigenvalues for a triatomic molecule&#39;</span><span class="p">)</span>
-<span class="n">plt</span><span class="o">.</span><span class="n">legend</span><span class="p">()</span>
-<span class="n">ax</span><span class="o">.</span><span class="n">set_aspect</span><span class="p">(</span><span class="o">.</span><span class="mi">15</span><span class="p">)</span>
-
-<span class="n">plt</span><span class="o">.</span><span class="n">savefig</span><span class="p">(</span><span class="s1">&#39;3-3-trievals.svg&#39;</span><span class="p">,</span> <span class="n">facecolor</span><span class="o">=</span><span class="s1">&#39;white&#39;</span><span class="p">,</span> <span class="n">transparent</span><span class="o">=</span><span class="kc">False</span><span class="p">,</span> <span class="n">bbox_inches</span><span class="o">=</span><span class="s1">&#39;tight&#39;</span><span class="p">)</span>
-
-<span class="n">plt</span><span class="o">.</span><span class="n">show</span><span class="p">()</span>
-</code></pre></div>
-
-Which produces the plot shown below:
-
-![](images/3-3-trievals.svg)
-
-As $t$ characterises the hopping between atoms, as this becomes larger, the existence of the bonding and antibonding states becomes more prevalent, and more and less energetically favourable respectively. We also note the existence of a third state at fixed energy, which arises due to equal attraction to both neighbours. But this is in line with what we have seen previously, namely, that the number of states should equal the number of degrees of freedom in the system. -->
-
-<p>Perhaps the most useful thing to do is similar to that which was introduced in the <a href="../../3-1d/3-2-diatomic#density-of-states">last section</a>, which is using to produce a histogram sampling of the energy eigenvalues in order to visualise the density of states. If we go ahead an do this:</p>
-<p><img alt="" src="images/3-3-DOS-3.svg" /></p>
-<p>The density of states is not a particularly useful concept with few states, but fortunately, this system scales well and "grows diagonally" with an increased number of atoms: as the hopping is limited to nearest neighbours and states are orthogonal, only the diagonal and first-off diagonal elements will be non-zero. So let's go ahead and crank the handle!</p>
-<div class="admonition example">
-<p class="admonition-title">To infinity and beyond</p>
-<div class="tabbed-set" data-tabs="1:6"><input checked="checked" id="__tabbed_1_1" name="__tabbed_1" type="radio" /><label for="__tabbed_1_1"><script type="math/tex">n = 3</script></label><div class="tabbed-content">
-<p><img alt="" src="images/3-3-DOS-3.svg" /></p>
-</div>
-<input id="__tabbed_1_2" name="__tabbed_1" type="radio" /><label for="__tabbed_1_2"><script type="math/tex">n = 10</script></label><div class="tabbed-content">
-<p><img alt="" src="images/3-3-DOS-10.svg" /></p>
-</div>
-<input id="__tabbed_1_3" name="__tabbed_1" type="radio" /><label for="__tabbed_1_3"><script type="math/tex">n = 100</script></label><div class="tabbed-content">
-<p><img alt="" src="images/3-3-DOS-100.svg" /></p>
-</div>
-<input id="__tabbed_1_4" name="__tabbed_1" type="radio" /><label for="__tabbed_1_4"><script type="math/tex">n = 1000</script></label><div class="tabbed-content">
-<p><img alt="" src="images/3-3-DOS-1000.svg" /></p>
-</div>
-<input id="__tabbed_1_5" name="__tabbed_1" type="radio" /><label for="__tabbed_1_5"><script type="math/tex">n = 10000</script></label><div class="tabbed-content">
-<p><img alt="" src="images/3-3-DOS-10000.svg" /></p>
-</div>
-<input id="__tabbed_1_6" name="__tabbed_1" type="radio" /><label for="__tabbed_1_6"><script type="math/tex">n = 100000</script></label><div class="tabbed-content">
-<p><iframe width="560" height="315" src="https://www.youtube-nocookie.com/embed/dik_wnOE4dk" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen class=center></iframe></p>
-<p>LOL: good luck! That would be one big matrix, much large than my meagre computer can handle.</p>
-</div>
-</div>
-</div>
-<details class="question"><summary>3.3.3: How do these results compare with what we have seen previously?</summary></details>
-<!-- The numerical results mostly agree with the models we developed earlier: for example, in the Sommerfeld model, the DoS in 1D is proportional to $\frac{1}{\sqrt{E}}$ and the large $n$ histograms reflect this proportionality for small energies $E$. But for larger values of $E$, there is  significant deviation form this behaviour. -->
-
-<h2 id="an-infinite-chain">An infinite chain<a class="headerlink" href="#an-infinite-chain" title="Permanent link">&para;</a></h2>
-<p>The above extension of the diatomic system to a triatomic system, especially when coupled with some computational assistance to hone our intuition, we are now going to consider the case of an infinite number of atoms, as depicted below:</p>
-<p><img alt="" src="images/3-3-chain.png" /></p>
-<p>The potential for the above system, assuming that the locations of atoms are <script type="math/tex">x_n = na</script> with <script type="math/tex">n \in \mathbb{Z}</script>, is then:</p>
-<p><img alt="" src="images/3-3-potential.svg" /></p>
-<p>Now we can redeploy the machinery that we used for the diatomic and triatomic systems, namely we formulate the molecular orbital via the LCAO model:</p>
-<p>
-<script type="math/tex; mode=display">
-\vert \Psi \rangle = \sum_n \phi_n |n \rangle
-</script>
-</p>
-<p>and write the effective Schrödinger as</p>
-<p>
-<script type="math/tex; mode=display">
-\sum_m H_{nm} \phi_m = E \phi_n
-</script>
-</p>
-<p>where the matrix elements of the Hamiltonian are given by</p>
-<p>
-<script type="math/tex; mode=display">  
-H_{nm} = \langle n | \hat{H} | m \rangle
-</script>
-</p>
-<p>It is a bit of work, but one can show that these matrix elements evaluate to</p>
-<p>
-<script type="math/tex; mode=display">
-H_{nm} = \epsilon_0 \delta_{n,m} - t \left(\delta_{n+1,m} + \delta_{n-1,m}\right)
-</script>
-</p>
-<p>with the same definitions for <script type="math/tex">\epsilon_0 = \epsilon_\textrm{atomic} + V_0</script> and <script type="math/tex">V_0 =  \sum_{m \ne j} \langle m | V_j | m \rangle</script> as in the triatomic case.</p>
-<h3 id="solving-the-tight-binding-chain">Solving the tight-binding chain<a class="headerlink" href="#solving-the-tight-binding-chain" title="Permanent link">&para;</a></h3>
-<p>It will perhaps come as little surprise that the method that we are going to use to solve our effective Schrödinger equation is similar to the method we have use to solve for vibrations in a chain, namely to look for plane-wave solutions:</p>
-<p>
-<script type="math/tex; mode=display">
-\phi_n = \frac{e^{-ikna}}{\sqrt{N}}
-</script>
-</p>
-<details class="question"><summary>3.3.4: How does this form of solution compare to the assumed form of solutions for oscillations?</summary></details>
-<!-- In the case of oscillations, we considered solutions of the form $e^{i\omega t - ikna}$, which was because we were looking for time dependent solutions. In this case, we are seeking variational solution to the time-independent Schödinger equation, and therefore do not require any time dependence. -->
-
-<p>We then crank the handle:</p>
+<p>As a result of the travel distance, the phase difference is:</p>
 <p>
 <script type="math/tex; mode=display">
 \begin{align}
-E \phi_n & = E \times \frac{e^{-ikna}}{\sqrt{N}} \\
-& = \sum_m H_{nm} \phi_m = \epsilon_0 \frac{e^{-ikna}}{\sqrt{N}} - t \left(\frac{e^{-ik(n+1)a}}{\sqrt{N}} - \frac{e^{-ik(n-1)a}}{\sqrt{N}}\right)
+\Delta \phi &= \lvert\mathbf{k} \rvert(\Delta x_1+\Delta x_2)\\
+&= \lvert\mathbf{k}\rvert \lvert\mathbf{R}\rvert(\cos(\theta)+\cos(\theta'))\\
+&= \mathbf{k'}\cdot \mathbf{R} - \mathbf{k}\cdot \mathbf{R} = (\mathbf{k'} - \mathbf{k}) \cdot \mathbf{R}.
 \end{align}
 </script>
 </p>
-<p>which yields the energy eigenvalue</p>
+<p>However, that is only a phase difference between waves scattered off of two atoms.
+To find the outgoing wave's amplitude, we must sum over scattered waves from each and every atom in the lattice:</p>
 <p>
 <script type="math/tex; mode=display">
-E = \epsilon_0 - t \left(e^{-ika} + e^{ika}\right) = \epsilon_0 - 2t\cos(ka)
+A\propto\sum_\mathbf{R}\mathrm{e}^{i\left(\Delta \phi-\omega t\right)} = \sum_\mathbf{R}\mathrm{e}^{i\left((\mathbf{k'}-\mathbf{k})\cdot\mathbf{R}-\omega t\right)}.
 </script>
 </p>
-<p>which is plotted below:</p>
-<p><img alt="" src="images/3-3-edispersion.svg" /></p>
-<p>There are obvious similarities to the dispersion of oscillations, or phonons, but there are stark differences as compared to the Sommerfeld free electron model: now only a range of energies can be occupied, and this range is referred to as an energy band, and the energy difference between the top and the bottom of this band is called the bandwidth<sup id="fnref:2"><a class="footnote-ref" href="#fn:2">2</a></sup>.</p>
-<p>Further considering the band structure as compared to the free electron model, let us focus on the dispersion relation close to the base of the band at <script type="math/tex">k=0</script>, where we approximate the energy as</p>
+<p>The above sum is non-zero if and only if the scattered waves interfere constructively i.e. the phase difference equals <script type="math/tex">2\pi n</script>, where <script type="math/tex">n</script> is an integer.
+Furthermore, we know that real and reciprocal lattice vectors are related by <script type="math/tex">\mathbf{G} \cdot \mathbf{R} = 2 \pi n</script>.
+Therefore, we conclude that the difference between incoming and outgoing waves must be:</p>
 <p>
 <script type="math/tex; mode=display">
-E \approx \epsilon_0 - 2t + t (ka)^2 \equiv E_0 + t (ka)^2.
+\mathbf{k'}-\mathbf{k}=\mathbf{G}.
 </script>
 </p>
-<p>If we compare this to the free-electron dispersion relation</p>
+<p>In other words, if the difference of the wavevector between the incoming and outgoing wave vectors coïncides with a reciprocal lattice point, we expect constructive interference.
+This requirement is known as the <em>Laue condition</em>.
+As a result, the interference pattern produced in diffraction experiments is a direct measurement of the reciprocal lattice!</p>
+<h3 id="structure-factor">Structure factor<a class="headerlink" href="#structure-factor" title="Permanent link">&para;</a></h3>
+<p>Above we assumed that the unit cell contains only a single atom.
+What if the basis contains more atoms though?
+In the figure below we show a simple lattice which contains multiple atoms in the unit cell.
+Note, the unit cell does not have to be primitive!</p>
+<p><img alt="" src="../images/laue_mod.svg" /></p>
+<p>Let <script type="math/tex">\mathbf{R}</script> be the lattice and let <script type="math/tex">\mathbf{R}+\mathbf{r}_j</script> be the location of the atoms in the unit cell.
+The distance <script type="math/tex">\mathbf{r}_j</script> is taken with respect to lattice point from which we construct the unit cell.
+Similar to before, we calculate the amplitude of the scattered wave.
+However, now there are multiple atoms in the unit cell and each of these atoms acquires a phase shift of its own.
+In order to keep track of the atoms, we define <script type="math/tex">\mathbf{r}_j</script> to be the location of atom <script type="math/tex">j</script> in the unit cell.
+The distance <script type="math/tex">\mathbf{r}_j</script> is defined with respect to the lattice point from which we construct the unit cell.
+In order to calculate the amplitude of the scattered wave, we must sum not only over all the lattice points but also over the atoms in a single unit cell:</p>
 <p>
 <script type="math/tex; mode=display">
-E=\frac{\hbar^2 k^2}{2m}
+\begin{align}
+A &\propto \sum_\mathbf{R} \sum_j f_j \mathrm{e}^{i\left(\mathbf{G}\cdot(\mathbf{R}+\mathbf{r}_j)-\omega t\right)}\\
+&= \sum_\mathbf{R}\mathrm{e}^{i\left(\mathbf{G}\cdot\mathbf{R}-\omega t\right)}\sum_j f_j\ \mathrm{e}^{i\mathbf{G}\cdot\mathbf{r}_j}
+\end{align}
 </script>
 </p>
-<p>we see that the band structure is similar, but with the lowest available energy is <script type="math/tex">E_0</script> instead of <script type="math/tex">0</script>, and the electrons behave as if they had a different <em>effective mass</em></p>
+<p>where <script type="math/tex">f_j</script> is the scattering amplitude off of a single atom, and it is called the <em>form factor</em>.
+The form factor mainly depends on the chemical element, nature of the scattered wave, and finer details like the electrical environment of the atom.
+The first part of the equation above is the familiar Laue condition, and it requires that the scattered wave satisfies the Laue condition.
+The second part gives the amplitude of the scattered wave, and it is called the <strong>structure factor</strong>:</p>
 <p>
 <script type="math/tex; mode=display">
-m^*=\frac{\hbar^2}{2ta^2}.
+S(\mathbf{G})=\sum_j f_j\ \mathrm{e}^{i\mathbf{G}\cdot\mathbf{r}_j}.
 </script>
 </p>
-<p>For the moment, we leave this as an observation, but we shall return to it later in the course.</p>
-<h3 id="filling-bands">Filling bands<a class="headerlink" href="#filling-bands" title="Permanent link">&para;</a></h3>
-<p>Let us now consider a system of <script type="math/tex">N</script> atoms. Due to the spin degeneracy, at each value <script type="math/tex">k</script> there are 2 possible states which can be occupied, which means for the system there are <script type="math/tex">2N</script> possible states. The implications of this are significant.</p>
-<div class="admonition example">
-<p class="admonition-title">Band filling</p>
-<div class="tabbed-set" data-tabs="2:3"><input checked="checked" id="__tabbed_2_1" name="__tabbed_2" type="radio" /><label for="__tabbed_2_1">Divalent system</label><div class="tabbed-content">
-<p>Let us consider an atom with two valance electrons: there will be as many electrons as states and thus the every state in the band will be occupied, as illustrated below:</p>
-<p><img alt="" src="images/3-3-divalentband.svg" /></p>
-</div>
-<input id="__tabbed_2_2" name="__tabbed_2" type="radio" /><label for="__tabbed_2_2">Monovalent system</label><div class="tabbed-content">
-<p>Now let us consider monovalent atoms: there will be twice as many states as there are electrons, and thus the band will only be half filled:</p>
-<p><img alt="" src="images/3-3-monovalentband.svg" /></p>
-<p>Note that there is now a Fermi surface - well, Fermi points.</p>
-</div>
-<input id="__tabbed_2_3" name="__tabbed_2" type="radio" /><label for="__tabbed_2_3">Monovalent system with electric field</label><div class="tabbed-content">
-<p>A Fermi surface means that nearby electrons can occupy neighbouring states, for example, under the influence of an electric field:</p>
-<p><img alt="" src="images/3-3-monovalentbandwithE.svg" /></p>
-</div>
-</div>
-</div>
-<details class="question"><summary>3.3.5: What is the implication of the plots shown in the <em>band filling</em> content block?</summary></details>
-<!-- This is the existence of conduction and insulation! For monovalent systems in the presence of an electric field, there can be an imbalance of electrons with either $+k$ or $-k$, so there will be a net charge migration, whereas with divalent atoms, one can never achieve a preference for either $\pm k$. -->
-
+<p>In diffraction experiments, the intensity of the scattered wave is <script type="math/tex">I \propto A^2</script>
+Therefore, the intensity of a scattered wave depends on the structure factor <script type="math/tex">I \propto S(\mathbf{G})^2</script>.
+Because the structure factor depends on the form factors and the positions of the basis atoms, by studying the visibility of different diffraction peaks we may learn the locations of atoms within the unit cell.</p>
+<h3 id="non-primitive-unit-cell">Non-primitive unit cell<a class="headerlink" href="#non-primitive-unit-cell" title="Permanent link">&para;</a></h3>
+<p>Laue conditions allow scattering as long as the scattering wave vector is a reciprocal lattice vector.
+However if we consider a non-primitive unit cell of the direct lattice, the reciprocal lattice contains more lattice points, seemingly leading to additional interference peaks.
+Computing the structure factor allows us to resolve this apparent contradiction.</p>
+<details class="question"><summary>Calculate the structure factor in which there is a single atom the unit cell located at the lattice point. Do any diffraction peaks dissapear?</summary><p>
+<script type="math/tex">\mathbf{r}_1=(0,0,0)\rightarrow S=f_1</script>.
+In this case, each reciprocal lattice point gives one interference peak, none of which are absent.</p>
+</details>
+<p>As a demonstration of how it happens, let us compute the structure factor of the FCC lattice using the conventional unit cell in the real space.</p>
+<p><img alt="" src="images/fcc_mod.svg" /></p>
+<p>The basis of the conventional FCC unit cell contains four identical atoms.
+With respect to the reference lattice point, these attoms are located at</p>
+<p>
+<script type="math/tex; mode=display">
+\begin{aligned}
+\mathbf{r}_1&=(0,0,0)\\
+\mathbf{r}_2&=\frac{1}{2}(\mathbf{a}_1+\mathbf{a}_2)\\
+\mathbf{r}_3&=\frac{1}{2}(\mathbf{a}_2+\mathbf{a}_3)\\
+\mathbf{r}_4&=\frac{1}{2}(\mathbf{a}_3+\mathbf{a}_1),
+\end{aligned}
+</script>
+with <script type="math/tex">f_1=f_2=f_3=f_4\equiv f</script>. Let the reciprocal lattice be described by <script type="math/tex">\mathbf{G}=h\mathbf{b}_1+k\mathbf{b}_2+l\mathbf{b}_3</script>, where <script type="math/tex">h</script>, <script type="math/tex">k</script> and <script type="math/tex">l</script> are integers. Using the basis described above and the reciprocal lattice, we calculate the structure factor:</p>
+<p>
+<script type="math/tex; mode=display">
+\begin{aligned}
+S&=f\left(\mathrm{e}^{i\mathbf{G}\cdot\mathbf{r}_1}+\mathrm{e}^{i\mathbf{G}\cdot\mathbf{r}_2}+\mathrm{e}^{i\mathbf{G}\cdot\mathbf{r}_3}+\mathrm{e}^{i\mathbf{G}\cdot\mathbf{r}_4}\right)\\
+&=f\left(1+\mathrm{e}^{i(h\mathbf{b}_1\cdot\mathbf{a}_1+k\mathbf{b}_2\cdot\mathbf{a}_2)/2}+\mathrm{e}^{i(k\mathbf{b}_2\cdot\mathbf{a}_2+l\mathbf{b}_3\cdot\mathbf{a}_3)/2}+\mathrm{e}^{i(h\mathbf{b}_1\cdot\mathbf{a}_1+l\mathbf{b}_3\cdot\mathbf{a}_3)/2}\right)\\
+&=f\left(1+\mathrm{e}^{i\pi(h+k)}+\mathrm{e}^{i\pi(k+l)}+\mathrm{e}^{i\pi(h+l)}\right).
+\end{aligned}
+</script>
+Because <script type="math/tex">h</script>, <script type="math/tex">k</script> and <script type="math/tex">l</script> are integers, all exponents are either <script type="math/tex">+1</script> or <script type="math/tex">-1</script>, and the interference is only present if</p>
+<p>
+<script type="math/tex; mode=display">
+S =
+\begin{cases}
+    4f, \: \mathrm{if} \: h, \: k, \: \mathrm{and} \: l \: \mathrm{are \: all \: even \: or \: odd,}\\
+    0, \: \mathrm{in \: all \: other \: cases}.
+\end{cases}
+</script>
+We now see that the reciprocal lattice points with nonzero amplitude exactly form the reciprocal lattice of the FCC lattice.</p>
+<h3 id="powder-diffraction">Powder Diffraction<a class="headerlink" href="#powder-diffraction" title="Permanent link">&para;</a></h3>
+<p>The easiest way to do diffraction measurements is to take a crystal, shoot an X-ray beam through it and measure the direction of outgoing waves.
+However growing a single crystal may be hard because many materials are polycrystalline</p>
+<p>A simple alternative is to perform <strong>powder diffraction</strong>.
+By crushing the crystal into a powder, the small crystallites are now orientated in random directions.
+This improves the chances of fulfilling the Laue condition for a fixed direction incoming beam.
+The experiment is illustrated in the figure above.
+The result is that the diffracted beam exits the sample via concentric circles at discrete <strong>deflection angles</strong> <script type="math/tex">2 \theta</script>.</p>
+<p><img alt="" src="../images/4-3-powder.svg" /></p>
+<p>In order to deduce the values of <script type="math/tex">\theta</script> of a specific crystal, let us put the Laue condition into a more practical form.
+We first take the modulus squared of both sides:</p>
+<p>
+<script type="math/tex; mode=display">
+\left|\mathbf{G}\right|^2 = \left|\mathbf{k'}-\mathbf{k} \right|^2 \\
+G^2 =  2k^2-2\mathbf{k'} \cdot \mathbf{k},
+</script>
+</p>
+<p>where we used <script type="math/tex">|\mathbf{k'}| = |\mathbf{k}|</script>.
+We then substitute the Laue condition <script type="math/tex">\mathbf{k'} = \mathbf{k}+\mathbf{G}</script>:</p>
+<p>
+<script type="math/tex; mode=display">
+\begin{align}
+\lvert \mathbf{G} \rvert ^2 &= 2k^2-2 \left(\mathbf{k}+\mathbf{G}\right) \cdot \mathbf{k} \\
+&= -2 \mathbf{G} \cdot \mathbf{k}.
+\end{align}
+</script>
+</p>
+<p>Using <script type="math/tex">\mathbf{k} \cdot \mathbf{G} = \lvert \mathbf{k} \rvert \lvert \mathbf{G} \rvert \cos(\phi)</script>,  we obtain</p>
+<p>
+<script type="math/tex; mode=display">
+\left| \mathbf{G} \right| = -2 \lvert \mathbf{k} \rvert \cos (\phi).
+</script>
+</p>
+<p>Note, <script type="math/tex">\phi</script> is the angle between the vector <script type="math/tex">\mathbf{k}</script> and <script type="math/tex">\mathbf{G}</script>, which is not the same as the angle between the incoming and scattered waves <script type="math/tex">\theta</script>.
+We are nearly there, but we are left with finding out the relation between <script type="math/tex">\phi</script> and <script type="math/tex">\theta</script>.</p>
+<p>Recall the concept of Miller planes.
+These are sets of planes identified by their Miller indices <script type="math/tex">(h,k,l)</script> which intersect the lattice vectors at <script type="math/tex">\mathbf{a}_1 / h</script>, <script type="math/tex">\mathbf{a}_22 / k</script> and <script type="math/tex">\mathbf{a}_3 / l</script>.
+It turns out that Miller planes are normal to the reciprocal lattice vector <script type="math/tex">\mathbf{G} = h \mathbf{b}_1 + k \mathbf{b}_2 + l \mathbf{b}_3</script> and the distance between subsequent Miller planes is <script type="math/tex">d_{hkl} = 2 \pi/\lvert \mathbf{G} \rvert</script> (you will derive this in today's exercise.
+Substituting the expression for <script type="math/tex">\lvert \mathbf{G} \rvert</script> into the expression for the distance between Miller planes we get:</p>
+<p>
+<script type="math/tex; mode=display">
+d_{hkl} \cos (\phi) = -\frac{\pi}{\lvert \mathbf{k} \rvert}.
+</script>
+</p>
+<p>We know that <script type="math/tex">\lvert \mathbf{k} \rvert</script> is related to the wavelength by <script type="math/tex">\lvert \mathbf{k} \rvert = 2\pi/\lambda</script>.
+Therefore, we can write the equation above as</p>
+<p>
+<script type="math/tex; mode=display">
+2 d_{hkl} \cos (\phi) = -\lambda.
+</script>
+</p>
+<p>Lastly, we express the equation in terms of the deflection angle through the relation <script type="math/tex">\phi = \theta + \pi/2</script>.
+With this, one can finally derive <strong>Bragg's Law</strong>:</p>
+<p>
+<script type="math/tex; mode=display">
+\lambda = 2 d_{hkl} \sin(\theta)
+</script>
+</p>
+<p>Bragg's law allows us to obtain atomic distances in the crystal <script type="math/tex">d_{hkl}</script> through powder diffraction experiments!</p>
 <hr />
 <h2 id="conclusions">Conclusions<a class="headerlink" href="#conclusions" title="Permanent link">&para;</a></h2>
-<ul>
-<li>Diffraction experiments reveal information about crystal structure.</li>
-<li>Laue condition: difference between wavevectors of incoming and diffracted waves matches a reciprocal lattice vector, necessary for constructive interference.</li>
-<li>Structure factor: describes the contribution of the atoms in a unit cell to the diffraction pattern.</li>
-<li>Powder diffraction and relating its experimental results to the crystal structure via Bragg's law.</li>
-</ul>
 <hr />
 <h2 id="exercises">Exercises<a class="headerlink" href="#exercises" title="Permanent link">&para;</a></h2>
 <h3 id="preliminary-provocations">Preliminary provocations<a class="headerlink" href="#preliminary-provocations" title="Permanent link">&para;</a></h3>
 <ol>
-<li>Compare the expression of the effective mass with Newton's second law. Do you observe any similarities?</li>
-<li>Check the units of the effective mass. Is it what you expect?</li>
-<li>Calculate the effective mass of the free-electron dispersion relation. Is this what was expected?</li>
-<li>Under what condition is the effective mass the same for each electron?</li>
+<li>Why is the amplitude of a scattered wave zero if <script type="math/tex">\mathbf{k'}-\mathbf{k} \neq \mathbf{G}</script>?</li>
+<li>Suppose we have a unit cell with a single atom in it.
+Can any intensity peaks dissapear as a result of the structure factor?</li>
+<li>Can increasing the unit cell in real space introduce new diffraction peaks due to reciprocal lattice having more points?</li>
 </ol>
-<h3 id="exercise-1-the-next-nearest-neighbour-chain">Exercise 1: The next-nearest neighbour chain<a class="headerlink" href="#exercise-1-the-next-nearest-neighbour-chain" title="Permanent link">&para;</a></h3>
-<p>Let's expand our one-dimensional chain model by extending the range of interaction to include the next-nearest neighbours:</p>
-<p>
-<script type="math/tex; mode=display"> \langle \phi_n | H | \phi_{n+2}\rangle \equiv -t' ≠ 0.</script>
-</p>
+<h3 id="exercise-3-x-ray-scattering-in-2d">Exercise 3: X-ray scattering in 2D<a class="headerlink" href="#exercise-3-x-ray-scattering-in-2d" title="Permanent link">&para;</a></h3>
+<p>Consider a two-dimensional crystal with a rectangular lattice and lattice vectors <script type="math/tex">\mathbf{a}_1 = (0.468, 0)</script> nm and <script type="math/tex">\mathbf{a}_2 = (0, 0.342)</script> nm (so that <script type="math/tex">\mathbf{a}_1</script> points along <script type="math/tex">x</script>-axis and <script type="math/tex">\mathbf{a}_2</script> points along <script type="math/tex">y</script>-axis).</p>
 <ol>
-<li>Write down the new Schrödinger equation for this system.</li>
-<li>Solve the Schrödinger equation to find the dispersion relation <script type="math/tex">E(k)</script>.</li>
-<li>Calculate the effective mass <script type="math/tex">m^*</script>.</li>
-<li>Sketch the effective mass as a function of <script type="math/tex">k</script> for the cases <script type="math/tex">t=2t'</script>,<script type="math/tex">t=4t'</script> and <script type="math/tex">t=10t'</script>.</li>
+<li>Sketch the reciprocal lattice of this crystal.</li>
+<li>Consider an X-ray diffraction experiment performed on this crystal using monochromatic X-rays with wavelength <script type="math/tex">0.166</script> nm. By assuming elastic scattering, find the magnitude of the wave vectors of the incident and reflected X-ray beams.</li>
+<li>On the reciprocal lattice sketched in 3.1, draw the "scattering triangle" corresponding to the diffraction from (210) planes. To do that use the Laue condition <script type="math/tex">\Delta \mathbf{k} = \mathbf{G}</script> for the constructive interference of diffracted beams.</li>
 </ol>
-<div class="footnote">
-<hr />
+<h3 id="exercise-4-structure-factors-and-powder-diffraction">Exercise 4: Structure factors and powder diffraction<a class="headerlink" href="#exercise-4-structure-factors-and-powder-diffraction" title="Permanent link">&para;</a></h3>
 <ol>
-<li id="fn:1">
-<p>This is not necessary but makes the calculation much simpler, and the qualitative behaviour reproduces that in which we are interested&#160;<a class="footnote-backref" href="#fnref:1" title="Jump back to footnote 1 in the text">&#8617;</a></p>
-</li>
-<li id="fn:2">
-<p>Original, hey?&#160;<a class="footnote-backref" href="#fnref:2" title="Jump back to footnote 2 in the text">&#8617;</a></p>
-</li>
+<li>Compute the structure factor <script type="math/tex">\mathbf{S}</script> of the BCC lattice.</li>
+<li>Which diffraction peaks are missing?</li>
+<li>How does this structure factor change if the atoms in the center of the conventional unit cell have a different form factor from the atoms at the corner of the conventional unit cell?</li>
+<li>A student carried out X-ray powder diffraction on Chromium (Cr) which is known to have a BCC structure. The first five diffraction peaks are given below. Furthermore, the student took the liberty of assigning Miller indices to the peaks. Were the peaks assigned correctly? Fix any mistakes and explain your reasoning.
+<img alt="" src="../images/cr_xray_exercise.svg" /></li>
+<li>Calculate the lattice constant, <script type="math/tex">a</script>, of the chromium bcc unit cell. Note that X-ray diffraction was carried out using Cu K-<script type="math/tex">\alpha</script> (<script type="math/tex">1.5406 \unicode{xC5}</script>) radiation.</li>
 </ol>
-</div>
                 
               
               
@@ -1273,13 +1186,13 @@ m^*=\frac{\hbar^2}{2ta^2}.
       
       
         
-        <a href="../../placeholder/" class="md-footer__link md-footer__link--next" aria-label="Next: Bloch theorem" rel="next">
+        <a href="../../5-solids/5-1-Bloch/" class="md-footer__link md-footer__link--next" aria-label="Next: The nearly free electron model" rel="next">
           <div class="md-footer__title">
             <div class="md-ellipsis">
               <span class="md-footer__direction">
                 Next
               </span>
-              Bloch theorem
+              The nearly free electron model
             </div>
           </div>
           <div class="md-footer__button md-icon">
