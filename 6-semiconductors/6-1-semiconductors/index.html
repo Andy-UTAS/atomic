@@ -685,7 +685,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../6-2-doping/" class="md-nav__link">
+      <a href="../6-2-devices/" class="md-nav__link">
         Doping and devices
       </a>
     </li>
@@ -963,16 +963,17 @@
                 
                 
                 <h1 id="semiconductor-physics">Semiconductor physics<a class="headerlink" href="#semiconductor-physics" title="Permanent link">&para;</a></h1>
+<!-- Some clever quip -->
+
 <h2 id="introduction">Introduction<a class="headerlink" href="#introduction" title="Permanent link">&para;</a></h2>
-<p><img alt="" src="" /></p>
+<!-- ![](An introductory image)
+
+Some introductory text -->
+
 <div class="admonition danger">
 <p class="admonition-title">Expected competencies</p>
 <p>It is assumed that you have familiarity with the following concepts/techniques:</p>
-<ul>
-<li>Simplify integral expressions by Taylor expansion</li>
-<li>Compute the density of states of the free electron model</li>
-<li>Apply the concepts of group velocity and effective mass to solve problems</li>
-</ul>
+<p>*</p>
 </div>
 <div class="admonition note">
 <p class="admonition-title">Text reference</p>
@@ -981,7 +982,7 @@
 <div class="admonition info">
 <p class="admonition-title">Computational content</p>
 <p>The Jupyter notebook associated with this section can be accessed by clicking the icon below:
-<a class="text-center" href="#" style="margin-left: 45%"><i class="fab fa-python fa-5x"></i></a></p>
+<a class="text-center" href="https://jove2021.cloud.edu.au/hub/user-redirect/git-pull?repo=https%3A%2F%2Fgithub.com%2FAndy-UTAS%2FSolid-state&amp;urlpath=tree%2FSolid-state%2F6-1-semiconductors.ipynb&amp;branch=master" style="margin-left: 45%"><i class="fab fa-python fa-5x"></i></a></p>
 </div>
 <hr />
 <p>Up until this point, we focused on calculating and understanding the band structures.
@@ -1033,7 +1034,7 @@ If, on the other hand, we only keep track which single box is empty, we solve th
 <p>The same approach applies to band filling.
 Instead of describing a lot of electrons that are present in an almost filled band, we focus on those that are absent.
 The absence of an electron is called a <strong>hole</strong>: a state of a completely filled band with one particle missing.</p>
-<p><img alt="" src="figures/holes.svg" /></p>
+<p><img alt="" src="../images/6-1-holes.svg" /></p>
 <p>In this schematic we can either say that 8×2 electron states are occupied (the system has 8×2 electrons counting spin), or 10×2 hole states are occupied.
 Electron and hole pictures correspond to two different, but equivalent ways of describing the occupation of a band.
 Naturally, dealing with electrons is more convenient whenever a band is almost empty and with holes when a band is almost full.</p>
@@ -1077,18 +1078,7 @@ From this point on, similar to most other discussions of semiconductors in the l
 Furthermore, the Fermi level of a semiconductor lies between the conduction and the valence bands, and the band gap <script type="math/tex">E_G \gg k_B T</script> in most materials.
 As a result, only the bottom of the conduction band has electrons and the top of the valence band has holes.
 Therefore we can approximate the dispersion relation of both bands as parabolic, like shown below</p>
-<div class="highlight"><pre><span></span><code><span class="n">E_C_1</span><span class="p">,</span> <span class="n">E_V_1</span> <span class="o">=</span> <span class="mi">1</span><span class="p">,</span> <span class="o">-.</span><span class="mi">5</span>
-
-<span class="n">k</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">linspace</span><span class="p">(</span><span class="o">-</span><span class="mi">1</span><span class="p">,</span> <span class="mi">1</span><span class="p">)</span>
-<span class="n">ax</span> <span class="o">=</span> <span class="n">pyplot</span><span class="o">.</span><span class="n">subplot</span><span class="p">(</span><span class="mi">1</span><span class="p">,</span> <span class="mi">1</span><span class="p">,</span> <span class="mi">1</span><span class="p">)</span>
-<span class="n">lines</span> <span class="o">=</span> <span class="n">pyplot</span><span class="o">.</span><span class="n">plot</span><span class="p">(</span><span class="n">k</span><span class="p">,</span> <span class="n">E_C_1</span> <span class="o">+</span> <span class="n">k</span><span class="o">**</span><span class="mi">2</span><span class="o">/</span><span class="p">(</span><span class="mi">2</span><span class="o">*.</span><span class="mi">1</span><span class="p">),</span> <span class="n">blue</span><span class="p">,</span> <span class="n">k</span><span class="p">,</span> <span class="n">E_V_1</span> <span class="o">-</span> <span class="n">k</span><span class="o">**</span><span class="mi">2</span><span class="o">/</span><span class="p">(</span><span class="mi">2</span><span class="o">*</span><span class="n">m_h</span><span class="p">),</span> <span class="n">red</span><span class="p">)</span>
-<span class="n">pyplot</span><span class="o">.</span><span class="n">xlabel</span><span class="p">(</span><span class="s1">&#39;$k$&#39;</span><span class="p">)</span>
-<span class="n">pyplot</span><span class="o">.</span><span class="n">ylabel</span><span class="p">(</span><span class="s1">&#39;$E$&#39;</span><span class="p">)</span>
-<span class="n">pyplot</span><span class="o">.</span><span class="n">ylim</span><span class="p">(</span><span class="o">-</span><span class="mf">1.5</span><span class="p">,</span> <span class="mi">3</span><span class="p">)</span>
-<span class="n">pyplot</span><span class="o">.</span><span class="n">yticks</span><span class="p">([</span><span class="n">E_C_1</span> <span class="o">-</span> <span class="o">.</span><span class="mi">15</span><span class="p">,</span> <span class="n">E_V_1</span> <span class="o">+.</span><span class="mi">15</span><span class="p">],</span> <span class="s2">&quot;$E_C$ $E_V$&quot;</span><span class="o">.</span><span class="n">split</span><span class="p">())</span>
-<span class="n">pyplot</span><span class="o">.</span><span class="n">legend</span><span class="p">(</span><span class="n">lines</span><span class="p">,</span> <span class="p">[</span><span class="s1">&#39;Conduction band&#39;</span><span class="p">,</span> <span class="s1">&#39;Valence band&#39;</span><span class="p">])</span>
-<span class="n">draw_classic_axes</span><span class="p">(</span><span class="n">ax</span><span class="p">)</span>
-</code></pre></div>
+<p><img alt="" src="../images/6-1-bands.svg" /></p>
 <p>Or in other words</p>
 <p>
 <script type="math/tex; mode=display">
@@ -1115,26 +1105,7 @@ g_h(E_h) &= (2m_h)^{3/2}\sqrt{E_h+E_v}/2\pi^2\hbar^3.
 <h3 id="intrinsic-semiconductor">Intrinsic semiconductor<a class="headerlink" href="#intrinsic-semiconductor" title="Permanent link">&para;</a></h3>
 <p>Our next task is to figure out <em>how many</em> electrons and holes there are, and for that we need to find where the Fermi level <script type="math/tex">E_F</script> is located.
 Let us plot the density of states, the Fermi distribution function, and the density of particles at each energy in the same plot:</p>
-<div class="highlight"><pre><span></span><code><span class="n">E</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">linspace</span><span class="p">(</span><span class="o">-</span><span class="mi">3</span><span class="p">,</span> <span class="mi">3</span><span class="p">,</span> <span class="mi">1000</span><span class="p">)</span>
-<span class="n">fig</span><span class="p">,</span> <span class="n">ax</span> <span class="o">=</span> <span class="n">pyplot</span><span class="o">.</span><span class="n">subplots</span><span class="p">()</span>
-
-<span class="n">n_F</span> <span class="o">=</span> <span class="mi">1</span><span class="o">/</span><span class="p">(</span><span class="n">np</span><span class="o">.</span><span class="n">exp</span><span class="p">(</span><span class="mi">2</span><span class="o">*</span><span class="p">(</span><span class="n">E</span> <span class="o">-</span> <span class="n">E_F</span><span class="p">))</span> <span class="o">+</span> <span class="mi">1</span><span class="p">)</span>
-<span class="n">g_e</span> <span class="o">=</span> <span class="n">m_e</span> <span class="o">*</span> <span class="n">sqrt_plus</span><span class="p">(</span><span class="n">E</span> <span class="o">-</span> <span class="n">E_C</span><span class="p">)</span>
-<span class="n">g_h</span> <span class="o">=</span> <span class="n">m_h</span> <span class="o">*</span> <span class="n">sqrt_plus</span><span class="p">(</span><span class="n">E_V</span> <span class="o">-</span> <span class="n">E</span><span class="p">)</span>
-<span class="n">ax</span><span class="o">.</span><span class="n">plot</span><span class="p">(</span><span class="n">E</span><span class="p">,</span> <span class="n">g_e</span><span class="p">,</span> <span class="n">label</span><span class="o">=</span><span class="s2">&quot;$g_e$&quot;</span><span class="p">,</span> <span class="n">c</span><span class="o">=</span><span class="n">blue</span><span class="p">)</span>
-<span class="n">ax</span><span class="o">.</span><span class="n">plot</span><span class="p">(</span><span class="n">E</span><span class="p">,</span> <span class="n">g_h</span><span class="p">,</span> <span class="n">label</span><span class="o">=</span><span class="s2">&quot;$g_h$&quot;</span><span class="p">,</span> <span class="n">c</span><span class="o">=</span><span class="n">red</span><span class="p">)</span>
-<span class="n">ax</span><span class="o">.</span><span class="n">fill_between</span><span class="p">(</span><span class="n">E</span><span class="p">,</span> <span class="mi">10</span> <span class="o">*</span> <span class="n">g_e</span> <span class="o">*</span> <span class="n">n_F</span><span class="p">,</span> <span class="mi">0</span><span class="p">,</span> <span class="n">alpha</span><span class="o">=.</span><span class="mi">7</span><span class="p">,</span> <span class="n">label</span><span class="o">=</span><span class="s2">&quot;$n_e$&quot;</span><span class="p">,</span> <span class="n">color</span><span class="o">=</span><span class="n">blue</span><span class="p">)</span>
-<span class="n">ax</span><span class="o">.</span><span class="n">fill_between</span><span class="p">(</span><span class="n">E</span><span class="p">,</span> <span class="mi">10</span> <span class="o">*</span> <span class="n">g_h</span> <span class="o">*</span> <span class="p">(</span><span class="mi">1</span><span class="o">-</span><span class="n">n_F</span><span class="p">),</span> <span class="mi">0</span><span class="p">,</span> <span class="n">alpha</span><span class="o">=.</span><span class="mi">7</span><span class="p">,</span> <span class="n">label</span><span class="o">=</span><span class="s2">&quot;$n_h$&quot;</span><span class="p">,</span> <span class="n">color</span><span class="o">=</span><span class="n">red</span><span class="p">)</span>
-<span class="n">ax</span><span class="o">.</span><span class="n">plot</span><span class="p">(</span><span class="n">E</span><span class="p">,</span> <span class="n">n_F</span><span class="p">,</span> <span class="n">label</span><span class="o">=</span><span class="s2">&quot;$n_F$&quot;</span><span class="p">,</span> <span class="n">linestyle</span><span class="o">=</span><span class="s1">&#39;dashed&#39;</span><span class="p">,</span> <span class="n">c</span><span class="o">=</span><span class="s1">&#39;k&#39;</span><span class="p">)</span>
-<span class="n">ax</span><span class="o">.</span><span class="n">set_ylim</span><span class="p">(</span><span class="n">top</span><span class="o">=</span><span class="mf">1.5</span><span class="p">)</span>
-
-<span class="n">ax</span><span class="o">.</span><span class="n">set_xlabel</span><span class="p">(</span><span class="s1">&#39;$E$&#39;</span><span class="p">)</span>
-<span class="n">ax</span><span class="o">.</span><span class="n">set_ylabel</span><span class="p">(</span><span class="s1">&#39;$g$&#39;</span><span class="p">)</span>
-<span class="n">ax</span><span class="o">.</span><span class="n">set_xticks</span><span class="p">([</span><span class="n">E_V</span><span class="p">,</span> <span class="n">E_C</span><span class="p">,</span> <span class="n">E_F</span><span class="p">])</span>
-<span class="n">ax</span><span class="o">.</span><span class="n">set_xticklabels</span><span class="p">([</span><span class="s1">&#39;$E_V$&#39;</span><span class="p">,</span> <span class="s1">&#39;$E_C$&#39;</span><span class="p">,</span> <span class="s1">&#39;$E_F$&#39;</span><span class="p">])</span>
-<span class="n">ax</span><span class="o">.</span><span class="n">legend</span><span class="p">()</span>
-<span class="n">draw_classic_axes</span><span class="p">(</span><span class="n">ax</span><span class="p">,</span> <span class="n">xlabeloffset</span><span class="o">=.</span><span class="mi">2</span><span class="p">)</span>
-</code></pre></div>
+<p><img alt="" src="../images/6-1-density.svg" /></p>
 <p>We know that by itself, the semiconductor should have no charge, and therefore the total numbers of electrons and holes must be equal.
 Since increasing the Fermi level increases the number of electrons and reduces the number of holes, we will use the charge neutrality condition to determine where the Fermi level is situated.</p>
 <p><strong>The key algorithm of describing the state of a semiconductor:</strong></p>
@@ -1302,7 +1273,7 @@ where <script type="math/tex">a</script> is the lattice constant and <script typ
       
       
         
-        <a href="../6-2-doping/" class="md-footer__link md-footer__link--next" aria-label="Next: Doping and devices" rel="next">
+        <a href="../6-2-devices/" class="md-footer__link md-footer__link--next" aria-label="Next: Doping and devices" rel="next">
           <div class="md-footer__title">
             <div class="md-ellipsis">
               <span class="md-footer__direction">

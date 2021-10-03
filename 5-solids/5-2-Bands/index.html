@@ -71,7 +71,7 @@
     <div data-md-component="skip">
       
         
-        <a href="#band-structure" class="md-skip">
+        <a href="#band-structure-and-material-properties" class="md-skip">
           Skip to content
         </a>
       
@@ -535,7 +535,7 @@
 </li>
       
         <li class="md-nav__item">
-  <a href="#band-structure_1" class="md-nav__link">
+  <a href="#band-structure" class="md-nav__link">
     Band structure
   </a>
   
@@ -670,7 +670,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../6-semiconductors/6-2-doping/" class="md-nav__link">
+      <a href="../../6-semiconductors/6-2-devices/" class="md-nav__link">
         Doping and devices
       </a>
     </li>
@@ -839,7 +839,7 @@
 </li>
       
         <li class="md-nav__item">
-  <a href="#band-structure_1" class="md-nav__link">
+  <a href="#band-structure" class="md-nav__link">
     Band structure
   </a>
   
@@ -932,18 +932,18 @@
               
                 
                 
-                <h1 id="band-structure">Band structure<a class="headerlink" href="#band-structure" title="Permanent link">&para;</a></h1>
+                <h1 id="band-structure-and-material-properties">Band structure and material properties<a class="headerlink" href="#band-structure-and-material-properties" title="Permanent link">&para;</a></h1>
+<!-- Some clever quip -->
+
 <h2 id="introduction">Introduction<a class="headerlink" href="#introduction" title="Permanent link">&para;</a></h2>
-<p><img alt="" src="" /></p>
+<!-- ![](An introductory image)
+
+Some introductory text -->
+
 <div class="admonition danger">
 <p class="admonition-title">Expected competencies</p>
 <p>It is assumed that you have familiarity with the following concepts/techniques:</p>
-<ul>
-<li>Write down the dispersion and wavefunction of an electron in free space (solving the Schrödinger equation).</li>
-<li>Describe how the periodicity of a band structure (= dispersion) is related to the reciprocal lattice.</li>
-<li>Write down a Fourier series representation of a periodic function.</li>
-<li>Diagonalize a 2x2 matrix (i.e., find its eigenvalues and eigenfunctions).</li>
-</ul>
+<p>*</p>
 </div>
 <div class="admonition note">
 <p class="admonition-title">Text reference</p>
@@ -952,14 +952,14 @@
 <div class="admonition info">
 <p class="admonition-title">Computational content</p>
 <p>The Jupyter notebook associated with this section can be accessed by clicking the icon below:
-<a class="text-center" href="#" style="margin-left: 45%"><i class="fab fa-python fa-5x"></i></a></p>
+<a class="text-center" href="https://jove2021.cloud.edu.au/hub/user-redirect/git-pull?repo=https%3A%2F%2Fgithub.com%2FAndy-UTAS%2FSolid-state&amp;urlpath=tree%2FSolid-state%2F5-2-bands.ipynb&amp;branch=master" style="margin-left: 45%"><i class="fab fa-python fa-5x"></i></a></p>
 </div>
 <hr />
-<h2 id="band-structure_1">Band structure<a class="headerlink" href="#band-structure_1" title="Permanent link">&para;</a></h2>
+<h2 id="band-structure">Band structure<a class="headerlink" href="#band-structure" title="Permanent link">&para;</a></h2>
 <p>How are material properties related to the band structure?</p>
 <p>For a material to be a conductor, there should be available electron states at the Fermi level. Otherwise all the states are occupied, and all the currents cancel out.</p>
 <p>A band structure of a 1D material may look similar to this:</p>
-<p><img alt="" src="figures/band_structure_sketch.svg" /></p>
+<p><img alt="" src="../images/5-2-band_structure_sketch.svg" /></p>
 <p>We see several <strong>energy bands</strong> that may be separated by a <strong>band gap</strong> or overlapping.</p>
 <p>When the Fermi level lies in the band gap, the material is called a semiconductor (or dielectric or insulator). When the Fermi level lies within a band, it is a conductor (metal).</p>
 <h3 id="a-simple-requirement-for-insulators">A simple requirement for insulators<a class="headerlink" href="#a-simple-requirement-for-insulators" title="Permanent link">&para;</a></h3>
@@ -983,117 +983,20 @@
 <li>Apply the perturbation where the Fermi surface crosses the Brillouin zone (due to avoided level crossings).</li>
 </ol>
 <p>The resulting band structure looks like this (in the extended Brillouin zone scheme):</p>
-<div class="highlight"><pre><span></span><code><span class="k">def</span> <span class="nf">E</span><span class="p">(</span><span class="n">k_x</span><span class="p">,</span> <span class="n">k_y</span><span class="p">):</span>
-    <span class="n">delta</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">array</span><span class="p">([</span><span class="o">-</span><span class="mi">2</span><span class="o">*</span><span class="n">pi</span><span class="p">,</span> <span class="mi">0</span><span class="p">,</span> <span class="mi">2</span><span class="o">*</span><span class="n">pi</span><span class="p">])</span>
-    <span class="n">H</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">diag</span><span class="p">(</span>
-        <span class="p">((</span><span class="n">k_x</span> <span class="o">+</span> <span class="n">delta</span><span class="p">)[:,</span> <span class="n">np</span><span class="o">.</span><span class="n">newaxis</span><span class="p">]</span><span class="o">**</span><span class="mi">2</span>
-        <span class="o">+</span> <span class="p">(</span><span class="n">k_y</span> <span class="o">+</span> <span class="n">delta</span><span class="p">)[</span><span class="n">np</span><span class="o">.</span><span class="n">newaxis</span><span class="p">]</span><span class="o">**</span><span class="mi">2</span><span class="p">)</span><span class="o">.</span><span class="n">flatten</span><span class="p">()</span>
-    <span class="p">)</span>
-    <span class="k">return</span> <span class="nb">tuple</span><span class="p">(</span><span class="n">np</span><span class="o">.</span><span class="n">linalg</span><span class="o">.</span><span class="n">eigvalsh</span><span class="p">(</span><span class="n">H</span> <span class="o">+</span> <span class="mi">5</span><span class="p">)[:</span><span class="mi">3</span><span class="p">])</span>
+<object type="text/html" data="../images/5-2-nearly-free.html"  frameborder="0" width=650 height=650 class=center></object>
 
-<span class="n">E</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">vectorize</span><span class="p">(</span><span class="n">E</span><span class="p">,</span> <span class="n">otypes</span><span class="o">=</span><span class="p">(</span><span class="nb">float</span><span class="p">,</span> <span class="nb">float</span><span class="p">,</span> <span class="nb">float</span><span class="p">))</span>
-
-<span class="n">momenta</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">linspace</span><span class="p">(</span><span class="o">-</span><span class="mi">2</span><span class="o">*</span><span class="n">pi</span><span class="p">,</span> <span class="mi">2</span><span class="o">*</span><span class="n">pi</span><span class="p">,</span> <span class="mi">100</span><span class="p">)</span>
-<span class="n">kx</span><span class="p">,</span> <span class="n">ky</span> <span class="o">=</span> <span class="n">momenta</span><span class="p">[:,</span> <span class="n">np</span><span class="o">.</span><span class="n">newaxis</span><span class="p">],</span> <span class="n">momenta</span><span class="p">[</span><span class="n">np</span><span class="o">.</span><span class="n">newaxis</span><span class="p">,</span> <span class="p">:]</span>
-<span class="n">bands</span> <span class="o">=</span> <span class="n">E</span><span class="p">(</span><span class="n">kx</span><span class="p">,</span> <span class="n">ky</span><span class="p">)</span>
-
-<span class="c1"># Extended Brillouin zone scheme</span>
-<span class="n">pad</span> <span class="o">=</span> <span class="o">.</span><span class="mi">3</span>
-<span class="n">first_BZ</span> <span class="o">=</span> <span class="p">((</span><span class="nb">abs</span><span class="p">(</span><span class="n">kx</span><span class="p">)</span> <span class="o">&lt;</span> <span class="n">pi</span> <span class="o">+</span> <span class="n">pad</span><span class="p">)</span> <span class="o">&amp;</span> <span class="p">(</span><span class="nb">abs</span><span class="p">(</span><span class="n">ky</span><span class="p">)</span> <span class="o">&lt;</span> <span class="n">pi</span> <span class="o">+</span> <span class="n">pad</span><span class="p">))</span>
-<span class="n">second_BZ</span> <span class="o">=</span> <span class="p">(</span>
-    <span class="p">((</span><span class="nb">abs</span><span class="p">(</span><span class="n">kx</span><span class="p">)</span> <span class="o">&gt;</span> <span class="n">pi</span> <span class="o">-</span> <span class="n">pad</span><span class="p">)</span> <span class="o">|</span> <span class="p">(</span><span class="nb">abs</span><span class="p">(</span><span class="n">ky</span><span class="p">)</span> <span class="o">&gt;</span> <span class="n">pi</span> <span class="o">-</span> <span class="n">pad</span><span class="p">))</span>
-    <span class="o">&amp;</span> <span class="p">((</span><span class="nb">abs</span><span class="p">(</span><span class="n">kx</span> <span class="o">+</span> <span class="n">ky</span><span class="p">)</span> <span class="o">&lt;</span> <span class="mi">2</span><span class="o">*</span><span class="n">pi</span> <span class="o">+</span> <span class="n">pad</span><span class="p">)</span> <span class="o">&amp;</span> <span class="p">(</span><span class="nb">abs</span><span class="p">(</span><span class="n">kx</span> <span class="o">-</span> <span class="n">ky</span><span class="p">)</span> <span class="o">&lt;</span> <span class="mi">2</span><span class="o">*</span><span class="n">pi</span> <span class="o">+</span> <span class="n">pad</span><span class="p">))</span>
-<span class="p">)</span>
-<span class="n">third_BZ</span> <span class="o">=</span> <span class="p">(</span>
-    <span class="p">(</span><span class="nb">abs</span><span class="p">(</span><span class="n">kx</span> <span class="o">+</span> <span class="n">ky</span><span class="p">)</span> <span class="o">&gt;</span> <span class="mi">2</span><span class="o">*</span><span class="n">pi</span> <span class="o">-</span> <span class="n">pad</span><span class="p">)</span> <span class="o">|</span> <span class="p">(</span><span class="nb">abs</span><span class="p">(</span><span class="n">kx</span> <span class="o">-</span> <span class="n">ky</span><span class="p">)</span> <span class="o">&gt;</span> <span class="mi">2</span><span class="o">*</span><span class="n">pi</span> <span class="o">-</span> <span class="n">pad</span><span class="p">)</span>
-<span class="p">)</span>
-
-<span class="n">bands</span><span class="p">[</span><span class="mi">0</span><span class="p">][</span><span class="o">~</span><span class="n">first_BZ</span><span class="p">]</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">nan</span>
-<span class="n">bands</span><span class="p">[</span><span class="mi">1</span><span class="p">][</span><span class="o">~</span><span class="n">second_BZ</span><span class="p">]</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">nan</span>
-<span class="c1">#bands[2][~third_BZ] = np.nan</span>
-
-<span class="c1"># Actually plotting</span>
-
-<span class="n">fig</span> <span class="o">=</span> <span class="n">go</span><span class="o">.</span><span class="n">Figure</span><span class="p">(</span>
-    <span class="n">data</span> <span class="o">=</span> <span class="p">[</span>
-        <span class="n">go</span><span class="o">.</span><span class="n">Surface</span><span class="p">(</span>
-            <span class="n">z</span><span class="o">=</span><span class="n">band</span> <span class="o">/</span> <span class="mi">5</span><span class="p">,</span>
-            <span class="c1"># colorscale=color,</span>
-            <span class="n">opacity</span><span class="o">=</span><span class="n">opacity</span><span class="p">,</span>
-            <span class="n">showscale</span><span class="o">=</span><span class="kc">False</span><span class="p">,</span>
-            <span class="n">hoverinfo</span><span class="o">=</span><span class="s1">&#39;none&#39;</span><span class="p">,</span>
-            <span class="n">colorscale</span><span class="o">=</span><span class="s1">&#39;Reds&#39;</span><span class="p">,</span>
-            <span class="n">x</span><span class="o">=</span><span class="n">momenta</span><span class="p">,</span>
-            <span class="n">y</span><span class="o">=</span><span class="n">momenta</span><span class="p">,</span>
-        <span class="p">)</span>
-        <span class="k">for</span> <span class="n">band</span><span class="p">,</span> <span class="n">opacity</span>
-        <span class="ow">in</span> <span class="nb">zip</span><span class="p">(</span><span class="n">bands</span><span class="p">[:</span><span class="mi">2</span><span class="p">],</span>
-               <span class="c1"># [&#39;#cf483d&#39;, &#39;#3d88cf&#39;],</span>
-               <span class="p">(</span><span class="mi">1</span><span class="p">,</span> <span class="mf">0.9</span><span class="p">))</span>
-    <span class="p">],</span>
-    <span class="n">layout</span> <span class="o">=</span> <span class="n">go</span><span class="o">.</span><span class="n">Layout</span><span class="p">(</span>
-        <span class="n">title</span><span class="o">=</span><span class="s1">&#39;Nearly free electrons in 2D&#39;</span><span class="p">,</span>
-        <span class="n">autosize</span><span class="o">=</span><span class="kc">True</span><span class="p">,</span>
-        <span class="n">hovermode</span><span class="o">=</span><span class="kc">False</span><span class="p">,</span>
-        <span class="n">margin</span><span class="o">=</span><span class="nb">dict</span><span class="p">(</span>
-            <span class="n">t</span><span class="o">=</span><span class="mi">50</span><span class="p">,</span>
-            <span class="n">l</span><span class="o">=</span><span class="mi">20</span><span class="p">,</span>
-            <span class="n">r</span><span class="o">=</span><span class="mi">20</span><span class="p">,</span>
-            <span class="n">b</span><span class="o">=</span><span class="mi">50</span><span class="p">,</span>
-        <span class="p">),</span>
-        <span class="n">scene</span><span class="o">=</span><span class="nb">dict</span><span class="p">(</span>
-            <span class="n">yaxis</span><span class="o">=</span><span class="p">{</span><span class="s2">&quot;title&quot;</span><span class="p">:</span> <span class="s2">&quot;k_y&quot;</span><span class="p">},</span>
-            <span class="n">xaxis</span><span class="o">=</span><span class="p">{</span><span class="s2">&quot;title&quot;</span><span class="p">:</span> <span class="s2">&quot;k_x&quot;</span><span class="p">},</span>
-            <span class="n">zaxis</span><span class="o">=</span><span class="p">{</span><span class="s2">&quot;title&quot;</span><span class="p">:</span> <span class="s2">&quot;E&quot;</span><span class="p">},</span>
-        <span class="p">)</span>
-    <span class="p">)</span>
-<span class="p">)</span>
-<span class="n">py</span><span class="o">.</span><span class="n">iplot</span><span class="p">(</span><span class="n">fig</span><span class="p">,</span> <span class="n">show_link</span><span class="o">=</span><span class="kc">False</span><span class="p">)</span>
-</code></pre></div>
 <p>Observe that the top of the first band is above the bottom of the lowest band. Therefore if <script type="math/tex">V</script> is sufficiently weak, the material can be conducting even with 2 electrons per unit cell!</p>
 <p>A larger <script type="math/tex">V</script> makes the Fermi surface more distorted and eventually makes the material insulating.
 Let's compare the almost parabolic dispersion of the nearly free electron model with a tight-binding model in 2D.</p>
 <p>We now have a dispersion relation <script type="math/tex">E = E_0 - 2t(\cos k_x a + \cos k_y a)</script>, which looks like this:</p>
-<div class="highlight"><pre><span></span><code><span class="n">momenta</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">linspace</span><span class="p">(</span><span class="o">-</span><span class="n">pi</span><span class="p">,</span> <span class="n">pi</span><span class="p">,</span> <span class="mi">100</span><span class="p">)</span>
-<span class="n">kx</span><span class="p">,</span> <span class="n">ky</span> <span class="o">=</span> <span class="n">momenta</span><span class="p">[:,</span> <span class="n">np</span><span class="o">.</span><span class="n">newaxis</span><span class="p">],</span> <span class="n">momenta</span><span class="p">[</span><span class="n">np</span><span class="o">.</span><span class="n">newaxis</span><span class="p">,</span> <span class="p">:]</span>
-<span class="n">energies</span> <span class="o">=</span> <span class="o">-</span><span class="n">np</span><span class="o">.</span><span class="n">cos</span><span class="p">(</span><span class="n">kx</span><span class="p">)</span> <span class="o">-</span> <span class="n">np</span><span class="o">.</span><span class="n">cos</span><span class="p">(</span><span class="n">ky</span><span class="p">)</span>
-<span class="n">fig</span> <span class="o">=</span> <span class="n">go</span><span class="o">.</span><span class="n">Figure</span><span class="p">(</span>
-    <span class="n">data</span> <span class="o">=</span> <span class="p">[</span>
-        <span class="n">go</span><span class="o">.</span><span class="n">Surface</span><span class="p">(</span>
-            <span class="n">z</span><span class="o">=</span><span class="n">energies</span><span class="p">,</span>
-            <span class="c1"># colorscale=&#39;#3d88cf&#39;,</span>
-            <span class="n">opacity</span><span class="o">=</span><span class="mi">1</span><span class="p">,</span>
-            <span class="n">showscale</span><span class="o">=</span><span class="kc">False</span><span class="p">,</span>
-            <span class="n">hoverinfo</span><span class="o">=</span><span class="s1">&#39;none&#39;</span><span class="p">,</span>
-            <span class="n">x</span><span class="o">=</span><span class="n">momenta</span><span class="p">,</span>
-            <span class="n">y</span><span class="o">=</span><span class="n">momenta</span><span class="p">,</span>
-        <span class="p">)</span>
-    <span class="p">],</span>
-    <span class="n">layout</span> <span class="o">=</span> <span class="n">go</span><span class="o">.</span><span class="n">Layout</span><span class="p">(</span>
-        <span class="n">title</span><span class="o">=</span><span class="s1">&#39;Tight-binding in 2D&#39;</span><span class="p">,</span>
-        <span class="n">autosize</span><span class="o">=</span><span class="kc">True</span><span class="p">,</span>
-        <span class="n">hovermode</span><span class="o">=</span><span class="kc">False</span><span class="p">,</span>
-        <span class="n">margin</span><span class="o">=</span><span class="nb">dict</span><span class="p">(</span>
-            <span class="n">t</span><span class="o">=</span><span class="mi">50</span><span class="p">,</span>
-            <span class="n">l</span><span class="o">=</span><span class="mi">20</span><span class="p">,</span>
-            <span class="n">r</span><span class="o">=</span><span class="mi">20</span><span class="p">,</span>
-            <span class="n">b</span><span class="o">=</span><span class="mi">50</span><span class="p">,</span>
-        <span class="p">),</span>
-        <span class="n">scene</span><span class="o">=</span><span class="nb">dict</span><span class="p">(</span>
-            <span class="n">yaxis</span><span class="o">=</span><span class="p">{</span><span class="s2">&quot;title&quot;</span><span class="p">:</span> <span class="s2">&quot;k_y&quot;</span><span class="p">},</span>
-            <span class="n">xaxis</span><span class="o">=</span><span class="p">{</span><span class="s2">&quot;title&quot;</span><span class="p">:</span> <span class="s2">&quot;k_x&quot;</span><span class="p">},</span>
-            <span class="n">zaxis</span><span class="o">=</span><span class="p">{</span><span class="s2">&quot;title&quot;</span><span class="p">:</span> <span class="s2">&quot;E&quot;</span><span class="p">},</span>
-        <span class="p">)</span>
-    <span class="p">)</span>
-<span class="p">)</span>
-<span class="n">py</span><span class="o">.</span><span class="n">iplot</span><span class="p">(</span><span class="n">fig</span><span class="p">,</span> <span class="n">show_link</span><span class="o">=</span><span class="kc">False</span><span class="p">)</span>
-</code></pre></div>
+<object type="text/html" data="../images/5-2-tightbinding.html"  frameborder="0" width=650 height=650 class=center></object>
+
 <h3 id="light-absorption">Light absorption<a class="headerlink" href="#light-absorption" title="Permanent link">&para;</a></h3>
 <p>Photons of external light can be reflected, transmitted, or absorbed by the material. Absorption, in turn requires energy transfer from the photon to electrons. In a filled band there are no available states where energy could be transferred (that's why insulators may be transparent).</p>
 <p>When transition between two bands becomes possible due to photons having high energy, the absorption increases in a step-like fashion, see the sketch below for germanium.</p>
-<p><img alt="" src="figures/adsorption.svg" /></p>
+<p><img alt="" src="../images/5-2-adsorption.svg" /></p>
 <p>Here <script type="math/tex">E'_G\approx 0.9eV</script> and <script type="math/tex">E_G\approx 0.8 eV</script>. The two visible steps are due to the special band structure of Ge:</p>
-<p><img alt="" src="figures/direct_indirect.svg" /></p>
+<p><img alt="" src="../images/5-2-direct_indirect.svg" /></p>
 <p>The band structure has two band gaps: <em>direct</em>, the band gap at <script type="math/tex">k=0</script>, <script type="math/tex">E'_G</script> and <em>indirect</em> gap <script type="math/tex">E_G</script> at any <script type="math/tex">k</script>. In Ge <script type="math/tex">E_G < E'_G</script>, and therefore it is an <em>indirect band gap semiconductor</em>. Silicon also has an indirect band gap. Direct band gap materials are for example GaAs and InAs.</p>
 <p>Photons carry very little momentum and a very high energy since <script type="math/tex">E = c \hbar k</script> and <script type="math/tex">c</script> is large. Therefore to excite electrons at <script type="math/tex">E_G</script>, despite a lower photon energy is sufficient, there is not enough momentum. Then an extra phonon is required. Phonons may have a very large momentum at room temperature, and a very low energy since atomic mass is much higher than electron mass.</p>
 <p>A joint absorbtion of a photon and a phonon collision may excite an electron across an indirect band gap, however this process is much less efficient, and therefore materials with an indirect bandgap are much worse for optics applications (light emitting diodes, light sensors, etc).</p>
