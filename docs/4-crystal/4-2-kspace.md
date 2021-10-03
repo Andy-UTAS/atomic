@@ -6,8 +6,6 @@ Learn the _reciprocal_ secrets of crystals[^1].
 
 ![](images/4-2-kspaceheader.jpg)
 
-The model of Sommerfeld saw the Fermionic nature of electrons cemented in Drude's kinetic theory of electrons, but as we saw in our discussion of [chemistry](../../2-chemistry/2-1-chemistry), electrons tend not to be free, but rather occupy states as governed by surrounding nuclei. It is from this point that we aim to marry our discussion of bonding theory in the LCAO framework with our recent progress on modelling solids in one dimension.  
-
 !!! danger  "Expected competencies"
 
     It is assumed that you have familiarity with the following concepts/techniques:
@@ -27,7 +25,6 @@ The model of Sommerfeld saw the Fermionic nature of electrons cemented in Drude'
 In the last lecture, we learned crystallographic terminology in order to describe crystal structures.
 Now our goal is twofold, we will:
 - Study what consequences does a lattice have in reciprocal space (with the goal of considering dispersion relations)
-- Consider how to probe crystal structure using X-ray diffraction experiments.
 
 ## Reciprocal lattice motivation 1D case
 Previously, we discussed the reciprocal space of a simple 1D lattice.

@@ -23,7 +23,7 @@ nav:
       - 'Band structure': 5-solids/5-2-Bands.md
     - '6: Semiconductors':
       - 'Semiconductors 101': 6-semiconductors/6-1-semiconductors.md
-      - 'Doping and devices': 6-semiconductors/6-2-doping.md
+      - 'Doping and devices': 6-semiconductors/6-2-devices.md
     - '7: Magnetism':
       - 'Empty content': placeholder.md
     - '8: Cool stuff':

@@ -1,17 +1,18 @@
 # The nearly free electron model
 
+<!-- Some clever quip -->
+
 ## Introduction
 
-![]()
+<!-- ![](An introductory image)
+
+Some introductory text -->
 
 !!! danger  "Expected competencies"
 
     It is assumed that you have familiarity with the following concepts/techniques:
 
-    * Write down the dispersion and wavefunction of an electron in free space (solving the Schrödinger equation).
-    * Describe how the periodicity of a band structure (= dispersion) is related to the reciprocal lattice.
-    * Write down a Fourier series representation of a periodic function.
-    * Diagonalize a 2x2 matrix (i.e., find its eigenvalues and eigenfunctions).
+    * Quantum: Perturbation theory, including degenerate perturbation theory
 
 !!! note  "Text reference"
     The material covered here is discussed in section(s) $\S 15$ of [The Oxford Solid State Basics](https://global.oup.com/academic/product/the-oxford-solid-state-basics-9780199680771?cc=au&lang=en&)
@@ -19,17 +20,17 @@
 !!! info "Computational content"
 
     The Jupyter notebook associated with this section can be accessed by clicking the icon below:
-    [<i class="fab fa-python fa-5x"></i>](#){ .md-button .md-button--primary class="text-center" style="margin-left: 45%"}
+    [<i class="fab fa-python fa-5x"></i>](https://jove2021.cloud.edu.au/hub/user-redirect/git-pull?repo=https%3A%2F%2Fgithub.com%2FAndy-UTAS%2FSolid-state&urlpath=tree%2FSolid-state%2F5-1-bloch.ipynb&branch=master){ .md-button .md-button--primary class="text-centre" style="margin-left: 45%"}
 
 ---
 
 Let's summarize what we learned about electrons so far:
 
-* Free electrons are described by plane waves with a quadratic dispersion and form a Fermi sea ([lecture 4](4_sommerfeld_model.md))
-* Electrons on isolated atoms live in discrete orbitals ([lecture 5](5_atoms_and_lcao.md))
-* When orbitals hybridize we get *LCAO* or *tight-binding* band structures ([lecture 7](7_tight_binding.md))
+* Free electrons are described by plane waves with a quadratic dispersion and form a Fermi sea ([Electrons in metals II](../../1-intoduction/1-4-emetalsII/))
+* Electrons on isolated atoms live in discrete orbitals ([Chemistry](../../2-chemistry/2-1-chemistry/))
+* When orbitals hybridise we get *LCAO* or *tight-binding* band structures ([The tight binding model](../../3-1d/3-3-tightbinding/))
 
-In this lecture, we will analyze how electrons behave in solids using the *nearly-free electron model*. This model considers electrons as plane waves (as in the free electron model) that are weakly perturbed by the periodic potential associated with the atoms in a solid. This approach is opposite to that of the tight-binding model, where our starting point was that the electrons are strongly bound to the individual atoms and we included hopping to other atoms as a small effect. Perhaps surprisingly, we will find that the nearly-free electron model gives very similar results to the tight binding model: it also leads to the formation of energy bands, and these bands are separated by *band gaps* - regions in the band structure where there are no allowed energy states.  
+In this section, we will analyse how electrons behave in solids using the *nearly-free electron model*. This model considers electrons as plane waves (as in the free electron model) that are weakly perturbed by the periodic potential associated with the atoms in a solid. This approach is opposite to that of the tight-binding model, where our starting point was that the electrons are strongly bound to the individual atoms and we included hopping to other atoms as a small effect. Perhaps surprisingly, we will find that the nearly-free electron model gives very similar results to the tight binding model: it also leads to the formation of energy bands, and these bands are separated by *band gaps* - regions in the band structure where there are no allowed energy states.  
 
 ## Nearly free electron model
 
@@ -39,51 +40,17 @@ In the free electron model, the dispersion is $E = \hbar^2 |\mathbf{k}|^2/2m$. T
 * the band structure is not periodic in $k$-space
 * i.e., the Brillouin zone is infinite in $k$-space
 
-Within the **nearly free electron model** we start from the dispersion relation of free electrons and analyze the effect of introducing a weak lattice potential. The logic is very similar to getting optical and acoustic phonon branches by changing atom masses (and thereby reducing the size of the Brillouin zone). The lattice potential results in a band structure that is periodic in $k$-space, with a period given by the period of the reciprocal lattice:
+Within the **nearly free electron model** we start from the dispersion relation of free electrons and analyse the effect of introducing a weak lattice potential. The logic is very similar to getting optical and acoustic phonon branches by changing atom masses (and thereby reducing the size of the Brillouin zone). The lattice potential results in a band structure that is periodic in $k$-space, with a period given by the period of the reciprocal lattice:
 
-```python
-# Use colors from the default color cycle
-default_colors = pyplot.rcParams['axes.prop_cycle'].by_key()['color']
-blue, orange, *_ = default_colors
-
-def energy(k, V=1):
-    k = (k + pi) % (2*pi) - pi
-    k_vals = k + 2*pi * np.arange(-1, 2)
-    h = np.diag(k_vals**2) + V * (1 - np.identity(3))
-    return np.linalg.eigvalsh(h)
-
-energy = np.vectorize(energy, signature="(),()->(m)")
-
-fig, ax = pyplot.subplots(1, 1)
-
-momenta = np.linspace(-3*pi, 3*pi, 400)
-energies = energy(momenta, 0)
-max_en = 60
-energies[energies > max_en] = np.nan
-ax.plot(momenta, energies, c=blue)
-energies = energy(momenta, 3)
-max_en = 60
-energies[energies > max_en] = np.nan
-ax.plot(momenta, energies, c=orange)
-
-ax.set_xlabel("$ka$")
-ax.set_ylabel("$E$")
-ax.set_ylim(-.5, max_en + 5)
-ax.set_xticks(pi * np.arange(-3, 4))
-ax.set_xticklabels(fr"${i}\pi$".replace("1", "") if i else "$0$" for i in range(-3, 4))
-
-draw_classic_axes(ax, xlabeloffset=4)
-```
+![](images/5-1-nearlyfree.svg)
 
 In this figure, the orange curves represent the nearly-free electron dispersion, which differs from the free-electron dispersion (blue curves) because of the interaction with the lattice. We see that **band gaps** open where two copies of the free-electron dispersion cross. A key goal of this lecture is to understand how the weak interaction with the lattice leads to this modified band structure.
 
-### Analyzing the avoided crossings
+### Analysing the avoided crossings
 
-_Remark: An avoided crossing is an important concept in quantum mechanics that can be analyzed using **perturbation theory**. You will only learn this theory later in QMIII, so we will need to postulate some important facts here._
+To analyse what happens near the crossings, we first neglect the lattice potential and consider the free-electron dispersion near the crossing at $k=\pi/a$ in 1D. Near this crossing, we see that two copies of the dispersion come together (one copy centred at $k=0$, the other at $k=2\pi/a$). We call the corresponding plane-wave eigenfunctions $|k\rangle$ and $|k'\rangle =|k-2\pi/a\rangle$. We now express the wavefunction near this crossing as a linear superposition $|\psi\rangle = \alpha |k\rangle + \beta |k'\rangle$. Note that this wave function is very similar to that used in the LCAO model, except there we used linear combinations of the orbitals $|1\rangle$ and $|2\rangle$ instead of the plane waves $|k\rangle$ and $|k'\rangle$.
 
-To analyze what happens near the crossings, we first neglect the lattice potential and consider the free-electron dispersion near the crossing at $k=\pi/a$ in 1D. Near this crossing, we see that two copies of the dispersion come together (one copy centered at $k=0$, the other at $k=2\pi/a$). We call the corresponding plane-wave eigenfunctions $|k\rangle$ and $|k'\rangle =|k-2\pi/a\rangle$. We now express the wavefunction near this crossing as a linear superposition $|\psi\rangle = \alpha |k\rangle + \beta |k'\rangle$. Note that this wave function is very similar to that used in the LCAO model, except there we used linear combinations of the orbitals $|1\rangle$ and $|2\rangle$ instead of the plane waves $|k\rangle$ and $|k'\rangle$.
-
-We express the Hamiltonian near the crossing as a matrix, using $| k \rangle$ and $| k' \rangle$ as the basis states. The matrix elements are given by $\langle k |H|k\rangle = E_0 + v \hbar \delta k$ and $\langle k' |H|k'\rangle = E_0 - v \hbar \delta k$, where $\delta k = k-\pi/a$ is the distance from the center of the crossing and we approximated the dispersion near the crossing by a linear term. In matrix form, this yields
+We express the Hamiltonian near the crossing as a matrix, using $| k \rangle$ and $| k' \rangle$ as the basis states. The matrix elements are given by $\langle k |H|k\rangle = E_0 + v \hbar \delta k$ and $\langle k' |H|k'\rangle = E_0 - v \hbar \delta k$, where $\delta k = k-\pi/a$ is the distance from the centre of the crossing and we approximated the dispersion near the crossing by a linear term. In matrix form, this yields
 
 $$H\begin{pmatrix}\alpha \\ \beta \end{pmatrix} =
 \begin{pmatrix} E_0 + v \hbar \delta k & 0 \\ 0 & E_0 - v \hbar \delta k\end{pmatrix}
@@ -128,7 +95,7 @@ $$
 Calculating $W$, we find
 $$W = \langle k | V | k' \rangle = \frac{1}{a}\int_0^{a} e^{-i k x} V(x) e^{i k'x}  dx = \frac{1}{a}\int_0^a e^{-i 2\pi x /a} V(x) dx = V_1$$
 
-where we have used that $k-k' =2\pi/a$ because we are analyzing the first crossing. We see that the first component of the Fourier-series representation of $V(x)$ determines the gap near the first crossing.
+where we have used that $k-k' =2\pi/a$ because we are analysing the first crossing. We see that the first component of the Fourier-series representation of $V(x)$ determines the gap near the first crossing.
 
 
 #### Crossings between the higher bands
@@ -147,7 +114,7 @@ The different models considered thus far can be organized as a function of the s
 
 ![](figures/models.svg)
 
-We have seen that in the nearly-free electron model, the electrons behave as plane waves that are only slightly perturbed by the lattice potential. How is it possible that an electron that can scatter off all the atoms in a solid can even remotely look like a plane wave? The answer lies in that the periodic potential of the atoms can only scatter an electron between momentum states $|\mathbf{k}\rangle$ and $|\mathbf{k'}\rangle$ *if these momenta differ by a reciprocal lattice vector*. This condition is very similar to the Laue condition of X-ray scattering. In this lecture we have explicitly analyzed it in the context of the nearly-free electron model. The condition is known as the **conservation of crystal momentum** and is central to Bloch's theorem, which provides a general framework for computing band structures in crystals.
+We have seen that in the nearly-free electron model, the electrons behave as plane waves that are only slightly perturbed by the lattice potential. How is it possible that an electron that can scatter off all the atoms in a solid can even remotely look like a plane wave? The answer lies in that the periodic potential of the atoms can only scatter an electron between momentum states $|\mathbf{k}\rangle$ and $|\mathbf{k'}\rangle$ *if these momenta differ by a reciprocal lattice vector*. This condition is very similar to the Laue condition of X-ray scattering. In this lecture we have explicitly analysed it in the context of the nearly-free electron model. The condition is known as the **conservation of crystal momentum** and is central to Bloch's theorem, which provides a general framework for computing band structures in crystals.
 
 Bloch theorem:
 
@@ -180,7 +147,9 @@ $$
 $$
 which shows that each Bloch wave can be written as a sum over plane waves that differ by a reciprocal lattice vector.
 
-??? question "Does the tight-binding wavefunction $|\psi\rangle = \sum_n e^{ikna}(\phi_0|n,1\rangle+\psi_0|n,2\rangle)$ (see exercise 2 in Lecture 8) satisfy the Bloch theorem? What part of $|\psi\rangle$ describes $u(x)$ in this case? Try to describe in words how this Bloch wave is built up."
+<!-- ??? question "Does the tight-binding wavefunction $|\psi\rangle = \sum_n e^{ikna}(\phi_0|n,1\rangle+\psi_0|n,2\rangle)$ (see exercise 2 in Lecture 8) satisfy the Bloch theorem? What part of $|\psi\rangle$ describes $u(x)$ in this case? Try to describe in words how this Bloch wave is built up." -->
+
+??? question "Does the tight-binding wavefunction $|\psi\rangle = \sum_n e^{ikna}(\phi_0|n,1\rangle+\psi_0|n,2\rangle)$ satisfy the Bloch theorem? What part of $|\psi\rangle$ describes $u(x)$ in this case? Try to describe in words how this Bloch wave is built up."
 
 ### Repeated vs reduced vs extended Brillouin zone
 
@@ -188,65 +157,23 @@ There are several common ways to **plot** the same dispersion relation (no diffe
 
 Repeated BZ (all possible Bloch bands):
 
-```python
-fig
-```
+
+![](images/5-1-nearlyfree.svg)
 
 * Contains redundant information
 * May be easier to count/follow the bands
 
 Reduced BZ (all bands within 1st BZ):
 
-```python
-fig, ax = pyplot.subplots(1, 1)
 
-momenta = np.linspace(-pi, pi, 400)
-energies = energy(momenta, 0)
-max_en = 60
-energies[energies > max_en] = np.nan
-ax.plot(momenta, energies, c=blue)
-energies = energy(momenta, 3)
-max_en = 60
-energies[energies > max_en] = np.nan
-ax.plot(momenta, energies, c=orange)
-
-ax.set_xlabel("$ka$")
-ax.set_ylabel("$E$")
-ax.set_ylim(-.5, max_en + 5)
-ax.set_xticks(pi * np.arange(-1, 2))
-ax.set_xticklabels(r"$-\pi$ $0$ $\pi$".split())
-
-draw_classic_axes(ax, xlabeloffset=4)
-```
+![](images/5-1-reduced.svg)
 
 * No redundant information
 * Hard to relate to original dispersion
 
 Extended BZ (n-th band within n-th BZ):
 
-```python
-fig, ax = pyplot.subplots(1, 1)
-
-momenta = np.linspace(-3*pi, 3*pi, 400)
-energies = energy(momenta, 0)
-max_en = 60
-energies[energies > max_en] = np.nan
-energies[~((abs(momenta) // pi).reshape(-1, 1) == np.arange(3).reshape(1, -1))] = np.nan
-ax.plot(momenta, energies, c=blue)
-energies = energy(momenta, 3)
-max_en = 60
-energies[energies > max_en] = np.nan
-energies[~((abs(momenta) // pi).reshape(-1, 1) == np.arange(3).reshape(1, -1))] = np.nan
-ax.plot(momenta, energies, c=orange)
-
-ax.set_xlabel("$ka$")
-ax.set_ylabel("$E$")
-ax.set_ylim(-.5, max_en + 5)
-ax.set_xticks(pi * np.arange(-3, 4))
-ax.set_xticklabels(fr"${i}\pi$".replace("1", "") if i else "$0$" for i in range(-3, 4))
-
-draw_classic_axes(ax, xlabeloffset=4)
-```
+![](images/5-1-extended.svg)
 
 * No redundant information
 * Easy to relate to free electron model

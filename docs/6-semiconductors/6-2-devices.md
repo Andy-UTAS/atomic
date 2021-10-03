@@ -1,25 +1,28 @@
-# Doping
+# Devices
 
+<!-- Some clever quip -->
 
 ## Introduction
 
-![]()
+<!-- ![](An introductory image)
+
+Some introductory text -->
 
 !!! danger  "Expected competencies"
 
     It is assumed that you have familiarity with the following concepts/techniques:
 
 !!! note  "Text reference"
-    The material covered here is discussed in section(s) $\S$ of [The Oxford Solid State Basics](https://global.oup.com/academic/product/the-oxford-solid-state-basics-9780199680771?cc=au&lang=en&)
+    The material covered here is discussed in section(s) $\S 18$ of [The Oxford Solid State Basics](https://global.oup.com/academic/product/the-oxford-solid-state-basics-9780199680771?cc=au&lang=en&)
 
 !!! info "Computational content"
 
     The Jupyter notebook associated with this section can be accessed by clicking the icon below:
-    [<i class="fab fa-python fa-5x"></i>](#){ .md-button .md-button--primary class="text-center" style="margin-left: 45%"}
+    [<i class="fab fa-python fa-5x"></i>](https://jove2021.cloud.edu.au/hub/user-redirect/git-pull?repo=https%3A%2F%2Fgithub.com%2FAndy-UTAS%2FSolid-state&urlpath=tree%2FSolid-state%2F6-2-doping.ipynb&branch=master){ .md-button .md-button--primary class="text-center" style="margin-left: 45%"}
 
 ---
 
-In the previous lecture, we learned how to deal with partially filled bands.
+In the previous section, we learned how to deal with partially filled bands.
 The concept of electrons/holes established the foundations needed to understand semiconductors.
 We saw that the filling in semiconductors can be controlled by tuning the temperature.
 However, Fermi level control through temperature is still far too constrained and leads to equal electron and hole densities $n_e = n_h$.
@@ -64,28 +67,7 @@ That allows us to use the previous results and to conclude that an acceptor crea
 
 ### Density of states with donors and acceptors
 
-```python
-E = np.linspace(-3, 3, 1000)
-fig, ax = pyplot.subplots()
-
-n_F = 1/(np.exp(2*(E - E_F)) + 1)
-g_e = m_e * sqrt_plus(E - E_C)
-g_h = m_h * sqrt_plus(E_V - E)
-ax.plot(E, g_h, label="$g_h$")
-ax.plot(E, g_e, label="$g_e$")
-
-sigma = 0.01
-g_D = np.exp(-(E_D - E)**2 / sigma**2)
-g_A = .7 * np.exp(-(E_A - E)**2 / sigma**2)
-ax.plot(E, g_D, label='$g_D$')
-ax.plot(E, g_A, label='$g_A$')
-ax.legend()
-ax.set_xticks([E_V, E_C, E_A, E_D])
-ax.set_xticklabels(['$E_V$', '$E_C$', '$E_A$', '$E_D$'])
-ax.set_ylabel('$g$')
-ax.set_xlabel('$E$')
-draw_classic_axes(ax, xlabeloffset=.2)
-```
+![](images/6-2-impurity.svg)
 
 In order to model **multiple** donor/acceptor states, we assume that they are all degenerate at the binding energy.
 Therefore, we model the density of states of donors/acceptors as a Dirac delta function:
@@ -164,7 +146,7 @@ $$E_F = kT\ln[N_V/(N_A-N_D)], \textrm{ for } N_A > N_D$$
 It is instructive to consider how $E_F$, $n_e$ and $n_h$ depend on carrier concentrations.
 In this case, we consider an n-doped semiconductor, however, the same logic applies to p-doped semiconductors.
 
-![](figures/E_F_and_carrier_density.svg)
+![](images/6-2-E_F_and_carrier_density.svg)
 
 There are several relevant temperature limits:
 
@@ -188,332 +170,7 @@ The main idea is to plot the dependence of various energies ($E_F$, bottom of co
 
 Let us build up the band diagram step by step:
 
-```python
-
-
-def trans(x, a, b):
-    x = (x-a)/(b-a)
-    return h(x)/(h(x) + h(1-x))
-
-
-def h(x):
-    return (x > 0) * np.exp(-1/x)
-
-left_cutoff = 0.3
-right_cutoff = 0.7
-x = np.linspace(0, 1, 100)
-mid_idx = (x > left_cutoff) * (x < right_cutoff)
-
-
-Ef_p = 0.5
-Ef_n = Ef_p + 0.25
-Ef_delta = Ef_n - Ef_p
-
-E_C_1 = 1
-E_V_1 = 0.25
-
-E_C = E_C_1 - trans(x, left_cutoff, right_cutoff)*Ef_delta
-E_V = E_V_1 - trans(x, left_cutoff, right_cutoff)*Ef_delta
-
-fig1 = go.Figure()
-
-fig1.add_trace(go.Scatter(
-        x = [0, left_cutoff],
-        y = [E_V_1, E_V_1],
-        line_color = 'red',
-        mode = 'lines',
-        name = r'$E_V$',
-    ))
-
-fig1.add_trace(go.Scatter(
-        x = [0, left_cutoff],
-        y = [E_C_1, E_C_1],
-        line_color = 'blue',
-        mode = 'lines',
-        name = r'$E_C$',
-    ))
-
-# n bands (button 1)
-fig1.add_trace(go.Scatter(
-        x = [right_cutoff, 1],
-        y = [E_V_1, E_V_1],
-        line_color = 'red',
-        mode = 'lines',
-        showlegend=False
-    ))
-
-fig1.add_trace(go.Scatter(
-        x = [right_cutoff, 1],
-        y = [E_C_1, E_C_1],
-        line_color = 'blue',
-        mode = 'lines',
-        showlegend=False
-    ))
-
-# p fermi
-fig1.add_trace(go.Scatter(
-        x = [0, left_cutoff],
-        y = [Ef_p, Ef_p],
-        line_color='black',
-        mode = 'lines',
-        line_dash='dot',
-        name=r'$E_F$'
-
-    ))
-
-# n fermi (button 1)
-fig1.add_trace(go.Scatter(
-        x = [right_cutoff, 1],
-        y = [Ef_n, Ef_n],
-        line_color='black',
-        mode = 'lines',
-        line_dash='dot',
-        name='r$E_f$',
-        showlegend=False
-    ))
-
-fig1.add_trace(go.Scatter(
-        x = [right_cutoff, 1],
-        y = [E_V_1-Ef_delta, E_V_1-Ef_delta],
-        line_color = 'red',
-        mode = 'lines',
-        showlegend=False,
-        visible=False
-    ))
-
-fig1.add_trace(go.Scatter(
-        x = [right_cutoff, 1],
-        y = [E_C_1-Ef_delta, E_C_1-Ef_delta],
-        line_color = 'blue',
-        mode = 'lines',
-        showlegend=False,
-        visible=False
-    ))
-
-
-fig1.add_trace(go.Scatter(
-        x = [0, 1],
-        y = [Ef_p, Ef_p],
-        line_color='black',
-        mode = 'lines',
-        line_dash='dot',
-        name='r$E_F$',
-        visible=False,
-
-    ))
-
-
-fig1.add_trace(go.Scatter(
-        x = x[mid_idx],
-        y = E_C[mid_idx],
-        line_color='blue',
-        line_dash='dot',
-        visible=False,
-        showlegend=False
-
-    ))
-
-fig1.add_trace(go.Scatter(
-        x = x[mid_idx],
-        y = E_V[mid_idx],
-        line_color = 'red',
-        line_dash='dot',
-        visible=False,
-        showlegend=False
-    ))
-
-base_annot = [
-    dict(
-    x = 1.065,
-    y = -0.1,
-    xref = "x", yref = "y",
-    axref = "x", ayref = "y",
-    text = "",
-    ax = 0.9,
-    ay = -0.1,
-    showarrow=True,
-    arrowhead=3,
-    arrowsize=30,
-    arrowwidth=0.1,
-    arrowcolor='black'),
-
-    dict(
-    x = -0.05,
-    y = 1.12,
-    xref = "x", yref = "y",
-    axref = "x", ayref = "y",
-    text = "",
-    ax = -0.05,
-    ay = 1.1,
-    showarrow=True,
-    arrowhead=3,
-    arrowsize=30,
-    arrowwidth=0.1,
-    arrowcolor='black'),
-
-    dict(
-    showarrow=False,
-    x = 0.15,
-    y = -0.05,
-    xref = "x", yref = "y",
-    axref = "x", ayref = "y",
-    text = "p-region"),
-
-    dict(
-    showarrow=False,
-    x = 0.5,
-    y = -0.05,
-    xref = "x", yref = "y",
-    axref = "x", ayref = "y",
-    text = "depletion region"),
-
-    dict(
-    showarrow=False,
-    x = 0.85,
-    y = -0.05,
-    xref = "x", yref = "y",
-    axref = "x", ayref = "y",
-    text = "n-region")
-]
-
-annot = [
-    dict(
-    x = 0.85,
-    y = 0.75,
-    xref = "x", yref = "y",
-    axref = "x", ayref = "y",
-    ax = 0.85,
-    ay = 0.9,
-    showarrow=True,
-    arrowhead=3,
-    arrowsize=2,
-    arrowwidth=1,
-    arrowcolor='black'),
-
-    dict(
-    x = 0.85,
-    y = 1,
-    xref = "x", yref = "y",
-    axref = "x", ayref = "y",
-    ax = 0.85,
-    ay = 0.849,
-    showarrow=True,
-    arrowhead=3,
-    arrowsize=2,
-    arrowwidth=1,
-    arrowcolor='black'),
-
-    dict(
-    x = 0.8,
-    y = 0.9,
-    xref = "x", yref = "y",
-    axref = "x", ayref = "y",
-    text = r'$\delta \varphi$',
-    font = dict(size=40),
-    showarrow=False),
-
-    *base_annot
-        ]
-
-
-
-
-updatemenus=list([
-    dict(
-        type="buttons",
-        direction="down",
-        active=0,
-        buttons=list([
-            dict(label="n and p",
-                 method="update",
-                 args=[{"visible": [True, True, True, True, True, True, False, False, False, False, False]}, {'annotations':base_annot}]),
-            dict(label="Equilibrium",
-                 method="update",
-                 args=[{"visible": [True, True, False, False, False, False, True, True, True, False, False]},  {'annotations':annot}]),
-            dict(label="Band Bending",
-                 method="update",
-                 args=[{"visible": [True, True, False, False, False, False, True, True, True, True, True]},  {'annotations':annot}]),
-        ]),
-    )
-]
-)
-
-layout = dict(
-    dragmode=False,
-    showlegend = True,
-    updatemenus=updatemenus,
-    plot_bgcolor = 'rgb(254, 254, 254)',
-    yaxis_range=[(E_V_1-Ef_delta)-0.1, 0.1+E_C_1],
-    xaxis_range=[-0.05, 1.05],
-    width = 800,
-    height = 600,
-    xaxis=dict(title=r'$x$', showticklabels=False),
-    yaxis=dict(title=r'$E$', showticklabels=False),
-    title='Band Diagram'
-)
-
-
-fig1.add_annotation(
-    x = 1.065,
-    y = -0.1,
-    xref = "x", yref = "y",
-    axref = "x", ayref = "y",
-    text = "",
-    ax = 0.9,
-    ay = -0.1,
-    showarrow=True,
-    arrowhead=3,
-    arrowsize=30,
-    arrowwidth=0.1,
-    arrowcolor='black')
-
-fig1.add_annotation(
-    x = -0.05,
-    y = 1.12,
-    xref = "x", yref = "y",
-    axref = "x", ayref = "y",
-    text = "",
-    ax = -0.05,
-    ay = 1.1,
-    showarrow=True,
-    arrowhead=3,
-    arrowsize=30,
-    arrowwidth=0.1,
-    arrowcolor='black')
-
-fig1.add_annotation(
-    showarrow=False,
-    x = 0.15,
-    y = -0.05,
-    xref = "x", yref = "y",
-    axref = "x", ayref = "y",
-    text = "p-region")
-
-fig1.add_annotation(
-    showarrow=False,
-    x = 0.5,
-    y = -0.05,
-    xref = "x", yref = "y",
-    axref = "x", ayref = "y",
-    text = "depletion region")
-
-fig1.add_annotation(
-    showarrow=False,
-    x = 0.85,
-    y = -0.05,
-    xref = "x", yref = "y",
-    axref = "x", ayref = "y",
-    text = "n-region")
-
-fig1.update_xaxes(showline=True, linewidth=2, linecolor='black')
-fig1.update_yaxes(showline=True, linewidth=2, linecolor='black')
-
-fig1.update_layout(layout)
-py.plot(fig1)
-fig1.show()
-
-
-```
+<object type="text/html" data="../images/6-2-bands.html"  frameborder="0" width=650 height=650 class=center></object>
 
 The main difference between $n$-type and $p$-type semiconductors is the location of the Fermi level $E_F$ (see "n and p" tab above).
 The Fermi level of an $n$-type semiconductor is close to the donor states.
@@ -539,7 +196,7 @@ Therefore, we refer to the region as the **depletion region**.
 
 The charge density $\rho$ distribution inside of a depletion region is shown below:
 
-![](figures/pn_charge_density.svg)
+![](images/6-2-pn_charge_density.svg)
 
 The typical values of $w_n+w_p$ are $\sim 1 \mu \textrm{m}$ at $N_A,\,N_D \sim 10^{16} \textrm{cm}^{-3}$, and $\sim 0.1 \mu \textrm{m}$ at $N_A,\,N_D \sim 10^{18} \textrm{cm}^{-3}$, so it may be much larger than the distance between the dopant atoms.
 
@@ -550,7 +207,7 @@ What happens if we apply voltage to a junction?
 
 Because the conductivity of the $p$-region and $n$-region is much larger than that of the depletion region, most of the voltage difference will appear in the depletion region:
 
-![](figures/pn_junction_bias.svg)
+![](images/6-2-pn_junction_bias.svg)
 
 
 The number of majority carriers moving across the junction is proportional to their concentration.
@@ -565,7 +222,7 @@ $$I = I_0 \left(\exp(eV/kT) -1\right)$$
 Light absorbed in the $pn$-junction creates electron-hole pairs.
 The eletric field then moves electrons to the $n$-doped region, holes to the $p$-doped one, and therefore generates a voltage.
 
-![](figures/solar_cell.svg)
+![](images/6-2-solar_cell.svg)
 
 ### Semiconducting laser
 
@@ -579,9 +236,7 @@ See the book for details.
 
 Density of states in a doped semiconductor:
 
-```python
-fig
-```
+![](images/6-2-impurity.svg)
 
 Charge balance determines the number of electrons and holes as well as the position of the Fermi level.
 
@@ -595,7 +250,7 @@ Conductance combines the contributions of electrons and holes, and allows to det
 
 A $pn$-junction has a **depletion layer** in its middle with the potential in a $pn$-junction having the following shape (where the transition region is made out of two parabolas):
 
-![](figures/band_diagram_solution.svg)
+![](images/6-2-band_diagram_solution.svg)
 
 ## Exercises
 

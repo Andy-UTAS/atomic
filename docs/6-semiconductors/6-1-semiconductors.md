@@ -1,17 +1,17 @@
 # Semiconductor physics
-
+<!-- Some clever quip -->
 
 ## Introduction
 
-![]()
+<!-- ![](An introductory image)
+
+Some introductory text -->
 
 !!! danger  "Expected competencies"
 
     It is assumed that you have familiarity with the following concepts/techniques:
 
-    * Simplify integral expressions by Taylor expansion
-    * Compute the density of states of the free electron model
-    * Apply the concepts of group velocity and effective mass to solve problems
+    *
 
 !!! note  "Text reference"
     The material covered here is discussed in section(s) $\S 17 and 18$ of [The Oxford Solid State Basics](https://global.oup.com/academic/product/the-oxford-solid-state-basics-9780199680771?cc=au&lang=en&)
@@ -19,7 +19,7 @@
 !!! info "Computational content"
 
     The Jupyter notebook associated with this section can be accessed by clicking the icon below:
-    [<i class="fab fa-python fa-5x"></i>](#){ .md-button .md-button--primary class="text-center" style="margin-left: 45%"}
+    [<i class="fab fa-python fa-5x"></i>](https://jove2021.cloud.edu.au/hub/user-redirect/git-pull?repo=https%3A%2F%2Fgithub.com%2FAndy-UTAS%2FSolid-state&urlpath=tree%2FSolid-state%2F6-1-semiconductors.ipynb&branch=master){ .md-button .md-button--primary class="text-center" style="margin-left: 45%"}
 
 ---
 
@@ -82,7 +82,7 @@ The same approach applies to band filling.
 Instead of describing a lot of electrons that are present in an almost filled band, we focus on those that are absent.
 The absence of an electron is called a **hole**: a state of a completely filled band with one particle missing.
 
-![](figures/holes.svg)
+![](images/6-1-holes.svg)
 
 In this schematic we can either say that 8×2 electron states are occupied (the system has 8×2 electrons counting spin), or 10×2 hole states are occupied.
 Electron and hole pictures correspond to two different, but equivalent ways of describing the occupation of a band.
@@ -136,19 +136,7 @@ Furthermore, the Fermi level of a semiconductor lies between the conduction and 
 As a result, only the bottom of the conduction band has electrons and the top of the valence band has holes.
 Therefore we can approximate the dispersion relation of both bands as parabolic, like shown below
 
-```python
-E_C_1, E_V_1 = 1, -.5
-
-k = np.linspace(-1, 1)
-ax = pyplot.subplot(1, 1, 1)
-lines = pyplot.plot(k, E_C_1 + k**2/(2*.1), blue, k, E_V_1 - k**2/(2*m_h), red)
-pyplot.xlabel('$k$')
-pyplot.ylabel('$E$')
-pyplot.ylim(-1.5, 3)
-pyplot.yticks([E_C_1 - .15, E_V_1 +.15], "$E_C$ $E_V$".split())
-pyplot.legend(lines, ['Conduction band', 'Valence band'])
-draw_classic_axes(ax)
-```
+![](images/6-1-bands.svg)
 
 Or in other words
 
@@ -181,27 +169,7 @@ $$
 Our next task is to figure out *how many* electrons and holes there are, and for that we need to find where the Fermi level $E_F$ is located.
 Let us plot the density of states, the Fermi distribution function, and the density of particles at each energy in the same plot:
 
-```python
-E = np.linspace(-3, 3, 1000)
-fig, ax = pyplot.subplots()
-
-n_F = 1/(np.exp(2*(E - E_F)) + 1)
-g_e = m_e * sqrt_plus(E - E_C)
-g_h = m_h * sqrt_plus(E_V - E)
-ax.plot(E, g_e, label="$g_e$", c=blue)
-ax.plot(E, g_h, label="$g_h$", c=red)
-ax.fill_between(E, 10 * g_e * n_F, 0, alpha=.7, label="$n_e$", color=blue)
-ax.fill_between(E, 10 * g_h * (1-n_F), 0, alpha=.7, label="$n_h$", color=red)
-ax.plot(E, n_F, label="$n_F$", linestyle='dashed', c='k')
-ax.set_ylim(top=1.5)
-
-ax.set_xlabel('$E$')
-ax.set_ylabel('$g$')
-ax.set_xticks([E_V, E_C, E_F])
-ax.set_xticklabels(['$E_V$', '$E_C$', '$E_F$'])
-ax.legend()
-draw_classic_axes(ax, xlabeloffset=.2)
-```
+![](images/6-1-density.svg)
 
 We know that by itself, the semiconductor should have no charge, and therefore the total numbers of electrons and holes must be equal.
 Since increasing the Fermi level increases the number of electrons and reduces the number of holes, we will use the charge neutrality condition to determine where the Fermi level is situated.

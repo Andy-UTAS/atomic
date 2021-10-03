@@ -531,11 +531,11 @@
       <ul class="md-nav__list">
         
           <li class="md-nav__item">
-  <a href="#analyzing-the-avoided-crossings" class="md-nav__link">
-    Analyzing the avoided crossings
+  <a href="#analysing-the-avoided-crossings" class="md-nav__link">
+    Analysing the avoided crossings
   </a>
   
-    <nav class="md-nav" aria-label="Analyzing the avoided crossings">
+    <nav class="md-nav" aria-label="Analysing the avoided crossings">
       <ul class="md-nav__list">
         
           <li class="md-nav__item">
@@ -697,7 +697,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../6-semiconductors/6-2-doping/" class="md-nav__link">
+      <a href="../../6-semiconductors/6-2-devices/" class="md-nav__link">
         Doping and devices
       </a>
     </li>
@@ -874,11 +874,11 @@
       <ul class="md-nav__list">
         
           <li class="md-nav__item">
-  <a href="#analyzing-the-avoided-crossings" class="md-nav__link">
-    Analyzing the avoided crossings
+  <a href="#analysing-the-avoided-crossings" class="md-nav__link">
+    Analysing the avoided crossings
   </a>
   
-    <nav class="md-nav" aria-label="Analyzing the avoided crossings">
+    <nav class="md-nav" aria-label="Analysing the avoided crossings">
       <ul class="md-nav__list">
         
           <li class="md-nav__item">
@@ -987,16 +987,18 @@
                 
                 
                 <h1 id="the-nearly-free-electron-model">The nearly free electron model<a class="headerlink" href="#the-nearly-free-electron-model" title="Permanent link">&para;</a></h1>
+<!-- Some clever quip -->
+
 <h2 id="introduction">Introduction<a class="headerlink" href="#introduction" title="Permanent link">&para;</a></h2>
-<p><img alt="" src="" /></p>
+<!-- ![](An introductory image)
+
+Some introductory text -->
+
 <div class="admonition danger">
 <p class="admonition-title">Expected competencies</p>
 <p>It is assumed that you have familiarity with the following concepts/techniques:</p>
 <ul>
-<li>Write down the dispersion and wavefunction of an electron in free space (solving the Schrödinger equation).</li>
-<li>Describe how the periodicity of a band structure (= dispersion) is related to the reciprocal lattice.</li>
-<li>Write down a Fourier series representation of a periodic function.</li>
-<li>Diagonalize a 2x2 matrix (i.e., find its eigenvalues and eigenfunctions).</li>
+<li>Quantum: Perturbation theory, including degenerate perturbation theory</li>
 </ul>
 </div>
 <div class="admonition note">
@@ -1006,16 +1008,16 @@
 <div class="admonition info">
 <p class="admonition-title">Computational content</p>
 <p>The Jupyter notebook associated with this section can be accessed by clicking the icon below:
-<a class="text-center" href="#" style="margin-left: 45%"><i class="fab fa-python fa-5x"></i></a></p>
+<a class="text-centre" href="https://jove2021.cloud.edu.au/hub/user-redirect/git-pull?repo=https%3A%2F%2Fgithub.com%2FAndy-UTAS%2FSolid-state&amp;urlpath=tree%2FSolid-state%2F5-1-bloch.ipynb&amp;branch=master" style="margin-left: 45%"><i class="fab fa-python fa-5x"></i></a></p>
 </div>
 <hr />
 <p>Let's summarize what we learned about electrons so far:</p>
 <ul>
-<li>Free electrons are described by plane waves with a quadratic dispersion and form a Fermi sea (<a href="4_sommerfeld_model.md">lecture 4</a>)</li>
-<li>Electrons on isolated atoms live in discrete orbitals (<a href="5_atoms_and_lcao.md">lecture 5</a>)</li>
-<li>When orbitals hybridize we get <em>LCAO</em> or <em>tight-binding</em> band structures (<a href="7_tight_binding.md">lecture 7</a>)</li>
+<li>Free electrons are described by plane waves with a quadratic dispersion and form a Fermi sea (<a href="../../1-intoduction/1-4-emetalsII/">Electrons in metals II</a>)</li>
+<li>Electrons on isolated atoms live in discrete orbitals (<a href="../../2-chemistry/2-1-chemistry/">Chemistry</a>)</li>
+<li>When orbitals hybridise we get <em>LCAO</em> or <em>tight-binding</em> band structures (<a href="../../3-1d/3-3-tightbinding/">The tight binding model</a>)</li>
 </ul>
-<p>In this lecture, we will analyze how electrons behave in solids using the <em>nearly-free electron model</em>. This model considers electrons as plane waves (as in the free electron model) that are weakly perturbed by the periodic potential associated with the atoms in a solid. This approach is opposite to that of the tight-binding model, where our starting point was that the electrons are strongly bound to the individual atoms and we included hopping to other atoms as a small effect. Perhaps surprisingly, we will find that the nearly-free electron model gives very similar results to the tight binding model: it also leads to the formation of energy bands, and these bands are separated by <em>band gaps</em> - regions in the band structure where there are no allowed energy states.  </p>
+<p>In this section, we will analyse how electrons behave in solids using the <em>nearly-free electron model</em>. This model considers electrons as plane waves (as in the free electron model) that are weakly perturbed by the periodic potential associated with the atoms in a solid. This approach is opposite to that of the tight-binding model, where our starting point was that the electrons are strongly bound to the individual atoms and we included hopping to other atoms as a small effect. Perhaps surprisingly, we will find that the nearly-free electron model gives very similar results to the tight binding model: it also leads to the formation of energy bands, and these bands are separated by <em>band gaps</em> - regions in the band structure where there are no allowed energy states.  </p>
 <h2 id="nearly-free-electron-model">Nearly free electron model<a class="headerlink" href="#nearly-free-electron-model" title="Permanent link">&para;</a></h2>
 <p>In the free electron model, the dispersion is <script type="math/tex">E = \hbar^2 |\mathbf{k}|^2/2m</script>. The corresponding eigenfunctions <script type="math/tex">|\mathbf{k}\rangle</script> are plane waves with a real-space representation <script type="math/tex">\psi(\mathbf{r}) \propto e^{i\mathbf{k}\cdot \mathbf{r}}</script>. We note that in the free electron model,</p>
 <ul>
@@ -1023,44 +1025,12 @@
 <li>the band structure is not periodic in <script type="math/tex">k</script>-space</li>
 <li>i.e., the Brillouin zone is infinite in <script type="math/tex">k</script>-space</li>
 </ul>
-<p>Within the <strong>nearly free electron model</strong> we start from the dispersion relation of free electrons and analyze the effect of introducing a weak lattice potential. The logic is very similar to getting optical and acoustic phonon branches by changing atom masses (and thereby reducing the size of the Brillouin zone). The lattice potential results in a band structure that is periodic in <script type="math/tex">k</script>-space, with a period given by the period of the reciprocal lattice:</p>
-<div class="highlight"><pre><span></span><code><span class="c1"># Use colors from the default color cycle</span>
-<span class="n">default_colors</span> <span class="o">=</span> <span class="n">pyplot</span><span class="o">.</span><span class="n">rcParams</span><span class="p">[</span><span class="s1">&#39;axes.prop_cycle&#39;</span><span class="p">]</span><span class="o">.</span><span class="n">by_key</span><span class="p">()[</span><span class="s1">&#39;color&#39;</span><span class="p">]</span>
-<span class="n">blue</span><span class="p">,</span> <span class="n">orange</span><span class="p">,</span> <span class="o">*</span><span class="n">_</span> <span class="o">=</span> <span class="n">default_colors</span>
-
-<span class="k">def</span> <span class="nf">energy</span><span class="p">(</span><span class="n">k</span><span class="p">,</span> <span class="n">V</span><span class="o">=</span><span class="mi">1</span><span class="p">):</span>
-    <span class="n">k</span> <span class="o">=</span> <span class="p">(</span><span class="n">k</span> <span class="o">+</span> <span class="n">pi</span><span class="p">)</span> <span class="o">%</span> <span class="p">(</span><span class="mi">2</span><span class="o">*</span><span class="n">pi</span><span class="p">)</span> <span class="o">-</span> <span class="n">pi</span>
-    <span class="n">k_vals</span> <span class="o">=</span> <span class="n">k</span> <span class="o">+</span> <span class="mi">2</span><span class="o">*</span><span class="n">pi</span> <span class="o">*</span> <span class="n">np</span><span class="o">.</span><span class="n">arange</span><span class="p">(</span><span class="o">-</span><span class="mi">1</span><span class="p">,</span> <span class="mi">2</span><span class="p">)</span>
-    <span class="n">h</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">diag</span><span class="p">(</span><span class="n">k_vals</span><span class="o">**</span><span class="mi">2</span><span class="p">)</span> <span class="o">+</span> <span class="n">V</span> <span class="o">*</span> <span class="p">(</span><span class="mi">1</span> <span class="o">-</span> <span class="n">np</span><span class="o">.</span><span class="n">identity</span><span class="p">(</span><span class="mi">3</span><span class="p">))</span>
-    <span class="k">return</span> <span class="n">np</span><span class="o">.</span><span class="n">linalg</span><span class="o">.</span><span class="n">eigvalsh</span><span class="p">(</span><span class="n">h</span><span class="p">)</span>
-
-<span class="n">energy</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">vectorize</span><span class="p">(</span><span class="n">energy</span><span class="p">,</span> <span class="n">signature</span><span class="o">=</span><span class="s2">&quot;(),()-&gt;(m)&quot;</span><span class="p">)</span>
-
-<span class="n">fig</span><span class="p">,</span> <span class="n">ax</span> <span class="o">=</span> <span class="n">pyplot</span><span class="o">.</span><span class="n">subplots</span><span class="p">(</span><span class="mi">1</span><span class="p">,</span> <span class="mi">1</span><span class="p">)</span>
-
-<span class="n">momenta</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">linspace</span><span class="p">(</span><span class="o">-</span><span class="mi">3</span><span class="o">*</span><span class="n">pi</span><span class="p">,</span> <span class="mi">3</span><span class="o">*</span><span class="n">pi</span><span class="p">,</span> <span class="mi">400</span><span class="p">)</span>
-<span class="n">energies</span> <span class="o">=</span> <span class="n">energy</span><span class="p">(</span><span class="n">momenta</span><span class="p">,</span> <span class="mi">0</span><span class="p">)</span>
-<span class="n">max_en</span> <span class="o">=</span> <span class="mi">60</span>
-<span class="n">energies</span><span class="p">[</span><span class="n">energies</span> <span class="o">&gt;</span> <span class="n">max_en</span><span class="p">]</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">nan</span>
-<span class="n">ax</span><span class="o">.</span><span class="n">plot</span><span class="p">(</span><span class="n">momenta</span><span class="p">,</span> <span class="n">energies</span><span class="p">,</span> <span class="n">c</span><span class="o">=</span><span class="n">blue</span><span class="p">)</span>
-<span class="n">energies</span> <span class="o">=</span> <span class="n">energy</span><span class="p">(</span><span class="n">momenta</span><span class="p">,</span> <span class="mi">3</span><span class="p">)</span>
-<span class="n">max_en</span> <span class="o">=</span> <span class="mi">60</span>
-<span class="n">energies</span><span class="p">[</span><span class="n">energies</span> <span class="o">&gt;</span> <span class="n">max_en</span><span class="p">]</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">nan</span>
-<span class="n">ax</span><span class="o">.</span><span class="n">plot</span><span class="p">(</span><span class="n">momenta</span><span class="p">,</span> <span class="n">energies</span><span class="p">,</span> <span class="n">c</span><span class="o">=</span><span class="n">orange</span><span class="p">)</span>
-
-<span class="n">ax</span><span class="o">.</span><span class="n">set_xlabel</span><span class="p">(</span><span class="s2">&quot;$ka$&quot;</span><span class="p">)</span>
-<span class="n">ax</span><span class="o">.</span><span class="n">set_ylabel</span><span class="p">(</span><span class="s2">&quot;$E$&quot;</span><span class="p">)</span>
-<span class="n">ax</span><span class="o">.</span><span class="n">set_ylim</span><span class="p">(</span><span class="o">-.</span><span class="mi">5</span><span class="p">,</span> <span class="n">max_en</span> <span class="o">+</span> <span class="mi">5</span><span class="p">)</span>
-<span class="n">ax</span><span class="o">.</span><span class="n">set_xticks</span><span class="p">(</span><span class="n">pi</span> <span class="o">*</span> <span class="n">np</span><span class="o">.</span><span class="n">arange</span><span class="p">(</span><span class="o">-</span><span class="mi">3</span><span class="p">,</span> <span class="mi">4</span><span class="p">))</span>
-<span class="n">ax</span><span class="o">.</span><span class="n">set_xticklabels</span><span class="p">(</span><span class="sa">fr</span><span class="s2">&quot;$</span><span class="si">{</span><span class="n">i</span><span class="si">}</span><span class="s2">\pi$&quot;</span><span class="o">.</span><span class="n">replace</span><span class="p">(</span><span class="s2">&quot;1&quot;</span><span class="p">,</span> <span class="s2">&quot;&quot;</span><span class="p">)</span> <span class="k">if</span> <span class="n">i</span> <span class="k">else</span> <span class="s2">&quot;$0$&quot;</span> <span class="k">for</span> <span class="n">i</span> <span class="ow">in</span> <span class="nb">range</span><span class="p">(</span><span class="o">-</span><span class="mi">3</span><span class="p">,</span> <span class="mi">4</span><span class="p">))</span>
-
-<span class="n">draw_classic_axes</span><span class="p">(</span><span class="n">ax</span><span class="p">,</span> <span class="n">xlabeloffset</span><span class="o">=</span><span class="mi">4</span><span class="p">)</span>
-</code></pre></div>
+<p>Within the <strong>nearly free electron model</strong> we start from the dispersion relation of free electrons and analyse the effect of introducing a weak lattice potential. The logic is very similar to getting optical and acoustic phonon branches by changing atom masses (and thereby reducing the size of the Brillouin zone). The lattice potential results in a band structure that is periodic in <script type="math/tex">k</script>-space, with a period given by the period of the reciprocal lattice:</p>
+<p><img alt="" src="../images/5-1-nearlyfree.svg" /></p>
 <p>In this figure, the orange curves represent the nearly-free electron dispersion, which differs from the free-electron dispersion (blue curves) because of the interaction with the lattice. We see that <strong>band gaps</strong> open where two copies of the free-electron dispersion cross. A key goal of this lecture is to understand how the weak interaction with the lattice leads to this modified band structure.</p>
-<h3 id="analyzing-the-avoided-crossings">Analyzing the avoided crossings<a class="headerlink" href="#analyzing-the-avoided-crossings" title="Permanent link">&para;</a></h3>
-<p><em>Remark: An avoided crossing is an important concept in quantum mechanics that can be analyzed using <strong>perturbation theory</strong>. You will only learn this theory later in QMIII, so we will need to postulate some important facts here.</em></p>
-<p>To analyze what happens near the crossings, we first neglect the lattice potential and consider the free-electron dispersion near the crossing at <script type="math/tex">k=\pi/a</script> in 1D. Near this crossing, we see that two copies of the dispersion come together (one copy centered at <script type="math/tex">k=0</script>, the other at <script type="math/tex">k=2\pi/a</script>). We call the corresponding plane-wave eigenfunctions <script type="math/tex">|k\rangle</script> and <script type="math/tex">|k'\rangle =|k-2\pi/a\rangle</script>. We now express the wavefunction near this crossing as a linear superposition <script type="math/tex">|\psi\rangle = \alpha |k\rangle + \beta |k'\rangle</script>. Note that this wave function is very similar to that used in the LCAO model, except there we used linear combinations of the orbitals <script type="math/tex">|1\rangle</script> and <script type="math/tex">|2\rangle</script> instead of the plane waves <script type="math/tex">|k\rangle</script> and <script type="math/tex">|k'\rangle</script>.</p>
-<p>We express the Hamiltonian near the crossing as a matrix, using <script type="math/tex">| k \rangle</script> and <script type="math/tex">| k' \rangle</script> as the basis states. The matrix elements are given by <script type="math/tex">\langle k |H|k\rangle = E_0 + v \hbar \delta k</script> and <script type="math/tex">\langle k' |H|k'\rangle = E_0 - v \hbar \delta k</script>, where <script type="math/tex">\delta k = k-\pi/a</script> is the distance from the center of the crossing and we approximated the dispersion near the crossing by a linear term. In matrix form, this yields</p>
+<h3 id="analysing-the-avoided-crossings">Analysing the avoided crossings<a class="headerlink" href="#analysing-the-avoided-crossings" title="Permanent link">&para;</a></h3>
+<p>To analyse what happens near the crossings, we first neglect the lattice potential and consider the free-electron dispersion near the crossing at <script type="math/tex">k=\pi/a</script> in 1D. Near this crossing, we see that two copies of the dispersion come together (one copy centred at <script type="math/tex">k=0</script>, the other at <script type="math/tex">k=2\pi/a</script>). We call the corresponding plane-wave eigenfunctions <script type="math/tex">|k\rangle</script> and <script type="math/tex">|k'\rangle =|k-2\pi/a\rangle</script>. We now express the wavefunction near this crossing as a linear superposition <script type="math/tex">|\psi\rangle = \alpha |k\rangle + \beta |k'\rangle</script>. Note that this wave function is very similar to that used in the LCAO model, except there we used linear combinations of the orbitals <script type="math/tex">|1\rangle</script> and <script type="math/tex">|2\rangle</script> instead of the plane waves <script type="math/tex">|k\rangle</script> and <script type="math/tex">|k'\rangle</script>.</p>
+<p>We express the Hamiltonian near the crossing as a matrix, using <script type="math/tex">| k \rangle</script> and <script type="math/tex">| k' \rangle</script> as the basis states. The matrix elements are given by <script type="math/tex">\langle k |H|k\rangle = E_0 + v \hbar \delta k</script> and <script type="math/tex">\langle k' |H|k'\rangle = E_0 - v \hbar \delta k</script>, where <script type="math/tex">\delta k = k-\pi/a</script> is the distance from the centre of the crossing and we approximated the dispersion near the crossing by a linear term. In matrix form, this yields</p>
 <p>
 <script type="math/tex; mode=display">H\begin{pmatrix}\alpha \\ \beta \end{pmatrix} =
 \begin{pmatrix} E_0 + v \hbar \delta k & 0 \\ 0 & E_0 - v \hbar \delta k\end{pmatrix}
@@ -1097,7 +1067,7 @@ V_n = \frac{1}{a}\int_0^a e^{- i n 2\pi x /a} V(x) dx
 <p>Calculating <script type="math/tex">W</script>, we find
 <script type="math/tex; mode=display">W = \langle k | V | k' \rangle = \frac{1}{a}\int_0^{a} e^{-i k x} V(x) e^{i k'x}  dx = \frac{1}{a}\int_0^a e^{-i 2\pi x /a} V(x) dx = V_1</script>
 </p>
-<p>where we have used that <script type="math/tex">k-k' =2\pi/a</script> because we are analyzing the first crossing. We see that the first component of the Fourier-series representation of <script type="math/tex">V(x)</script> determines the gap near the first crossing.</p>
+<p>where we have used that <script type="math/tex">k-k' =2\pi/a</script> because we are analysing the first crossing. We see that the first component of the Fourier-series representation of <script type="math/tex">V(x)</script> determines the gap near the first crossing.</p>
 <h4 id="crossings-between-the-higher-bands">Crossings between the higher bands<a class="headerlink" href="#crossings-between-the-higher-bands" title="Permanent link">&para;</a></h4>
 <p>Everything we did can also be applied to the higher-energy crossings seen in the figure above. We note that all crossings occur between parabola's that are shifted by integer multiples of reciprocal lattice vectors <script type="math/tex">n 2\pi/a</script>. The first crossing corresponds to <script type="math/tex">n=1</script>, and we found that the magnitude of the gap is given by <script type="math/tex">V_1</script>. Similarly, <script type="math/tex">V_2</script> determines the gap between the second and third bands, <script type="math/tex">V_3</script> for the crossing between third and fourth, etc.</p>
 <p>The key conclusion is that the lattice potential couples plane-wave states that differ by integer multiples of reciprocal lattice vectors. This coupling alters the band structure most strongly where the free-electron eigenenergies cross, opening up gaps of which the magnitudes are determined by the Fourier components of the lattice potential.  </p>
@@ -1107,7 +1077,7 @@ V_n = \frac{1}{a}\int_0^a e^{- i n 2\pi x /a} V(x) dx
 <p>The different models considered thus far can be organized as a function of the strength of the lattice potential <script type="math/tex">V(x)</script>:</p>
 <p><img alt="" src="figures/models.svg" /></p>
 <p>We have seen that in the nearly-free electron model, the electrons behave as plane waves that are only slightly perturbed by the lattice potential. How is it possible that an electron that can scatter off all the atoms in a solid can even remotely look like a plane wave? The answer lies in that the periodic potential of the atoms can only scatter an electron between momentum states <script type="math/tex">|\mathbf{k}\rangle</script> and <script type="math/tex">|\mathbf{k'}\rangle</script>
-<em>if these momenta differ by a reciprocal lattice vector</em>. This condition is very similar to the Laue condition of X-ray scattering. In this lecture we have explicitly analyzed it in the context of the nearly-free electron model. The condition is known as the <strong>conservation of crystal momentum</strong> and is central to Bloch's theorem, which provides a general framework for computing band structures in crystals.</p>
+<em>if these momenta differ by a reciprocal lattice vector</em>. This condition is very similar to the Laue condition of X-ray scattering. In this lecture we have explicitly analysed it in the context of the nearly-free electron model. The condition is known as the <strong>conservation of crystal momentum</strong> and is central to Bloch's theorem, which provides a general framework for computing band structures in crystals.</p>
 <p>Bloch theorem:</p>
 <blockquote>
 <p>All Hamiltonian eigenstates in a crystal have the form
@@ -1132,64 +1102,25 @@ where <script type="math/tex">u^{\alpha}_\mathbf{G}</script> are the Fourier coe
 \psi^\alpha(r) = \sum_\mathbf{G} u^{\alpha}_\mathbf{G} e^{i(\mathbf{k}+\mathbf{G})\cdot\mathbf{r}}
 </script>
 which shows that each Bloch wave can be written as a sum over plane waves that differ by a reciprocal lattice vector.</p>
-<details class="question"><summary>Does the tight-binding wavefunction <script type="math/tex">|\psi\rangle = \sum_n e^{ikna}(\phi_0|n,1\rangle+\psi_0|n,2\rangle)</script> (see exercise 2 in Lecture 8) satisfy the Bloch theorem? What part of <script type="math/tex">|\psi\rangle</script> describes <script type="math/tex">u(x)</script> in this case? Try to describe in words how this Bloch wave is built up.</summary></details>
+<!-- ??? question "Does the tight-binding wavefunction $|\psi\rangle = \sum_n e^{ikna}(\phi_0|n,1\rangle+\psi_0|n,2\rangle)$ (see exercise 2 in Lecture 8) satisfy the Bloch theorem? What part of $|\psi\rangle$ describes $u(x)$ in this case? Try to describe in words how this Bloch wave is built up." -->
+
+<details class="question"><summary>Does the tight-binding wavefunction <script type="math/tex">|\psi\rangle = \sum_n e^{ikna}(\phi_0|n,1\rangle+\psi_0|n,2\rangle)</script> satisfy the Bloch theorem? What part of <script type="math/tex">|\psi\rangle</script> describes <script type="math/tex">u(x)</script> in this case? Try to describe in words how this Bloch wave is built up.</summary></details>
 <h3 id="repeated-vs-reduced-vs-extended-brillouin-zone">Repeated vs reduced vs extended Brillouin zone<a class="headerlink" href="#repeated-vs-reduced-vs-extended-brillouin-zone" title="Permanent link">&para;</a></h3>
 <p>There are several common ways to <strong>plot</strong> the same dispersion relation (no difference in physical information).</p>
 <p>Repeated BZ (all possible Bloch bands):</p>
-<div class="highlight"><pre><span></span><code><span class="n">fig</span>
-</code></pre></div>
+<p><img alt="" src="../images/5-1-nearlyfree.svg" /></p>
 <ul>
 <li>Contains redundant information</li>
 <li>May be easier to count/follow the bands</li>
 </ul>
 <p>Reduced BZ (all bands within 1st BZ):</p>
-<div class="highlight"><pre><span></span><code><span class="n">fig</span><span class="p">,</span> <span class="n">ax</span> <span class="o">=</span> <span class="n">pyplot</span><span class="o">.</span><span class="n">subplots</span><span class="p">(</span><span class="mi">1</span><span class="p">,</span> <span class="mi">1</span><span class="p">)</span>
-
-<span class="n">momenta</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">linspace</span><span class="p">(</span><span class="o">-</span><span class="n">pi</span><span class="p">,</span> <span class="n">pi</span><span class="p">,</span> <span class="mi">400</span><span class="p">)</span>
-<span class="n">energies</span> <span class="o">=</span> <span class="n">energy</span><span class="p">(</span><span class="n">momenta</span><span class="p">,</span> <span class="mi">0</span><span class="p">)</span>
-<span class="n">max_en</span> <span class="o">=</span> <span class="mi">60</span>
-<span class="n">energies</span><span class="p">[</span><span class="n">energies</span> <span class="o">&gt;</span> <span class="n">max_en</span><span class="p">]</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">nan</span>
-<span class="n">ax</span><span class="o">.</span><span class="n">plot</span><span class="p">(</span><span class="n">momenta</span><span class="p">,</span> <span class="n">energies</span><span class="p">,</span> <span class="n">c</span><span class="o">=</span><span class="n">blue</span><span class="p">)</span>
-<span class="n">energies</span> <span class="o">=</span> <span class="n">energy</span><span class="p">(</span><span class="n">momenta</span><span class="p">,</span> <span class="mi">3</span><span class="p">)</span>
-<span class="n">max_en</span> <span class="o">=</span> <span class="mi">60</span>
-<span class="n">energies</span><span class="p">[</span><span class="n">energies</span> <span class="o">&gt;</span> <span class="n">max_en</span><span class="p">]</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">nan</span>
-<span class="n">ax</span><span class="o">.</span><span class="n">plot</span><span class="p">(</span><span class="n">momenta</span><span class="p">,</span> <span class="n">energies</span><span class="p">,</span> <span class="n">c</span><span class="o">=</span><span class="n">orange</span><span class="p">)</span>
-
-<span class="n">ax</span><span class="o">.</span><span class="n">set_xlabel</span><span class="p">(</span><span class="s2">&quot;$ka$&quot;</span><span class="p">)</span>
-<span class="n">ax</span><span class="o">.</span><span class="n">set_ylabel</span><span class="p">(</span><span class="s2">&quot;$E$&quot;</span><span class="p">)</span>
-<span class="n">ax</span><span class="o">.</span><span class="n">set_ylim</span><span class="p">(</span><span class="o">-.</span><span class="mi">5</span><span class="p">,</span> <span class="n">max_en</span> <span class="o">+</span> <span class="mi">5</span><span class="p">)</span>
-<span class="n">ax</span><span class="o">.</span><span class="n">set_xticks</span><span class="p">(</span><span class="n">pi</span> <span class="o">*</span> <span class="n">np</span><span class="o">.</span><span class="n">arange</span><span class="p">(</span><span class="o">-</span><span class="mi">1</span><span class="p">,</span> <span class="mi">2</span><span class="p">))</span>
-<span class="n">ax</span><span class="o">.</span><span class="n">set_xticklabels</span><span class="p">(</span><span class="sa">r</span><span class="s2">&quot;$-\pi$ $0$ $\pi$&quot;</span><span class="o">.</span><span class="n">split</span><span class="p">())</span>
-
-<span class="n">draw_classic_axes</span><span class="p">(</span><span class="n">ax</span><span class="p">,</span> <span class="n">xlabeloffset</span><span class="o">=</span><span class="mi">4</span><span class="p">)</span>
-</code></pre></div>
+<p><img alt="" src="../images/5-1-reduced.svg" /></p>
 <ul>
 <li>No redundant information</li>
 <li>Hard to relate to original dispersion</li>
 </ul>
 <p>Extended BZ (n-th band within n-th BZ):</p>
-<div class="highlight"><pre><span></span><code><span class="n">fig</span><span class="p">,</span> <span class="n">ax</span> <span class="o">=</span> <span class="n">pyplot</span><span class="o">.</span><span class="n">subplots</span><span class="p">(</span><span class="mi">1</span><span class="p">,</span> <span class="mi">1</span><span class="p">)</span>
-
-<span class="n">momenta</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">linspace</span><span class="p">(</span><span class="o">-</span><span class="mi">3</span><span class="o">*</span><span class="n">pi</span><span class="p">,</span> <span class="mi">3</span><span class="o">*</span><span class="n">pi</span><span class="p">,</span> <span class="mi">400</span><span class="p">)</span>
-<span class="n">energies</span> <span class="o">=</span> <span class="n">energy</span><span class="p">(</span><span class="n">momenta</span><span class="p">,</span> <span class="mi">0</span><span class="p">)</span>
-<span class="n">max_en</span> <span class="o">=</span> <span class="mi">60</span>
-<span class="n">energies</span><span class="p">[</span><span class="n">energies</span> <span class="o">&gt;</span> <span class="n">max_en</span><span class="p">]</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">nan</span>
-<span class="n">energies</span><span class="p">[</span><span class="o">~</span><span class="p">((</span><span class="nb">abs</span><span class="p">(</span><span class="n">momenta</span><span class="p">)</span> <span class="o">//</span> <span class="n">pi</span><span class="p">)</span><span class="o">.</span><span class="n">reshape</span><span class="p">(</span><span class="o">-</span><span class="mi">1</span><span class="p">,</span> <span class="mi">1</span><span class="p">)</span> <span class="o">==</span> <span class="n">np</span><span class="o">.</span><span class="n">arange</span><span class="p">(</span><span class="mi">3</span><span class="p">)</span><span class="o">.</span><span class="n">reshape</span><span class="p">(</span><span class="mi">1</span><span class="p">,</span> <span class="o">-</span><span class="mi">1</span><span class="p">))]</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">nan</span>
-<span class="n">ax</span><span class="o">.</span><span class="n">plot</span><span class="p">(</span><span class="n">momenta</span><span class="p">,</span> <span class="n">energies</span><span class="p">,</span> <span class="n">c</span><span class="o">=</span><span class="n">blue</span><span class="p">)</span>
-<span class="n">energies</span> <span class="o">=</span> <span class="n">energy</span><span class="p">(</span><span class="n">momenta</span><span class="p">,</span> <span class="mi">3</span><span class="p">)</span>
-<span class="n">max_en</span> <span class="o">=</span> <span class="mi">60</span>
-<span class="n">energies</span><span class="p">[</span><span class="n">energies</span> <span class="o">&gt;</span> <span class="n">max_en</span><span class="p">]</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">nan</span>
-<span class="n">energies</span><span class="p">[</span><span class="o">~</span><span class="p">((</span><span class="nb">abs</span><span class="p">(</span><span class="n">momenta</span><span class="p">)</span> <span class="o">//</span> <span class="n">pi</span><span class="p">)</span><span class="o">.</span><span class="n">reshape</span><span class="p">(</span><span class="o">-</span><span class="mi">1</span><span class="p">,</span> <span class="mi">1</span><span class="p">)</span> <span class="o">==</span> <span class="n">np</span><span class="o">.</span><span class="n">arange</span><span class="p">(</span><span class="mi">3</span><span class="p">)</span><span class="o">.</span><span class="n">reshape</span><span class="p">(</span><span class="mi">1</span><span class="p">,</span> <span class="o">-</span><span class="mi">1</span><span class="p">))]</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">nan</span>
-<span class="n">ax</span><span class="o">.</span><span class="n">plot</span><span class="p">(</span><span class="n">momenta</span><span class="p">,</span> <span class="n">energies</span><span class="p">,</span> <span class="n">c</span><span class="o">=</span><span class="n">orange</span><span class="p">)</span>
-
-<span class="n">ax</span><span class="o">.</span><span class="n">set_xlabel</span><span class="p">(</span><span class="s2">&quot;$ka$&quot;</span><span class="p">)</span>
-<span class="n">ax</span><span class="o">.</span><span class="n">set_ylabel</span><span class="p">(</span><span class="s2">&quot;$E$&quot;</span><span class="p">)</span>
-<span class="n">ax</span><span class="o">.</span><span class="n">set_ylim</span><span class="p">(</span><span class="o">-.</span><span class="mi">5</span><span class="p">,</span> <span class="n">max_en</span> <span class="o">+</span> <span class="mi">5</span><span class="p">)</span>
-<span class="n">ax</span><span class="o">.</span><span class="n">set_xticks</span><span class="p">(</span><span class="n">pi</span> <span class="o">*</span> <span class="n">np</span><span class="o">.</span><span class="n">arange</span><span class="p">(</span><span class="o">-</span><span class="mi">3</span><span class="p">,</span> <span class="mi">4</span><span class="p">))</span>
-<span class="n">ax</span><span class="o">.</span><span class="n">set_xticklabels</span><span class="p">(</span><span class="sa">fr</span><span class="s2">&quot;$</span><span class="si">{</span><span class="n">i</span><span class="si">}</span><span class="s2">\pi$&quot;</span><span class="o">.</span><span class="n">replace</span><span class="p">(</span><span class="s2">&quot;1&quot;</span><span class="p">,</span> <span class="s2">&quot;&quot;</span><span class="p">)</span> <span class="k">if</span> <span class="n">i</span> <span class="k">else</span> <span class="s2">&quot;$0$&quot;</span> <span class="k">for</span> <span class="n">i</span> <span class="ow">in</span> <span class="nb">range</span><span class="p">(</span><span class="o">-</span><span class="mi">3</span><span class="p">,</span> <span class="mi">4</span><span class="p">))</span>
-
-<span class="n">draw_classic_axes</span><span class="p">(</span><span class="n">ax</span><span class="p">,</span> <span class="n">xlabeloffset</span><span class="o">=</span><span class="mi">4</span><span class="p">)</span>
-</code></pre></div>
+<p><img alt="" src="../images/5-1-extended.svg" /></p>
 <ul>
 <li>No redundant information</li>
 <li>Easy to relate to free electron model</li>
