@@ -9,14 +9,14 @@
       
       
       
-        <link rel="canonical" href="https://andy-utas.github.io/solutions/3-3-solutions/">
+        <link rel="canonical" href="https://andy-utas.github.io/solutions/assignment1/">
       
       <link rel="icon" href="../../logo.png">
       <meta name="generator" content="mkdocs-1.2.2, mkdocs-material-7.2.2">
     
     
       
-        <title>Solutions to exercises - Solid-state physics</title>
+        <title>Assignment 1: Debye, Drude, Sommerfeld, and chemistry - Solid-state physics</title>
       
     
     
@@ -71,7 +71,7 @@
     <div data-md-component="skip">
       
         
-        <a href="#solutions-to-exercises" class="md-skip">
+        <a href="#assignment-1-debye-drude-sommerfeld-and-chemistry" class="md-skip">
           Skip to content
         </a>
       
@@ -100,7 +100,7 @@
         <div class="md-header__topic" data-md-component="header-topic">
           <span class="md-ellipsis">
             
-              Solutions to exercises
+              Assignment 1: Debye, Drude, Sommerfeld, and chemistry
             
           </span>
         </div>
@@ -655,8 +655,29 @@
     <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
       
         <li class="md-nav__item">
-  <a href="#solutions-for-the-specific-heat-of-solids-i-exercises" class="md-nav__link">
-    Solutions for The specific heat of solids I exercises
+  <a href="#exercise-1-debye" class="md-nav__link">
+    Exercise 1 - Debye
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#exercise-2-drude-mixed-ion-electron-conductors-miecs" class="md-nav__link">
+    Exercise 2 - Drude: mixed ion-electron conductors (MIECs)
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#exercise-3-sommerfeld" class="md-nav__link">
+    Exercise 3 - Sommerfeld
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#exercise-4-chemistry" class="md-nav__link">
+    Exercise 4 - chemistry
   </a>
   
 </li>
@@ -674,82 +695,238 @@
               
                 
                 
-                <h1 id="solutions-to-exercises">Solutions to exercises<a class="headerlink" href="#solutions-to-exercises" title="Permanent link">&para;</a></h1>
-<h2 id="solutions-for-the-specific-heat-of-solids-i-exercises">Solutions for <em>The specific heat of solids I</em> exercises<a class="headerlink" href="#solutions-for-the-specific-heat-of-solids-i-exercises" title="Permanent link">&para;</a></h2>
-<h1 id="solutions-for-lecture-7-exercises">Solutions for lecture 7 exercises<a class="headerlink" href="#solutions-for-lecture-7-exercises" title="Permanent link">&para;</a></h1>
-<h2 id="warm-up-exercises">Warm up exercises<a class="headerlink" href="#warm-up-exercises" title="Permanent link">&para;</a></h2>
+                <h1 id="assignment-1-debye-drude-sommerfeld-and-chemistry">Assignment 1: Debye, Drude, Sommerfeld, and chemistry<a class="headerlink" href="#assignment-1-debye-drude-sommerfeld-and-chemistry" title="Permanent link">&para;</a></h1>
+<p>The first assignment can be found <a href="../assignments/Assignment one.pdf">here</a></p>
+<h2 id="exercise-1-debye">Exercise 1 - Debye<a class="headerlink" href="#exercise-1-debye" title="Permanent link">&para;</a></h2>
 <ol>
-<li>Check by yourself
-2.
-<script type="math/tex; mode=display">
-[m^*] = \frac{[p^2]}{[E]} = kg
-</script>
-3.
-<script type="math/tex; mode=display">
-m^* = m_e,
-</script>
-where <script type="math/tex">m_e</script> is the free electron mass. This is expected because the free elctrons are not subject to a potential</li>
-<li>If the dispersion relation is parabolic, so in the free electron model.</li>
-</ol>
-<h2 id="exercise-1-next-nearest-neighbours-chain">Exercise 1: Next-nearest neighbours chain<a class="headerlink" href="#exercise-1-next-nearest-neighbours-chain" title="Permanent link">&para;</a></h2>
-<p>1.</p>
-<p>The Schrödinger equation is given by: <script type="math/tex">|\Psi\rangle = \sum_n \phi_n |n\rangle</script> such that we find <script type="math/tex; mode=display"> E\phi_n = E_0\phi_n - t\phi_{n-1} - t\phi_{n+1} - t'\phi_{n-2} - t'\phi_{n+2}</script>
-</p>
-<p>2.</p>
-<p>Solving the Schrödinger equation yields dispersion: <script type="math/tex; mode=display">E(k) = E_0 -2t\cos(ka) -2t'\cos(2ka)</script>
-</p>
-<p>3.</p>
+<li>
+<p>What are the assumptions of the Debye model?</p>
+<p>The Debye model considers only sound waves in a material (i.e. one assumes a linear dispersion <script type="math/tex">\omega = v k</script>) which oscillate up to a maximum frequency <script type="math/tex">\omega_{\mathrm{cutoff}} = \omega_d</script>, the Debye frequency, which exists to ensure that the total number of vibrational modes in the system is correct (equal to the number of degrees of freedom in the system).</p>
+</li>
+<li>
+<p>Write an expression for the number of modes in a two-dimensional system, and thus determine the <em>Debye wavenumber</em> (the wavenumber which corresponds to the Debye frequency).</p>
+<p>In two dimensions, there should be <script type="math/tex">2N</script> modes (we implicitly assume that the different sound polarisations propagate with the same velocity, and thus</p>
 <p>
-<script type="math/tex; mode=display">m^* = \frac{\hbar^2}{2a^2}\frac{1}{t\cos(ka)+4t'\cos(2ka)}</script>
+<script type="math/tex; mode=display">
+2N = 2 \frac{A}{2\pi^2} \int_0^{|k| = k_d} \mathrm{d}^2 k
+</script>
 </p>
-<p>Plot for t=t':</p>
-<div class="highlight"><pre><span></span><code><span class="n">k1</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">linspace</span><span class="p">(</span><span class="o">-</span><span class="n">pi</span><span class="p">,</span> <span class="o">-</span><span class="n">pi</span><span class="o">/</span><span class="mi">2</span><span class="o">-</span><span class="mf">0.01</span><span class="p">,</span> <span class="mi">300</span><span class="p">);</span>
-<span class="n">k2</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">linspace</span><span class="p">(</span><span class="o">-</span><span class="n">pi</span><span class="o">/</span><span class="mi">2</span><span class="o">+</span><span class="mf">0.01</span><span class="p">,</span> <span class="n">pi</span><span class="o">/</span><span class="mi">2</span><span class="o">-</span><span class="mf">0.01</span><span class="p">,</span> <span class="mi">300</span><span class="p">);</span>
-<span class="n">k3</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">linspace</span><span class="p">(</span><span class="n">pi</span><span class="o">/</span><span class="mi">2</span><span class="o">+</span><span class="mf">0.01</span><span class="p">,</span> <span class="n">pi</span><span class="p">,</span> <span class="mi">300</span><span class="p">);</span>
-
-<span class="n">pyplot</span><span class="o">.</span><span class="n">plot</span><span class="p">(</span><span class="n">k1</span><span class="p">,</span> <span class="mi">1</span><span class="o">/</span><span class="p">(</span><span class="mi">5</span><span class="o">*</span><span class="n">np</span><span class="o">.</span><span class="n">cos</span><span class="p">(</span><span class="n">k1</span><span class="p">)),</span><span class="s1">&#39;b&#39;</span><span class="p">);</span>
-<span class="n">pyplot</span><span class="o">.</span><span class="n">plot</span><span class="p">(</span><span class="n">k2</span><span class="p">,</span> <span class="mi">1</span><span class="o">/</span><span class="p">(</span><span class="mi">5</span><span class="o">*</span><span class="n">np</span><span class="o">.</span><span class="n">cos</span><span class="p">(</span><span class="n">k2</span><span class="p">)),</span><span class="s1">&#39;b&#39;</span><span class="p">);</span>
-<span class="n">pyplot</span><span class="o">.</span><span class="n">plot</span><span class="p">(</span><span class="n">k3</span><span class="p">,</span> <span class="mi">1</span><span class="o">/</span><span class="p">(</span><span class="mi">5</span><span class="o">*</span><span class="n">np</span><span class="o">.</span><span class="n">cos</span><span class="p">(</span><span class="n">k3</span><span class="p">)),</span><span class="s1">&#39;b&#39;</span><span class="p">);</span>
-<span class="n">pyplot</span><span class="o">.</span><span class="n">xlabel</span><span class="p">(</span><span class="sa">r</span><span class="s1">&#39;$k$&#39;</span><span class="p">);</span> <span class="n">pyplot</span><span class="o">.</span><span class="n">ylabel</span><span class="p">(</span><span class="s1">&#39;$m_</span><span class="si">{eff}</span><span class="s1">(k)$&#39;</span><span class="p">);</span>
-<span class="n">pyplot</span><span class="o">.</span><span class="n">xticks</span><span class="p">([</span><span class="o">-</span><span class="n">pi</span><span class="p">,</span><span class="mi">0</span><span class="p">,</span><span class="n">pi</span><span class="p">],[</span><span class="sa">r</span><span class="s1">&#39;$-\pi/a$&#39;</span><span class="p">,</span><span class="mi">0</span><span class="p">,</span><span class="sa">r</span><span class="s1">&#39;$\pi/a$&#39;</span><span class="p">]);</span>
-<span class="n">pyplot</span><span class="o">.</span><span class="n">yticks</span><span class="p">([],[]);</span>
-<span class="n">pyplot</span><span class="o">.</span><span class="n">tight_layout</span><span class="p">();</span>
-</code></pre></div>
-<p>4.</p>
-<p>Plots for 2t'=t, 4t'=t and 10t'=t:</p>
-<div class="highlight"><pre><span></span><code><span class="k">def</span> <span class="nf">m</span><span class="p">(</span><span class="n">k</span><span class="p">,</span><span class="n">t</span><span class="p">):</span>
-    <span class="k">return</span> <span class="mi">1</span><span class="o">/</span><span class="p">(</span><span class="n">np</span><span class="o">.</span><span class="n">cos</span><span class="p">(</span><span class="n">k</span><span class="p">)</span><span class="o">+</span><span class="mi">4</span><span class="o">*</span><span class="n">t</span><span class="o">*</span><span class="n">np</span><span class="o">.</span><span class="n">cos</span><span class="p">(</span><span class="mi">2</span><span class="o">*</span><span class="n">k</span><span class="p">))</span>
-
-<span class="n">k1</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">linspace</span><span class="p">(</span><span class="o">-</span><span class="mf">1.6</span><span class="p">,</span> <span class="o">-</span><span class="mf">0.83</span><span class="p">,</span> <span class="mi">300</span><span class="p">);</span>
-<span class="n">k2</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">linspace</span><span class="p">(</span><span class="o">-</span><span class="mf">0.826</span><span class="p">,</span> <span class="mf">0.826</span><span class="p">,</span> <span class="mi">300</span><span class="p">);</span>
-<span class="n">k3</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">linspace</span><span class="p">(</span><span class="mf">0.83</span><span class="p">,</span> <span class="mf">1.6</span><span class="p">,</span> <span class="mi">300</span><span class="p">);</span>
-
-<span class="n">pyplot</span><span class="o">.</span><span class="n">plot</span><span class="p">(</span><span class="n">k1</span><span class="p">,</span> <span class="n">m</span><span class="p">(</span><span class="n">k1</span><span class="p">,</span><span class="mi">2</span><span class="p">),</span><span class="s1">&#39;b&#39;</span><span class="p">);</span>
-<span class="n">pyplot</span><span class="o">.</span><span class="n">plot</span><span class="p">(</span><span class="n">k2</span><span class="p">,</span> <span class="n">m</span><span class="p">(</span><span class="n">k2</span><span class="p">,</span><span class="mi">2</span><span class="p">),</span><span class="s1">&#39;b&#39;</span><span class="p">);</span>
-<span class="n">pyplot</span><span class="o">.</span><span class="n">plot</span><span class="p">(</span><span class="n">k3</span><span class="p">,</span> <span class="n">m</span><span class="p">(</span><span class="n">k3</span><span class="p">,</span><span class="mi">2</span><span class="p">),</span><span class="s1">&#39;b&#39;</span><span class="p">,</span><span class="n">label</span><span class="o">=</span><span class="s1">&#39;t=2t</span><span class="se">\&#39;</span><span class="s1">&#39;</span><span class="p">);</span>
-<span class="n">pyplot</span><span class="o">.</span><span class="n">xlabel</span><span class="p">(</span><span class="s1">&#39;$k$&#39;</span><span class="p">);</span> <span class="n">pyplot</span><span class="o">.</span><span class="n">ylabel</span><span class="p">(</span><span class="s1">&#39;$m_</span><span class="si">{eff}</span><span class="s1">(k)$&#39;</span><span class="p">);</span>
-<span class="n">pyplot</span><span class="o">.</span><span class="n">xticks</span><span class="p">([</span><span class="o">-</span><span class="mf">1.6</span><span class="p">,</span><span class="mi">0</span><span class="p">,</span><span class="mf">1.6</span><span class="p">],[</span><span class="sa">r</span><span class="s1">&#39;$-\pi/a$&#39;</span><span class="p">,</span><span class="mi">0</span><span class="p">,</span><span class="sa">r</span><span class="s1">&#39;$\pi/a$&#39;</span><span class="p">]);</span>
-<span class="n">pyplot</span><span class="o">.</span><span class="n">yticks</span><span class="p">([</span><span class="mi">0</span><span class="p">],[]);</span>
-<span class="n">pyplot</span><span class="o">.</span><span class="n">tight_layout</span><span class="p">();</span>
-
-<span class="n">k1</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">linspace</span><span class="p">(</span><span class="o">-</span><span class="mf">1.58</span><span class="p">,</span> <span class="o">-</span><span class="mf">0.81</span><span class="p">,</span> <span class="mi">300</span><span class="p">);</span>
-<span class="n">k2</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">linspace</span><span class="p">(</span><span class="o">-</span><span class="mf">0.804</span><span class="p">,</span> <span class="mf">0.804</span><span class="p">,</span> <span class="mi">300</span><span class="p">);</span>
-<span class="n">k3</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">linspace</span><span class="p">(</span><span class="mf">0.81</span><span class="p">,</span> <span class="mf">1.58</span><span class="p">,</span> <span class="mi">300</span><span class="p">);</span>
-
-<span class="n">pyplot</span><span class="o">.</span><span class="n">plot</span><span class="p">(</span><span class="n">k1</span><span class="p">,</span> <span class="n">m</span><span class="p">(</span><span class="n">k1</span><span class="p">,</span><span class="mi">4</span><span class="p">),</span><span class="s1">&#39;r&#39;</span><span class="p">);</span>
-<span class="n">pyplot</span><span class="o">.</span><span class="n">plot</span><span class="p">(</span><span class="n">k2</span><span class="p">,</span> <span class="n">m</span><span class="p">(</span><span class="n">k2</span><span class="p">,</span><span class="mi">4</span><span class="p">),</span><span class="s1">&#39;r&#39;</span><span class="p">);</span>
-<span class="n">pyplot</span><span class="o">.</span><span class="n">plot</span><span class="p">(</span><span class="n">k3</span><span class="p">,</span> <span class="n">m</span><span class="p">(</span><span class="n">k3</span><span class="p">,</span><span class="mi">4</span><span class="p">),</span><span class="s1">&#39;r&#39;</span><span class="p">,</span><span class="n">label</span><span class="o">=</span><span class="s1">&#39;t=4t</span><span class="se">\&#39;</span><span class="s1">&#39;</span><span class="p">);</span>
-
-<span class="n">k1</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">linspace</span><span class="p">(</span><span class="o">-</span><span class="mf">1.575</span><span class="p">,</span> <span class="o">-</span><span class="mf">0.798</span><span class="p">,</span> <span class="mi">300</span><span class="p">);</span>
-<span class="n">k2</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">linspace</span><span class="p">(</span><span class="o">-</span><span class="mf">0.790</span><span class="p">,</span> <span class="mf">0.790</span><span class="p">,</span> <span class="mi">300</span><span class="p">);</span>
-<span class="n">k3</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">linspace</span><span class="p">(</span><span class="mf">0.798</span><span class="p">,</span> <span class="mf">1.575</span><span class="p">,</span> <span class="mi">300</span><span class="p">);</span>
-
-<span class="n">pyplot</span><span class="o">.</span><span class="n">plot</span><span class="p">(</span><span class="n">k1</span><span class="p">,</span> <span class="n">m</span><span class="p">(</span><span class="n">k1</span><span class="p">,</span><span class="mi">10</span><span class="p">),</span><span class="s1">&#39;k&#39;</span><span class="p">);</span>
-<span class="n">pyplot</span><span class="o">.</span><span class="n">plot</span><span class="p">(</span><span class="n">k2</span><span class="p">,</span> <span class="n">m</span><span class="p">(</span><span class="n">k2</span><span class="p">,</span><span class="mi">10</span><span class="p">),</span><span class="s1">&#39;k&#39;</span><span class="p">);</span>
-<span class="n">pyplot</span><span class="o">.</span><span class="n">plot</span><span class="p">(</span><span class="n">k3</span><span class="p">,</span> <span class="n">m</span><span class="p">(</span><span class="n">k3</span><span class="p">,</span><span class="mi">10</span><span class="p">),</span><span class="s1">&#39;k&#39;</span><span class="p">,</span><span class="n">label</span><span class="o">=</span><span class="s1">&#39;t=10t</span><span class="se">\&#39;</span><span class="s1">&#39;</span><span class="p">);</span>
-
-<span class="n">pyplot</span><span class="o">.</span><span class="n">legend</span><span class="p">();</span>
-</code></pre></div>
+<p>where <script type="math/tex">A</script> is the area of our periodic system (<script type="math/tex">L \times L</script>). The integral is simply the area of a circle with a radius <script type="math/tex">k_d</script>, so it evaluates to</p>
+<p>
+<script type="math/tex; mode=display">
+2N = \frac{2A}{(2\pi)^2}(\pi k_d^2)
+</script>
+</p>
+<p>and ultimately obtains</p>
+<p>
+<script type="math/tex; mode=display">
+k_d = \sqrt{4\pi n}
+</script>
+</p>
+<p>with <script type="math/tex">n = N/A</script> (the two-dimensional density).</p>
+</li>
+<li>
+<p>Provide a brief discussion of which elements you would expect to have a high Debye temperature, and which elements you would expect to have a low Debye temperature.</p>
+<p>The Debye temperature <script type="math/tex">T_d</script> is defined through</p>
+<p>
+<script type="math/tex; mode=display">
+E_d = \hbar \omega_{d} = k_{\mathrm{B}} T_d
+</script>
+</p>
+<p>and as was <a href="https://andy-utas.github.io/1-intoduction/1-2-specificheatII/#the-density-of-states">shown in class</a>, the Debye frequency is</p>
+<p>
+<script type="math/tex; mode=display">
+\omega_d^3 = 6\pi^2 n v_s^3
+</script>
+</p>
+<p>where <script type="math/tex">v_s</script> is the speed of sound in the material. Therefore, one would expect the materials with large <script type="math/tex">v_s</script> to have the highest <script type="math/tex">T_d</script>. Consequently, a good guess for the highest <script type="math/tex">T_d</script> would be diamond (and indeed, it is the highest). For low <script type="math/tex">T_d</script>, low speed of sound materials will be compressible - a small spring constant in the Einstein/Debye models - so the nobel gasses or soft metals (e.g. group I) would be good candidates.</p>
+</li>
+</ol>
+<h2 id="exercise-2-drude-mixed-ion-electron-conductors-miecs">Exercise 2 - Drude: mixed ion-electron conductors (MIECs)<a class="headerlink" href="#exercise-2-drude-mixed-ion-electron-conductors-miecs" title="Permanent link">&para;</a></h2>
+<ol>
+<li>
+<p>Calculate the electrical resistivity <script type="math/tex">\rho</script>
+</p>
+<p>Assuming that both species respond to the electric field independently - we assume that there are no interactions - the total conductivity is the sum of the two independent conductivities</p>
+<p>
+<script type="math/tex; mode=display">
+\sigma = \sigma_e + \sigma_i = e^2 \left(\frac{n_e \tau_e}{m_e} + \frac{n_i \tau_i}{m_i}\right)
+</script>
+</p>
+<p>and therefore the resistivity <script type="math/tex">\rho = 1/\sigma</script>
+</p>
+<p>
+<script type="math/tex; mode=display">
+\rho  \frac{1}{e^2 \left(\frac{n_e \tau_e}{m_e} + \frac{n_i \tau_i}{m_i}\right)}
+</script>
+</p>
+</li>
+<li>
+<p>Calculate the thermal conductivity <script type="math/tex">\kappa</script>
+</p>
+<p>The thermal conductivity is calculated in the same way as the resistivity, in that we add the two pieces:</p>
+<p>
+<script type="math/tex; mode=display">
+\kappa = \kappa_e + \kappa_i = \frac{4k_{\textrm{B}}^2 T}{\pi} \left( \frac{n_e \tau_e}{m_e} + \frac{n_i \tau_i}{m_i} \right)
+</script>
+</p>
+</li>
+<li>
+<p>What is the Wiedemann-Franz law? Does it hold in this situation?</p>
+<p>The Wiedemann-Franz law states that the ratio (also known as the Lorenz number)</p>
+<p>
+<script type="math/tex; mode=display">
+L = \frac{\kappa}{T\sigma} = \frac{3}{2} \left(\frac{k_{\textrm{B}}}{e}\right)
+</script>
+</p>
+<p>is roughly constant for metals, and it indeed holds for MIECs</p>
+</li>
+<li>
+<p>If we consider a magnetic field applied in the <script type="math/tex">+z</script> direction, we need only consider the conductivity in <script type="math/tex">x</script> and <script type="math/tex">y</script> and can write</p>
+<p>
+<script type="math/tex; mode=display">
+\rho =
+\begin{pmatrix}
+\frac{m}{nq^2\tau} & \frac{Bq}{n} \\
+-\frac{Bq}{n} & \frac{m}{nq^2\tau}
+\end{pmatrix}
+</script>
+</p>
+<p>which is true for both charge carrier species. Use this result to calculate the resistivity matrix in the case of a MIEC.</p>
+<p>To make life simpler, one can write</p>
+<p>
+<script type="math/tex; mode=display">
+\rho =
+\begin{pmatrix}
+r & B R \\
+-B R & r
+\end{pmatrix}
+</script>
+</p>
+<p>where <script type="math/tex">r = m/(n q^2 \tau)</script> and <script type="math/tex">R=q/n</script>. We can then define <script type="math/tex">\rho_e</script> and <script type="math/tex">\rho_i</script> for the two species. The conductivities are then <script type="math/tex">\sigma_j=\rho_j^{-1}</script> for <script type="math/tex">j = e, i</script>, and then the total conductivity <script type="math/tex">\sigma_t = \sigma_e + \sigma_i</script>. The total resistivity is then <script type="math/tex">\rho = \sigma_t^{-1}</script> \mrk{1}. The process is pretty algebra heavy, but the results are</p>
+<p>
+<script type="math/tex; mode=display">\begin{align}
+\rho_{xx} & = \frac{B^2 (r_e R_i^2 + r_i R_e^2) + r_i r_e (r_e + r_i)}{B^2 (R_e + R_i)^2 + (r_e + r_i)^2} \\
+\rho_{xy} & = \frac{B (B^2 R_e R_i (R_e + R_i) + R_i r_e^2 + R_e r_i^2 }{B^2 (R_e + R_i)^2 + (r_e + r_i)^2}
+\end{align}</script>
+</p>
+<p>Note that using software to do this kind of grunt work is absolutely fine (encouraged even)</p>
+</li>
+</ol>
+<h2 id="exercise-3-sommerfeld">Exercise 3 - Sommerfeld<a class="headerlink" href="#exercise-3-sommerfeld" title="Permanent link">&para;</a></h2>
+<ol>
+<li>
+<p>In your own words, explain what is the Fermi energy, Fermi temperature and the Fermi surface</p>
+<p>The Fermi energy is the chemical potential at <script type="math/tex">T=0</script>, the Fermi temperature is the associated temperature <script type="math/tex">T_F = E_F/k_{\textrm{B}}</script>, and is the temperature at which thermal energy would dictate the properties of a material to the same degree as the fact they are fermions. The Fermi surface is the surface in momentum space which separates the filled and unfilled states <em>at zero temperature_</em>.</p>
+</li>
+<li>
+<p>Write an expression for the number of states for a gas of free electrons in three dimension and use this to calculate the Fermi wavenumber and Fermi Energy</p>
+<p>
+<script type="math/tex; mode=display">
+N = \frac{2V}{(2\pi)^3} \int_{k<k_F} \mathrm{d}\mathbf{k}
+</script>
+</p>
+<p>The factor of two is <em>very</em> important. The integral is just the volume of a sphere of radius <script type="math/tex">k_F</script>, this is, <script type="math/tex">4\pi k_F^3/3</script> which then yields</p>
+<p>
+<script type="math/tex; mode=display">
+k_F = (3\pi^2 N/V)^{1/3}
+</script>
+</p>
+<p>and thus the Fermi energy is</p>
+<p>
+<script type="math/tex; mode=display">
+E_F = \frac{\hbar^2(3\pi^2 N/V)^{2/3}}{2m}
+</script>
+</p>
+</li>
+<li>
+<p>Using the previous result, estimate the value of the Fermi energy for Caesium</p>
+<p>Caesium has a density of <script type="math/tex">1.93\textrm{g/cm^3}</script> and a mass of approximately <script type="math/tex">133 \textrm{amu}</script>  (132.9055) and thus the density of atoms is</p>
+<p>
+<script type="math/tex; mode=display">
+N/V = (1.93 \textrm{g/cm^3}) \times (10^2 \textrm{cm/m})^3 \times (\frac{1}{133}\textrm{mol/g}) \times (N_A \textrm{atoms/mol}) = 8.7 \textrm{atoms/m^3}
+</script>
+</p>
+<p>and with one valence electron, <script type="math/tex">N/V</script> for electrons is identical and we can plug it into the expression for <script type="math/tex">E_F</script> from part (ii) which returns <script type="math/tex">E_F = 2.48 \times 10^{-19} \textrm {J} = 1.6 \textrm{eV}</script>
+</p>
+</li>
+<li>
+<p>Obtain an expression for the density of states at the Fermi surface of a \textbf{two-dimensional} free-electron gas.</p>
+<p>For a two-dimensional gas</p>
+<p>
+<script type="math/tex; mode=display">
+N = 2A \int_{k<k_F} \frac{\mathrm{d}\mathbf{k}}{(2\pi)^2} = \frac{2A}{(2\pi)^2}\pi k_F^2
+</script>
+</p>
+<p>where (again) <script type="math/tex">A</script> is the area and the integral is over a circle with radius <script type="math/tex">k_F</script> (c.f. exercise 1 (ii), only a factor of two different due to polarisation). Therefore</p>
+<p>
+<script type="math/tex; mode=display">
+k_F = (2\pi N/A)^{1/2}
+</script>
+</p>
+<p>and the Fermi energy is</p>
+<p>
+<script type="math/tex; mode=display">
+E_F = \frac{\hbar^2 (2\pi N/A)}{2m} = \frac{\hbar^2\pi N/A}{m}
+</script>
+</p>
+<p>The density of states is then independent of energy and is given by</p>
+<p>
+<script type="math/tex; mode=display">
+\frac{\mathrm{d}N}{\mathrm{d}E} = \frac{Am}{\hbar^2\pi} = N/E_F
+</script>
+</p>
+</li>
+<li>
+<p>Using the above result, show that for a two-dimensional free-electron gas that the chemical potential <script type="math/tex">\mu</script> is independent of temperature when <script type="math/tex">T \ll \mu</script>
+</p>
+<p>From above, we have the density of states which we note to be temperature independent. Thus, for a fixed density of electrons, the chemical potential is fixed by</p>
+<p>
+<script type="math/tex; mode=display">
+n = \int_0^{\infty} \mathrm{d}E~g(E)~\frac{1}{\exp\left(\beta(E-\mu)\right)+1}.
+</script>
+</p>
+<p>The connection one must make is that except for corrections exponentially small in <script type="math/tex">\beta\mu</script>, the value of the integral is independent of <script type="math/tex">\beta</script> and thus one can assume that the dependence of <script type="math/tex">n</script> on <script type="math/tex">\mu</script> is temperature independent.</p>
+<p>If one wants to do the maths, we write the density of states as a constant <script type="math/tex">g</script> (see above) and then the integral above can be recast</p>
+<p>
+<script type="math/tex; mode=display">
+n = g \int_{-\mu}^{\infty} \mathrm{d}x~\frac{1}{\exp(\beta x)+1} = g \int_{-\mu}^{\infty} \mathrm{d}x \frac{\exp(-\beta x)}{\exp(-\beta x)+1} = \frac{g}{\beta} \log(\exp(\beta \mu)+1)
+</script>
+</p>
+<p>And for large <script type="math/tex">\beta\mu</script> (small) we can expand to have</p>
+<p>
+<script type="math/tex; mode=display">
+n/g = \mu + \mathcal{O}\left(\exp(-\beta\mu)\right)
+</script>
+</p>
+<p>which means that provided <script type="math/tex">T \ll \mu</script>, there is no dependence on the temperature.</p>
+</li>
+</ol>
+<h2 id="exercise-4-chemistry">Exercise 4 - chemistry<a class="headerlink" href="#exercise-4-chemistry" title="Permanent link">&para;</a></h2>
+<ol>
+<li>
+<p>Explain using the simplest language you can muster why is there periodic table important?</p>
+<p>Ability to predict properties of elements, ability to predict properties of compounds, ability to group/classify elements with similar characteristics, displays trends</p>
+</li>
+<li>
+<p>Choose a naturally occurring element with a high atomic number and use Madelung's Rule to deduce the shell filling configuration.</p>
+<p>The configuration for uranium is shown below, and all shell filling will be in this order:</p>
+<p>U: 1s<script type="math/tex">^2</script>2s<script type="math/tex">^2</script>2p<script type="math/tex">^6</script>3s<script type="math/tex">^2</script>3p<script type="math/tex">^6</script>4s<script type="math/tex">^2</script>3d<script type="math/tex">^{10}</script>4p<script type="math/tex">^6</script>5s<script type="math/tex">^2</script>4d<script type="math/tex">^{10}</script>5p<script type="math/tex">^6</script>6s<script type="math/tex">^2</script>4e<script type="math/tex">^{14}</script>5d<script type="math/tex">^{10}</script>6p<script type="math/tex">^6</script>7s<script type="math/tex">^2</script>5f<script type="math/tex">^4</script>
+</p>
+<p>which can be written in shorthand as [Rn]7s<script type="math/tex">^2</script>5f<script type="math/tex">^4</script>.</p>
+</li>
+<li>
+<p>Using any tools at your disposal (i.e. use a computer) produce a plot of the energy eigenstate described by <script type="math/tex">|5, 2, 0 \rangle</script>. You must include your code and you will be partially assessed on presentation: producing content that is digestible and visually pleasing is an important part of modern science!</p>
+<p>I made a mistake here, I should have the angular dependence or something, as plotting the wavefunction in 3D is hard.</p>
+<p>The electronic states of hydrogen can be found in many places (e.g. <a href="https://en.wikipedia.org/wiki/Hydrogen_atom">Wikipedia</a>) and are given by</p>
+<p>
+<script type="math/tex; mode=display">
+\psi _{n\ell m}(r,\theta ,\varphi )={\sqrt {{\left({\frac {2}{na_{0}^{*}}}\right)}^{3}{\frac {(n-\ell -1)!}{2n(n+\ell )!}}}}e^{-\rho /2}\rho ^{\ell }L_{n-\ell -1}^{2\ell +1}(\rho )Y_{\ell }^{m}(\theta ,\varphi )
+</script>
+</p>
+<p>where <script type="math/tex">\rho = 2r/n a_0^*</script>, <script type="math/tex">a_0^*=4\pi\epsilon_0\hbar^2/\mu e^2</script> is the reduced Bohr radius, <script type="math/tex">\mu = m_e M/(m_e + M)</script> is the reduced mass, <script type="math/tex">L_{n-\ell -1}^{2\ell +1}(\rho )</script> is the generalised Laguerre polynomial and <script type="math/tex">Y_{\ell }^{m}(\theta ,\varphi )</script> is the spherical harmonic function.</p>
+</li>
+</ol>
                 
               
               
