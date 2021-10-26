@@ -24,12 +24,15 @@ nav:
     - '6: Semiconductors':
       - 'Semiconductors 101': 6-semiconductors/6-1-semiconductors.md
       - 'Doping and devices': 6-semiconductors/6-2-devices.md
-    - '7: Magnetism':
-      - 'Empty content': placeholder.md
-    - '8: Cool stuff':
-      - 'Topological insulators': placeholder.md
-      - 'Superconductors': placeholder.md
-      - 'Quantum simulators': placeholder.md
+    - 'Solutions':
+      - 'Assignments': solutions/assignments.md
+      - 'Exercises': solutions/exercises.md
+    # - '7: Magnetism':
+    #   - 'Empty content': placeholder.md
+    # - '8: Cool stuff':
+    #   - 'Topological insulators': placeholder.md
+    #   - 'Superconductors': placeholder.md
+    #   - 'Quantum simulators': placeholder.md
     - Additional resources: additional.md
 
 theme:
