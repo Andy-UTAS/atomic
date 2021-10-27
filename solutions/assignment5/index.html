@@ -655,29 +655,29 @@
     <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
       
         <li class="md-nav__item">
-  <a href="#exercise-1-debye" class="md-nav__link">
-    Exercise 1 - Debye
+  <a href="#exercise-1-the-reciprocal-lattice" class="md-nav__link">
+    Exercise 1 - The reciprocal lattice
   </a>
   
 </li>
       
         <li class="md-nav__item">
-  <a href="#exercise-2-drude-mixed-ion-electron-conductors-miecs" class="md-nav__link">
-    Exercise 2 - Drude: mixed ion-electron conductors (MIECs)
+  <a href="#exercise-2-lattice-planes" class="md-nav__link">
+    Exercise 2 - Lattice planes
   </a>
   
 </li>
       
         <li class="md-nav__item">
-  <a href="#exercise-3-sommerfeld" class="md-nav__link">
-    Exercise 3 - Sommerfeld
+  <a href="#exercise-3-scattering" class="md-nav__link">
+    Exercise 3 - Scattering
   </a>
   
 </li>
       
         <li class="md-nav__item">
-  <a href="#exercise-4-chemistry" class="md-nav__link">
-    Exercise 4 - chemistry
+  <a href="#exercise-4-diffraction-and-structure" class="md-nav__link">
+    Exercise 4 - Diffraction and structure
   </a>
   
 </li>
@@ -697,234 +697,219 @@
                 
                 <h1 id="assignment-5-the-reciprocal-lattice-and-scattering">Assignment 5: the reciprocal lattice and scattering<a class="headerlink" href="#assignment-5-the-reciprocal-lattice-and-scattering" title="Permanent link">&para;</a></h1>
 <p>The fifth assignment can be found <a href="../assignments/Assignment five.pdf">here</a></p>
-<h2 id="exercise-1-debye">Exercise 1 - Debye<a class="headerlink" href="#exercise-1-debye" title="Permanent link">&para;</a></h2>
+<h2 id="exercise-1-the-reciprocal-lattice">Exercise 1 - The reciprocal lattice<a class="headerlink" href="#exercise-1-the-reciprocal-lattice" title="Permanent link">&para;</a></h2>
+<p>Following the normal conventions, let us denote <script type="math/tex">\mathbf{a}_i</script> and <script type="math/tex">\mathbf{b}_i</script> as the real-space and reciprocal space lattice vectors.</p>
 <ol>
 <li>
-<p>What are the assumptions of the Debye model?</p>
-<p>The Debye model considers only sound waves in a material (i.e. one assumes a linear dispersion <script type="math/tex">\omega = v k</script>) which oscillate up to a maximum frequency <script type="math/tex">\omega_{\mathrm{cutoff}} = \omega_d</script>, the Debye frequency, which exists to ensure that the total number of vibrational modes in the system is correct (equal to the number of degrees of freedom in the system).</p>
+<p>A construction of lattice vectors can be achieved using the relation
+<script type="math/tex; mode=display">
+\mathbf{b}_i = 2\pi \frac{\mathbf{a}_j \times \mathbf{a}_k}{\mathbf{a}_1 \cdot (\mathbf{a}_2 \times \mathbf{a}_3)}
+</script>
+Explicitly compute <script type="math/tex">\mathbf{a}_1 \cdot \mathbf{b}_1</script>, <script type="math/tex">\mathbf{a}_2 \cdot \mathbf{b}_1</script>, and <script type="math/tex">\mathbf{a}_3 \cdot \mathbf{b}_1</script>. Do these computations accord with the definition of the reciprocal lattice?</p>
+<p>The computation of these vectors is aided by knowledge of <a href="https://en.wikipedia.org/wiki/Triple_product#Scalar_triple_product">properties of the scalar triple product</a>. In calculating the product:</p>
+<p>
+<script type="math/tex; mode=display">
+\mathbf{a}_i \cdot \mathbf{b}_1 = 2\pi \frac{\mathbf{a}_i \cdot (\mathbf{a}_2 \times \mathbf{a}_3)}{\mathbf{a}_1 \cdot (\mathbf{a}_2 \times \mathbf{a}_3)}
+</script>
+</p>
+<p>it should be immediately obvious that <script type="math/tex">\mathbf{a}_2 \times \mathbf{a}_3</script> is orthogonal to both <script type="math/tex">\mathbf{a}_2</script> and <script type="math/tex">\mathbf{a}_3</script>, so the dot product between <script type="math/tex">\mathbf{a}_2</script> and <script type="math/tex">\mathbf{a}_3</script> will be zero. In the case of <script type="math/tex">\mathbf{a}_1</script>, we then have identical vector products on both numerator and denominator and therefore the product evaluates to <script type="math/tex">2\pi</script>.</p>
+<p>The construction of the reciprocal lattice is baser around the identity</p>
+<p>
+<script type="math/tex; mode=display">
+e^{i\mathbf{G}\cdot\mathbf{R}} = 1
+</script>
+</p>
+<p>for any lattice point <script type="math/tex">\mathbf{R}</script> and any reciprocal lattice point <script type="math/tex">\mathbf{G}</script>. That relation only holds when</p>
+<p>
+<script type="math/tex; mode=display">
+\mathbf{a}_i \cdot \mathbf{b}_j = 2\pi \delta_{ij}
+</script>
+</p>
+<p>and hence our relations above are looking good.</p>
 </li>
 <li>
-<p>Write an expression for the number of modes in a two-dimensional system, and thus determine the <em>Debye wavenumber</em> (the wavenumber which corresponds to the Debye frequency).</p>
-<p>In two dimensions, there should be <script type="math/tex">2N</script> modes (we implicitly assume that the different sound polarisations propagate with the same velocity, and thus</p>
+<p>The volume of a primitive unit cell with lattice vectors <script type="math/tex">\mathbf{a}_i</script> is given by <script type="math/tex">V = \left|\mathbf{a}_1 \cdot (\mathbf{a}_2 \times \mathbf{a}_3) \right|</script>. Find the volume of the corresponding primitive unit cell in reciprocal space.</p>
+<p>The volume in reciprocal space <script type="math/tex">V'</script> should be computed using the same method as provided:</p>
 <p>
 <script type="math/tex; mode=display">
-2N = 2 \frac{A}{2\pi^2} \int_0^{|k| = k_d} \mathrm{d}^2 k
+\begin{align}
+V' & = \left|\mathbf{b}_1 \cdot (\mathbf{b}_2 \times \mathbf{b}_3) \right| \\
+& = 2\pi \left| \frac{(\mathbf{a}_2 \times \mathbf{a}_3)}{\mathbf{a}_1 \cdot (\mathbf{a}_2 \times \mathbf{a}_3)} \cdot (\mathbf{b}_2 \times \mathbf{b}_3) \right| \\
+& = \frac{2\pi}{V}\left| (\mathbf{a}_2 \times \mathbf{a}_3) \cdot (\mathbf{b}_2 \times \mathbf{b}_3) \right| \\
+& = \frac{2\pi}{V}\left| (\mathbf{a}_2 \cdot \mathbf{b}_2)(\mathbf{a}_3 \cdot  \mathbf{b}_3) - ( \mathbf{a}_2 \cdot \mathbf{b}_3)( \mathbf{a}_3 \cdot \mathbf{b}_2) \right| \\
+& = \frac{(2\pi)^3}{V}
+\end{align}
 </script>
 </p>
-<p>where <script type="math/tex">A</script> is the area of our periodic system (<script type="math/tex">L \times L</script>). The integral is simply the area of a circle with a radius <script type="math/tex">k_d</script>, so it evaluates to</p>
-<p>
-<script type="math/tex; mode=display">
-2N = \frac{2A}{(2\pi)^2}(\pi k_d^2)
-</script>
-</p>
-<p>and ultimately obtains</p>
-<p>
-<script type="math/tex; mode=display">
-k_d = \sqrt{4\pi n}
-</script>
-</p>
-<p>with <script type="math/tex">n = N/A</script> (the two-dimensional density).</p>
 </li>
 <li>
-<p>Provide a brief discussion of which elements you would expect to have a high Debye temperature, and which elements you would expect to have a low Debye temperature.</p>
-<p>The Debye temperature <script type="math/tex">T_d</script> is defined through</p>
+<p>Show that the general direction <script type="math/tex">[hkl]</script> in a cubic crystal is normal to the planes with Miller indices <script type="math/tex">(hkl)</script>.</p>
+<p>Consider a (real-space) lattice with basis vectors <script type="math/tex">\mathbf{a}</script>, <script type="math/tex">\mathbf{b}</script>, and <script type="math/tex">\mathbf{c}</script> which are assumed orthogonal (cubic crystal). Let the lengths of these vectors be <script type="math/tex">a</script>, <script type="math/tex">b</script>, and <script type="math/tex">c</script> respectively. The plane <script type="math/tex">(hkl)</script> will have intercepts with the axes at (a/h, 0, 0), (0, b/k, 0), (0, 0, c/l), and from these 3 points, one can construct a vector normal to the plane (which defines the plane) by taking the cross products between any two vectors between the points above. For example,     consider</p>
 <p>
 <script type="math/tex; mode=display">
-E_d = \hbar \omega_{d} = k_{\mathrm{B}} T_d
+\begin{align}
+\mathbf{n} & = (\mathbf{a}/h - \mathbf{b}/k) \times (\mathbf{a}/h - \mathbf{c}/k) \\
+& = \frac{abc}{hkl} \left( \frac{h}{a^2}\mathbf{a} + \frac{k}{b^2}\mathbf{b} + \frac{l}{c^2}\mathbf{c} \right)
+\end{align}
 </script>
 </p>
-<p>and as was <a href="https://andy-utas.github.io/1-intoduction/1-2-specificheatII/#the-density-of-states">shown in class</a>, the Debye frequency is</p>
+<p>and this is only parallel to the vector <script type="math/tex">[hkl]</script> in the case of <script type="math/tex">a = b = c</script>.</p>
+</li>
+<li>
+<p>Is the above statement true for an orthorhombic crystal? Justify your response.</p>
+<p>No, it is not true, see the question above!</p>
+</li>
+<li>
+<p>Show that the distance between two adjacent Miller planes <script type="math/tex">(hkl)</script> of any lattice is <script type="math/tex">d=2\pi/|\mathbf{G}_{\textrm{min}}|</script>, where <script type="math/tex">\mathbf{G}_{\textrm{min}}</script> is the shortest reciprocal lattice vector perpendicular to these Miller planes.</p>
+<p>The unit vector normal to the plane can be computed via</p>
 <p>
 <script type="math/tex; mode=display">
-\omega_d^3 = 6\pi^2 n v_s^3
+\hat{\mathbf{n}} = \frac{\mathbf{G}}{|\mathbf{G}|}.
 </script>
 </p>
-<p>where <script type="math/tex">v_s</script> is the speed of sound in the material. Therefore, one would expect the materials with large <script type="math/tex">v_s</script> to have the highest <script type="math/tex">T_d</script>. Consequently, a good guess for the highest <script type="math/tex">T_d</script> would be diamond (and indeed, it is the highest). For low <script type="math/tex">T_d</script>, low speed of sound materials will be compressible - a small spring constant in the Einstein/Debye models - so the nobel gasses or soft metals (e.g. group I) would be good candidates.</p>
+<p>Let us consider a very simple case in which we have the miller planes <script type="math/tex">(h00)</script>. For lattice planes, there is always a plane intersecting the zero lattice point <script type="math/tex">(0,0,0)</script>. As such, the distance from this plane to the closest next one is given by</p>
+<p>
+<script type="math/tex; mode=display">
+d = \hat{\mathbf{n}} \cdot \frac{\mathbf{a_1}}{h} = \frac{2\pi}{|\mathbf{G}|}
+</script>
+</p>
+</li>
+<li>
+<p>Find the family of Miller planes of the BCC lattice that has the highest density of lattice points. It may of useful to think about the density of lattice points per unit area on a Miller plane which is given by <script type="math/tex">\rho=d/V</script>.</p>
+<p>Since <script type="math/tex">\rho=d/V</script>, to maximise <script type="math/tex">\rho</script> me must either must maximize <script type="math/tex">d</script> or minimise <script type="math/tex">V</script>, the latter of which is fixed. Therefore, to maximise <script type="math/tex">d</script>, we minimize must <script type="math/tex">|\mathbf{G}|</script> and thus the smallest possible reciprocal lattice vectors are the (100) family of planes (in terms of FCC primitive lattice vectors).</p>
 </li>
 </ol>
-<h2 id="exercise-2-drude-mixed-ion-electron-conductors-miecs">Exercise 2 - Drude: mixed ion-electron conductors (MIECs)<a class="headerlink" href="#exercise-2-drude-mixed-ion-electron-conductors-miecs" title="Permanent link">&para;</a></h2>
+<h2 id="exercise-2-lattice-planes">Exercise 2 - Lattice planes<a class="headerlink" href="#exercise-2-lattice-planes" title="Permanent link">&para;</a></h2>
+<p>In assignment four, you looked at the  structure of zincblende (ZnS) (zinc atoms are yellow, sulphur atoms are grey).</p>
+<p><img alt="" src="../images/A5-2-Zincblende.png" /></p>
 <ol>
 <li>
-<p>Calculate the electrical resistivity <script type="math/tex">\rho</script>
-</p>
-<p>Assuming that both species respond to the electric field independently - we assume that there are no interactions - the total conductivity is the sum of the two independent conductivities</p>
-<p>
-<script type="math/tex; mode=display">
-\sigma = \sigma_e + \sigma_i = e^2 \left(\frac{n_e \tau_e}{m_e} + \frac{n_i \tau_i}{m_i}\right)
-</script>
-</p>
-<p>and therefore the resistivity <script type="math/tex">\rho = 1/\sigma</script>
-</p>
-<p>
-<script type="math/tex; mode=display">
-\rho  \frac{1}{e^2 \left(\frac{n_e \tau_e}{m_e} + \frac{n_i \tau_i}{m_i}\right)}
-</script>
-</p>
+<p>Draw a simplified plan view (don't worry about indicating heights) down the [001] axis, and indicate the [210] direction and the (210) family of planes</p>
+<p>The plan, planes and reciprocal lattice vector are shown below:</p>
+<p><img alt="" class="center" src="../images/A5-2-210.png" /></p>
 </li>
 <li>
-<p>Calculate the thermal conductivity <script type="math/tex">\kappa</script>
-</p>
-<p>The thermal conductivity is calculated in the same way as the resistivity, in that we add the two pieces:</p>
-<p>
-<script type="math/tex; mode=display">
-\kappa = \kappa_e + \kappa_i = \frac{4k_{\textrm{B}}^2 T}{\pi} \left( \frac{n_e \tau_e}{m_e} + \frac{n_i \tau_i}{m_i} \right)
-</script>
-</p>
-</li>
-<li>
-<p>What is the Wiedemann-Franz law? Does it hold in this situation?</p>
-<p>The Wiedemann-Franz law states that the ratio (also known as the Lorenz number)</p>
-<p>
-<script type="math/tex; mode=display">
-L = \frac{\kappa}{T\sigma} = \frac{3}{2} \left(\frac{k_{\textrm{B}}}{e}\right)
-</script>
-</p>
-<p>is roughly constant for metals, and it indeed holds for MIECs</p>
-</li>
-<li>
-<p>If we consider a magnetic field applied in the <script type="math/tex">+z</script> direction, we need only consider the conductivity in <script type="math/tex">x</script> and <script type="math/tex">y</script> and can write</p>
-<p>
-<script type="math/tex; mode=display">
-\rho =
-\begin{pmatrix}
-\frac{m}{nq^2\tau} & \frac{Bq}{n} \\
--\frac{Bq}{n} & \frac{m}{nq^2\tau}
-\end{pmatrix}
-</script>
-</p>
-<p>which is true for both charge carrier species. Use this result to calculate the resistivity matrix in the case of a MIEC.</p>
-<p>To make life simpler, one can write</p>
-<p>
-<script type="math/tex; mode=display">
-\rho =
-\begin{pmatrix}
-r & B R \\
--B R & r
-\end{pmatrix}
-</script>
-</p>
-<p>where <script type="math/tex">r = m/(n q^2 \tau)</script> and <script type="math/tex">R=q/n</script>. We can then define <script type="math/tex">\rho_e</script> and <script type="math/tex">\rho_i</script> for the two species. The conductivities are then <script type="math/tex">\sigma_j=\rho_j^{-1}</script> for <script type="math/tex">j = e, i</script>, and then the total conductivity <script type="math/tex">\sigma_t = \sigma_e + \sigma_i</script>. The total resistivity is then <script type="math/tex">\rho = \sigma_t^{-1}</script> \mrk{1}. The process is pretty algebra heavy, but the results are</p>
-<p>
-<script type="math/tex; mode=display">\begin{align}
-\rho_{xx} & = \frac{B^2 (r_e R_i^2 + r_i R_e^2) + r_i r_e (r_e + r_i)}{B^2 (R_e + R_i)^2 + (r_e + r_i)^2} \\
-\rho_{xy} & = \frac{B (B^2 R_e R_i (R_e + R_i) + R_i r_e^2 + R_e r_i^2 }{B^2 (R_e + R_i)^2 + (r_e + r_i)^2}
-\end{align}</script>
-</p>
-<p>Note that using software to do this kind of grunt work is absolutely fine (encouraged even)</p>
+<p>The confidence tester: explain why the family of planes above is or is not a family of lattice planes.</p>
+<ul>
+<li>If it is a family of lattice planes, do nothing and be content with your decision</li>
+<li>If it is not a family of lattice planes, what would be a family of lattice planes in the same direction?</li>
+</ul>
+<p>The lattice type is a Face-centred cubic (FCC), and clearly the lattice planes do capture all atoms, and thus the spacing must be decreased, or the reciprocal lattice vector doubled, so (420) would define a family of lattice planes.</p>
 </li>
 </ol>
-<h2 id="exercise-3-sommerfeld">Exercise 3 - Sommerfeld<a class="headerlink" href="#exercise-3-sommerfeld" title="Permanent link">&para;</a></h2>
+<h2 id="exercise-3-scattering">Exercise 3 - Scattering<a class="headerlink" href="#exercise-3-scattering" title="Permanent link">&para;</a></h2>
 <ol>
 <li>
-<p>In your own words, explain what is the Fermi energy, Fermi temperature and the Fermi surface</p>
-<p>The Fermi energy is the chemical potential at <script type="math/tex">T=0</script>, the Fermi temperature is the associated temperature <script type="math/tex">T_F = E_F/k_{\textrm{B}}</script>, and is the temperature at which thermal energy would dictate the properties of a material to the same degree as the fact they are fermions. The Fermi surface is the surface in momentum space which separates the filled and unfilled states <em>at zero temperature_</em>.</p>
+<p>What is the origin of the Laue condition? That is, why is the amplitude of a scattered wave zero if <script type="math/tex">\mathbf{k'} - \mathbf{k} \ne \mathbf{G}</script>?</p>
+<p>If <script type="math/tex">\mathbf{k'} - \mathbf{k} \ne \mathbf{G}</script>, then the argument of the exponent has a phase factor dependent on the real-space lattice points. Because we sum over each of these lattice points, each argument has a different phase. Summing over all these phases results in an average amplitude of 0, resulting in no intensity peaks.</p>
 </li>
 <li>
-<p>Write an expression for the number of states for a gas of free electrons in three dimension and use this to calculate the Fermi wavenumber and Fermi Energy</p>
-<p>
-<script type="math/tex; mode=display">
-N = \frac{2V}{(2\pi)^3} \int_{k<k_F} \mathrm{d}\mathbf{k}
-</script>
+<p>Consider a two-dimensional crystal with a rectangular lattice and lattice vectors <script type="math/tex">\mathbf{a}_1 = (0.468, 0) \mathrm{nm}</script> and <script type="math/tex">\mathbf{a}_2 = (0, 0.342) \mathrm{nm}</script> (so that <script type="math/tex">\mathbf{a}_1</script> points along <script type="math/tex">x</script>-axis and <script type="math/tex">\mathbf{a}_2</script> points along <script type="math/tex">y</script>-axis)</p>
+<ol>
+<li>Sketch the reciprocal lattice of this crystal</li>
+</ol>
+<p><img alt="" class="center" src="../images/A5-3-i.svg" /></p>
+<ol>
+<li>Consider an X-ray diffraction experiment performed on this crystal using monochromatic X-rays with wavelength <script type="math/tex">0.166\mathrm{nm}</script>. Assuming elastic scattering, find the magnitude of the wave vectors of the incident and reflected X-rays</li>
+</ol>
+<p>With elastic scattering, we have <script type="math/tex">|k| = |k'| = 2\pi\lambda = 37.9 \mathrm{nm^{-1}}</script>
 </p>
-<p>The factor of two is <em>very</em> important. The integral is just the volume of a sphere of radius <script type="math/tex">k_F</script>, this is, <script type="math/tex">4\pi k_F^3/3</script> which then yields</p>
-<p>
-<script type="math/tex; mode=display">
-k_F = (3\pi^2 N/V)^{1/3}
-</script>
-</p>
-<p>and thus the Fermi energy is</p>
-<p>
-<script type="math/tex; mode=display">
-E_F = \frac{\hbar^2(3\pi^2 N/V)^{2/3}}{2m}
-</script>
-</p>
-</li>
-<li>
-<p>Using the previous result, estimate the value of the Fermi energy for Caesium</p>
-<p>Caesium has a density of <script type="math/tex">1.93\textrm{g/cm^3}</script> and a mass of approximately <script type="math/tex">133 \textrm{amu}</script>  (132.9055) and thus the density of atoms is</p>
-<p>
-<script type="math/tex; mode=display">
-N/V = (1.93 \textrm{g/cm^3}) \times (10^2 \textrm{cm/m})^3 \times (\frac{1}{133}\textrm{mol/g}) \times (N_A \textrm{atoms/mol}) = 8.7 \textrm{atoms/m^3}
-</script>
-</p>
-<p>and with one valence electron, <script type="math/tex">N/V</script> for electrons is identical and we can plug it into the expression for <script type="math/tex">E_F</script> from part (ii) which returns <script type="math/tex">E_F = 2.48 \times 10^{-19} \textrm {J} = 1.6 \textrm{eV}</script>
-</p>
-</li>
-<li>
-<p>Obtain an expression for the density of states at the Fermi surface of a \textbf{two-dimensional} free-electron gas.</p>
-<p>For a two-dimensional gas</p>
-<p>
-<script type="math/tex; mode=display">
-N = 2A \int_{k<k_F} \frac{\mathrm{d}\mathbf{k}}{(2\pi)^2} = \frac{2A}{(2\pi)^2}\pi k_F^2
-</script>
-</p>
-<p>where (again) <script type="math/tex">A</script> is the area and the integral is over a circle with radius <script type="math/tex">k_F</script> (c.f. exercise 1 (ii), only a factor of two different due to polarisation). Therefore</p>
-<p>
-<script type="math/tex; mode=display">
-k_F = (2\pi N/A)^{1/2}
-</script>
-</p>
-<p>and the Fermi energy is</p>
-<p>
-<script type="math/tex; mode=display">
-E_F = \frac{\hbar^2 (2\pi N/A)}{2m} = \frac{\hbar^2\pi N/A}{m}
-</script>
-</p>
-<p>The density of states is then independent of energy and is given by</p>
-<p>
-<script type="math/tex; mode=display">
-\frac{\mathrm{d}N}{\mathrm{d}E} = \frac{Am}{\hbar^2\pi} = N/E_F
-</script>
-</p>
-</li>
-<li>
-<p>Using the above result, show that for a two-dimensional free-electron gas that the chemical potential <script type="math/tex">\mu</script> is independent of temperature when <script type="math/tex">T \ll \mu</script>
-</p>
-<p>From above, we have the density of states which we note to be temperature independent. Thus, for a fixed density of electrons, the chemical potential is fixed by</p>
-<p>
-<script type="math/tex; mode=display">
-n = \int_0^{\infty} \mathrm{d}E~g(E)~\frac{1}{\exp\left(\beta(E-\mu)\right)+1}.
-</script>
-</p>
-<p>The connection one must make is that except for corrections exponentially small in <script type="math/tex">\beta\mu</script>, the value of the integral is independent of <script type="math/tex">\beta</script> and thus one can assume that the dependence of <script type="math/tex">n</script> on <script type="math/tex">\mu</script> is temperature independent.</p>
-<p>If one wants to do the maths, we write the density of states as a constant <script type="math/tex">g</script> (see above) and then the integral above can be recast</p>
-<p>
-<script type="math/tex; mode=display">
-n = g \int_{-\mu}^{\infty} \mathrm{d}x~\frac{1}{\exp(\beta x)+1} = g \int_{-\mu}^{\infty} \mathrm{d}x \frac{\exp(-\beta x)}{\exp(-\beta x)+1} = \frac{g}{\beta} \log(\exp(\beta \mu)+1)
-</script>
-</p>
-<p>And for large <script type="math/tex">\beta\mu</script> (small) we can expand to have</p>
-<p>
-<script type="math/tex; mode=display">
-n/g = \mu + \mathcal{O}\left(\exp(-\beta\mu)\right)
-</script>
-</p>
-<p>which means that provided <script type="math/tex">T \ll \mu</script>, there is no dependence on the temperature.</p>
+<ol>
+<li>On your sketch of the reciprocal lattice, draw the "scattering triangle" corresponding to the diffraction from (210) planes. Explicitly, use the Laue condition <script type="math/tex">\Delta \mathbf{k} = \mathbf{G}</script> for constructive interference of diffracted X-rays</li>
+</ol>
+<p><img alt="" class="center" src="../images/A5-3-iii.svg" /></p>
 </li>
 </ol>
-<h2 id="exercise-4-chemistry">Exercise 4 - chemistry<a class="headerlink" href="#exercise-4-chemistry" title="Permanent link">&para;</a></h2>
+<h2 id="exercise-4-diffraction-and-structure">Exercise 4 - Diffraction and structure<a class="headerlink" href="#exercise-4-diffraction-and-structure" title="Permanent link">&para;</a></h2>
 <ol>
 <li>
-<p>Explain using the simplest language you can muster why is there periodic table important?</p>
-<p>Ability to predict properties of elements, ability to predict properties of compounds, ability to group/classify elements with similar characteristics, displays trends</p>
-</li>
-<li>
-<p>Choose a naturally occurring element with a high atomic number and use Madelung's Rule to deduce the shell filling configuration.\</p>
-<p>I will write out uranium here, and all shell filling will be in this order</p>
-<p>$$
-\textrm{U}: 1s<script type="math/tex">^2</script>2s<script type="math/tex">^2</script>2p<script type="math/tex">^6</script>3s<script type="math/tex">^2</script>3p<script type="math/tex">^6</script>4s<script type="math/tex">^2</script>3d<script type="math/tex">^{10}</script>4p<script type="math/tex">^6</script>5s<script type="math/tex">^2</script>4d<script type="math/tex">^{10}</script>5p<script type="math/tex">^6</script>6s<script type="math/tex">^2</script>4e<script type="math/tex">^{14}</script>5d<script type="math/tex">^{10}</script>6p<script type="math/tex">^6</script>7s<script type="math/tex">^2</script>5f<script type="math/tex">^4</script> ([Rn]7s<script type="math/tex">^2</script>5f<script type="math/tex">^4</script>)
-$$</p>
-</li>
-<li>
-<p>Using any tools at your disposal (i.e. use a computer) produce a plot of the energy eigenstate described by <script type="math/tex">|5, 2, 0 \rangle</script>. You must include your code and you will be partially assessed on presentation: producing content that is digestible and visually pleasing is an important part of modern science!</p>
-<p>I made a mistake here, I should have the angular dependence or something, as plotting the wavefunction in 3D is hard.</p>
-<p>The electronic states of hydrogen can be found in many places (e.g. <a href="https://en.wikipedia.org/wiki/Hydrogen_atom">Wikipedia</a>) and are given by</p>
+<p>Compute the structure factor <script type="math/tex">S</script> of the BCC lattice</p>
+<p>The structure factor <script type="math/tex">S(\mathbf{G})</script> is given by</p>
 <p>
-<script type="math/tex; mode=display">\begin{equation}
-  \psi _{n\ell m}(r,\theta ,\varphi )={\sqrt {{\left({\frac {2}{na_{0}^{*}}}\right)}^{3}{\frac {(n-\ell -1)!}{2n(n+\ell )!}}}}e^{-\rho /2}\rho ^{\ell }L_{n-\ell -1}^{2\ell +1}(\rho )Y_{\ell }^{m}(\theta ,\varphi )
-\end{equation}</script>
+<script type="math/tex; mode=display">
+\sum_j f_j e^{i\mathbf{G} \cdot \mathbf{r}_j}
+</script>
 </p>
-<p>where <script type="math/tex">\rho = 2r/n a_0^*</script>, <script type="math/tex">a_0^*=4\pi\epsilon_0\hbar^2/\mu e^2</script> is the reduced Bohr radius, <script type="math/tex">\mu = m_e M/(m_e + M)</script> is the reduced mass, <script type="math/tex">L_{n-\ell -1}^{2\ell +1}(\rho )</script> is the generalised Laguerre polynomial and <script type="math/tex">Y_{\ell }^{m}(\theta ,\varphi )</script> is the spherical harmonic function.</p>
+<p>where the sum over <script type="math/tex">j</script> is the atoms in the unit cell. We can write this explicitly as</p>
+<p>
+<script type="math/tex; mode=display">
+\sum_j f_j e^{2\pi i hu_j + kv_j + lw_j} f_j
+</script>
+</p>
+<p>where <script type="math/tex">(hkl)</script> are the miller indices of <script type="math/tex">\mathbf{G}</script> and <script type="math/tex">[u_j, v_j, w_j]</script> are the positions of atom <script type="math/tex">j</script> in the unit cell. To compute this, we write a BCC lattice as a simple cubic with a basis [0,0,0] and [1/2, 1/2, 1/2], and therefore we get the structure factor</p>
+<p>
+<script type="math/tex; mode=display">
+\begin{align}
+S & = f_{\textrm{Cr}} + f_{\textrm{Cr}} e^{2\pi i(h/2 + k/2 + l/2)} \\
+& = f_{\textrm{Cr}}\left(1 + (-1)^{h+k+l}\right)
+\end{align}
+</script>
+</p>
+</li>
+<li>
+<p>Which diffraction peaks are missing?</p>
+<p>From above, it is clear that the structure vanishes whenever <script type="math/tex">h+k+l</script> is odd, and we can write</p>
+<p>
+<script type="math/tex; mode=display">
+S = \left\{ \begin{array}{ll} 2f_{\textrm{Cr}} \quad h+k+l~\textrm{even} \\ 0 \quad h+k+l~\textrm{odd} \end{array} \right.
+</script>
+</p>
+</li>
+<li>
+<p>How does this structure factor change if the atoms in the centre of the conventional unit cell have a different form factor from the atoms at the corner of the conventional unit cell?</p>
+<p>If we write the atomic form factors of the different atoms <script type="math/tex">f_1</script> and <script type="math/tex">f_2</script>
+</p>
+<p>
+<script type="math/tex; mode=display">
+S = \left\{ \begin{array}{ll} f_1 + f_2 \quad h+k+l~\textrm{even} \\ f_1 - f_2 \quad h+k+l~\textrm{odd} \end{array} \right.
+</script>
+</p>
+</li>
+<li>
+<p>A student carried out X-ray powder diffraction on chromium (Cr) which is known to have a BCC structure, and the first five diffraction peaks are given below. Delightfully, the student took the liberty of assigning Miller indices to the peaks. Were the peaks assigned correctly? Fix any mistakes and explain your reasoning.
+<img alt="" src="../images/A5-Cr.svg" /></p>
+<p>The values of <script type="math/tex">(hkl)</script> must satisfy the selection rules above, which means that the peaks should be <script type="math/tex">(110), (200), (211), (220), (310)</script> from lowest angle to highest angle.</p>
+</li>
+<li>
+<p>The X-ray diffraction was carried out using Cu <script type="math/tex">K_\alpha</script> radiation (<script type="math/tex">\lambda = 1.5406 \mathrm{\unicode{x212B}}</script>). Use this information to calculate the lattice constant <script type="math/tex">a</script> of the chromium BCC unit cell, and provide an estimate for uncertainty of this value.</p>
+<p>To calculate the lattice spacing, one must use the relations that for a given lattice spacing <script type="math/tex">d_{(h,k,l)}</script>, the Bragg condition holds:</p>
+<p>
+<script type="math/tex; mode=display">
+d_{(h,k,l)} = \frac{\lambda}{2 \sin\theta}
+</script>
+</p>
+<p>In a cubic lattice, one also has the relation that</p>
+<p>
+<script type="math/tex; mode=display">
+d_{(h,k,l)} = \frac{a}{\sqrt{h^2 + k^2 + l^2}}
+</script>
+</p>
+<p>so then the lattice constant <script type="math/tex">a</script> can be calculated through</p>
+<p>
+<script type="math/tex; mode=display">
+a = \frac{\lambda\sqrt{h^2 + k^2 + l^2}}{2 \sin\theta}
+</script>
+</p>
+<p>One can the calculate a value for each angle (and Miller index) to return a list of lattice constants, from which a range an uncertainty can be derived. I have just used the mean and standard deviation - no weighted means, no uncertainty in peak location, just raw statistical deviation from my <em>very</em> rough extraction of the scattering angle.</p>
+<div class="highlight"><pre><span></span><code><span class="n">lamb</span> <span class="o">=</span> <span class="mf">1.5406</span> <span class="c1">#[\unicode{x212B}]</span>
+<span class="k">def</span> <span class="nf">lat</span><span class="p">(</span><span class="n">h</span><span class="p">,</span> <span class="n">k</span><span class="p">,</span> <span class="n">l</span><span class="p">,</span> <span class="n">t</span><span class="p">):</span>
+  <span class="k">return</span> <span class="p">(</span><span class="n">np</span><span class="o">.</span><span class="n">sqrt</span><span class="p">(</span><span class="n">h</span><span class="o">**</span><span class="mi">2</span> <span class="o">+</span> <span class="n">k</span><span class="o">**</span><span class="mi">2</span> <span class="o">+</span> <span class="n">l</span><span class="o">**</span><span class="mi">2</span><span class="p">)</span> <span class="o">*</span> <span class="n">lamb</span><span class="p">)</span><span class="o">/</span><span class="p">(</span><span class="mi">2</span><span class="o">*</span><span class="n">np</span><span class="o">.</span><span class="n">sin</span><span class="p">(</span><span class="n">t</span><span class="p">))</span>
+
+<span class="n">angles</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">array</span><span class="p">([</span><span class="mi">44</span><span class="p">,</span> <span class="mi">63</span><span class="p">,</span> <span class="mi">81</span><span class="p">,</span> <span class="mi">97</span><span class="p">,</span> <span class="mi">113</span><span class="p">])</span>
+<span class="n">miller</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">array</span><span class="p">([[</span><span class="mi">1</span><span class="p">,</span><span class="mi">1</span><span class="p">,</span><span class="mi">0</span><span class="p">],</span> <span class="p">[</span><span class="mi">2</span><span class="p">,</span><span class="mi">0</span><span class="p">,</span><span class="mi">0</span><span class="p">],</span> <span class="p">[</span><span class="mi">2</span><span class="p">,</span><span class="mi">1</span><span class="p">,</span><span class="mi">1</span><span class="p">],</span> <span class="p">[</span><span class="mi">2</span><span class="p">,</span><span class="mi">2</span><span class="p">,</span><span class="mi">0</span><span class="p">],</span> <span class="p">[</span><span class="mi">3</span><span class="p">,</span><span class="mi">1</span><span class="p">,</span><span class="mi">0</span><span class="p">]])</span>
+
+<span class="n">touse</span> <span class="o">=</span> <span class="p">[]</span>
+<span class="k">for</span> <span class="p">(</span><span class="n">n</span><span class="p">,</span> <span class="n">p</span><span class="p">)</span> <span class="ow">in</span> <span class="nb">enumerate</span><span class="p">(</span><span class="n">miller</span><span class="p">):</span>
+  <span class="n">touse</span><span class="o">.</span><span class="n">append</span><span class="p">(</span><span class="n">np</span><span class="o">.</span><span class="n">append</span><span class="p">(</span><span class="n">p</span><span class="p">,</span> <span class="n">np</span><span class="o">.</span><span class="n">deg2rad</span><span class="p">(</span><span class="n">angles</span><span class="p">[</span><span class="n">n</span><span class="p">]</span><span class="o">/</span><span class="mi">2</span><span class="p">)))</span>
+
+<span class="n">avals</span> <span class="o">=</span> <span class="p">[]</span>
+<span class="k">for</span> <span class="n">d</span> <span class="ow">in</span> <span class="n">touse</span><span class="p">:</span>
+  <span class="n">avals</span><span class="o">.</span><span class="n">append</span><span class="p">(</span><span class="n">lat</span><span class="p">(</span><span class="o">*</span><span class="n">d</span><span class="p">))</span>
+
+<span class="nb">print</span><span class="p">(</span><span class="sa">f</span><span class="s2">&quot;The lattice spacing was determined to be </span><span class="si">{</span><span class="n">np</span><span class="o">.</span><span class="n">mean</span><span class="p">(</span><span class="n">avals</span><span class="p">)</span><span class="si">:</span><span class="s2">.3f</span><span class="si">}</span><span class="s2"> with a standard deviation of </span><span class="si">{</span><span class="n">np</span><span class="o">.</span><span class="n">std</span><span class="p">(</span><span class="n">avals</span><span class="p">)</span><span class="si">:</span><span class="s2">.3f</span><span class="si">}</span><span class="s2">&quot;</span><span class="p">)</span>
+</code></pre></div>
+<p>My result was <script type="math/tex">a = 2.918 \pm 0.016 \mathrm{\unicode{x212B}}</script>
+</p>
 </li>
 </ol>
                 
