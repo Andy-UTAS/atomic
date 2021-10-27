@@ -2,221 +2,211 @@
 
 The fifth assignment can be found [here](../assignments/Assignment five.pdf)
 
-## Exercise 1 - Debye
+## Exercise 1 - The reciprocal lattice
 
-1. What are the assumptions of the Debye model?
+Following the normal conventions, let us denote $\mathbf{a}_i$ and $\mathbf{b}_i$ as the real-space and reciprocal space lattice vectors.
 
-    The Debye model considers only sound waves in a material (i.e. one assumes a linear dispersion $\omega = v k$) which oscillate up to a maximum frequency $\omega_{\mathrm{cutoff}} = \omega_d$, the Debye frequency, which exists to ensure that the total number of vibrational modes in the system is correct (equal to the number of degrees of freedom in the system).
+1. A construction of lattice vectors can be achieved using the relation
+\[
+\mathbf{b}_i = 2\pi \frac{\mathbf{a}_j \times \mathbf{a}_k}{\mathbf{a}_1 \cdot (\mathbf{a}_2 \times \mathbf{a}_3)}
+\]
+Explicitly compute $\mathbf{a}_1 \cdot \mathbf{b}_1$, $\mathbf{a}_2 \cdot \mathbf{b}_1$, and $\mathbf{a}_3 \cdot \mathbf{b}_1$. Do these computations accord with the definition of the reciprocal lattice?
 
-2. Write an expression for the number of modes in a two-dimensional system, and thus determine the _Debye wavenumber_ (the wavenumber which corresponds to the Debye frequency).
-
-    In two dimensions, there should be $2N$ modes (we implicitly assume that the different sound polarisations propagate with the same velocity, and thus
-
-    $$
-    2N = 2 \frac{A}{2\pi^2} \int_0^{|k| = k_d} \mathrm{d}^2 k
-    $$
-
-    where $A$ is the area of our periodic system ($L \times L$). The integral is simply the area of a circle with a radius $k_d$, so it evaluates to
+    The computation of these vectors is aided by knowledge of [properties of the scalar triple product](https://en.wikipedia.org/wiki/Triple_product#Scalar_triple_product). In calculating the product:
 
     $$
-    2N = \frac{2A}{(2\pi)^2}(\pi k_d^2)
+    \mathbf{a}_i \cdot \mathbf{b}_1 = 2\pi \frac{\mathbf{a}_i \cdot (\mathbf{a}_2 \times \mathbf{a}_3)}{\mathbf{a}_1 \cdot (\mathbf{a}_2 \times \mathbf{a}_3)}
     $$
 
-    and ultimately obtains
+    it should be immediately obvious that $\mathbf{a}_2 \times \mathbf{a}_3$ is orthogonal to both $\mathbf{a}_2$ and $\mathbf{a}_3$, so the dot product between $\mathbf{a}_2$ and $\mathbf{a}_3$ will be zero. In the case of $\mathbf{a}_1$, we then have identical vector products on both numerator and denominator and therefore the product evaluates to $2\pi$.
+
+    The construction of the reciprocal lattice is baser around the identity
 
     $$
-    k_d = \sqrt{4\pi n}
+    e^{i\mathbf{G}\cdot\mathbf{R}} = 1
     $$
 
-    with $n = N/A$ (the two-dimensional density).
-
-3. Provide a brief discussion of which elements you would expect to have a high Debye temperature, and which elements you would expect to have a low Debye temperature.
-
-    The Debye temperature $T_d$ is defined through
+    for any lattice point $\mathbf{R}$ and any reciprocal lattice point $\mathbf{G}$. That relation only holds when
 
     $$
-    E_d = \hbar \omega_{d} = k_{\mathrm{B}} T_d
+    \mathbf{a}_i \cdot \mathbf{b}_j = 2\pi \delta_{ij}
     $$
 
-    and as was [shown in class](https://andy-utas.github.io/1-intoduction/1-2-specificheatII/#the-density-of-states), the Debye frequency is
+    and hence our relations above are looking good.
+
+2. The volume of a primitive unit cell with lattice vectors $\mathbf{a}_i$ is given by $V = \left|\mathbf{a}_1 \cdot (\mathbf{a}_2 \times \mathbf{a}_3) \right|$. Find the volume of the corresponding primitive unit cell in reciprocal space.
+
+    The volume in reciprocal space $V'$ should be computed using the same method as provided:
 
     $$
-    \omega_d^3 = 6\pi^2 n v_s^3
-    $$
-
-    where $v_s$ is the speed of sound in the material. Therefore, one would expect the materials with large $v_s$ to have the highest $T_d$. Consequently, a good guess for the highest $T_d$ would be diamond (and indeed, it is the highest). For low $T_d$, low speed of sound materials will be compressible - a small spring constant in the Einstein/Debye models - so the nobel gasses or soft metals (e.g. group I) would be good candidates.
-
-## Exercise 2 - Drude: mixed ion-electron conductors (MIECs)
-
-1. Calculate the electrical resistivity $\rho$
-
-    Assuming that both species respond to the electric field independently - we assume that there are no interactions - the total conductivity is the sum of the two independent conductivities
-
-    $$
-    \sigma = \sigma_e + \sigma_i = e^2 \left(\frac{n_e \tau_e}{m_e} + \frac{n_i \tau_i}{m_i}\right)
-    $$
-
-    and therefore the resistivity $\rho = 1/\sigma$
-
-    $$
-    \rho  \frac{1}{e^2 \left(\frac{n_e \tau_e}{m_e} + \frac{n_i \tau_i}{m_i}\right)}
-    $$
-
-2. Calculate the thermal conductivity $\kappa$
-
-    The thermal conductivity is calculated in the same way as the resistivity, in that we add the two pieces:
-
-    $$
-    \kappa = \kappa_e + \kappa_i = \frac{4k_{\textrm{B}}^2 T}{\pi} \left( \frac{n_e \tau_e}{m_e} + \frac{n_i \tau_i}{m_i} \right)
-    $$
-
-3. What is the Wiedemann-Franz law? Does it hold in this situation?
-
-    The Wiedemann-Franz law states that the ratio (also known as the Lorenz number)
-
-    $$
-    L = \frac{\kappa}{T\sigma} = \frac{3}{2} \left(\frac{k_{\textrm{B}}}{e}\right)
-    $$
-
-    is roughly constant for metals, and it indeed holds for MIECs
-
-4. If we consider a magnetic field applied in the $+z$ direction, we need only consider the conductivity in $x$ and $y$ and can write
-
-    $$
-    \rho =
-    \begin{pmatrix}
-    \frac{m}{nq^2\tau} & \frac{Bq}{n} \\
-    -\frac{Bq}{n} & \frac{m}{nq^2\tau}
-    \end{pmatrix}
-    $$
-
-    which is true for both charge carrier species. Use this result to calculate the resistivity matrix in the case of a MIEC.
-
-    To make life simpler, one can write
-
-    $$
-    \rho =
-    \begin{pmatrix}
-    r & B R \\
-    -B R & r
-    \end{pmatrix}
-    $$
-
-    where $r = m/(n q^2 \tau)$ and $R=q/n$. We can then define $\rho_e$ and $\rho_i$ for the two species. The conductivities are then $\sigma_j=\rho_j^{-1}$ for $j = e, i$, and then the total conductivity $\sigma_t = \sigma_e + \sigma_i$. The total resistivity is then $\rho = \sigma_t^{-1}$ \mrk{1}. The process is pretty algebra heavy, but the results are
-
     \begin{align}
-    \rho_{xx} & = \frac{B^2 (r_e R_i^2 + r_i R_e^2) + r_i r_e (r_e + r_i)}{B^2 (R_e + R_i)^2 + (r_e + r_i)^2} \\
-    \rho_{xy} & = \frac{B (B^2 R_e R_i (R_e + R_i) + R_i r_e^2 + R_e r_i^2 }{B^2 (R_e + R_i)^2 + (r_e + r_i)^2}
+    V' & = \left|\mathbf{b}_1 \cdot (\mathbf{b}_2 \times \mathbf{b}_3) \right| \\
+    & = 2\pi \left| \frac{(\mathbf{a}_2 \times \mathbf{a}_3)}{\mathbf{a}_1 \cdot (\mathbf{a}_2 \times \mathbf{a}_3)} \cdot (\mathbf{b}_2 \times \mathbf{b}_3) \right| \\
+    & = \frac{2\pi}{V}\left| (\mathbf{a}_2 \times \mathbf{a}_3) \cdot (\mathbf{b}_2 \times \mathbf{b}_3) \right| \\
+    & = \frac{2\pi}{V}\left| (\mathbf{a}_2 \cdot \mathbf{b}_2)(\mathbf{a}_3 \cdot  \mathbf{b}_3) - ( \mathbf{a}_2 \cdot \mathbf{b}_3)( \mathbf{a}_3 \cdot \mathbf{b}_2) \right| \\
+    & = \frac{(2\pi)^3}{V}
     \end{align}
-
-    Note that using software to do this kind of grunt work is absolutely fine (encouraged even)
-
-## Exercise 3 - Sommerfeld
-
-1. In your own words, explain what is the Fermi energy, Fermi temperature and the Fermi surface
-
-    The Fermi energy is the chemical potential at $T=0$, the Fermi temperature is the associated temperature $T_F = E_F/k_{\textrm{B}}$, and is the temperature at which thermal energy would dictate the properties of a material to the same degree as the fact they are fermions. The Fermi surface is the surface in momentum space which separates the filled and unfilled states _at zero temperature__.
-
-2. Write an expression for the number of states for a gas of free electrons in three dimension and use this to calculate the Fermi wavenumber and Fermi Energy
-
-    $$
-    N = \frac{2V}{(2\pi)^3} \int_{k<k_F} \mathrm{d}\mathbf{k}
     $$
 
-    The factor of two is _very_ important. The integral is just the volume of a sphere of radius $k_F$, this is, $4\pi k_F^3/3$ which then yields
+3. Show that the general direction $[hkl]$ in a cubic crystal is normal to the planes with Miller indices $(hkl)$.
+
+    Consider a (real-space) lattice with basis vectors $\mathbf{a}$, $\mathbf{b}$, and $\mathbf{c}$ which are assumed orthogonal (cubic crystal). Let the lengths of these vectors be $a$, $b$, and $c$ respectively. The plane $(hkl)$ will have intercepts with the axes at (a/h, 0, 0), (0, b/k, 0), (0, 0, c/l), and from these 3 points, one can construct a vector normal to the plane (which defines the plane) by taking the cross products between any two vectors between the points above. For example,     consider
 
     $$
-    k_F = (3\pi^2 N/V)^{1/3}
+    \begin{align}
+    \mathbf{n} & = (\mathbf{a}/h - \mathbf{b}/k) \times (\mathbf{a}/h - \mathbf{c}/k) \\
+    & = \frac{abc}{hkl} \left( \frac{h}{a^2}\mathbf{a} + \frac{k}{b^2}\mathbf{b} + \frac{l}{c^2}\mathbf{c} \right)
+    \end{align}
     $$
 
-    and thus the Fermi energy is
+    and this is only parallel to the vector $[hkl]$ in the case of $a = b = c$.
+
+4. Is the above statement true for an orthorhombic crystal? Justify your response.
+
+    No, it is not true, see the question above!
+
+5. Show that the distance between two adjacent Miller planes $(hkl)$ of any lattice is $d=2\pi/|\mathbf{G}_{\textrm{min}}|$, where $\mathbf{G}_{\textrm{min}}$ is the shortest reciprocal lattice vector perpendicular to these Miller planes.
+
+    The unit vector normal to the plane can be computed via
 
     $$
-    E_F = \frac{\hbar^2(3\pi^2 N/V)^{2/3}}{2m}
+    \hat{\mathbf{n}} = \frac{\mathbf{G}}{|\mathbf{G}|}.
     $$
 
-3. Using the previous result, estimate the value of the Fermi energy for Caesium
-
-    Caesium has a density of $1.93\textrm{g/cm^3}$ and a mass of approximately $133 \textrm{amu}$  (132.9055) and thus the density of atoms is
+    Let us consider a very simple case in which we have the miller planes $(h00)$. For lattice planes, there is always a plane intersecting the zero lattice point $(0,0,0)$. As such, the distance from this plane to the closest next one is given by
 
     $$
-    N/V = (1.93 \textrm{g/cm^3}) \times (10^2 \textrm{cm/m})^3 \times (\frac{1}{133}\textrm{mol/g}) \times (N_A \textrm{atoms/mol}) = 8.7 \textrm{atoms/m^3}
+    d = \hat{\mathbf{n}} \cdot \frac{\mathbf{a_1}}{h} = \frac{2\pi}{|\mathbf{G}|}
     $$
 
-    and with one valence electron, $N/V$ for electrons is identical and we can plug it into the expression for $E_F$ from part (ii) which returns $E_F = 2.48 \times 10^{-19} \textrm {J} = 1.6 \textrm{eV}$
+6. Find the family of Miller planes of the BCC lattice that has the highest density of lattice points. It may of useful to think about the density of lattice points per unit area on a Miller plane which is given by $\rho=d/V$.
 
-4. Obtain an expression for the density of states at the Fermi surface of a \textbf{two-dimensional} free-electron gas.
+    Since $\rho=d/V$, to maximise $\rho$ me must either must maximize $d$ or minimise $V$, the latter of which is fixed. Therefore, to maximise $d$, we minimize must $|\mathbf{G}|$ and thus the smallest possible reciprocal lattice vectors are the (100) family of planes (in terms of FCC primitive lattice vectors).
 
-    For a two-dimensional gas
+## Exercise 2 - Lattice planes
 
-    $$
-    N = 2A \int_{k<k_F} \frac{\mathrm{d}\mathbf{k}}{(2\pi)^2} = \frac{2A}{(2\pi)^2}\pi k_F^2
-    $$
+In assignment four, you looked at the  structure of zincblende (ZnS) (zinc atoms are yellow, sulphur atoms are grey).
 
-    where (again) $A$ is the area and the integral is over a circle with radius $k_F$ (c.f. exercise 1 (ii), only a factor of two different due to polarisation). Therefore
+![](../images/A5-2-Zincblende.png)
 
-    $$
-    k_F = (2\pi N/A)^{1/2}
-    $$
+1. Draw a simplified plan view (don't worry about indicating heights) down the [001] axis, and indicate the [210] direction and the (210) family of planes
 
-    and the Fermi energy is
+    The plan, planes and reciprocal lattice vector are shown below:
 
-    $$
-    E_F = \frac{\hbar^2 (2\pi N/A)}{2m} = \frac{\hbar^2\pi N/A}{m}
-    $$
+    ![](../images/A5-2-210.png){: .center}
 
-    The density of states is then independent of energy and is given by
+2. The confidence tester: explain why the family of planes above is or is not a family of lattice planes.
 
-    $$
-    \frac{\mathrm{d}N}{\mathrm{d}E} = \frac{Am}{\hbar^2\pi} = N/E_F
-    $$
+    * If it is a family of lattice planes, do nothing and be content with your decision
+    * If it is not a family of lattice planes, what would be a family of lattice planes in the same direction?
 
-5. Using the above result, show that for a two-dimensional free-electron gas that the chemical potential $\mu$ is independent of temperature when $T \ll \mu$
+    The lattice type is a Face-centred cubic (FCC), and clearly the lattice planes do capture all atoms, and thus the spacing must be decreased, or the reciprocal lattice vector doubled, so (420) would define a family of lattice planes.
 
-    From above, we have the density of states which we note to be temperature independent. Thus, for a fixed density of electrons, the chemical potential is fixed by
+## Exercise 3 - Scattering
 
-    $$
-    n = \int_0^{\infty} \mathrm{d}E~g(E)~\frac{1}{\exp\left(\beta(E-\mu)\right)+1}.
-    $$
+1. What is the origin of the Laue condition? That is, why is the amplitude of a scattered wave zero if $\mathbf{k'} - \mathbf{k} \ne \mathbf{G}$?
 
-    The connection one must make is that except for corrections exponentially small in $\beta\mu$, the value of the integral is independent of $\beta$ and thus one can assume that the dependence of $n$ on $\mu$ is temperature independent.
+    If $\mathbf{k'} - \mathbf{k} \ne \mathbf{G}$, then the argument of the exponent has a phase factor dependent on the real-space lattice points. Because we sum over each of these lattice points, each argument has a different phase. Summing over all these phases results in an average amplitude of 0, resulting in no intensity peaks.
 
-    If one wants to do the maths, we write the density of states as a constant $g$ (see above) and then the integral above can be recast
+2. Consider a two-dimensional crystal with a rectangular lattice and lattice vectors $\mathbf{a}_1 = (0.468, 0) \mathrm{nm}$ and $\mathbf{a}_2 = (0, 0.342) \mathrm{nm}$ (so that $\mathbf{a}_1$ points along $x$-axis and $\mathbf{a}_2$ points along $y$-axis)
 
-    $$
-    n = g \int_{-\mu}^{\infty} \mathrm{d}x~\frac{1}{\exp(\beta x)+1} = g \int_{-\mu}^{\infty} \mathrm{d}x \frac{\exp(-\beta x)}{\exp(-\beta x)+1} = \frac{g}{\beta} \log(\exp(\beta \mu)+1)
-    $$
+    1. Sketch the reciprocal lattice of this crystal
 
-    And for large $\beta\mu$ (small) we can expand to have
+    ![](../images/A5-3-i.svg){: .center}
 
-    $$
-    n/g = \mu + \mathcal{O}\left(\exp(-\beta\mu)\right)
-    $$
+    2. Consider an X-ray diffraction experiment performed on this crystal using monochromatic X-rays with wavelength $0.166\mathrm{nm}$. Assuming elastic scattering, find the magnitude of the wave vectors of the incident and reflected X-rays
 
-    which means that provided $T \ll \mu$, there is no dependence on the temperature.
+    With elastic scattering, we have $|k| = |k'| = 2\pi\lambda = 37.9 \mathrm{nm^{-1}}$
 
-## Exercise 4 - chemistry
+    3. On your sketch of the reciprocal lattice, draw the "scattering triangle" corresponding to the diffraction from (210) planes. Explicitly, use the Laue condition $\Delta \mathbf{k} = \mathbf{G}$ for constructive interference of diffracted X-rays
 
-1. Explain using the simplest language you can muster why is there periodic table important?
+    ![](../images/A5-3-iii.svg){: .center}
 
-    Ability to predict properties of elements, ability to predict properties of compounds, ability to group/classify elements with similar characteristics, displays trends
+## Exercise 4 - Diffraction and structure
 
-2. Choose a naturally occurring element with a high atomic number and use Madelung's Rule to deduce the shell filling configuration.\\
+1. Compute the structure factor $S$ of the BCC lattice
 
-    I will write out uranium here, and all shell filling will be in this order
+    The structure factor $S(\mathbf{G})$ is given by
 
     $$
-    \textrm{U}: 1s$^2$2s$^2$2p$^6$3s$^2$3p$^6$4s$^2$3d$^{10}$4p$^6$5s$^2$4d$^{10}$5p$^6$6s$^2$4e$^{14}$5d$^{10}$6p$^6$7s$^2$5f$^4$ ([Rn]7s$^2$5f$^4$)
+    \sum_j f_j e^{i\mathbf{G} \cdot \mathbf{r}_j}
     $$
 
-3. Using any tools at your disposal (i.e. use a computer) produce a plot of the energy eigenstate described by $|5, 2, 0 \rangle$. You must include your code and you will be partially assessed on presentation: producing content that is digestible and visually pleasing is an important part of modern science!
+    where the sum over $j$ is the atoms in the unit cell. We can write this explicitly as
 
-    I made a mistake here, I should have the angular dependence or something, as plotting the wavefunction in 3D is hard.
+    $$
+    \sum_j f_j e^{2\pi i hu_j + kv_j + lw_j} f_j
+    $$
 
-    The electronic states of hydrogen can be found in many places (e.g. [Wikipedia](https://en.wikipedia.org/wiki/Hydrogen_atom)) and are given by
+    where $(hkl)$ are the miller indices of $\mathbf{G}$ and $[u_j, v_j, w_j]$ are the positions of atom $j$ in the unit cell. To compute this, we write a BCC lattice as a simple cubic with a basis [0,0,0] and [1/2, 1/2, 1/2], and therefore we get the structure factor
 
-    \begin{equation}
-      \psi _{n\ell m}(r,\theta ,\varphi )={\sqrt {{\left({\frac {2}{na_{0}^{*}}}\right)}^{3}{\frac {(n-\ell -1)!}{2n(n+\ell )!}}}}e^{-\rho /2}\rho ^{\ell }L_{n-\ell -1}^{2\ell +1}(\rho )Y_{\ell }^{m}(\theta ,\varphi )
-    \end{equation}
+    $$
+    \begin{align}
+    S & = f_{\textrm{Cr}} + f_{\textrm{Cr}} e^{2\pi i(h/2 + k/2 + l/2)} \\
+    & = f_{\textrm{Cr}}\left(1 + (-1)^{h+k+l}\right)
+    \end{align}
+    $$
 
-    where $\rho = 2r/n a_0^*$, $a_0^*=4\pi\epsilon_0\hbar^2/\mu e^2$ is the reduced Bohr radius, $\mu = m_e M/(m_e + M)$ is the reduced mass, $L_{n-\ell -1}^{2\ell +1}(\rho )$ is the generalised Laguerre polynomial and $Y_{\ell }^{m}(\theta ,\varphi )$ is the spherical harmonic function.
+2. Which diffraction peaks are missing?
+
+    From above, it is clear that the structure vanishes whenever $h+k+l$ is odd, and we can write
+
+    $$
+    S = \left\{ \begin{array}{ll} 2f_{\textrm{Cr}} \quad h+k+l~\textrm{even} \\ 0 \quad h+k+l~\textrm{odd} \end{array} \right.
+    $$
+
+3. How does this structure factor change if the atoms in the centre of the conventional unit cell have a different form factor from the atoms at the corner of the conventional unit cell?
+
+    If we write the atomic form factors of the different atoms $f_1$ and $f_2$
+
+    $$
+    S = \left\{ \begin{array}{ll} f_1 + f_2 \quad h+k+l~\textrm{even} \\ f_1 - f_2 \quad h+k+l~\textrm{odd} \end{array} \right.
+    $$
+
+4. A student carried out X-ray powder diffraction on chromium (Cr) which is known to have a BCC structure, and the first five diffraction peaks are given below. Delightfully, the student took the liberty of assigning Miller indices to the peaks. Were the peaks assigned correctly? Fix any mistakes and explain your reasoning.
+![](../images/A5-Cr.svg)
+
+    The values of $(hkl)$ must satisfy the selection rules above, which means that the peaks should be $(110), (200), (211), (220), (310)$ from lowest angle to highest angle.
+
+5. The X-ray diffraction was carried out using Cu $K_\alpha$ radiation ($\lambda = 1.5406 \mathrm{\unicode{x212B}}$). Use this information to calculate the lattice constant $a$ of the chromium BCC unit cell, and provide an estimate for uncertainty of this value.
+
+    To calculate the lattice spacing, one must use the relations that for a given lattice spacing $d_{(h,k,l)}$, the Bragg condition holds:
+
+    $$
+    d_{(h,k,l)} = \frac{\lambda}{2 \sin\theta}
+    $$
+
+    In a cubic lattice, one also has the relation that
+
+    $$
+    d_{(h,k,l)} = \frac{a}{\sqrt{h^2 + k^2 + l^2}}
+    $$
+
+    so then the lattice constant $a$ can be calculated through
+
+    $$
+    a = \frac{\lambda\sqrt{h^2 + k^2 + l^2}}{2 \sin\theta}
+    $$
+
+    One can the calculate a value for each angle (and Miller index) to return a list of lattice constants, from which a range an uncertainty can be derived. I have just used the mean and standard deviation - no weighted means, no uncertainty in peak location, just raw statistical deviation from my _very_ rough extraction of the scattering angle.
+
+    ``` python
+    lamb = 1.5406 #[\unicode{x212B}]
+    def lat(h, k, l, t):
+      return (np.sqrt(h**2 + k**2 + l**2) * lamb)/(2*np.sin(t))
+
+    angles = np.array([44, 63, 81, 97, 113])
+    miller = np.array([[1,1,0], [2,0,0], [2,1,1], [2,2,0], [3,1,0]])
+
+    touse = []
+    for (n, p) in enumerate(miller):
+      touse.append(np.append(p, np.deg2rad(angles[n]/2)))
+
+    avals = []
+    for d in touse:
+      avals.append(lat(*d))
+
+    print(f"The lattice spacing was determined to be {np.mean(avals):.3f} with a standard deviation of {np.std(avals):.3f}")
+    ```
+
+    My result was $a = 2.918 \pm 0.016 \mathrm{\unicode{x212B}}$

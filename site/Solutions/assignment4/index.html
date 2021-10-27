@@ -648,6 +648,42 @@
     
   
   
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Table of contents
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#exercise-1-two-dimensional-crystal-structure" class="md-nav__link">
+    Exercise 1 - Two-dimensional crystal structure
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#exercise-2-three-dimensional-crystal-structure" class="md-nav__link">
+    Exercise 2 - Three-dimensional crystal structure
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#exercise-3-filing-factor" class="md-nav__link">
+    Exercise 3 - Filing factor
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#exercise-4-reciprocal-lattice" class="md-nav__link">
+    Exercise 4 - Reciprocal lattice
+  </a>
+  
+</li>
+      
+    </ul>
+  
 </nav>
                   </div>
                 </div>
@@ -661,6 +697,146 @@
                 
                 <h1 id="assignment-4-crystals">Assignment 4: Crystals<a class="headerlink" href="#assignment-4-crystals" title="Permanent link">&para;</a></h1>
 <p>The fourth assignment can be found <a href="../assignments/Assignment four.pdf">here</a></p>
+<h2 id="exercise-1-two-dimensional-crystal-structure">Exercise 1 - Two-dimensional crystal structure<a class="headerlink" href="#exercise-1-two-dimensional-crystal-structure" title="Permanent link">&para;</a></h2>
+<p>Consider the following two-dimensional diatomic crystal:</p>
+<p><img alt="" src="../images/A4-1-diatomic.png" /></p>
+<ol>
+<li>
+<p>Sketch the Wigner-Seitz unit cell and two other possible primitive unit cells of the crystal</p>
+<p>An example of two possible primitive primative cells are shown below, along with the Wigner-Seitz cell, which is unique.</p>
+<p><img alt="" src="../images/A4-1.png" /></p>
+</li>
+<li>
+<p>If the distance between the filled circles is <script type="math/tex">a=2.8\mathrm{\unicode{x212B}}</script>, what is the area of the primitive unit cell? How would this area change if all the empty circles and the filled circles were identical?</p>
+<p>The area of the primitive unit cell is <script type="math/tex">A = a^2</script>. If the filled and empty circles are identical particle, the nearest neighbour distance becomes <script type="math/tex">a^* = \frac{a}{\sqrt{2}}</script> and thus the area <script type="math/tex">A^* = {a^*}^2 = \frac{a^2}{2} = \frac{A}{2}</script>.</p>
+</li>
+<li>
+<p>Write down one set of primitive lattice vectors and the basis for this crystal. What happens to the number of elements in the basis if all empty and filled circles were identical?</p>
+<p>One set of primitive lattice vectors is</p>
+<p>
+<script type="math/tex; mode=display">
+\mathbf{a_1} = a \hat{\mathbf{x}}, \quad \mathbf{a_2} = a \hat{\mathbf{y}}.
+</script>
+</p>
+<p>With respect to the primitive lattice vectors, the basis is</p>
+<p>
+<script type="math/tex; mode=display">
+\huge \bullet ~ \normalsize[0,0], \quad \bigcirc ~ [\frac{1}{2},\frac{1}{2}]
+</script>
+</p>
+<p>If all atoms were identical, then the basis only has one element (and consequently the PLVs above would cease to be PLVs)</p>
+</li>
+<li>
+<p>Imagine expanding the lattice into the perpendicular direction <script type="math/tex">z</script>. We can define a new three-dimensional crystal by considering a periodic structure in the <script type="math/tex">z</script> direction, where the filled circles have been displaced by <script type="math/tex">\frac{a}{2}</script> in both the <script type="math/tex">x</script> and <script type="math/tex">y</script> direction from the empty circles. The figure below shows the new arrangement of the atoms.
+<img alt="" src="../images/A4-1-BCC.png" />
+What lattice do we obtain? Write down the basis of the three-dimensional crystal.</p>
+<p>The lattice is a cubic lattice and the basis of the crystal is</p>
+<p>
+<script type="math/tex; mode=display">
+\huge \bullet \normalsize ~ [0,0,0], \quad \bigcirc ~ \left[\frac{1}{2},\frac{1}{2},\frac{1}{2}\right].
+</script>
+</p>
+<p>An example of such a material is Caesium Chloride (CsCl).</p>
+</li>
+</ol>
+<h2 id="exercise-2-three-dimensional-crystal-structure">Exercise 2 - Three-dimensional crystal structure<a class="headerlink" href="#exercise-2-three-dimensional-crystal-structure" title="Permanent link">&para;</a></h2>
+<p>The image below shows the three dimensional structure of zincblende (ZnS) (zinc atoms are yellow, sulphur atoms are grey).</p>
+<p><img alt="" src="../images/A4-2-Zincblende.png" /></p>
+<ol>
+<li>
+<p>How many atoms are in the unit cell?</p>
+<p>Corner atoms <script type="math/tex">8 \times 1/8 </script> + face atoms (<script type="math/tex">6 \times 1/2</script>) + interior atoms (<script type="math/tex">4 \times 1</script>) = <script type="math/tex">1 + 3 + 4 = 8</script>
+</p>
+</li>
+<li>
+<p>Draw the plan view of the unit cell</p>
+<p><img alt="" src="../images/A4-2-ZnSplan.jpg" /></p>
+</li>
+<li>
+<p>Identify the lattice type of zincblende</p>
+<p>The lattice type is Face-centred cubic (FCC)</p>
+</li>
+<li>
+<p>Describe the basis for zincblende</p>
+<p>The basis can be described as Zn at [0,0,0] and S at [1/4, 1/4, 1/4]</p>
+</li>
+<li>
+<p>Given the unit cell length <script type="math/tex">a=5.41\mathrm{\unicode{x212B}}</script>, calculate the nearest-neighbour Zn-Zn, Zn-S, and S-S distances</p>
+<p>This is just geometry: Zn-Zn is <script type="math/tex">a/\sqrt{2} = 3.83\mathrm{\unicode{x212B}}</script>, Zn-S is <script type="math/tex">a\sqrt{1/4^2 + 1/4^2 + 1/4^2} = 2.34 \mathrm{\unicode{x212B}}</script>, and S-S is <script type="math/tex">a/\sqrt{2} = 3.83\mathrm{\unicode{x212B}}</script>.</p>
+</li>
+</ol>
+<h2 id="exercise-3-filing-factor">Exercise 3 - Filing factor<a class="headerlink" href="#exercise-3-filing-factor" title="Permanent link">&para;</a></h2>
+<p>Consider a lattice with a sphere at each lattice point, and choose the radius of the spheres to be such that neighbouring spheres just touch. The filling factor (or packing fraction) is the fraction of the volume of all of space which is enclosed by the union of all the spheres (i.e. the ratio of the volume of the spheres to the total volume).</p>
+<ol>
+<li>
+<p>Calculate the packing fraction for a simple cubic lattice</p>
+<p>The volume of a conventional unit cell is <script type="math/tex">V = a^3</script>. Each cell corresponds to a single sphere, and the radius of this sphere is <script type="math/tex">a/2</script> so the volume of the sphere is <script type="math/tex">V_s = 4\pi/3 \times (a/2)^3</script>. Therefore the packing fraction <script type="math/tex">V_s/V = \pi/6 \approx 0.52</script>
+</p>
+</li>
+<li>
+<p>Calculate the packing fraction for a BCC lattice</p>
+<p>The volume of a conventional unit cell is <script type="math/tex">V = a^3</script>. Each conventional cell contains two lattice points which are a distance <script type="math/tex">a\sqrt{3}/2</script> apart, thus the radius of each sphere is <script type="math/tex">a\sqrt{3}/4</script> so the volume of the sphere is <script type="math/tex">V_s = 4\pi/3 \times (a\sqrt{3}/4)^3</script>. Therefore the packing fraction <script type="math/tex">2V_s/V = \pi\sqrt{3}/8 \approx 0.68</script>
+</p>
+</li>
+<li>
+<p>Calculate the packing fraction for an FCC lattice</p>
+<p>The volume of a conventional unit cell is <script type="math/tex">V = a^3</script>. Each conventional cell contains four lattice points which are a distance <script type="math/tex">a\sqrt{2}/2</script> apart, thus the radius of each sphere is <script type="math/tex">a\sqrt{2}/4</script> so the volume of the sphere is <script type="math/tex">V_s = 4\pi/3 \times (a\sqrt{2}/4)^3</script>. Therefore the packing fraction <script type="math/tex">4V_s/V = \pi/(3\sqrt{2}) \approx 0.74</script>
+</p>
+</li>
+</ol>
+<h2 id="exercise-4-reciprocal-lattice">Exercise 4 - Reciprocal lattice<a class="headerlink" href="#exercise-4-reciprocal-lattice" title="Permanent link">&para;</a></h2>
+<ol>
+<li>
+<p>Show that the reciprocal lattice of a FCC lattice is a BCC lattice. Correspondingly, show that the reciprocal lattice of a BCC lattice is an FCC lattice</p>
+<p>The BCC has primitive lattice vectors</p>
+<p>
+<script type="math/tex; mode=display">
+\begin{aligned}
+&\mathbf{a}_{1}=[1,0,0] ~ a \\
+&\mathbf{a}_{2}=[0,1,0] ~ a \\
+&\mathbf{a}_{3}=[1 / 2,1 / 2,1 / 2] ~ a
+\end{aligned}
+</script>
+</p>
+<p>from which we can construct primitive lattice vectors for the reciprocal lattice via</p>
+<p>
+<script type="math/tex; mode=display">
+\mathbf{b}_{i}=\frac{2 \pi \mathbf{a}_{j} \times \mathbf{a}_{k}}{\mathbf{a}_{1} \cdot \mathbf{a}_{2} \times \mathbf{a}_{3}}
+</script>
+</p>
+<p>which gives</p>
+<p>
+<script type="math/tex; mode=display">\begin{equation}
+\begin{aligned}
+\mathbf{b}_{1} &= (1 / 2,0,-1 / 2) ~ \frac{4 \pi}{a} \\
+\mathbf{b}_{2} &= (0,1 / 2,-1 / 2) ~ \frac{4 \pi}{a} \\
+\mathbf{b}_{3} &= (0,0,1) ~ \frac{4 \pi}{a}
+\end{aligned}
+\end{equation}</script>
+</p>
+<p>and they themselves can be transformed into the standard PLVs via</p>
+<p>
+<script type="math/tex; mode=display">
+\begin{aligned}
+\mathbf{b}_{1}^{\prime} &=\mathbf{b}_{1}+\mathbf{b}_{3} & = &(1 / 2,0,1 / 2) ~ \frac{4 \pi}{a} \\
+\mathbf{b}_{2}^{\prime} &=\mathbf{b}_{2}+\mathbf{b}_{3} & = &(0,1 / 2,1 / 2) ~ \frac{4 \pi}{a} \\
+\mathbf{b}_{3}^{\prime} &=\mathbf{b}_{1}+\mathbf{b}_{2}+\mathbf{b}_{3} & = &(1 / 2,1 / 2,0) ~ \frac{4 \pi}{a}
+\end{aligned}
+</script>
+</p>
+<p>which is fine since we are making integer additions of PLVs.</p>
+</li>
+<li>
+<p>If an FCC lattice has conventional unit cell with lattice constant <script type="math/tex">a</script>, what is the lattice constant for the conventional unit cell of the reciprocal BCC lattice?</p>
+<p>From above, we can see that the lattice constant is <script type="math/tex">4\pi/a</script>
+</p>
+</li>
+<li>
+<p>Consider now an orthorhombic face-centred lattice with conventional lattice constants <script type="math/tex">a_1, a_2, a_3</script>. What is the reciprocal lattice now?</p>
+<p>Everything from above still holds, except one would have basis vectors scaled to <script type="math/tex">4\pi/a_i</script>
+</p>
+</li>
+</ol>
                 
               
               
