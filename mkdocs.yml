@@ -1,32 +1,35 @@
 site_name: Solid-state physics
 site_url: https://andy-utas.github.io/
+repo_url: https://github.com/Andy-UTAS/andy-utas.github.io
+repo_name:  andy-utas.github.io
 
 nav:
     - Home: index.md
     - Course particulars: particulars.md
     - '1: An introduction to solid-state physics':
-      - '1.1: The specific heat of solids I': 1-intoduction/1-1-specificheatI.md
-      - '1.2: The specific heat of solids II': 1-intoduction/1-2-specificheatII.md
-      - '1.3: Electrons in metals I': 1-intoduction/1-3-emetalsI.md
-      - '1.4: Electrons in metals II': 1-intoduction/1-4-emetalsII.md
+      - '1.1 - The specific heat of solids I': 1-intoduction/1-1-specificheatI.md
+      - '1.2 - The specific heat of solids II': 1-intoduction/1-2-specificheatII.md
+      - '1.3 - Electrons in metals I': 1-intoduction/1-3-emetalsI.md
+      - '1.4 - Electrons in metals II': 1-intoduction/1-4-emetalsII.md
     - '2: Chemistry 101': 2-chemistry/2-1-chemistry.md
     - '3: One-dimensional solids':
-      - '3.1: Vibrations': 3-1d/3-1-vibrations.md
-      - '3.2: The diatomic chain': 3-1d/3-2-diatomic.md
-      - '3.3: The tight binding model': 3-1d/3-3-tightbinding.md
+      - '3.1 - Vibrations': 3-1d/3-1-vibrations.md
+      - '3.2 - The diatomic chain': 3-1d/3-2-diatomic.md
+      - '3.3 - The tight binding model': 3-1d/3-3-tightbinding.md
     - '4: Crystallography':
-      - 'Crystals': 4-crystal/4-1-realspace.md
-      - 'Crystals in reciprocal space': 4-crystal/4-2-kspace.md
-      - 'Scattering': 4-crystal/4-3-scattering.md
+      - '4.1 - Crystals': 4-crystal/4-1-realspace.md
+      - '4.2 - Crystals in reciprocal space': 4-crystal/4-2-kspace.md
+      - '4.3 - Scattering': 4-crystal/4-3-scattering.md
     - '5: Electrons in solids':
-      - 'The nearly free electron model': 5-solids/5-1-Bloch.md
-      - 'Band structure': 5-solids/5-2-Bands.md
+      - '5.1 - The nearly free electron model': 5-solids/5-1-Bloch.md
+      - '5.2 - Band structure': 5-solids/5-2-Bands.md
     - '6: Semiconductors':
-      - 'Semiconductors 101': 6-semiconductors/6-1-semiconductors.md
-      - 'Doping and devices': 6-semiconductors/6-2-devices.md
+      - '6.1 - Semiconductors 101': 6-semiconductors/6-1-semiconductors.md
+      - '6.2 - Doping and devices': 6-semiconductors/6-2-devices.md
     - 'Solutions':
       - 'Assignments': solutions/assignments.md
       - 'Exercises': solutions/exercises.md
+      - 'Practice Exam': solutions/practice-exam.md
     # - '7: Magnetism':
     #   - 'Empty content': placeholder.md
     # - '8: Cool stuff':
@@ -57,12 +60,18 @@ theme:
   features:
   #  - navigation.expand
     - navigation.top
+    - navigation.sections
+    - search.highlight
   highlightjs: True
+  icon:
+    repo: fontawesome/brands/git-alt
   # custom_dir: overrides # Initially here for banner usage, but this was not very good
 
 plugins:
   - mkdocs-video
   - search
+  - git-revision-date-localized:
+        type: date
 
 markdown_extensions:
   - mdx_math:
