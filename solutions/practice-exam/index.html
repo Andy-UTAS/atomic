@@ -1151,11 +1151,15 @@ S_{(hkl)} = f_{\mathrm{Cs}} \left[1 + (-1)^{h+k+l} \right]
 <ol>
 <li>
 <p>Roughly sketch the first Brillouin zone for the lattice (only the shape is important), and indicate the Fermi sea in the absence of a periodic potential</p>
-<p><strong>Still needs to be finished</strong>, but square lattice will have square Brillouin zone, and for a monovalent atom, this means one electron per unit cell and thus a half filled Brillouin zone. Thus, a circle inside a square which occupies <script type="math/tex">50\%</script> of the area will be the occupied states, and the Fermi sea is the interior of this circle.</p>
+<p>The reciprocal lattice of a square lattice will also be a square lattice, and the Wigner-Seitz cell of a square lattice is a square. This question is very qualitative, but is one of the most important concepts in this course, hence its appearance here.</p>
+<p>Rather than just providing a sketch, this is a full calculation and so obviously beyond what would be expected. The dispersion relation - a surface in 2D - is shown, along with a contour plot of this surface. As each <script type="math/tex">k</script> state can hold 2 electrons, <script type="math/tex">50\%</script> of the Brillouin zone will be filled (in this case area) with the lowest states being preferentially filled. The free-electron dispersion relationship is a parabaloid, and hence we get a circular Fermi surface, with the Fermi sea being the interior of this circle.</p>
+<p><img alt="" src="../images/PE-free.svg" /></p>
 </li>
 <li>
 <p>Repeat the process above for both a weak and strong periodic potential</p>
-<p><strong>Still needs to be finished</strong>, but for with a weak periodic potential (the nearly-free electron model) there will be some band bending and thus the points that are closest to the BZ boundary will be pulled a bit towards the boundary, and for a strong periodic potential, it will have the same shape as the BZ, but only occupy <script type="math/tex">50\%</script> of the area (square in a square)</p>
+<p>Shown below is the dispersion surface in the tight-binding model (which you can think of as a <em>very</em> strong periodic potential), which in contrast to the Fermi circle of a free-electron, makes a Fermi square:</p>
+<p><img alt="" src="../images/PE-tightbinding.svg" /></p>
+<p>A weaker periodic potential would be in-between these extremes, a circle with the points closest to the Brillouin zone boundaries filled more due to band bending.</p>
 </li>
 </ol>
 </li>
@@ -1301,7 +1305,7 @@ g(\varepsilon) & = \sum_{n_1,n_2} g(\varepsilon_{n_1, n_2}) & \\
 <div class="md-source-date">
   <small>
     
-      Last update: <span class="git-revision-date-localized-plugin git-revision-date-localized-plugin-date">November 3, 2021</span>
+      Last update: <span class="git-revision-date-localized-plugin git-revision-date-localized-plugin-date">November 4, 2021</span>
       
     
   </small>
