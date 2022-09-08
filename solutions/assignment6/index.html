@@ -12,7 +12,7 @@
         <link rel="canonical" href="https://andy-utas.github.io/solutions/assignment6/">
       
       <link rel="icon" href="../../logo.png">
-      <meta name="generator" content="mkdocs-1.2.2, mkdocs-material-7.2.2">
+      <meta name="generator" content="mkdocs-1.3.0, mkdocs-material-7.2.2">
     
     
       
@@ -168,7 +168,7 @@
     
       <div class="md-header__source">
         
-<a href="https://github.com/Andy-UTAS/andy-utas.github.io/" title="Go to repository" class="md-source" data-md-component="source">
+<a href="https://github.com/Andy-UTAS/andy-utas.github.io" title="Go to repository" class="md-source" data-md-component="source">
   <div class="md-source__icon md-icon">
     
     <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512"><path d="M439.55 236.05 244 40.45a28.87 28.87 0 0 0-40.81 0l-40.66 40.63 51.52 51.52c27.06-9.14 52.68 16.77 43.39 43.68l49.66 49.66c34.23-11.8 61.18 31 35.47 56.69-26.49 26.49-70.21-2.87-56-37.34L240.22 199v121.85c25.3 12.54 22.26 41.85 9.08 55a34.34 34.34 0 0 1-48.55 0c-17.57-17.6-11.07-46.91 11.25-56v-123c-20.8-8.51-24.6-30.74-18.64-45L142.57 101 8.45 235.14a28.86 28.86 0 0 0 0 40.81l195.61 195.6a28.86 28.86 0 0 0 40.8 0l194.69-194.69a28.86 28.86 0 0 0 0-40.81z"/></svg>
@@ -210,7 +210,7 @@
   
     <div class="md-nav__source">
       
-<a href="https://github.com/Andy-UTAS/andy-utas.github.io/" title="Go to repository" class="md-source" data-md-component="source">
+<a href="https://github.com/Andy-UTAS/andy-utas.github.io" title="Go to repository" class="md-source" data-md-component="source">
   <div class="md-source__icon md-icon">
     
     <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512"><path d="M439.55 236.05 244 40.45a28.87 28.87 0 0 0-40.81 0l-40.66 40.63 51.52 51.52c27.06-9.14 52.68 16.77 43.39 43.68l49.66 49.66c34.23-11.8 61.18 31 35.47 56.69-26.49 26.49-70.21-2.87-56-37.34L240.22 199v121.85c25.3 12.54 22.26 41.85 9.08 55a34.34 34.34 0 0 1-48.55 0c-17.57-17.6-11.07-46.91 11.25-56v-123c-20.8-8.51-24.6-30.74-18.64-45L142.57 101 8.45 235.14a28.86 28.86 0 0 0 0 40.81l195.61 195.6a28.86 28.86 0 0 0 40.8 0l194.69-194.69a28.86 28.86 0 0 0 0-40.81z"/></svg>
@@ -751,10 +751,6 @@
             <article class="md-content__inner md-typeset">
               
                 
-                  <a href="https://github.com/Andy-UTAS/andy-utas.github.io/edit/master/docs/solutions/assignment6.md" title="Edit this page" class="md-content__button md-icon">
-                    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20.71 7.04c.39-.39.39-1.04 0-1.41l-2.34-2.34c-.37-.39-1.02-.39-1.41 0l-1.84 1.83 3.75 3.75M3 17.25V21h3.75L17.81 9.93l-3.75-3.75L3 17.25z"/></svg>
-                  </a>
-                
                 
                 <h1 id="assignment-6-waves-in-three-dimensional-solids-and-applications">Assignment 6: Waves in three-dimensional solids and applications<a class="headerlink" href="#assignment-6-waves-in-three-dimensional-solids-and-applications" title="Permanent link">&para;</a></h1>
 <p>The first assignment can be found <a href="../assignments/Assignment six.pdf">here</a></p>
@@ -789,7 +785,9 @@ I(\lambda)d\lambda = K \left(\frac{\lambda}{\lambda_{\textrm{min}}}-1\right)\fra
 <p>Following the recipe discussed in class, produce a table with columns of angle, plane separation, ratio of the square of first plane separation to plane separation, <script type="math/tex">N = h^2 + k^2 + l^2</script>, <script type="math/tex">{hkl}</script>, and <script type="math/tex">a</script> (assuming some kind of cubic lattice)</p>
 <p>This should be relatively straightforward, given the example we did in class was trickier and the code used to do the analysis was freely distributed. The peaks as found from the data are shown below:</p>
 <p><img alt="" src="../images/A-6-peaks.svg" /></p>
-<details class="example"><summary>Peak finding code</summary><div class="highlight"><pre><span></span><code><span class="n">peaks</span><span class="p">,</span> <span class="n">_</span> <span class="o">=</span> <span class="n">find_peaks</span><span class="p">(</span><span class="n">data</span><span class="p">[</span><span class="s1">&#39;Intensity&#39;</span><span class="p">])</span>
+<details class="example">
+<summary>Peak finding code</summary>
+<div class="highlight"><pre><span></span><code><span class="n">peaks</span><span class="p">,</span> <span class="n">_</span> <span class="o">=</span> <span class="n">find_peaks</span><span class="p">(</span><span class="n">data</span><span class="p">[</span><span class="s1">&#39;Intensity&#39;</span><span class="p">])</span>
 
 <span class="n">fig</span><span class="p">,</span> <span class="n">ax</span> <span class="o">=</span> <span class="n">plt</span><span class="o">.</span><span class="n">subplots</span><span class="p">()</span>
 
@@ -1053,7 +1051,9 @@ where <script type="math/tex">G</script> is chosen such that <script type="math/
 <p>These plots below are actually calculated by solving the eigenvalue problem as outlined in the next question for all <script type="math/tex">k</script> (where the perturbation is valid, that is where the term in <script type="math/tex">\delta k</script> to second order is small compared <script type="math/tex">|V_{2n\pi/a}|^2</script>).  </p>
 <p>In the reduced zone scheme, one should have something like:</p>
 <p><img alt="" src="../images/A6-2-reduced.svg" /></p>
-<details class="example"><summary>Reduced-zone scheme code</summary><div class="highlight"><pre><span></span><code><span class="c1"># Use colors from the default color cycle</span>
+<details class="example">
+<summary>Reduced-zone scheme code</summary>
+<div class="highlight"><pre><span></span><code><span class="c1"># Use colors from the default color cycle</span>
 <span class="n">default_colors</span> <span class="o">=</span> <span class="n">plt</span><span class="o">.</span><span class="n">rcParams</span><span class="p">[</span><span class="s1">&#39;axes.prop_cycle&#39;</span><span class="p">]</span><span class="o">.</span><span class="n">by_key</span><span class="p">()[</span><span class="s1">&#39;color&#39;</span><span class="p">]</span>
 <span class="n">blue</span><span class="p">,</span> <span class="n">orange</span><span class="p">,</span> <span class="o">*</span><span class="n">_</span> <span class="o">=</span> <span class="n">default_colors</span>
 
@@ -1099,7 +1099,9 @@ where <script type="math/tex">G</script> is chosen such that <script type="math/
 </details>
 <p>Whereas in the extended zone scheme, one should have:</p>
 <p><img alt="" src="../images/A6-2-extended.svg" /></p>
-<details class="example"><summary>Extended-zone scheme code</summary><div class="highlight"><pre><span></span><code><span class="n">fig</span><span class="p">,</span> <span class="n">ax</span> <span class="o">=</span> <span class="n">plt</span><span class="o">.</span><span class="n">subplots</span><span class="p">(</span><span class="mi">1</span><span class="p">,</span> <span class="mi">1</span><span class="p">)</span>
+<details class="example">
+<summary>Extended-zone scheme code</summary>
+<div class="highlight"><pre><span></span><code><span class="n">fig</span><span class="p">,</span> <span class="n">ax</span> <span class="o">=</span> <span class="n">plt</span><span class="o">.</span><span class="n">subplots</span><span class="p">(</span><span class="mi">1</span><span class="p">,</span> <span class="mi">1</span><span class="p">)</span>
 
 <span class="n">momenta</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">linspace</span><span class="p">(</span><span class="o">-</span><span class="mi">3</span><span class="o">*</span><span class="n">np</span><span class="o">.</span><span class="n">pi</span><span class="p">,</span> <span class="mi">3</span><span class="o">*</span><span class="n">np</span><span class="o">.</span><span class="n">pi</span><span class="p">,</span> <span class="mi">400</span><span class="p">)</span>
 <span class="n">energies</span> <span class="o">=</span> <span class="n">energy</span><span class="p">(</span><span class="n">momenta</span><span class="p">,</span> <span class="mi">0</span><span class="p">)</span>
@@ -1206,7 +1208,9 @@ m^{*}=\left|\frac{m}{1 \pm \frac{\hbar^{2}(n \pi / a)^{2}}{m\left|V_{2 n \pi / a
 </p>
 <p>and a plot of the dispersion is shown below</p>
 <p><img alt="" src="../images/A6-3-tightbindingdisp.svg" /></p>
-<details class="example"><summary>Fermi surface code</summary><div class="highlight"><pre><span></span><code><span class="kn">from</span> <span class="nn">matplotlib</span> <span class="kn">import</span> <span class="n">cm</span>
+<details class="example">
+<summary>Fermi surface code</summary>
+<div class="highlight"><pre><span></span><code><span class="kn">from</span> <span class="nn">matplotlib</span> <span class="kn">import</span> <span class="n">cm</span>
 <span class="kn">from</span> <span class="nn">mpl_toolkits.mplot3d</span> <span class="kn">import</span> <span class="n">Axes3D</span>
 <span class="c1"># Axes3D import has side effects, it enables using projection=&#39;3d&#39; in add_subplot</span>
 
@@ -1239,7 +1243,9 @@ m^{*}=\left|\frac{m}{1 \pm \frac{\hbar^{2}(n \pi / a)^{2}}{m\left|V_{2 n \pi / a
 </details>
 <p>which although it looks cool, it is much more useful to look at a contour plot of the energy:</p>
 <p><img alt="" src="../images/A6-3-tightbindingcontour.svg" /></p>
-<details class="example"><summary>Contour plot code</summary><div class="highlight"><pre><span></span><code><span class="n">fig</span><span class="p">,</span><span class="n">ax</span><span class="o">=</span><span class="n">plt</span><span class="o">.</span><span class="n">subplots</span><span class="p">(</span><span class="mi">1</span><span class="p">,</span><span class="mi">1</span><span class="p">)</span>
+<details class="example">
+<summary>Contour plot code</summary>
+<div class="highlight"><pre><span></span><code><span class="n">fig</span><span class="p">,</span><span class="n">ax</span><span class="o">=</span><span class="n">plt</span><span class="o">.</span><span class="n">subplots</span><span class="p">(</span><span class="mi">1</span><span class="p">,</span><span class="mi">1</span><span class="p">)</span>
 <span class="n">x</span> <span class="o">=</span> <span class="n">y</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">arange</span><span class="p">(</span><span class="o">-</span><span class="n">np</span><span class="o">.</span><span class="n">pi</span><span class="o">/</span><span class="n">a</span><span class="p">,</span> <span class="n">np</span><span class="o">.</span><span class="n">pi</span><span class="o">/</span><span class="n">a</span><span class="p">,</span> <span class="mf">0.05</span><span class="p">)</span>
 
 <span class="n">zs</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">array</span><span class="p">(</span><span class="n">ep</span><span class="p">(</span><span class="n">np</span><span class="o">.</span><span class="n">ravel</span><span class="p">(</span><span class="n">X</span><span class="p">),</span> <span class="n">np</span><span class="o">.</span><span class="n">ravel</span><span class="p">(</span><span class="n">Y</span><span class="p">)))</span>
@@ -1259,7 +1265,9 @@ m^{*}=\left|\frac{m}{1 \pm \frac{\hbar^{2}(n \pi / a)^{2}}{m\left|V_{2 n \pi / a
 </details>
 <p>If we are considering a monovalent unit cell, then the Brillouin zone is half filled:</p>
 <p><img alt="" src="../images/A6-3-tightbindingmonovalent.svg" /></p>
-<details class="example"><summary>Filled cell code</summary><div class="highlight"><pre><span></span><code><span class="n">fig</span><span class="p">,</span><span class="n">ax</span><span class="o">=</span><span class="n">plt</span><span class="o">.</span><span class="n">subplots</span><span class="p">(</span><span class="mi">1</span><span class="p">,</span><span class="mi">1</span><span class="p">)</span>
+<details class="example">
+<summary>Filled cell code</summary>
+<div class="highlight"><pre><span></span><code><span class="n">fig</span><span class="p">,</span><span class="n">ax</span><span class="o">=</span><span class="n">plt</span><span class="o">.</span><span class="n">subplots</span><span class="p">(</span><span class="mi">1</span><span class="p">,</span><span class="mi">1</span><span class="p">)</span>
 <span class="n">x</span> <span class="o">=</span> <span class="n">y</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">arange</span><span class="p">(</span><span class="o">-</span><span class="n">np</span><span class="o">.</span><span class="n">pi</span><span class="o">/</span><span class="n">a</span><span class="p">,</span> <span class="n">np</span><span class="o">.</span><span class="n">pi</span><span class="o">/</span><span class="n">a</span><span class="p">,</span> <span class="mf">0.1</span><span class="p">)</span>
 
 <span class="n">zs</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">array</span><span class="p">(</span><span class="n">ep</span><span class="p">(</span><span class="n">np</span><span class="o">.</span><span class="n">ravel</span><span class="p">(</span><span class="n">X</span><span class="p">),</span> <span class="n">np</span><span class="o">.</span><span class="n">ravel</span><span class="p">(</span><span class="n">Y</span><span class="p">)))</span>
@@ -1303,7 +1311,9 @@ m^{*}=\left|\frac{m}{1 \pm \frac{\hbar^{2}(n \pi / a)^{2}}{m\left|V_{2 n \pi / a
 <p>Suppose once again that the atoms are monovalent. What is the shape of the Fermi surface?</p>
 <p>As an example, let us choose <script type="math/tex">t_y = 3t_x</script> but <script type="math/tex">a_x = ay = a</script> for simplicity. A contour plot of this energy is given shown below:</p>
 <p><img alt="" src="../images/A6-3-tightbindingcontour_noniso.svg" /></p>
-<details class="example"><summary>Contour plot code</summary><div class="highlight"><pre><span></span><code><span class="n">a</span> <span class="o">=</span> <span class="mi">1</span>
+<details class="example">
+<summary>Contour plot code</summary>
+<div class="highlight"><pre><span></span><code><span class="n">a</span> <span class="o">=</span> <span class="mi">1</span>
 <span class="n">t_x</span> <span class="o">=</span> <span class="mi">2</span>
 <span class="n">t_y</span> <span class="o">=</span> <span class="mi">2</span> <span class="o">*</span> <span class="n">t_x</span>
 
@@ -1330,7 +1340,9 @@ m^{*}=\left|\frac{m}{1 \pm \frac{\hbar^{2}(n \pi / a)^{2}}{m\left|V_{2 n \pi / a
 </details>
 <p>If we are considering a monovalent unit cell, then the Brillouin zone is half filled:</p>
 <p><img alt="" src="../images/A6-3-tightbindingmonovalent_noniso.svg" /></p>
-<details class="example"><summary>Filled cell code</summary><div class="highlight"><pre><span></span><code><span class="n">fig</span><span class="p">,</span><span class="n">ax</span><span class="o">=</span><span class="n">plt</span><span class="o">.</span><span class="n">subplots</span><span class="p">(</span><span class="mi">1</span><span class="p">,</span><span class="mi">1</span><span class="p">)</span>
+<details class="example">
+<summary>Filled cell code</summary>
+<div class="highlight"><pre><span></span><code><span class="n">fig</span><span class="p">,</span><span class="n">ax</span><span class="o">=</span><span class="n">plt</span><span class="o">.</span><span class="n">subplots</span><span class="p">(</span><span class="mi">1</span><span class="p">,</span><span class="mi">1</span><span class="p">)</span>
 <span class="n">x</span> <span class="o">=</span> <span class="n">y</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">arange</span><span class="p">(</span><span class="o">-</span><span class="n">np</span><span class="o">.</span><span class="n">pi</span><span class="o">/</span><span class="n">a</span><span class="p">,</span> <span class="n">np</span><span class="o">.</span><span class="n">pi</span><span class="o">/</span><span class="n">a</span><span class="p">,</span> <span class="mf">0.1</span><span class="p">)</span>
 
 <span class="n">zs</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">array</span><span class="p">(</span><span class="n">ep</span><span class="p">(</span><span class="n">np</span><span class="o">.</span><span class="n">ravel</span><span class="p">(</span><span class="n">X</span><span class="p">),</span> <span class="n">np</span><span class="o">.</span><span class="n">ravel</span><span class="p">(</span><span class="n">Y</span><span class="p">)))</span>
@@ -1410,7 +1422,7 @@ vector in the <script type="math/tex">x-</script>direction. For a hole, calculat
 <div class="md-source-date">
   <small>
     
-      Last update: <span class="git-revision-date-localized-plugin git-revision-date-localized-plugin-date">November 4, 2021</span>
+      Last update: <span class="git-revision-date-localized-plugin git-revision-date-localized-plugin-date">September 9, 2022</span>
       
     
   </small>
@@ -1460,7 +1472,7 @@ vector in the <script type="math/tex">x-</script>direction. For a hole, calculat
     <div class="md-dialog" data-md-component="dialog">
       <div class="md-dialog__inner md-typeset"></div>
     </div>
-    <script id="__config" type="application/json">{"base": "../..", "features": ["navigation.top", "navigation.sections", "search.highlight"], "translations": {"clipboard.copy": "Copy to clipboard", "clipboard.copied": "Copied to clipboard", "search.config.lang": "en", "search.config.pipeline": "trimmer, stopWordFilter", "search.config.separator": "[\\s\\-]+", "search.placeholder": "Search", "search.result.placeholder": "Type to start searching", "search.result.none": "No matching documents", "search.result.one": "1 matching document", "search.result.other": "# matching documents", "search.result.more.one": "1 more on this page", "search.result.more.other": "# more on this page", "search.result.term.missing": "Missing", "select.version.title": "Select version"}, "search": "../../assets/javascripts/workers/search.709b4209.min.js", "version": null}</script>
+    <script id="__config" type="application/json">{"base": "../..", "features": ["navigation.top", "navigation.sections", "search.highlight"], "search": "../../assets/javascripts/workers/search.709b4209.min.js", "translations": {"clipboard.copied": "Copied to clipboard", "clipboard.copy": "Copy to clipboard", "search.config.lang": "en", "search.config.pipeline": "trimmer, stopWordFilter", "search.config.separator": "[\\s\\-]+", "search.placeholder": "Search", "search.result.more.one": "1 more on this page", "search.result.more.other": "# more on this page", "search.result.none": "No matching documents", "search.result.one": "1 matching document", "search.result.other": "# matching documents", "search.result.placeholder": "Type to start searching", "search.result.term.missing": "Missing", "select.version.title": "Select version"}, "version": null}</script>
     
     
       <script src="../../assets/javascripts/bundle.2b46852b.min.js"></script>

@@ -12,7 +12,7 @@
         <link rel="canonical" href="https://andy-utas.github.io/3-1d/3-1-vibrations/">
       
       <link rel="icon" href="../../logo.png">
-      <meta name="generator" content="mkdocs-1.2.2, mkdocs-material-7.2.2">
+      <meta name="generator" content="mkdocs-1.3.0, mkdocs-material-7.2.2">
     
     
       
@@ -168,7 +168,7 @@
     
       <div class="md-header__source">
         
-<a href="https://github.com/Andy-UTAS/andy-utas.github.io/" title="Go to repository" class="md-source" data-md-component="source">
+<a href="https://github.com/Andy-UTAS/andy-utas.github.io" title="Go to repository" class="md-source" data-md-component="source">
   <div class="md-source__icon md-icon">
     
     <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512"><path d="M439.55 236.05 244 40.45a28.87 28.87 0 0 0-40.81 0l-40.66 40.63 51.52 51.52c27.06-9.14 52.68 16.77 43.39 43.68l49.66 49.66c34.23-11.8 61.18 31 35.47 56.69-26.49 26.49-70.21-2.87-56-37.34L240.22 199v121.85c25.3 12.54 22.26 41.85 9.08 55a34.34 34.34 0 0 1-48.55 0c-17.57-17.6-11.07-46.91 11.25-56v-123c-20.8-8.51-24.6-30.74-18.64-45L142.57 101 8.45 235.14a28.86 28.86 0 0 0 0 40.81l195.61 195.6a28.86 28.86 0 0 0 40.8 0l194.69-194.69a28.86 28.86 0 0 0 0-40.81z"/></svg>
@@ -210,7 +210,7 @@
   
     <div class="md-nav__source">
       
-<a href="https://github.com/Andy-UTAS/andy-utas.github.io/" title="Go to repository" class="md-source" data-md-component="source">
+<a href="https://github.com/Andy-UTAS/andy-utas.github.io" title="Go to repository" class="md-source" data-md-component="source">
   <div class="md-source__icon md-icon">
     
     <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512"><path d="M439.55 236.05 244 40.45a28.87 28.87 0 0 0-40.81 0l-40.66 40.63 51.52 51.52c27.06-9.14 52.68 16.77 43.39 43.68l49.66 49.66c34.23-11.8 61.18 31 35.47 56.69-26.49 26.49-70.21-2.87-56-37.34L240.22 199v121.85c25.3 12.54 22.26 41.85 9.08 55a34.34 34.34 0 0 1-48.55 0c-17.57-17.6-11.07-46.91 11.25-56v-123c-20.8-8.51-24.6-30.74-18.64-45L142.57 101 8.45 235.14a28.86 28.86 0 0 0 0 40.81l195.61 195.6a28.86 28.86 0 0 0 40.8 0l194.69-194.69a28.86 28.86 0 0 0 0-40.81z"/></svg>
@@ -1035,10 +1035,6 @@
             <article class="md-content__inner md-typeset">
               
                 
-                  <a href="https://github.com/Andy-UTAS/andy-utas.github.io/edit/master/docs/3-1d/3-1-vibrations.md" title="Edit this page" class="md-content__button md-icon">
-                    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20.71 7.04c.39-.39.39-1.04 0-1.41l-2.34-2.34c-.37-.39-1.02-.39-1.41 0l-1.84 1.83 3.75 3.75M3 17.25V21h3.75L17.81 9.93l-3.75-3.75L3 17.25z"/></svg>
-                  </a>
-                
                 
                 <h1 id="vibrations">Vibrations<a class="headerlink" href="#vibrations" title="Permanent link">&para;</a></h1>
 <h2 id="introduction">Introduction<a class="headerlink" href="#introduction" title="Permanent link">&para;</a></h2>
@@ -1081,7 +1077,9 @@ V \approx V_0(x_{\mathrm{eq}}) + \frac{\kappa}{2!} (r - x_{\mathrm{eq}})^2 - \fr
 </script>
 </p>
 <p>we have deliberately excluded term linear in <script type="math/tex">x_{\mathrm{eq}}</script>, as its inclusion would remove the minimum! In the usual way, we are only going to consider small displacements around <script type="math/tex">x_{\mathrm{eq}}</script> and then throw all terms other than the constant and the quadratic in the bin, greatly simplifying our life.</p>
-<details class="question"><summary>3.1.1: With a potential of the form <script type="math/tex">V(x) = V_0 + a x^2</script>, what will be the motion of an atom in the potential?</summary><!-- Quadratic potentials give rise to harmonic motion: harmonic oscillator here we come! -->
+<details class="question">
+<summary>3.1.1: With a potential of the form <script type="math/tex">V(x) = V_0 + a x^2</script>, what will be the motion of an atom in the potential?</summary>
+<!-- Quadratic potentials give rise to harmonic motion: harmonic oscillator here we come! -->
 </details>
 <h3 id="compressibility">Compressibility<a class="headerlink" href="#compressibility" title="Permanent link">&para;</a></h3>
 <p>With our potential approximated as a quadratic, let us consider what happens when we compress or stretch the system. Consider a material with length <script type="math/tex">L</script>; if the equilibrium distance between atoms is <script type="math/tex">x_{\mathrm{eq}}</script>, then there are <script type="math/tex">N = L/x_{\mathrm{eq}}</script> atoms in the material. Now lets change the material to length <script type="math/tex">L + \delta L</script>, which will lead to a change in the interatomic distance of <script type="math/tex">\delta x = \delta L/N</script>. With only small changes in <script type="math/tex">x</script> we can then write</p>
@@ -1160,7 +1158,10 @@ m (\ddot{\delta x_n}) = \kappa (\delta x_{n+1} + \delta x_{n-1} - 2\delta x_n).
 \delta x_n = A e^{i \omega t - i k x_{n, \textrm{eq}}} = A e^{i \omega t - i k n a}
 </script>
 </p>
-<details class="question"><summary>3.1.2: Assuming plain-wave solutions, show that <script type="math/tex">\omega = 2 \sqrt{\kappa/m} |\sin(ka/2)|</script></summary></details>
+<details class="question">
+<summary>3.1.2: Assuming plain-wave solutions, show that <script type="math/tex">\omega = 2 \sqrt{\kappa/m} |\sin(ka/2)|</script>
+</summary>
+</details>
 <!-- Plug and play:
 
 $$
@@ -1182,7 +1183,9 @@ from which the results follows -->
 </script>
 </p>
 <p>which in contrast to that we have seen previously in the Debye model, <script type="math/tex">\omega = v_s |k|</script>, is very different.</p>
-<details class="question"><summary>3.1.3: What can one say about the relationship between the dispersion relationship for a 1D chain of oscillators and that of the Debye model?</summary></details>
+<details class="question">
+<summary>3.1.3: What can one say about the relationship between the dispersion relationship for a 1D chain of oscillators and that of the Debye model?</summary>
+</details>
 <!-- In the Debye model, we were explicitly looking at sound waves, which have are long wavelength or small wavenumber waves, so if we look at the low $k$ behaviour of the dispersion relation $\omega = 2 \sqrt{\kappa/m} |\sin(ka/2)|$:
 
 $$
@@ -1207,7 +1210,9 @@ which is exactly the relation that Debye used, but obviously for other values of
 \delta x_n = A e^{i \omega t - i k n a}
 </script>
 </p>
-<details class="question"><summary>3.1.4: What happens to a given mode of oscillation under the transformation <script type="math/tex">k \rightarrow k + 2\pi/a</script>?</summary></details>
+<details class="question">
+<summary>3.1.4: What happens to a given mode of oscillation under the transformation <script type="math/tex">k \rightarrow k + 2\pi/a</script>?</summary>
+</details>
 <!-- $$
 \begin{align}
 \delta x_n & = A e^{i \omega t - i (k + 2\pi/a) n a} = A e^{i \omega t - i k n a}  e^{- i 2 \pi n}
@@ -1237,7 +1242,9 @@ c = \frac{\omega}{k}
 </script>
 </p>
 <p>but if <script type="math/tex">k</script> and <script type="math/tex">k + n \times 2\pi/a</script> are equivalent, what is heck is going on?</p>
-<details class="question"><summary>3.1.5: What the heck is going on?</summary><!-- <img alt="" src="images/3-1-aliasing.svg" /> -->
+<details class="question">
+<summary>3.1.5: What the heck is going on?</summary>
+<!-- <img alt="" src="images/3-1-aliasing.svg" /> -->
 </details>
 <h3 id="counting-normal-modes">Counting normal modes<a class="headerlink" href="#counting-normal-modes" title="Permanent link">&para;</a></h3>
 <p>As is (hopefully) becoming a normal question to ask when we consider modes of oscillation: how many modes are there? Well let us consider a chain of <script type="math/tex">N</script> masses, and once again we are going to assume periodic boundary conditions, with the same justification as last time, namely that we are interested in bulk quantities and we will make sure that we don't take look at things happening near boundaries. In a periodic system, we can consider the chain wrapped around back onto itself, such that</p>
@@ -1279,7 +1286,10 @@ E_n = \hbar \omega \left(n + \frac{1}{2}\right).
 E_k = \hbar\omega(k)\left(n_\mathrm{B}(\beta\hbar\omega(k))+\frac{1}{2}\right)
 </script>
 </p>
-<details class="question"><summary>3.1.6: Use the energy <script type="math/tex">E_k</script> to get obtain an expression for the <em>total</em> energy in the system in terms of an integral over <script type="math/tex">k</script></summary></details>
+<details class="question">
+<summary>3.1.6: Use the energy <script type="math/tex">E_k</script> to get obtain an expression for the <em>total</em> energy in the system in terms of an integral over <script type="math/tex">k</script>
+</summary>
+</details>
 <p>With this, we now have a well-formulated quantum system from which we can calculate quantities of interest, but also extend to model systems that are not just infinite chains of identical particles.</p>
 <hr />
 <h2 id="conclusions">Conclusions<a class="headerlink" href="#conclusions" title="Permanent link">&para;</a></h2>
@@ -1309,7 +1319,9 @@ E_k = \hbar\omega(k)\left(n_\mathrm{B}(\beta\hbar\omega(k))+\frac{1}{2}\right)
 <li>Using the spring constant <script type="math/tex">\kappa</script> you found earlier, find the ground state energy of the molecule by comparing the molecule to a quantum harmonic oscillator. What is the energy required to break the molecule apart?</li>
 <li>What is the approximate number of phonons that can occupy this mode before the potential becomes anharmonic?</li>
 </ol>
-<details class="hint"><summary>Hint</summary><p>Because the diatomic molecule is modelled as a one-body problem (in the center of mass rest frame of the molecule), the mass should be replaced by the <a href="https://en.wikipedia.org/wiki/Reduced_mass">reduced mass</a>.</p>
+<details class="hint">
+<summary>Hint</summary>
+<p>Because the diatomic molecule is modelled as a one-body problem (in the center of mass rest frame of the molecule), the mass should be replaced by the <a href="https://en.wikipedia.org/wiki/Reduced_mass">reduced mass</a>.</p>
 </details>
 <h3 id="exercise-2-vibrational-heat-capacity-of-a-1d-monatomic-chain">Exercise 2: Vibrational heat capacity of a 1D monatomic chain<a class="headerlink" href="#exercise-2-vibrational-heat-capacity-of-a-1d-monatomic-chain" title="Permanent link">&para;</a></h3>
 <ol>
@@ -1340,7 +1352,9 @@ E_k = \hbar\omega(k)\left(n_\mathrm{B}(\beta\hbar\omega(k))+\frac{1}{2}\right)
   \end{pmatrix}\mathbf{u}
   </script>
 </p>
-<details class="hint"><summary>Hint</summary><p>In Python use the function <a href="https://docs.scipy.org/doc/numpy/reference/generated/numpy.diag.html"><code>numpy.diag</code></a></p>
+<details class="hint">
+<summary>Hint</summary>
+<p>In Python use the function <a href="https://docs.scipy.org/doc/numpy/reference/generated/numpy.diag.html"><code>numpy.diag</code></a></p>
 </details>
 <ol>
 <li>Define a matrix that relates forces to displacements in a linear 1D chain containing <script type="math/tex">N=5</script> atoms. Repeat for <script type="math/tex">N=200</script>.
@@ -1451,7 +1465,7 @@ E_k = \hbar\omega(k)\left(n_\mathrm{B}(\beta\hbar\omega(k))+\frac{1}{2}\right)
     <div class="md-dialog" data-md-component="dialog">
       <div class="md-dialog__inner md-typeset"></div>
     </div>
-    <script id="__config" type="application/json">{"base": "../..", "features": ["navigation.top", "navigation.sections", "search.highlight"], "translations": {"clipboard.copy": "Copy to clipboard", "clipboard.copied": "Copied to clipboard", "search.config.lang": "en", "search.config.pipeline": "trimmer, stopWordFilter", "search.config.separator": "[\\s\\-]+", "search.placeholder": "Search", "search.result.placeholder": "Type to start searching", "search.result.none": "No matching documents", "search.result.one": "1 matching document", "search.result.other": "# matching documents", "search.result.more.one": "1 more on this page", "search.result.more.other": "# more on this page", "search.result.term.missing": "Missing", "select.version.title": "Select version"}, "search": "../../assets/javascripts/workers/search.709b4209.min.js", "version": null}</script>
+    <script id="__config" type="application/json">{"base": "../..", "features": ["navigation.top", "navigation.sections", "search.highlight"], "search": "../../assets/javascripts/workers/search.709b4209.min.js", "translations": {"clipboard.copied": "Copied to clipboard", "clipboard.copy": "Copy to clipboard", "search.config.lang": "en", "search.config.pipeline": "trimmer, stopWordFilter", "search.config.separator": "[\\s\\-]+", "search.placeholder": "Search", "search.result.more.one": "1 more on this page", "search.result.more.other": "# more on this page", "search.result.none": "No matching documents", "search.result.one": "1 matching document", "search.result.other": "# matching documents", "search.result.placeholder": "Type to start searching", "search.result.term.missing": "Missing", "select.version.title": "Select version"}, "version": null}</script>
     
     
       <script src="../../assets/javascripts/bundle.2b46852b.min.js"></script>

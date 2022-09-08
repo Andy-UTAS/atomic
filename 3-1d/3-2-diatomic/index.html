@@ -12,7 +12,7 @@
         <link rel="canonical" href="https://andy-utas.github.io/3-1d/3-2-diatomic/">
       
       <link rel="icon" href="../../logo.png">
-      <meta name="generator" content="mkdocs-1.2.2, mkdocs-material-7.2.2">
+      <meta name="generator" content="mkdocs-1.3.0, mkdocs-material-7.2.2">
     
     
       
@@ -168,7 +168,7 @@
     
       <div class="md-header__source">
         
-<a href="https://github.com/Andy-UTAS/andy-utas.github.io/" title="Go to repository" class="md-source" data-md-component="source">
+<a href="https://github.com/Andy-UTAS/andy-utas.github.io" title="Go to repository" class="md-source" data-md-component="source">
   <div class="md-source__icon md-icon">
     
     <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512"><path d="M439.55 236.05 244 40.45a28.87 28.87 0 0 0-40.81 0l-40.66 40.63 51.52 51.52c27.06-9.14 52.68 16.77 43.39 43.68l49.66 49.66c34.23-11.8 61.18 31 35.47 56.69-26.49 26.49-70.21-2.87-56-37.34L240.22 199v121.85c25.3 12.54 22.26 41.85 9.08 55a34.34 34.34 0 0 1-48.55 0c-17.57-17.6-11.07-46.91 11.25-56v-123c-20.8-8.51-24.6-30.74-18.64-45L142.57 101 8.45 235.14a28.86 28.86 0 0 0 0 40.81l195.61 195.6a28.86 28.86 0 0 0 40.8 0l194.69-194.69a28.86 28.86 0 0 0 0-40.81z"/></svg>
@@ -210,7 +210,7 @@
   
     <div class="md-nav__source">
       
-<a href="https://github.com/Andy-UTAS/andy-utas.github.io/" title="Go to repository" class="md-source" data-md-component="source">
+<a href="https://github.com/Andy-UTAS/andy-utas.github.io" title="Go to repository" class="md-source" data-md-component="source">
   <div class="md-source__icon md-icon">
     
     <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512"><path d="M439.55 236.05 244 40.45a28.87 28.87 0 0 0-40.81 0l-40.66 40.63 51.52 51.52c27.06-9.14 52.68 16.77 43.39 43.68l49.66 49.66c34.23-11.8 61.18 31 35.47 56.69-26.49 26.49-70.21-2.87-56-37.34L240.22 199v121.85c25.3 12.54 22.26 41.85 9.08 55a34.34 34.34 0 0 1-48.55 0c-17.57-17.6-11.07-46.91 11.25-56v-123c-20.8-8.51-24.6-30.74-18.64-45L142.57 101 8.45 235.14a28.86 28.86 0 0 0 0 40.81l195.61 195.6a28.86 28.86 0 0 0 40.8 0l194.69-194.69a28.86 28.86 0 0 0 0-40.81z"/></svg>
@@ -915,10 +915,6 @@
             <article class="md-content__inner md-typeset">
               
                 
-                  <a href="https://github.com/Andy-UTAS/andy-utas.github.io/edit/master/docs/3-1d/3-2-diatomic.md" title="Edit this page" class="md-content__button md-icon">
-                    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20.71 7.04c.39-.39.39-1.04 0-1.41l-2.34-2.34c-.37-.39-1.02-.39-1.41 0l-1.84 1.83 3.75 3.75M3 17.25V21h3.75L17.81 9.93l-3.75-3.75L3 17.25z"/></svg>
-                  </a>
-                
                 
                 <h1 id="the-diatomic-chain">The diatomic chain<a class="headerlink" href="#the-diatomic-chain" title="Permanent link">&para;</a></h1>
 <p>Vibrations in one-dimension with extra pizzazz.</p>
@@ -993,7 +989,9 @@ A_y
 \end{pmatrix}
 </script>
 </p>
-<details class="question"><summary>3.2.1: Explicitly verify that the trail solutions lead to the above matrix equation</summary></details>
+<details class="question">
+<summary>3.2.1: Explicitly verify that the trail solutions lead to the above matrix equation</summary>
+</details>
 <!-- This is tedious but straightforward:
 
 $$
@@ -1022,7 +1020,10 @@ which when expressed in matrix form is as required. -->
 \omega_\pm^2 = \frac{\kappa_1+\kappa_2}{m} \pm \sqrt{\frac{(\kappa_1+\kappa_2)^2 - 4\kappa_1\kappa_2\sin^2(ka/2)}{m^2}}
 </script>
 </p>
-<details class="question"><summary>3.2.2: Solve the eigenvalue equation and verify the result for <script type="math/tex">\omega_\pm</script></summary></details>
+<details class="question">
+<summary>3.2.2: Solve the eigenvalue equation and verify the result for <script type="math/tex">\omega_\pm</script>
+</summary>
+</details>
 <!-- Subtracting the eigenvalue $m\omega^2$ from the diagonal elements of the matrix and then solving when the determinant evaluates to zero:
 
 $$
@@ -1069,11 +1070,15 @@ which is the desired result. -->
 <p><img alt="" src="../images/3-2-brillouin.svg" /></p>
 <p>One may ask why the second branch appears, which is an good question, and is understood as with a diatomic system, we have added a second degree of freedom per unit cell. Indeed, had we a unit cell with 3 atoms, that is 3 degrees of freedom, we would find that there are three branches, or three frequencies, for each value of <script type="math/tex">k</script>.</p>
 <p>Looking at the <script type="math/tex">\omega_-</script> mode, we notice that as <script type="math/tex">k \rightarrow 0</script>, the dispersion relationship is linear. In this regime, the modes behave like sound waves (i.e. <script type="math/tex">\omega = v |k|</script>) and consequently, the mode is referred to as the <em>acoustic mode</em>. On the other hand, modes which intersect with optical dispersion modes (i.e. <script type="math/tex">\omega = c|k|</script>) are referred to as <em>optical modes</em>.</p>
-<details class="question"><summary>3.2.3: Plot the dispersion modes, along with an optical dispersion curve for visible light. What are the implications intersecting curves?</summary></details>
+<details class="question">
+<summary>3.2.3: Plot the dispersion modes, along with an optical dispersion curve for visible light. What are the implications intersecting curves?</summary>
+</details>
 <p>We can look at the behaviour of the curves at specific values of <script type="math/tex">k</script>, for example at the zone boundary, <script type="math/tex">\omega_{+}(\pi/a) = \sqrt{2\kappa_1/m}</script> and <script type="math/tex">\omega_{+}(\pi/a) = \sqrt{2\kappa_2/m}</script>. At this point, it is useful to consider the idea of an <em>extended</em> Brillouin zone: the Brillouin zone houses all unique values of <script type="math/tex">k</script>, but in this case, there are multiple frequencies for each value of <script type="math/tex">k</script>. By extending the Brillouin zone, unfolding the higher-order mode(s) out to a the neighbouring unit cell in reciprocal space, we can obtain a plot which was unique frequencies for each <script type="math/tex">k</script>. A plot illustrating the extended scheme is shown below:</p>
 <p><img alt="" src="../images/3-2-extended.svg" /></p>
 <p>But why would we do this? Well, consider the case of <script type="math/tex">\kappa_1 \approx \kappa_2</script> and the limit of <script type="math/tex">\kappa_1 = \kappa_2</script>. We can clearly observe an "opening" between the bands which depends on the values of <script type="math/tex">\kappa_1</script> and <script type="math/tex">\kappa_2</script>, but physically, what would one expect to happen when <script type="math/tex">\kappa_1 = \kappa_2 = \kappa</script>?</p>
-<details class="question"><summary>3.2.4: Make a prediction for what will be the consequences of setting <script type="math/tex">\kappa_1 = \kappa_2</script> and how this relates to the monatomic chain.</summary><p>Hopefully it is clear that with identical spring constants, we are back at the case of a monatomic chain. In the case of the band splitting, this will go to zero as the difference between <script type="math/tex">\kappa_1</script> and <script type="math/tex">\kappa_2</script> goes to zero:</p>
+<details class="question">
+<summary>3.2.4: Make a prediction for what will be the consequences of setting <script type="math/tex">\kappa_1 = \kappa_2</script> and how this relates to the monatomic chain.</summary>
+<p>Hopefully it is clear that with identical spring constants, we are back at the case of a monatomic chain. In the case of the band splitting, this will go to zero as the difference between <script type="math/tex">\kappa_1</script> and <script type="math/tex">\kappa_2</script> goes to zero:</p>
 <p><img alt="" src="../images/3-2-di-to-mon.svg" /></p>
 <p>But now we have a bit of a quandary, namely, in order to capture all unique values of <script type="math/tex">k</script>, we now have a plot Brillouin zone that runs from <script type="math/tex">-2\pi/a</script> to <script type="math/tex">2\pi/a</script> (see above), whereas previously this ran from <script type="math/tex">-\pi/a</script> to <script type="math/tex">\pi/a</script>. Any what about our number of states?</p>
 <p>The solution comes in the recognition that in the diatomic case, one has a unit cell length of <script type="math/tex">a</script>, which is <script type="math/tex">2 \times a_\mathrm{monatomic}</script>, so the "true" Brillouin zone for the monatomic chain extents from <script type="math/tex">-\pi/a_\mathrm{monatomic}</script> to <script type="math/tex">\pi/a_\mathrm{monatomic}</script> which is equivalent to <script type="math/tex">-2\pi/a</script> to <script type="math/tex">2\pi/a</script>. Similarly, the number of atoms per unit cell as changed from 2 to 1, meaning that everything doesn't fall apart. YAY!</p>
@@ -1109,7 +1114,9 @@ g(\omega) = \frac{\textrm{d}N}{\textrm{d}\omega} = \frac{L}{2\pi} \sum | \textrm
   </script>
 </p>
 <p>where the plus sign corresponds to the optical branch and the minus sign to the acoustic branch.</p>
-<details class="hint"><summary>Hint</summary><p>The final form of <script type="math/tex">\omega_\pm</script> as given is not always the most useful: sometimes the complex exponential form - see 3.2.2 - can make life easier</p>
+<details class="hint">
+<summary>Hint</summary>
+<p>The final form of <script type="math/tex">\omega_\pm</script> as given is not always the most useful: sometimes the complex exponential form - see 3.2.2 - can make life easier</p>
 </details>
 <ol>
 <li>Find the magnitude of the group velocity near <script type="math/tex">k=0</script> for the <em>acoustic</em> branch.</li>
@@ -1118,7 +1125,9 @@ g(\omega) = \frac{\textrm{d}N}{\textrm{d}\omega} = \frac{L}{2\pi} \sum | \textrm
 </ol>
 <h3 id="exercise-2-atomic-chain-with-3-different-spring-constants">Exercise 2: atomic chain with 3 different spring constants<a class="headerlink" href="#exercise-2-atomic-chain-with-3-different-spring-constants" title="Permanent link">&para;</a></h3>
 <p>Suppose we have a vibrating 1D atomic chain with 3 different spring constants alternating like <script type="math/tex">\kappa_ 1</script>, <script type="math/tex">\kappa_2</script>, <script type="math/tex">\kappa_3</script>, <script type="math/tex">\kappa_1</script>, etc. All the atoms in the chain have an equal mass <script type="math/tex">m</script>.</p>
-<details class="hint"><summary>Hint</summary><p>To solve the eigenvalue problem quickly, make use of the fact that the mass-spring matrix in that case commutes with the matrix</p>
+<details class="hint">
+<summary>Hint</summary>
+<p>To solve the eigenvalue problem quickly, make use of the fact that the mass-spring matrix in that case commutes with the matrix</p>
 <p>
 <script type="math/tex; mode=display">
 X = \begin{pmatrix} 0 & 0 & 1 \\ 0 & 1 & 0 \\ 1 & 0 & 0 \end{pmatrix}.
@@ -1234,7 +1243,7 @@ X = \begin{pmatrix} 0 & 0 & 1 \\ 0 & 1 & 0 \\ 1 & 0 & 0 \end{pmatrix}.
     <div class="md-dialog" data-md-component="dialog">
       <div class="md-dialog__inner md-typeset"></div>
     </div>
-    <script id="__config" type="application/json">{"base": "../..", "features": ["navigation.top", "navigation.sections", "search.highlight"], "translations": {"clipboard.copy": "Copy to clipboard", "clipboard.copied": "Copied to clipboard", "search.config.lang": "en", "search.config.pipeline": "trimmer, stopWordFilter", "search.config.separator": "[\\s\\-]+", "search.placeholder": "Search", "search.result.placeholder": "Type to start searching", "search.result.none": "No matching documents", "search.result.one": "1 matching document", "search.result.other": "# matching documents", "search.result.more.one": "1 more on this page", "search.result.more.other": "# more on this page", "search.result.term.missing": "Missing", "select.version.title": "Select version"}, "search": "../../assets/javascripts/workers/search.709b4209.min.js", "version": null}</script>
+    <script id="__config" type="application/json">{"base": "../..", "features": ["navigation.top", "navigation.sections", "search.highlight"], "search": "../../assets/javascripts/workers/search.709b4209.min.js", "translations": {"clipboard.copied": "Copied to clipboard", "clipboard.copy": "Copy to clipboard", "search.config.lang": "en", "search.config.pipeline": "trimmer, stopWordFilter", "search.config.separator": "[\\s\\-]+", "search.placeholder": "Search", "search.result.more.one": "1 more on this page", "search.result.more.other": "# more on this page", "search.result.none": "No matching documents", "search.result.one": "1 matching document", "search.result.other": "# matching documents", "search.result.placeholder": "Type to start searching", "search.result.term.missing": "Missing", "select.version.title": "Select version"}, "version": null}</script>
     
     
       <script src="../../assets/javascripts/bundle.2b46852b.min.js"></script>

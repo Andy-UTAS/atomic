@@ -12,7 +12,7 @@
         <link rel="canonical" href="https://andy-utas.github.io/4-crystal/4-2-kspace/">
       
       <link rel="icon" href="../../logo.png">
-      <meta name="generator" content="mkdocs-1.2.2, mkdocs-material-7.2.2">
+      <meta name="generator" content="mkdocs-1.3.0, mkdocs-material-7.2.2">
     
     
       
@@ -168,7 +168,7 @@
     
       <div class="md-header__source">
         
-<a href="https://github.com/Andy-UTAS/andy-utas.github.io/" title="Go to repository" class="md-source" data-md-component="source">
+<a href="https://github.com/Andy-UTAS/andy-utas.github.io" title="Go to repository" class="md-source" data-md-component="source">
   <div class="md-source__icon md-icon">
     
     <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512"><path d="M439.55 236.05 244 40.45a28.87 28.87 0 0 0-40.81 0l-40.66 40.63 51.52 51.52c27.06-9.14 52.68 16.77 43.39 43.68l49.66 49.66c34.23-11.8 61.18 31 35.47 56.69-26.49 26.49-70.21-2.87-56-37.34L240.22 199v121.85c25.3 12.54 22.26 41.85 9.08 55a34.34 34.34 0 0 1-48.55 0c-17.57-17.6-11.07-46.91 11.25-56v-123c-20.8-8.51-24.6-30.74-18.64-45L142.57 101 8.45 235.14a28.86 28.86 0 0 0 0 40.81l195.61 195.6a28.86 28.86 0 0 0 40.8 0l194.69-194.69a28.86 28.86 0 0 0 0-40.81z"/></svg>
@@ -210,7 +210,7 @@
   
     <div class="md-nav__source">
       
-<a href="https://github.com/Andy-UTAS/andy-utas.github.io/" title="Go to repository" class="md-source" data-md-component="source">
+<a href="https://github.com/Andy-UTAS/andy-utas.github.io" title="Go to repository" class="md-source" data-md-component="source">
   <div class="md-source__icon md-icon">
     
     <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512"><path d="M439.55 236.05 244 40.45a28.87 28.87 0 0 0-40.81 0l-40.66 40.63 51.52 51.52c27.06-9.14 52.68 16.77 43.39 43.68l49.66 49.66c34.23-11.8 61.18 31 35.47 56.69-26.49 26.49-70.21-2.87-56-37.34L240.22 199v121.85c25.3 12.54 22.26 41.85 9.08 55a34.34 34.34 0 0 1-48.55 0c-17.57-17.6-11.07-46.91 11.25-56v-123c-20.8-8.51-24.6-30.74-18.64-45L142.57 101 8.45 235.14a28.86 28.86 0 0 0 0 40.81l195.61 195.6a28.86 28.86 0 0 0 40.8 0l194.69-194.69a28.86 28.86 0 0 0 0-40.81z"/></svg>
@@ -983,10 +983,6 @@
             <article class="md-content__inner md-typeset">
               
                 
-                  <a href="https://github.com/Andy-UTAS/andy-utas.github.io/edit/master/docs/4-crystal/4-2-kspace.md" title="Edit this page" class="md-content__button md-icon">
-                    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20.71 7.04c.39-.39.39-1.04 0-1.41l-2.34-2.34c-.37-.39-1.02-.39-1.41 0l-1.84 1.83 3.75 3.75M3 17.25V21h3.75L17.81 9.93l-3.75-3.75L3 17.25z"/></svg>
-                  </a>
-                
                 
                 <h1 id="the-reciprocal-lattice">The reciprocal lattice<a class="headerlink" href="#the-reciprocal-lattice" title="Permanent link">&para;</a></h1>
 <p>Learn the <em>reciprocal</em> secrets of crystals<sup id="fnref:1"><a class="footnote-ref" href="#fn:1">1</a></sup>.</p>
@@ -1118,7 +1114,9 @@ With <script type="math/tex">\lvert \mathbf{b}_2 \rvert</script> and <script typ
 \mathbf{b}_1 = \frac{4\pi}{a\sqrt{3}} \left(\frac{\sqrt{3}}{2} \mathbf{\hat{x}} - \frac{1}{2}\mathbf{\hat{y}} \right).
 </script>
 </p>
-<details class="question"><summary>Is the choice of a set of reciprocal lattice vectors unique? If not, which other ones are possible?</summary><p>There are many equivalent ways to choose lattice vectors of the reciprocal lattice. In the example above we could as well use
+<details class="question">
+<summary>Is the choice of a set of reciprocal lattice vectors unique? If not, which other ones are possible?</summary>
+<p>There are many equivalent ways to choose lattice vectors of the reciprocal lattice. In the example above we could as well use
 <script type="math/tex; mode=display">
 \mathbf{b}_1 = \frac{4\pi}{a\sqrt{3}} \left(-\frac{\sqrt{3}}{2} \mathbf{\hat{x}} + \frac{1}{2}\mathbf{\hat{y}} \right) \quad \text{and} \quad \mathbf{b}_2 = -\frac{4\pi}{a\sqrt{3}} \mathbf{\hat{y}}.
 </script>
@@ -1222,7 +1220,9 @@ It allows us to know the exact orientation of a crystal structure if the crystal
 <li>Find the volume of a primitive unit cell <script type="math/tex">V^* = \left| \mathbf{b}_1 \cdot (\mathbf{b}_2 \times \mathbf{b}_3) \right|</script> of the corresponding reciprocal lattice.</li>
 <li>
 <p>Derive the expressions for the lattice vectors <script type="math/tex">\mathbf{a}_i</script> through the reciprocal lattice <script type="math/tex">\mathbf{b}_i</script>.</p>
-<details class="hint"><summary>Hint</summary><p>Make use of the vector identity
+<details class="hint">
+<summary>Hint</summary>
+<p>Make use of the vector identity
 <script type="math/tex; mode=display">\mathbf{A}\times(\mathbf{B}\times\mathbf{C}) = \mathbf{B}(\mathbf{A}\cdot\mathbf{C}) - \mathbf{C}(\mathbf{A}\cdot\mathbf{B})</script>
 </p>
 </details>
@@ -1238,7 +1238,9 @@ Which type of lattice is the reciprocal lattice of a BCC crystal?</p>
 <ol>
 <li>
 <p>Prove that the reciprocal lattice vector <script type="math/tex">\mathbf{G} = h \mathbf{b}_1 + k \mathbf{b}_2 + l \mathbf{b}_3</script> is perpendicular to the Miller plane <script type="math/tex">(hkl)</script>.</p>
-<details class="hint"><summary>Hint</summary><p>Choose two vectors that lie within the Miller plane and are not parallel to each other.</p>
+<details class="hint">
+<summary>Hint</summary>
+<p>Choose two vectors that lie within the Miller plane and are not parallel to each other.</p>
 </details>
 </li>
 <li>
@@ -1253,7 +1255,9 @@ Which type of lattice is the reciprocal lattice of a BCC crystal?</p>
 <li>Show that this is not true in general. Consider for instance an orthorhombic crystal, for which the primitive lattice vectors are still orthogonal but have different lengths.</li>
 <li>
 <p>Any set of Miller indices corresponds to a family of planes separated by a distance <script type="math/tex">d</script>. Show that the spacing <script type="math/tex">d</script> of the <script type="math/tex">(hkl)</script> set of planes in a cubic crystal with lattice parameter <script type="math/tex">a</script> is <script type="math/tex">d = \frac{a}{\sqrt{h^2 + k^2 + l^2}}</script>.</p>
-<details class="hint"><summary>Hint</summary><p>Recall that a family of lattice planes is an infinite set of equally separated parallel planes which taken all together contain all points of the lattice.</p>
+<details class="hint">
+<summary>Hint</summary>
+<p>Recall that a family of lattice planes is an infinite set of equally separated parallel planes which taken all together contain all points of the lattice.</p>
 <p>Try computing the distance between the plane that contains the site <script type="math/tex">(0,0,0)</script> of the conventional unit cell and a plane defined by the <script type="math/tex">(hkl)</script> indices.</p>
 </details>
 </li>
@@ -1359,7 +1363,7 @@ Which type of lattice is the reciprocal lattice of a BCC crystal?</p>
     <div class="md-dialog" data-md-component="dialog">
       <div class="md-dialog__inner md-typeset"></div>
     </div>
-    <script id="__config" type="application/json">{"base": "../..", "features": ["navigation.top", "navigation.sections", "search.highlight"], "translations": {"clipboard.copy": "Copy to clipboard", "clipboard.copied": "Copied to clipboard", "search.config.lang": "en", "search.config.pipeline": "trimmer, stopWordFilter", "search.config.separator": "[\\s\\-]+", "search.placeholder": "Search", "search.result.placeholder": "Type to start searching", "search.result.none": "No matching documents", "search.result.one": "1 matching document", "search.result.other": "# matching documents", "search.result.more.one": "1 more on this page", "search.result.more.other": "# more on this page", "search.result.term.missing": "Missing", "select.version.title": "Select version"}, "search": "../../assets/javascripts/workers/search.709b4209.min.js", "version": null}</script>
+    <script id="__config" type="application/json">{"base": "../..", "features": ["navigation.top", "navigation.sections", "search.highlight"], "search": "../../assets/javascripts/workers/search.709b4209.min.js", "translations": {"clipboard.copied": "Copied to clipboard", "clipboard.copy": "Copy to clipboard", "search.config.lang": "en", "search.config.pipeline": "trimmer, stopWordFilter", "search.config.separator": "[\\s\\-]+", "search.placeholder": "Search", "search.result.more.one": "1 more on this page", "search.result.more.other": "# more on this page", "search.result.none": "No matching documents", "search.result.one": "1 matching document", "search.result.other": "# matching documents", "search.result.placeholder": "Type to start searching", "search.result.term.missing": "Missing", "select.version.title": "Select version"}, "version": null}</script>
     
     
       <script src="../../assets/javascripts/bundle.2b46852b.min.js"></script>

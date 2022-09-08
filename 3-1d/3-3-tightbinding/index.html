@@ -12,7 +12,7 @@
         <link rel="canonical" href="https://andy-utas.github.io/3-1d/3-3-tightbinding/">
       
       <link rel="icon" href="../../logo.png">
-      <meta name="generator" content="mkdocs-1.2.2, mkdocs-material-7.2.2">
+      <meta name="generator" content="mkdocs-1.3.0, mkdocs-material-7.2.2">
     
     
       
@@ -168,7 +168,7 @@
     
       <div class="md-header__source">
         
-<a href="https://github.com/Andy-UTAS/andy-utas.github.io/" title="Go to repository" class="md-source" data-md-component="source">
+<a href="https://github.com/Andy-UTAS/andy-utas.github.io" title="Go to repository" class="md-source" data-md-component="source">
   <div class="md-source__icon md-icon">
     
     <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512"><path d="M439.55 236.05 244 40.45a28.87 28.87 0 0 0-40.81 0l-40.66 40.63 51.52 51.52c27.06-9.14 52.68 16.77 43.39 43.68l49.66 49.66c34.23-11.8 61.18 31 35.47 56.69-26.49 26.49-70.21-2.87-56-37.34L240.22 199v121.85c25.3 12.54 22.26 41.85 9.08 55a34.34 34.34 0 0 1-48.55 0c-17.57-17.6-11.07-46.91 11.25-56v-123c-20.8-8.51-24.6-30.74-18.64-45L142.57 101 8.45 235.14a28.86 28.86 0 0 0 0 40.81l195.61 195.6a28.86 28.86 0 0 0 40.8 0l194.69-194.69a28.86 28.86 0 0 0 0-40.81z"/></svg>
@@ -210,7 +210,7 @@
   
     <div class="md-nav__source">
       
-<a href="https://github.com/Andy-UTAS/andy-utas.github.io/" title="Go to repository" class="md-source" data-md-component="source">
+<a href="https://github.com/Andy-UTAS/andy-utas.github.io" title="Go to repository" class="md-source" data-md-component="source">
   <div class="md-source__icon md-icon">
     
     <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512"><path d="M439.55 236.05 244 40.45a28.87 28.87 0 0 0-40.81 0l-40.66 40.63 51.52 51.52c27.06-9.14 52.68 16.77 43.39 43.68l49.66 49.66c34.23-11.8 61.18 31 35.47 56.69-26.49 26.49-70.21-2.87-56-37.34L240.22 199v121.85c25.3 12.54 22.26 41.85 9.08 55a34.34 34.34 0 0 1-48.55 0c-17.57-17.6-11.07-46.91 11.25-56v-123c-20.8-8.51-24.6-30.74-18.64-45L142.57 101 8.45 235.14a28.86 28.86 0 0 0 0 40.81l195.61 195.6a28.86 28.86 0 0 0 40.8 0l194.69-194.69a28.86 28.86 0 0 0 0-40.81z"/></svg>
@@ -953,10 +953,6 @@
             <article class="md-content__inner md-typeset">
               
                 
-                  <a href="https://github.com/Andy-UTAS/andy-utas.github.io/edit/master/docs/3-1d/3-3-tightbinding.md" title="Edit this page" class="md-content__button md-icon">
-                    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20.71 7.04c.39-.39.39-1.04 0-1.41l-2.34-2.34c-.37-.39-1.02-.39-1.41 0l-1.84 1.83 3.75 3.75M3 17.25V21h3.75L17.81 9.93l-3.75-3.75L3 17.25z"/></svg>
-                  </a>
-                
                 
                 <h1 id="the-tight-binding-model">The tight binding model<a class="headerlink" href="#the-tight-binding-model" title="Permanent link">&para;</a></h1>
 <p>One-dimensional chains have been doing well, so why stop?</p>
@@ -1025,11 +1021,15 @@ E \begin{pmatrix}
 \langle1|H|2\rangle = \langle2|H|3\rangle = -t.
 </script>
 </p>
-<details class="question"><summary>3.3.1: Apply the exact same logic and mathematics to arrive at the above matrix equation</summary></details>
+<details class="question">
+<summary>3.3.1: Apply the exact same logic and mathematics to arrive at the above matrix equation</summary>
+</details>
 <p>Obtaining solutions to such a problem can be unwieldy, but fortunately, we have the perfect tool for the job.</p>
 <h4 id="number-cruncher">Number cruncher<a class="headerlink" href="#number-cruncher" title="Permanent link">&para;</a></h4>
 <p>We can use our computational toolkit to solve for the eigenvalues of a matrix. For example, with <script type="math/tex">\epsilon_0 = 2</script> and <script type="math/tex">t=1</script>, we find that the eigenvalues for the matrix above are approximately <script type="math/tex">(0.59, 2.00, 3.41)</script>. But what use is this? Well, let's look at a simple case of varying <script type="math/tex">t</script>.</p>
-<details class="question"><summary>3.3.2: Make a plot of the energy eigenvalues as a function of <script type="math/tex">t</script> running from <script type="math/tex">(0, \epsilon)</script> and interpret your result. Ensure to include your code.</summary></details>
+<details class="question">
+<summary>3.3.2: Make a plot of the energy eigenvalues as a function of <script type="math/tex">t</script> running from <script type="math/tex">(0, \epsilon)</script> and interpret your result. Ensure to include your code.</summary>
+</details>
 <!-- Using the definitions that already exist in this section's notebook, one can do something like the following
 
 <div class="highlight"><pre><span></span><code><span class="n">eigen</span> <span class="o">=</span> <span class="p">[]</span> <span class="c1"># Initalise a list for the eigenvalues</span>
@@ -1092,7 +1092,9 @@ As $t$ characterises the hopping between atoms, as this becomes larger, the exis
 </div>
 </div>
 </div>
-<details class="question"><summary>3.3.3: How do these results compare with what we have seen previously?</summary></details>
+<details class="question">
+<summary>3.3.3: How do these results compare with what we have seen previously?</summary>
+</details>
 <!-- The numerical results mostly agree with the models we developed earlier: for example, in the Sommerfeld model, the DoS in 1D is proportional to $\frac{1}{\sqrt{E}}$ and the large $n$ histograms reflect this proportionality for small energies $E$. But for larger values of $E$, there is  significant deviation form this behaviour. -->
 
 <h2 id="an-infinite-chain">An infinite chain<a class="headerlink" href="#an-infinite-chain" title="Permanent link">&para;</a></h2>
@@ -1132,7 +1134,9 @@ H_{nm} = \epsilon_0 \delta_{n,m} - t \left(\delta_{n+1,m} + \delta_{n-1,m}\right
 \phi_n = \frac{e^{-ikna}}{\sqrt{N}}
 </script>
 </p>
-<details class="question"><summary>3.3.4: How does this form of solution compare to the assumed form of solutions for oscillations?</summary></details>
+<details class="question">
+<summary>3.3.4: How does this form of solution compare to the assumed form of solutions for oscillations?</summary>
+</details>
 <!-- In the case of oscillations, we considered solutions of the form $e^{i\omega t - ikna}$, which was because we were looking for time dependent solutions. In this case, we are seeking variational solution to the time-independent Schödinger equation, and therefore do not require any time dependence. -->
 
 <p>We then crank the handle:</p>
@@ -1191,7 +1195,9 @@ m^*=\frac{\hbar^2}{2ta^2}.
 </div>
 </div>
 </div>
-<details class="question"><summary>3.3.5: What is the implication of the plots shown in the <em>band filling</em> content block?</summary></details>
+<details class="question">
+<summary>3.3.5: What is the implication of the plots shown in the <em>band filling</em> content block?</summary>
+</details>
 <!-- This is the existence of conduction and insulation! For monovalent systems in the presence of an electric field, there can be an imbalance of electrons with either $+k$ or $-k$, so there will be a net charge migration, whereas with divalent atoms, one can never achieve a preference for either $\pm k$. -->
 
 <hr />
@@ -1326,7 +1332,7 @@ m^*=\frac{\hbar^2}{2ta^2}.
     <div class="md-dialog" data-md-component="dialog">
       <div class="md-dialog__inner md-typeset"></div>
     </div>
-    <script id="__config" type="application/json">{"base": "../..", "features": ["navigation.top", "navigation.sections", "search.highlight"], "translations": {"clipboard.copy": "Copy to clipboard", "clipboard.copied": "Copied to clipboard", "search.config.lang": "en", "search.config.pipeline": "trimmer, stopWordFilter", "search.config.separator": "[\\s\\-]+", "search.placeholder": "Search", "search.result.placeholder": "Type to start searching", "search.result.none": "No matching documents", "search.result.one": "1 matching document", "search.result.other": "# matching documents", "search.result.more.one": "1 more on this page", "search.result.more.other": "# more on this page", "search.result.term.missing": "Missing", "select.version.title": "Select version"}, "search": "../../assets/javascripts/workers/search.709b4209.min.js", "version": null}</script>
+    <script id="__config" type="application/json">{"base": "../..", "features": ["navigation.top", "navigation.sections", "search.highlight"], "search": "../../assets/javascripts/workers/search.709b4209.min.js", "translations": {"clipboard.copied": "Copied to clipboard", "clipboard.copy": "Copy to clipboard", "search.config.lang": "en", "search.config.pipeline": "trimmer, stopWordFilter", "search.config.separator": "[\\s\\-]+", "search.placeholder": "Search", "search.result.more.one": "1 more on this page", "search.result.more.other": "# more on this page", "search.result.none": "No matching documents", "search.result.one": "1 matching document", "search.result.other": "# matching documents", "search.result.placeholder": "Type to start searching", "search.result.term.missing": "Missing", "select.version.title": "Select version"}, "version": null}</script>
     
     
       <script src="../../assets/javascripts/bundle.2b46852b.min.js"></script>

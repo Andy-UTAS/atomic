@@ -12,7 +12,7 @@
         <link rel="canonical" href="https://andy-utas.github.io/5-solids/5-1-Bloch/">
       
       <link rel="icon" href="../../logo.png">
-      <meta name="generator" content="mkdocs-1.2.2, mkdocs-material-7.2.2">
+      <meta name="generator" content="mkdocs-1.3.0, mkdocs-material-7.2.2">
     
     
       
@@ -168,7 +168,7 @@
     
       <div class="md-header__source">
         
-<a href="https://github.com/Andy-UTAS/andy-utas.github.io/" title="Go to repository" class="md-source" data-md-component="source">
+<a href="https://github.com/Andy-UTAS/andy-utas.github.io" title="Go to repository" class="md-source" data-md-component="source">
   <div class="md-source__icon md-icon">
     
     <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512"><path d="M439.55 236.05 244 40.45a28.87 28.87 0 0 0-40.81 0l-40.66 40.63 51.52 51.52c27.06-9.14 52.68 16.77 43.39 43.68l49.66 49.66c34.23-11.8 61.18 31 35.47 56.69-26.49 26.49-70.21-2.87-56-37.34L240.22 199v121.85c25.3 12.54 22.26 41.85 9.08 55a34.34 34.34 0 0 1-48.55 0c-17.57-17.6-11.07-46.91 11.25-56v-123c-20.8-8.51-24.6-30.74-18.64-45L142.57 101 8.45 235.14a28.86 28.86 0 0 0 0 40.81l195.61 195.6a28.86 28.86 0 0 0 40.8 0l194.69-194.69a28.86 28.86 0 0 0 0-40.81z"/></svg>
@@ -210,7 +210,7 @@
   
     <div class="md-nav__source">
       
-<a href="https://github.com/Andy-UTAS/andy-utas.github.io/" title="Go to repository" class="md-source" data-md-component="source">
+<a href="https://github.com/Andy-UTAS/andy-utas.github.io" title="Go to repository" class="md-source" data-md-component="source">
   <div class="md-source__icon md-icon">
     
     <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512"><path d="M439.55 236.05 244 40.45a28.87 28.87 0 0 0-40.81 0l-40.66 40.63 51.52 51.52c27.06-9.14 52.68 16.77 43.39 43.68l49.66 49.66c34.23-11.8 61.18 31 35.47 56.69-26.49 26.49-70.21-2.87-56-37.34L240.22 199v121.85c25.3 12.54 22.26 41.85 9.08 55a34.34 34.34 0 0 1-48.55 0c-17.57-17.6-11.07-46.91 11.25-56v-123c-20.8-8.51-24.6-30.74-18.64-45L142.57 101 8.45 235.14a28.86 28.86 0 0 0 0 40.81l195.61 195.6a28.86 28.86 0 0 0 40.8 0l194.69-194.69a28.86 28.86 0 0 0 0-40.81z"/></svg>
@@ -981,10 +981,6 @@
             <article class="md-content__inner md-typeset">
               
                 
-                  <a href="https://github.com/Andy-UTAS/andy-utas.github.io/edit/master/docs/5-solids/5-1-Bloch.md" title="Edit this page" class="md-content__button md-icon">
-                    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20.71 7.04c.39-.39.39-1.04 0-1.41l-2.34-2.34c-.37-.39-1.02-.39-1.41 0l-1.84 1.83 3.75 3.75M3 17.25V21h3.75L17.81 9.93l-3.75-3.75L3 17.25z"/></svg>
-                  </a>
-                
                 
                 <h1 id="the-nearly-free-electron-model">The nearly free electron model<a class="headerlink" href="#the-nearly-free-electron-model" title="Permanent link">&para;</a></h1>
 <!-- Some clever quip -->
@@ -1037,7 +1033,10 @@ Some introductory text -->
 \begin{pmatrix}\alpha \\ \beta \end{pmatrix}.
 </script>
 Note that this Hamiltonian is diagonal, so the eigenenergies are on the diagonal and the eigenfunctions are simply the <script type="math/tex">|k\rangle</script> and <script type="math/tex">|k'\rangle</script> basis states.</p>
-<details class="question"><summary>calculate <script type="math/tex">E_0</script> and the velocity <script type="math/tex">v</script></summary><p>The edge of the Brilloin zone has <script type="math/tex">k = \pi/a</script>. Substituting this in the free electron dispersion <script type="math/tex">E = \hbar^2 k^2/2m</script> we get <script type="math/tex">E_0 = \hbar^2 \pi^2/2 m a^2</script>, and <script type="math/tex">v=\hbar k/m=\hbar \pi/ma</script>.</p>
+<details class="question">
+<summary>calculate <script type="math/tex">E_0</script> and the velocity <script type="math/tex">v</script>
+</summary>
+<p>The edge of the Brilloin zone has <script type="math/tex">k = \pi/a</script>. Substituting this in the free electron dispersion <script type="math/tex">E = \hbar^2 k^2/2m</script> we get <script type="math/tex">E_0 = \hbar^2 \pi^2/2 m a^2</script>, and <script type="math/tex">v=\hbar k/m=\hbar \pi/ma</script>.</p>
 </details>
 <p>As we will see below, the lattice potential <script type="math/tex">V(x)</script> can couple the states <script type="math/tex">|k\rangle</script> and <script type="math/tex">|k'\rangle</script>. The coupling between these states is given by the matrix element <script type="math/tex">W=\langle k | V | k'\rangle</script>. Including this coupling into the Hamiltonian:</p>
 <p>
@@ -1071,7 +1070,9 @@ V_n = \frac{1}{a}\int_0^a e^{- i n 2\pi x /a} V(x) dx
 <h4 id="crossings-between-the-higher-bands">Crossings between the higher bands<a class="headerlink" href="#crossings-between-the-higher-bands" title="Permanent link">&para;</a></h4>
 <p>Everything we did can also be applied to the higher-energy crossings seen in the figure above. We note that all crossings occur between parabola's that are shifted by integer multiples of reciprocal lattice vectors <script type="math/tex">n 2\pi/a</script>. The first crossing corresponds to <script type="math/tex">n=1</script>, and we found that the magnitude of the gap is given by <script type="math/tex">V_1</script>. Similarly, <script type="math/tex">V_2</script> determines the gap between the second and third bands, <script type="math/tex">V_3</script> for the crossing between third and fourth, etc.</p>
 <p>The key conclusion is that the lattice potential couples plane-wave states that differ by integer multiples of reciprocal lattice vectors. This coupling alters the band structure most strongly where the free-electron eigenenergies cross, opening up gaps of which the magnitudes are determined by the Fourier components of the lattice potential.  </p>
-<details class="question"><summary>Suppose the lattice potential is <script type="math/tex">V(x)=A\cos(2\pi/ax)</script>. At what locations in the dispersion does <script type="math/tex">V(x)</script> lead to the formation of gaps?</summary><p>Hint: The Fourier series of <script type="math/tex">V(x)</script> is <script type="math/tex">V(x)=A(e^{i2\pi/ax}+e^{-i2\pi/ax})/2</script>, so the only non-zero Fourier components are <script type="math/tex">V_1=V_{-1} = A/2</script>.  </p>
+<details class="question">
+<summary>Suppose the lattice potential is <script type="math/tex">V(x)=A\cos(2\pi/ax)</script>. At what locations in the dispersion does <script type="math/tex">V(x)</script> lead to the formation of gaps?</summary>
+<p>Hint: The Fourier series of <script type="math/tex">V(x)</script> is <script type="math/tex">V(x)=A(e^{i2\pi/ax}+e^{-i2\pi/ax})/2</script>, so the only non-zero Fourier components are <script type="math/tex">V_1=V_{-1} = A/2</script>.  </p>
 </details>
 <h2 id="general-description-of-a-band-structure-in-a-crystal-bloch-theorem">General description of a band structure in a crystal - Bloch theorem<a class="headerlink" href="#general-description-of-a-band-structure-in-a-crystal-bloch-theorem" title="Permanent link">&para;</a></h2>
 <p>The different models considered thus far can be organized as a function of the strength of the lattice potential <script type="math/tex">V(x)</script>:</p>
@@ -1085,7 +1086,9 @@ V_n = \frac{1}{a}\int_0^a e^{- i n 2\pi x /a} V(x) dx
 with <script type="math/tex">u^\alpha(\mathbf{r})</script> having the same periodicity as the lattice potential <script type="math/tex">V(\mathbf{r})</script>, and index <script type="math/tex">\alpha</script> labeling electron bands with energies <script type="math/tex">E^\alpha(\mathbf{k})</script>.</p>
 </blockquote>
 <p>In other words: any electron wave function in a crystal is a product of a periodic part that describes electron motion within a unit cell and a plane wave. In both the tight-binding and the nearly-free electron models, the wave functions we considered are consistent with Bloch's theorem.</p>
-<details class="question"><summary>Does our nearly-free electron wavefunction <script type="math/tex">|\psi\rangle = \alpha|k\rangle + \beta|k'\rangle</script> satisfy the Bloch theorem? What is <script type="math/tex">u(x)</script> in this case?</summary><p>The wave function has a form <script type="math/tex">\psi(x) = \alpha \exp[ikx] + \beta \exp[i(k - 2\pi/a)x]</script>
+<details class="question">
+<summary>Does our nearly-free electron wavefunction <script type="math/tex">|\psi\rangle = \alpha|k\rangle + \beta|k'\rangle</script> satisfy the Bloch theorem? What is <script type="math/tex">u(x)</script> in this case?</summary>
+<p>The wave function has a form <script type="math/tex">\psi(x) = \alpha \exp[ikx] + \beta \exp[i(k - 2\pi/a)x]</script>
 (here <script type="math/tex">k = \pi/a + \delta k</script>). Choosing <script type="math/tex">u(x) = \alpha + \beta \exp(2\pi i x/a)</script> we see
 that <script type="math/tex">\psi(x) = u(x) \exp(ikx)</script>.</p>
 </details>
@@ -1104,7 +1107,9 @@ where <script type="math/tex">u^{\alpha}_\mathbf{G}</script> are the Fourier coe
 which shows that each Bloch wave can be written as a sum over plane waves that differ by a reciprocal lattice vector.</p>
 <!-- ??? question "Does the tight-binding wavefunction $|\psi\rangle = \sum_n e^{ikna}(\phi_0|n,1\rangle+\psi_0|n,2\rangle)$ (see exercise 2 in Lecture 8) satisfy the Bloch theorem? What part of $|\psi\rangle$ describes $u(x)$ in this case? Try to describe in words how this Bloch wave is built up." -->
 
-<details class="question"><summary>Does the tight-binding wavefunction <script type="math/tex">|\psi\rangle = \sum_n e^{ikna}(\phi_0|n,1\rangle+\psi_0|n,2\rangle)</script> satisfy the Bloch theorem? What part of <script type="math/tex">|\psi\rangle</script> describes <script type="math/tex">u(x)</script> in this case? Try to describe in words how this Bloch wave is built up.</summary></details>
+<details class="question">
+<summary>Does the tight-binding wavefunction <script type="math/tex">|\psi\rangle = \sum_n e^{ikna}(\phi_0|n,1\rangle+\psi_0|n,2\rangle)</script> satisfy the Bloch theorem? What part of <script type="math/tex">|\psi\rangle</script> describes <script type="math/tex">u(x)</script> in this case? Try to describe in words how this Bloch wave is built up.</summary>
+</details>
 <h3 id="repeated-vs-reduced-vs-extended-brillouin-zone">Repeated vs reduced vs extended Brillouin zone<a class="headerlink" href="#repeated-vs-reduced-vs-extended-brillouin-zone" title="Permanent link">&para;</a></h3>
 <p>There are several common ways to <strong>plot</strong> the same dispersion relation (no difference in physical information).</p>
 <p>Repeated BZ (all possible Bloch bands):</p>
@@ -1148,7 +1153,9 @@ which shows that each Bloch wave can be written as a sum over plane waves that d
 </li>
 <li>
 <p>Using the trial eigenstate above and the Schrödinger equation, show that <script type="math/tex; mode=display">E C_m = \varepsilon_m C_m+\sum_{n=-\infty}^{\infty} V_{n}C_{m-n},</script> where <script type="math/tex">V_n</script> are the Fourier components of the potential defined <a href="#physical-meaning-of-w">above</a>. Find an expression for <script type="math/tex">\varepsilon_m</script>. <em><strong>NB:</strong> This equation is also known as the central equation (in 1D).</em></p>
-<details class="hint"><summary>Hint</summary><ul>
+<details class="hint">
+<summary>Hint</summary>
+<ul>
 <li>Apply <script type="math/tex">\left<\phi_m\right|</script> to the Schrödinger equation.</li>
 <li>To evaluate <script type="math/tex">\left<\phi_m\right| \hat{H} \left| \phi_n\right></script>, it may be helpful to separate the kinetic energy and potential energy of the Hamiltonian.</li>
 </ul>
@@ -1156,7 +1163,9 @@ which shows that each Bloch wave can be written as a sum over plane waves that d
 </li>
 <li>
 <p>Why is the dispersion relation only affected near <script type="math/tex">k=0</script> and at the edge of the Brillouin zone (see also figures <a href="#repeated-vs-reduced-vs-extended-brillouin-zone">above</a>)?</p>
-<details class="hint"><summary>Hint</summary><p>To answer this question, only consider consider two free electron wavefunctions in the Hamiltonian and ignore all the others. Between what two of free electron wavefunctions does the coupling give significant contribution to the energy levels of the free electron wavefunctions?</p>
+<details class="hint">
+<summary>Hint</summary>
+<p>To answer this question, only consider consider two free electron wavefunctions in the Hamiltonian and ignore all the others. Between what two of free electron wavefunctions does the coupling give significant contribution to the energy levels of the free electron wavefunctions?</p>
 </details>
 </li>
 </ol>
@@ -1172,7 +1181,9 @@ which shows that each Bloch wave can be written as a sum over plane waves that d
 <li>
 <p>We first find the band structure using the nearly free electron model. To this end, we consider the effect of the potential on the free electron wavefunctions given by <script type="math/tex">\psi_1(x) \propto e^{ikx}</script> and <script type="math/tex">\psi_2(x) \propto e^{i[k-2\pi/a]x}</script> on the interval <script type="math/tex">k=[0,\pi/a]</script>. Derive a dispersion relation of the lower band using the Schödinger equation and the trial eigenstate <script type="math/tex; mode=display">\Psi(x) = \alpha \psi_1(x) + \beta \psi_2(x).</script>
 </p>
-<details class="hint"><summary>Hint</summary><p>Using the Schrödinger equation and the trial eigenstate, first derive a 2×2 eigenvalue problem given by <script type="math/tex; mode=display">E \begin{pmatrix}\alpha \\ \beta\end{pmatrix} = \begin{pmatrix}\varepsilon_0(k)+V_0 & V_1^* \\ V_1 & \varepsilon_0(k - 2\pi/a) + V_0\end{pmatrix} \begin{pmatrix}\alpha \\ \beta\end{pmatrix}.</script> What are <script type="math/tex">\varepsilon_0(k)</script>, <script type="math/tex">V_0</script> and <script type="math/tex">V_1</script>?</p>
+<details class="hint">
+<summary>Hint</summary>
+<p>Using the Schrödinger equation and the trial eigenstate, first derive a 2×2 eigenvalue problem given by <script type="math/tex; mode=display">E \begin{pmatrix}\alpha \\ \beta\end{pmatrix} = \begin{pmatrix}\varepsilon_0(k)+V_0 & V_1^* \\ V_1 & \varepsilon_0(k - 2\pi/a) + V_0\end{pmatrix} \begin{pmatrix}\alpha \\ \beta\end{pmatrix}.</script> What are <script type="math/tex">\varepsilon_0(k)</script>, <script type="math/tex">V_0</script> and <script type="math/tex">V_1</script>?</p>
 </details>
 </li>
 <li>
@@ -1275,7 +1286,7 @@ which shows that each Bloch wave can be written as a sum over plane waves that d
     <div class="md-dialog" data-md-component="dialog">
       <div class="md-dialog__inner md-typeset"></div>
     </div>
-    <script id="__config" type="application/json">{"base": "../..", "features": ["navigation.top", "navigation.sections", "search.highlight"], "translations": {"clipboard.copy": "Copy to clipboard", "clipboard.copied": "Copied to clipboard", "search.config.lang": "en", "search.config.pipeline": "trimmer, stopWordFilter", "search.config.separator": "[\\s\\-]+", "search.placeholder": "Search", "search.result.placeholder": "Type to start searching", "search.result.none": "No matching documents", "search.result.one": "1 matching document", "search.result.other": "# matching documents", "search.result.more.one": "1 more on this page", "search.result.more.other": "# more on this page", "search.result.term.missing": "Missing", "select.version.title": "Select version"}, "search": "../../assets/javascripts/workers/search.709b4209.min.js", "version": null}</script>
+    <script id="__config" type="application/json">{"base": "../..", "features": ["navigation.top", "navigation.sections", "search.highlight"], "search": "../../assets/javascripts/workers/search.709b4209.min.js", "translations": {"clipboard.copied": "Copied to clipboard", "clipboard.copy": "Copy to clipboard", "search.config.lang": "en", "search.config.pipeline": "trimmer, stopWordFilter", "search.config.separator": "[\\s\\-]+", "search.placeholder": "Search", "search.result.more.one": "1 more on this page", "search.result.more.other": "# more on this page", "search.result.none": "No matching documents", "search.result.one": "1 matching document", "search.result.other": "# matching documents", "search.result.placeholder": "Type to start searching", "search.result.term.missing": "Missing", "select.version.title": "Select version"}, "version": null}</script>
     
     
       <script src="../../assets/javascripts/bundle.2b46852b.min.js"></script>
