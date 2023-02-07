@@ -1,10 +1,10 @@
-# Welcome to the home of solid-state physics
+# Welcome to the home of quantum mechanics
 
-This site exists to enhance the distribution of course information and content for the solid-state physics component of [KYA322: Statistical and solid-state physics](https://www.utas.edu.au/courses/cse/units/kya322-statistical-physics-and-solid-state-physics). All official communication will be though [MyLO](https://mylo.utas.edu.au/)[^1].
+This site exists to enhance the distribution of course information and content for the measurement component of [KYA321: Quantum Mechanics](https://www.utas.edu.au/courses/cse/units/kya321-quantum-mechanics). All official communication will be though [MyLO](https://mylo.utas.edu.au/)[^1].
 
 <figure>
-  <img src="images/Crocoite.jpg" />
-  <figcaption>A <a href="https://en.wikipedia.org/wiki/Crocoite">Crocoite</a> sample found near <a href="https://www.openstreetmap.org/node/4294351400">Dundas</a> in western Tasmania. As part of this course, we will investigate the what happens when atoms are no longer considered in isolation, and see that systems of interacting particles can have some pretty incredible outcomes</figcaption>
+  <img src="images/header.jpg" />
+  <figcaption>An <a href="https://en.wikipedia.org/wiki/Quantum_entanglement">entangled</a> photon source for satellite-based <a href="https://en.wikipedia.org/wiki/Quantum_information">quantum communication</a>, developed by the <a href="https://www.iof.fraunhofer.de/en.html">Fraunhofer Institute for Applied Optics and Precision Engineering</a>. As part of this course, we will investigate what it means to make a measurement of a quantum system. We shall develop tools, techniques, and machinery for modelling measurements, and look at real-world quantum systems and their applications. </figcaption>
 </figure>
 
 ---

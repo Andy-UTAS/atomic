@@ -319,11 +319,19 @@ This question focuses on band structure and its applications
 
     1. Roughly sketch the first Brillouin zone for the lattice (only the shape is important), and indicate the Fermi sea in the absence of a periodic potential
 
-        **Still needs to be finished**, but square lattice will have square Brillouin zone, and for a monovalent atom, this means one electron per unit cell and thus a half filled Brillouin zone. Thus, a circle inside a square which occupies $50\%$ of the area will be the occupied states, and the Fermi sea is the interior of this circle.
+        The reciprocal lattice of a square lattice will also be a square lattice, and the Wigner-Seitz cell of a square lattice is a square. This question is very qualitative, but is one of the most important concepts in this course, hence its appearance here.
+
+        Rather than just providing a sketch, this is a full calculation and so obviously beyond what would be expected. The dispersion relation - a surface in 2D - is shown, along with a contour plot of this surface. As each $k$ state can hold 2 electrons, $50\%$ of the Brillouin zone will be filled (in this case area) with the lowest states being preferentially filled. The free-electron dispersion relationship is a parabaloid, and hence we get a circular Fermi surface, with the Fermi sea being the interior of this circle.
+
+        ![](../images/PE-free.svg)
 
     2. Repeat the process above for both a weak and strong periodic potential
 
-        **Still needs to be finished**, but for with a weak periodic potential (the nearly-free electron model) there will be some band bending and thus the points that are closest to the BZ boundary will be pulled a bit towards the boundary, and for a strong periodic potential, it will have the same shape as the BZ, but only occupy $50\%$ of the area (square in a square)
+        Shown below is the dispersion surface in the tight-binding model (which you can think of as a _very_ strong periodic potential), which in contrast to the Fermi circle of a free-electron, makes a Fermi square:
+
+        ![](../images/PE-tightbinding.svg)
+
+        A weaker periodic potential would be in-between these extremes, a circle with the points closest to the Brillouin zone boundaries filled more due to band bending.
 
 3. Barium ($Z = 56$) is a divalent atom, and the Fermi surface is shown below:
 ![](../images/PE-Ba.jpg){: .center}

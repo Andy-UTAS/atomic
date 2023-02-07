@@ -8,11 +8,10 @@
       
       
       
-      
         <link rel="canonical" href="https://andy-utas.github.io/4-crystal/4-1-realspace/">
       
       <link rel="icon" href="../../logo.png">
-      <meta name="generator" content="mkdocs-1.2.2, mkdocs-material-7.2.2">
+      <meta name="generator" content="mkdocs-1.4.2, mkdocs-material-8.5.10">
     
     
       
@@ -20,32 +19,35 @@
       
     
     
-      <link rel="stylesheet" href="../../assets/stylesheets/main.1118c9be.min.css">
+      <link rel="stylesheet" href="../../assets/stylesheets/main.472b142f.min.css">
       
         
-        <link rel="stylesheet" href="../../assets/stylesheets/palette.ba0d045b.min.css">
+        <link rel="stylesheet" href="../../assets/stylesheets/palette.08040f6c.min.css">
         
       
+      
+
     
     
     
       
+        
         
         <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-        <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto:300,400,400i,700%7CRoboto+Mono&display=fallback">
-        <style>:root{--md-text-font-family:"Roboto";--md-code-font-family:"Roboto Mono"}</style>
+        <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto:300,300i,400,400i,700,700i%7CRoboto+Mono:400,400i,700,700i&display=fallback">
+        <style>:root{--md-text-font:"Roboto";--md-code-font:"Roboto Mono"}</style>
       
-    
     
     
       <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.8.1/css/all.css">
     
       <link rel="stylesheet" href="../../stylesheets/extra.css">
     
+    <script>__md_scope=new URL("../..",location),__md_hash=e=>[...e].reduce((e,_)=>(e<<5)-e+_.charCodeAt(0),0),__md_get=(e,_=localStorage,t=__md_scope)=>JSON.parse(_.getItem(t.pathname+"."+e)),__md_set=(e,_,t=localStorage,a=__md_scope)=>{try{t.setItem(a.pathname+"."+e,JSON.stringify(_))}catch(e){}}</script>
     
       
 
-
+    
     
     
   </head>
@@ -61,9 +63,8 @@
     <body dir="ltr" data-md-color-scheme="default" data-md-color-primary="red" data-md-color-accent="orange">
   
     
-    <script>function __prefix(e){return new URL("../..",location).pathname+"."+e}function __get(e,t=localStorage){return JSON.parse(t.getItem(__prefix(e)))}</script>
     
-      <script>var palette=__get("__palette");if(null!==palette&&"object"==typeof palette.color)for(var key in palette.color)document.body.setAttribute("data-md-color-"+key,palette.color[key])</script>
+      <script>var palette=__md_get("__palette");if(palette&&"object"==typeof palette.color)for(var key of Object.keys(palette.color))document.body.setAttribute("data-md-color-"+key,palette.color[key])</script>
     
     <input class="md-toggle" data-md-toggle="drawer" type="checkbox" id="__drawer" autocomplete="off">
     <input class="md-toggle" data-md-toggle="search" type="checkbox" id="__search" autocomplete="off">
@@ -80,7 +81,10 @@
       
     </div>
     
-      <header class="md-header" data-md-component="header">
+    
+      
+
+<header class="md-header" data-md-component="header">
   <nav class="md-header__inner md-grid" aria-label="Header">
     <a href="../.." title="Solid-state physics" class="md-header__button md-logo" aria-label="Solid-state physics" data-md-component="logo">
       
@@ -88,7 +92,7 @@
 
     </a>
     <label class="md-header__button md-icon" for="__drawer">
-      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M3 6h18v2H3V6m0 5h18v2H3v-2m0 5h18v2H3v-2z"/></svg>
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M3 6h18v2H3V6m0 5h18v2H3v-2m0 5h18v2H3v-2Z"/></svg>
     </label>
     <div class="md-header__title" data-md-component="header-title">
       <div class="md-header__ellipsis">
@@ -111,19 +115,21 @@
         
           
           
+          
           <input class="md-option" data-md-color-media="(prefers-color-scheme: light)" data-md-color-scheme="default" data-md-color-primary="red" data-md-color-accent="orange"  aria-label="Switch to dark mode"  type="radio" name="__palette" id="__palette_1">
           
             <label class="md-header__button md-icon" title="Switch to dark mode" for="__palette_2" hidden>
-              <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M7 10a2 2 0 0 1 2 2 2 2 0 0 1-2 2 2 2 0 0 1-2-2 2 2 0 0 1 2-2m10-3a5 5 0 0 1 5 5 5 5 0 0 1-5 5H7a5 5 0 0 1-5-5 5 5 0 0 1 5-5h10M7 9a3 3 0 0 0-3 3 3 3 0 0 0 3 3h10a3 3 0 0 0 3-3 3 3 0 0 0-3-3H7z"/></svg>
+              <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M17 6H7c-3.31 0-6 2.69-6 6s2.69 6 6 6h10c3.31 0 6-2.69 6-6s-2.69-6-6-6zm0 10H7c-2.21 0-4-1.79-4-4s1.79-4 4-4h10c2.21 0 4 1.79 4 4s-1.79 4-4 4zM7 9c-1.66 0-3 1.34-3 3s1.34 3 3 3 3-1.34 3-3-1.34-3-3-3z"/></svg>
             </label>
           
         
           
           
+          
           <input class="md-option" data-md-color-media="(prefers-color-scheme: dark)" data-md-color-scheme="slate" data-md-color-primary="red" data-md-color-accent="orange"  aria-label="Switch to light mode"  type="radio" name="__palette" id="__palette_2">
           
             <label class="md-header__button md-icon" title="Switch to light mode" for="__palette_1" hidden>
-              <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M17 7H7a5 5 0 0 0-5 5 5 5 0 0 0 5 5h10a5 5 0 0 0 5-5 5 5 0 0 0-5-5m0 8a3 3 0 0 1-3-3 3 3 0 0 1 3-3 3 3 0 0 1 3 3 3 3 0 0 1-3 3z"/></svg>
+              <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M17 7H7a5 5 0 0 0-5 5 5 5 0 0 0 5 5h10a5 5 0 0 0 5-5 5 5 0 0 0-5-5m0 8a3 3 0 0 1-3-3 3 3 0 0 1 3-3 3 3 0 0 1 3 3 3 3 0 0 1-3 3Z"/></svg>
             </label>
           
         
@@ -132,22 +138,21 @@
     
     
       <label class="md-header__button md-icon" for="__search">
-        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.516 6.516 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5z"/></svg>
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.516 6.516 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5Z"/></svg>
       </label>
-      
-<div class="md-search" data-md-component="search" role="dialog">
+      <div class="md-search" data-md-component="search" role="dialog">
   <label class="md-search__overlay" for="__search"></label>
   <div class="md-search__inner" role="search">
     <form class="md-search__form" name="search">
       <input type="text" class="md-search__input" name="query" aria-label="Search" placeholder="Search" autocapitalize="off" autocorrect="off" autocomplete="off" spellcheck="false" data-md-component="search-query" required>
       <label class="md-search__icon md-icon" for="__search">
-        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.516 6.516 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5z"/></svg>
-        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11h12z"/></svg>
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.516 6.516 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5Z"/></svg>
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11h12Z"/></svg>
       </label>
       <nav class="md-search__options" aria-label="Search">
         
-        <button type="reset" class="md-search__icon md-icon" aria-label="Clear" tabindex="-1">
-          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M19 6.41 17.59 5 12 10.59 6.41 5 5 6.41 10.59 12 5 17.59 6.41 19 12 13.41 17.59 19 19 17.59 13.41 12 19 6.41z"/></svg>
+        <button type="reset" class="md-search__icon md-icon" title="Clear" aria-label="Clear" tabindex="-1">
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M19 6.41 17.59 5 12 10.59 6.41 5 5 6.41 10.59 12 5 17.59 6.41 19 12 13.41 17.59 19 19 17.59 13.41 12 19 6.41Z"/></svg>
         </button>
       </nav>
       
@@ -167,11 +172,10 @@
     
     
       <div class="md-header__source">
-        
-<a href="https://github.com/Andy-UTAS/andy-utas.github.io/" title="Go to repository" class="md-source" data-md-component="source">
+        <a href="https://github.com/Andy-UTAS/andy-utas.github.io" title="Go to repository" class="md-source" data-md-component="source">
   <div class="md-source__icon md-icon">
     
-    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512"><path d="M439.55 236.05 244 40.45a28.87 28.87 0 0 0-40.81 0l-40.66 40.63 51.52 51.52c27.06-9.14 52.68 16.77 43.39 43.68l49.66 49.66c34.23-11.8 61.18 31 35.47 56.69-26.49 26.49-70.21-2.87-56-37.34L240.22 199v121.85c25.3 12.54 22.26 41.85 9.08 55a34.34 34.34 0 0 1-48.55 0c-17.57-17.6-11.07-46.91 11.25-56v-123c-20.8-8.51-24.6-30.74-18.64-45L142.57 101 8.45 235.14a28.86 28.86 0 0 0 0 40.81l195.61 195.6a28.86 28.86 0 0 0 40.8 0l194.69-194.69a28.86 28.86 0 0 0 0-40.81z"/></svg>
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512"><!--! Font Awesome Free 6.2.0 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2022 Fonticons, Inc.--><path d="M439.55 236.05 244 40.45a28.87 28.87 0 0 0-40.81 0l-40.66 40.63 51.52 51.52c27.06-9.14 52.68 16.77 43.39 43.68l49.66 49.66c34.23-11.8 61.18 31 35.47 56.69-26.49 26.49-70.21-2.87-56-37.34L240.22 199v121.85c25.3 12.54 22.26 41.85 9.08 55a34.34 34.34 0 0 1-48.55 0c-17.57-17.6-11.07-46.91 11.25-56v-123c-20.8-8.51-24.6-30.74-18.64-45L142.57 101 8.45 235.14a28.86 28.86 0 0 0 0 40.81l195.61 195.6a28.86 28.86 0 0 0 40.8 0l194.69-194.69a28.86 28.86 0 0 0 0-40.81z"/></svg>
   </div>
   <div class="md-source__repository">
     andy-utas.github.io
@@ -180,11 +184,14 @@
       </div>
     
   </nav>
+  
 </header>
     
     <div class="md-container" data-md-component="container">
       
       
+        
+          
         
       
       <main class="md-main" data-md-component="main">
@@ -209,11 +216,10 @@
   </label>
   
     <div class="md-nav__source">
-      
-<a href="https://github.com/Andy-UTAS/andy-utas.github.io/" title="Go to repository" class="md-source" data-md-component="source">
+      <a href="https://github.com/Andy-UTAS/andy-utas.github.io" title="Go to repository" class="md-source" data-md-component="source">
   <div class="md-source__icon md-icon">
     
-    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512"><path d="M439.55 236.05 244 40.45a28.87 28.87 0 0 0-40.81 0l-40.66 40.63 51.52 51.52c27.06-9.14 52.68 16.77 43.39 43.68l49.66 49.66c34.23-11.8 61.18 31 35.47 56.69-26.49 26.49-70.21-2.87-56-37.34L240.22 199v121.85c25.3 12.54 22.26 41.85 9.08 55a34.34 34.34 0 0 1-48.55 0c-17.57-17.6-11.07-46.91 11.25-56v-123c-20.8-8.51-24.6-30.74-18.64-45L142.57 101 8.45 235.14a28.86 28.86 0 0 0 0 40.81l195.61 195.6a28.86 28.86 0 0 0 40.8 0l194.69-194.69a28.86 28.86 0 0 0 0-40.81z"/></svg>
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512"><!--! Font Awesome Free 6.2.0 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2022 Fonticons, Inc.--><path d="M439.55 236.05 244 40.45a28.87 28.87 0 0 0-40.81 0l-40.66 40.63 51.52 51.52c27.06-9.14 52.68 16.77 43.39 43.68l49.66 49.66c34.23-11.8 61.18 31 35.47 56.69-26.49 26.49-70.21-2.87-56-37.34L240.22 199v121.85c25.3 12.54 22.26 41.85 9.08 55a34.34 34.34 0 0 1-48.55 0c-17.57-17.6-11.07-46.91 11.25-56v-123c-20.8-8.51-24.6-30.74-18.64-45L142.57 101 8.45 235.14a28.86 28.86 0 0 0 0 40.81l195.61 195.6a28.86 28.86 0 0 0 40.8 0l194.69-194.69a28.86 28.86 0 0 0 0-40.81z"/></svg>
   </div>
   <div class="md-source__repository">
     andy-utas.github.io
@@ -268,10 +274,14 @@
       
         <input class="md-nav__toggle md-toggle" data-md-toggle="__nav_3" type="checkbox" id="__nav_3" >
       
-      <label class="md-nav__link" for="__nav_3">
-        1: An introduction to solid-state physics
-        <span class="md-nav__icon md-icon"></span>
-      </label>
+      
+      
+      
+        <label class="md-nav__link" for="__nav_3">
+          1: An introduction to solid-state physics
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
       <nav class="md-nav" aria-label="1: An introduction to solid-state physics" data-md-level="1">
         <label class="md-nav__title" for="__nav_3">
           <span class="md-nav__icon md-icon"></span>
@@ -280,6 +290,7 @@
         <ul class="md-nav__list" data-md-scrollfix>
           
             
+              
   
   
   
@@ -290,8 +301,10 @@
     </li>
   
 
+            
           
             
+              
   
   
   
@@ -302,8 +315,10 @@
     </li>
   
 
+            
           
             
+              
   
   
   
@@ -314,8 +329,10 @@
     </li>
   
 
+            
           
             
+              
   
   
   
@@ -326,6 +343,7 @@
     </li>
   
 
+            
           
         </ul>
       </nav>
@@ -363,10 +381,14 @@
       
         <input class="md-nav__toggle md-toggle" data-md-toggle="__nav_5" type="checkbox" id="__nav_5" >
       
-      <label class="md-nav__link" for="__nav_5">
-        3: One-dimensional solids
-        <span class="md-nav__icon md-icon"></span>
-      </label>
+      
+      
+      
+        <label class="md-nav__link" for="__nav_5">
+          3: One-dimensional solids
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
       <nav class="md-nav" aria-label="3: One-dimensional solids" data-md-level="1">
         <label class="md-nav__title" for="__nav_5">
           <span class="md-nav__icon md-icon"></span>
@@ -375,6 +397,7 @@
         <ul class="md-nav__list" data-md-scrollfix>
           
             
+              
   
   
   
@@ -385,8 +408,10 @@
     </li>
   
 
+            
           
             
+              
   
   
   
@@ -397,8 +422,10 @@
     </li>
   
 
+            
           
             
+              
   
   
   
@@ -409,6 +436,7 @@
     </li>
   
 
+            
           
         </ul>
       </nav>
@@ -433,10 +461,14 @@
       
         <input class="md-nav__toggle md-toggle" data-md-toggle="__nav_6" type="checkbox" id="__nav_6" checked>
       
-      <label class="md-nav__link" for="__nav_6">
-        4: Crystallography
-        <span class="md-nav__icon md-icon"></span>
-      </label>
+      
+      
+      
+        <label class="md-nav__link" for="__nav_6">
+          4: Crystallography
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
       <nav class="md-nav" aria-label="4: Crystallography" data-md-level="1">
         <label class="md-nav__title" for="__nav_6">
           <span class="md-nav__icon md-icon"></span>
@@ -445,6 +477,7 @@
         <ul class="md-nav__list" data-md-scrollfix>
           
             
+              
   
   
     
@@ -468,6 +501,7 @@
       </a>
       
         
+
 <nav class="md-nav md-nav--secondary" aria-label="Table of contents">
   
   
@@ -658,8 +692,10 @@
     </li>
   
 
+            
           
             
+              
   
   
   
@@ -670,8 +706,10 @@
     </li>
   
 
+            
           
             
+              
   
   
   
@@ -682,6 +720,7 @@
     </li>
   
 
+            
           
         </ul>
       </nav>
@@ -704,10 +743,14 @@
       
         <input class="md-nav__toggle md-toggle" data-md-toggle="__nav_7" type="checkbox" id="__nav_7" >
       
-      <label class="md-nav__link" for="__nav_7">
-        5: Electrons in solids
-        <span class="md-nav__icon md-icon"></span>
-      </label>
+      
+      
+      
+        <label class="md-nav__link" for="__nav_7">
+          5: Electrons in solids
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
       <nav class="md-nav" aria-label="5: Electrons in solids" data-md-level="1">
         <label class="md-nav__title" for="__nav_7">
           <span class="md-nav__icon md-icon"></span>
@@ -716,6 +759,7 @@
         <ul class="md-nav__list" data-md-scrollfix>
           
             
+              
   
   
   
@@ -726,8 +770,10 @@
     </li>
   
 
+            
           
             
+              
   
   
   
@@ -738,6 +784,7 @@
     </li>
   
 
+            
           
         </ul>
       </nav>
@@ -760,10 +807,14 @@
       
         <input class="md-nav__toggle md-toggle" data-md-toggle="__nav_8" type="checkbox" id="__nav_8" >
       
-      <label class="md-nav__link" for="__nav_8">
-        6: Semiconductors
-        <span class="md-nav__icon md-icon"></span>
-      </label>
+      
+      
+      
+        <label class="md-nav__link" for="__nav_8">
+          6: Semiconductors
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
       <nav class="md-nav" aria-label="6: Semiconductors" data-md-level="1">
         <label class="md-nav__title" for="__nav_8">
           <span class="md-nav__icon md-icon"></span>
@@ -772,6 +823,7 @@
         <ul class="md-nav__list" data-md-scrollfix>
           
             
+              
   
   
   
@@ -782,8 +834,10 @@
     </li>
   
 
+            
           
             
+              
   
   
   
@@ -794,6 +848,7 @@
     </li>
   
 
+            
           
         </ul>
       </nav>
@@ -816,10 +871,14 @@
       
         <input class="md-nav__toggle md-toggle" data-md-toggle="__nav_9" type="checkbox" id="__nav_9" >
       
-      <label class="md-nav__link" for="__nav_9">
-        Solutions
-        <span class="md-nav__icon md-icon"></span>
-      </label>
+      
+      
+      
+        <label class="md-nav__link" for="__nav_9">
+          Solutions
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
       <nav class="md-nav" aria-label="Solutions" data-md-level="1">
         <label class="md-nav__title" for="__nav_9">
           <span class="md-nav__icon md-icon"></span>
@@ -828,6 +887,7 @@
         <ul class="md-nav__list" data-md-scrollfix>
           
             
+              
   
   
   
@@ -838,8 +898,10 @@
     </li>
   
 
+            
           
             
+              
   
   
   
@@ -850,8 +912,10 @@
     </li>
   
 
+            
           
             
+              
   
   
   
@@ -862,6 +926,7 @@
     </li>
   
 
+            
           
         </ul>
       </nav>
@@ -896,6 +961,7 @@
                 <div class="md-sidebar__scrollwrap">
                   <div class="md-sidebar__inner">
                     
+
 <nav class="md-nav md-nav--secondary" aria-label="Table of contents">
   
   
@@ -1087,16 +1153,14 @@
               </div>
             
           
-          <div class="md-content" data-md-component="content">
-            <article class="md-content__inner md-typeset">
-              
+          
+            <div class="md-content" data-md-component="content">
+              <article class="md-content__inner md-typeset">
                 
-                  <a href="https://github.com/Andy-UTAS/andy-utas.github.io/edit/master/docs/4-crystal/4-1-realspace.md" title="Edit this page" class="md-content__button md-icon">
-                    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20.71 7.04c.39-.39.39-1.04 0-1.41l-2.34-2.34c-.37-.39-1.02-.39-1.41 0l-1.84 1.83 3.75 3.75M3 17.25V21h3.75L17.81 9.93l-3.75-3.75L3 17.25z"/></svg>
-                  </a>
-                
-                
-                <h1 id="crystal-structure">Crystal structure<a class="headerlink" href="#crystal-structure" title="Permanent link">&para;</a></h1>
+                  
+
+
+<h1 id="crystal-structure">Crystal structure<a class="headerlink" href="#crystal-structure" title="Permanent link">&para;</a></h1>
 <p>Learn the <em>real</em> secrets of crystals.</p>
 <h2 id="introduction">Introduction<a class="headerlink" href="#introduction" title="Permanent link">&para;</a></h2>
 <p><img alt="" src="../images/4-1-crystalheader.jpg" /></p>
@@ -1171,7 +1235,9 @@ iii) A lattice is an infinite set of vectors where the addition of any two vecto
   <img src="../images/4-1-graphene-single.png">
 </figure>
 
-<details class="question"><summary>4.1.1: Is the honeycomb structure a lattice?</summary><!-- No, despite seeming like it should be! It is most easily seen as the environment around all points should look the same, and if we look at the point at the tip of a given hexagon, and the point to either the left or right of this point, it is clear that they are not the same! -->
+<details class="question">
+<summary>4.1.1: Is the honeycomb structure a lattice?</summary>
+<!-- No, despite seeming like it should be! It is most easily seen as the environment around all points should look the same, and if we look at the point at the tip of a given hexagon, and the point to either the left or right of this point, it is clear that they are not the same! -->
 </details>
 <p>A vector connecting any two lattice points is called a <strong>lattice vector</strong>. Supposing that we choose two linearly independent lattice vectors <script type="math/tex">\mathbf{a}_1</script> and <script type="math/tex">\mathbf{a}_2</script>, these two lattice vectors span an area which is called a <strong>unit cell</strong>:</p>
 <div class="admonition info">
@@ -1184,7 +1250,9 @@ iii) A lattice is an infinite set of vectors where the addition of any two vecto
 <p>The unit cell, which was conveniently chosen in panel <code>B</code>, defines a primitive unit cell. At first glance it might seem that there are four lattice point inside the primitive unit cell instead of one; however, each point only occupies the lattice by one quarter. Therefore, there is exactly <script type="math/tex">4 \times \frac{1}{4} = 1</script> lattice point in the unit cell and is thus it is a primitive unit cell!</p>
 <p>As previously mentioned, the choice of the primitive lattice vectors is <em>not</em> unique. For example, we could have easily chosen another set of lattice vectors - as shown in panel <code>C</code> - which produce primitive unit cells.
 Both choices are primitive unit cells and thus make it possible to map out the entire lattice!</p>
-<details class="question"><summary>4.2.2: Looking the primitive cell in panel <code>C</code>, how much does each lattice point "occupy" the unit cell?</summary><!-- Two points occupy it for one eight and two points for three eights. -->
+<details class="question">
+<summary>4.2.2: Looking the primitive cell in panel <code>C</code>, how much does each lattice point "occupy" the unit cell?</summary>
+<!-- Two points occupy it for one eight and two points for three eights. -->
 </details>
 <h3 id="periodic-structures">Periodic structures.<a class="headerlink" href="#periodic-structures" title="Permanent link">&para;</a></h3>
 <p>Equipped with the basic definitions of a lattice, (primitive) lattice vectors, and (primitive) unit cells, we can now apply our knowledge to an actual periodic structure.
@@ -1231,7 +1299,9 @@ In the image below we show a periodic structure (panel <code>A</code>).</p>
 </p>
 <p>In our case, the basis is <code>hourglass</code> <script type="math/tex">(0,0)</script> which is specifying the location of the <code>hourglass</code> in the unit cell as <script type="math/tex">0 \mathbf{a}_1 +0 \mathbf{a}_2</script>. Whilst the is slightly contrived, we shall see its application to physical systems soon enough, and there we would simply replace <code>hourglass</code> with the relevant atom, for example, <script type="math/tex">\mathrm{C}(f_1, f_2)</script> for carbon in the unit cell.</p>
 <p>Similar to primitive lattice vectors, the choice of a lattice <strong>not</strong> unique. For example, shown in panel <code>C</code>, the same periodic structure is shown, but with the lattice translated by <script type="math/tex">1/2 \mathbf{a}_1</script>. The choice still fulfils the definition of a lattice: the environment of each lattice point is the same, with the only difference being that the lattice is translated and thus we keep using the same primitive lattice vectors.</p>
-<details class="question"><summary>4.2.3: What is the basis for translated lattice as shown in panel <code>C</code>? What are the positions of each of the hourglasses in the lattice?</summary></details>
+<details class="question">
+<summary>4.2.3: What is the basis for translated lattice as shown in panel <code>C</code>? What are the positions of each of the hourglasses in the lattice?</summary>
+</details>
 <!-- The hourglasses are no longer situated on the lattice points, rather they are located at $[1/2,0]$, which is half of $\mathbf{a}_1$, and therefore the basis hourglass $(1/2, 0)$.
 
 The location of the hourglasses throughout the periodic structure with respect to the reference lattice point is then given by
@@ -1260,7 +1330,9 @@ $$
 </p>
 <p>for <script type="math/tex"> n_{1}, n_{2} \in \mathbb{Z}</script>.</p>
 <p>Alternatively, one can think of the crystal structure being made up from two intersecting orthogonal lattices - one centred at <script type="math/tex">[0,0]</script> and another at <script type="math/tex">[1/2,1/2]</script>, each with basis <script type="math/tex">(0,0)</script>.</p>
-<details class="question"><summary>4.2.4: For what type of lattice is the conventional unit cell also primitive?</summary><!-- A simple square lattice -->
+<details class="question">
+<summary>4.2.4: For what type of lattice is the conventional unit cell also primitive?</summary>
+<!-- A simple square lattice -->
 </details>
 <h3 id="recipe-for-analysing-periodic-structures">Recipe for analysing periodic structures<a class="headerlink" href="#recipe-for-analysing-periodic-structures" title="Permanent link">&para;</a></h3>
 <p>When encountering periodic systems in the wild, we can come up with a recipe for analysing them. One such recipe is as follows:</p>
@@ -1316,7 +1388,9 @@ We know that</p>
 <li>Extend the perpendicular bisectors until they intersect</li>
 </ol>
 <p>This procedure will produce the Wigner-Seitz cell, and panel <code>E</code> in the graphene example shows the Wigner-Seitz cell for graphene. We note that the Wigner-Seitz cell only contains a single lattice point in the middle, but it does however contain other atoms, which must be specified in the basis.</p>
-<details class="question"><summary>How many carbon atoms are inside the Wigner-Seitz cell of graphene?</summary><p>There are two methods to calculate this. We either translate the lattice and thus the Wigner-Seitz cell a bit and observe that there are two carbon atoms inside the cell.
+<details class="question">
+<summary>How many carbon atoms are inside the Wigner-Seitz cell of graphene?</summary>
+<p>There are two methods to calculate this. We either translate the lattice and thus the Wigner-Seitz cell a bit and observe that there are two carbon atoms inside the cell.
 Another way to calculate the number of atoms inside the cell is by realizing that there is an atom at the lattice point itself and there is 1/3'rd of an atom at three corners of the cell.
 This results in <script type="math/tex">1+3\times 1/3 = 2</script> atoms being inside the unit cell.</p>
 </details>
@@ -1345,7 +1419,9 @@ This results in <script type="math/tex">1+3\times 1/3 = 2</script> atoms being i
 </div>
 </div>
 </div>
-<details class="question"><summary>4.2.5: How many lattice points are there in the unit cell for the simple cubic lattice?</summary><!-- Each corner of the cell contains a lattice point, but only one eighth of each lattice point is in the cell, thus there is a single lattice point in the cell and it is therefore a primitive unit cell. -->
+<details class="question">
+<summary>4.2.5: How many lattice points are there in the unit cell for the simple cubic lattice?</summary>
+<!-- Each corner of the cell contains a lattice point, but only one eighth of each lattice point is in the cell, thus there is a single lattice point in the cell and it is therefore a primitive unit cell. -->
 </details>
 <p>The only mineral which has a simple cubic lattice structure is a metallic allotrope of Polonium, but given the nature of polonium, there are no pretty pictures to show. Rather, shown below is the mineral pyrite (iron (II) disulphide), which at the macroscale has a very satisfying cubic structure:</p>
 <figure>
@@ -1358,7 +1434,9 @@ This results in <script type="math/tex">1+3\times 1/3 = 2</script> atoms being i
 <object type="text/html" data="../images/4-1-fcc.html"  frameborder="0" width=650 height=650 class=center></object>
 
 <p>The image above (panel <code>A</code>) shows a simple cubic lattice. Now, perhaps the simplest adjustment one can imagine making the simple cubic structure is the addition of a lattice point to the centre of the simple cubic cell, which is shown in panel <code>B</code>. This structure is known as the  <strong>Body-Centred Cubic</strong> (<strong>BCC</strong>) lattice. In the BCC lattice, there are 8 lattice points on the corners of the cell and one in the centre and thus the conventional unit cell contains <script type="math/tex">8\times 1/8+1 = 2</script> lattice points, and is therefore not primitive.</p>
-<details class="question"><summary>What is the basis of the bcc lattice?</summary><p>
+<details class="question">
+<summary>What is the basis of the bcc lattice?</summary>
+<p>
 <script type="math/tex">(0,0,0)</script> and <script type="math/tex">(1/2, 1/2, 1/2)</script>
 </p>
 </details>
@@ -1411,7 +1489,9 @@ F &= \frac{ N_{\mathrm{atom}} V_{\mathrm{atom}} }{V_{\mathrm{cell}}}\\
 </p>
 <p>or put another way, approximately <script type="math/tex">74 \%</script> of the FCC unit cell is occupied by atoms.</p>
 </div>
-<details class="question"><summary>4.2.5: Can you think of another lattice structure with a higher filling factor?</summary><!-- The packing limit was theorized by Kepler in 1571 – 1630 and proven by Hales _et al._ in 1998!. -->
+<details class="question">
+<summary>4.2.5: Can you think of another lattice structure with a higher filling factor?</summary>
+<!-- The packing limit was theorized by Kepler in 1571 – 1630 and proven by Hales _et al._ in 1998!. -->
 </details>
 <h3 id="other-lattice-structures">Other lattice structures<a class="headerlink" href="#other-lattice-structures" title="Permanent link">&para;</a></h3>
 <p>It should be noted that there exist three dimensional lattices with non-orthogonal axes (and indeed are common), and the method for their description as introduced here is identical, but just a bit messier. Perhaps surprisingly, there are only <a href="https://en.wikipedia.org/wiki/Crystal_system#Bravais%20lattices">14 distinct lattices from which all other lattices from which all other lattices can be constructed</a>!</p>
@@ -1482,47 +1562,45 @@ F &= \frac{ N_{\mathrm{atom}} V_{\mathrm{atom}} }{V_{\mathrm{cell}}}\\
 </li>
 </ol>
 </div>
-                
-                  
-                    
 
-<hr>
-<div class="md-source-date">
+  <hr>
+<div class="md-source-file">
   <small>
     
-      Last update: <span class="git-revision-date-localized-plugin git-revision-date-localized-plugin-date">September 26, 2021</span>
+      Last update:
+      <span class="git-revision-date-localized-plugin git-revision-date-localized-plugin-date">September 26, 2021</span>
       
     
   </small>
 </div>
-                  
-                
-              
-              
-                
 
 
-              
-            </article>
-          </div>
+
+
+
+                
+              </article>
+            </div>
+          
+          
         </div>
         
-          <a href="#" class="md-top md-icon" data-md-component="top" data-md-state="hidden">
-            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M13 20h-2V8l-5.5 5.5-1.42-1.42L12 4.16l7.92 7.92-1.42 1.42L13 8v12z"/></svg>
+          <a href="#" class="md-top md-icon" data-md-component="top" hidden>
+            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M13 20h-2V8l-5.5 5.5-1.42-1.42L12 4.16l7.92 7.92-1.42 1.42L13 8v12Z"/></svg>
             Back to top
           </a>
         
       </main>
       
-        
-<footer class="md-footer">
+        <footer class="md-footer">
   
-    <nav class="md-footer__inner md-grid" aria-label="Footer">
+    
+    <nav class="md-footer__inner md-grid" aria-label="Footer" >
       
         
         <a href="../../3-1d/3-3-tightbinding/" class="md-footer__link md-footer__link--prev" aria-label="Previous: 3.3 - The tight binding model" rel="prev">
           <div class="md-footer__button md-icon">
-            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11h12z"/></svg>
+            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11h12Z"/></svg>
           </div>
           <div class="md-footer__title">
             <div class="md-ellipsis">
@@ -1546,7 +1624,7 @@ F &= \frac{ N_{\mathrm{atom}} V_{\mathrm{atom}} }{V_{\mathrm{cell}}}\\
             </div>
           </div>
           <div class="md-footer__button md-icon">
-            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M4 11v2h12l-5.5 5.5 1.42 1.42L19.84 12l-7.92-7.92L10.5 5.5 16 11H4z"/></svg>
+            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M4 11v2h12l-5.5 5.5 1.42 1.42L19.84 12l-7.92-7.92L10.5 5.5 16 11H4Z"/></svg>
           </div>
         </a>
       
@@ -1554,18 +1632,19 @@ F &= \frac{ N_{\mathrm{atom}} V_{\mathrm{atom}} }{V_{\mathrm{cell}}}\\
   
   <div class="md-footer-meta md-typeset">
     <div class="md-footer-meta__inner md-grid">
-      <div class="md-footer-copyright">
-        
-          <div class="md-footer-copyright__highlight">
-            Content prepared and curated by <a href="mailto:andrew.mcculloch@utas.edu.au">A J McCulloch</a>
-          </div>
-        
-        Made with
-        <a href="https://squidfunk.github.io/mkdocs-material/" target="_blank" rel="noopener">
-          Material for MkDocs
-        </a>
-        
-      </div>
+      <div class="md-copyright">
+  
+    <div class="md-copyright__highlight">
+      Content prepared and curated by <a href="mailto:andrew.mcculloch@utas.edu.au">A J McCulloch</a>
+    </div>
+  
+  
+    Made with
+    <a href="https://squidfunk.github.io/mkdocs-material/" target="_blank" rel="noopener">
+      Material for MkDocs
+    </a>
+  
+</div>
       
     </div>
   </div>
@@ -1575,10 +1654,11 @@ F &= \frac{ N_{\mathrm{atom}} V_{\mathrm{atom}} }{V_{\mathrm{cell}}}\\
     <div class="md-dialog" data-md-component="dialog">
       <div class="md-dialog__inner md-typeset"></div>
     </div>
-    <script id="__config" type="application/json">{"base": "../..", "features": ["navigation.top", "navigation.sections", "search.highlight"], "translations": {"clipboard.copy": "Copy to clipboard", "clipboard.copied": "Copied to clipboard", "search.config.lang": "en", "search.config.pipeline": "trimmer, stopWordFilter", "search.config.separator": "[\\s\\-]+", "search.placeholder": "Search", "search.result.placeholder": "Type to start searching", "search.result.none": "No matching documents", "search.result.one": "1 matching document", "search.result.other": "# matching documents", "search.result.more.one": "1 more on this page", "search.result.more.other": "# more on this page", "search.result.term.missing": "Missing", "select.version.title": "Select version"}, "search": "../../assets/javascripts/workers/search.709b4209.min.js", "version": null}</script>
+    
+    <script id="__config" type="application/json">{"base": "../..", "features": ["navigation.top", "navigation.sections", "search.highlight"], "search": "../../assets/javascripts/workers/search.16e2a7d4.min.js", "translations": {"clipboard.copied": "Copied to clipboard", "clipboard.copy": "Copy to clipboard", "search.config.lang": "en", "search.config.pipeline": "trimmer, stopWordFilter", "search.config.separator": "[\\s\\-]+", "search.placeholder": "Search", "search.result.more.one": "1 more on this page", "search.result.more.other": "# more on this page", "search.result.none": "No matching documents", "search.result.one": "1 matching document", "search.result.other": "# matching documents", "search.result.placeholder": "Type to start searching", "search.result.term.missing": "Missing", "select.version.title": "Select version"}}</script>
     
     
-      <script src="../../assets/javascripts/bundle.2b46852b.min.js"></script>
+      <script src="../../assets/javascripts/bundle.d6c3db9e.min.js"></script>
       
         <script src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.3/MathJax.js?config=TeX-AMS_HTML"></script>
       
