@@ -1,158 +1,98 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
     <url>
-         <loc>https://andy-utas.github.io/</loc>
-         <lastmod>2023-01-10</lastmod>
+         <loc>https://qm.utasphys.cloud.edu.au/</loc>
+         <lastmod>2023-02-24</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
-         <loc>https://andy-utas.github.io/Lost/</loc>
-         <lastmod>2023-01-10</lastmod>
+         <loc>https://qm.utasphys.cloud.edu.au/Lost/</loc>
+         <lastmod>2023-02-24</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
-         <loc>https://andy-utas.github.io/additional/</loc>
-         <lastmod>2023-01-10</lastmod>
+         <loc>https://qm.utasphys.cloud.edu.au/additional/</loc>
+         <lastmod>2023-02-24</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
-         <loc>https://andy-utas.github.io/particulars/</loc>
-         <lastmod>2023-01-10</lastmod>
+         <loc>https://qm.utasphys.cloud.edu.au/particulars/</loc>
+         <lastmod>2023-02-24</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
-         <loc>https://andy-utas.github.io/placeholder/</loc>
-         <lastmod>2023-01-10</lastmod>
+         <loc>https://qm.utasphys.cloud.edu.au/placeholder/</loc>
+         <lastmod>2023-02-24</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
-         <loc>https://andy-utas.github.io/1-intoduction/1-1-specificheatI/</loc>
-         <lastmod>2023-01-10</lastmod>
+         <loc>https://qm.utasphys.cloud.edu.au/00-introduction/0-1-intro/</loc>
+         <lastmod>2023-02-24</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
-         <loc>https://andy-utas.github.io/1-intoduction/1-2-specificheatII/</loc>
-         <lastmod>2023-01-10</lastmod>
+         <loc>https://qm.utasphys.cloud.edu.au/01-stern-gerlach/1-1-exp/</loc>
+         <lastmod>2023-02-24</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
-         <loc>https://andy-utas.github.io/1-intoduction/1-3-emetalsI/</loc>
-         <lastmod>2023-01-10</lastmod>
+         <loc>https://qm.utasphys.cloud.edu.au/01-stern-gerlach/1-2-statevectors/</loc>
+         <lastmod>2023-02-24</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
-         <loc>https://andy-utas.github.io/1-intoduction/1-4-emetalsII/</loc>
-         <lastmod>2023-01-10</lastmod>
+         <loc>https://qm.utasphys.cloud.edu.au/solutions/3-3-solutions/</loc>
+         <lastmod>2023-02-24</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
-         <loc>https://andy-utas.github.io/2-chemistry/2-1-chemistry/</loc>
-         <lastmod>2023-01-10</lastmod>
+         <loc>https://qm.utasphys.cloud.edu.au/solutions/assignment1/</loc>
+         <lastmod>2023-02-24</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
-         <loc>https://andy-utas.github.io/3-1d/3-1-vibrations/</loc>
-         <lastmod>2023-01-10</lastmod>
+         <loc>https://qm.utasphys.cloud.edu.au/solutions/assignment2/</loc>
+         <lastmod>2023-02-24</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
-         <loc>https://andy-utas.github.io/3-1d/3-2-diatomic/</loc>
-         <lastmod>2023-01-10</lastmod>
+         <loc>https://qm.utasphys.cloud.edu.au/solutions/assignment3/</loc>
+         <lastmod>2023-02-24</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
-         <loc>https://andy-utas.github.io/3-1d/3-3-tightbinding/</loc>
-         <lastmod>2023-01-10</lastmod>
+         <loc>https://qm.utasphys.cloud.edu.au/solutions/assignment4/</loc>
+         <lastmod>2023-02-24</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
-         <loc>https://andy-utas.github.io/4-crystal/4-1-realspace/</loc>
-         <lastmod>2023-01-10</lastmod>
+         <loc>https://qm.utasphys.cloud.edu.au/solutions/assignment5/</loc>
+         <lastmod>2023-02-24</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
-         <loc>https://andy-utas.github.io/4-crystal/4-2-kspace/</loc>
-         <lastmod>2023-01-10</lastmod>
+         <loc>https://qm.utasphys.cloud.edu.au/solutions/assignment6/</loc>
+         <lastmod>2023-02-24</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
-         <loc>https://andy-utas.github.io/4-crystal/4-3-scattering/</loc>
-         <lastmod>2023-01-10</lastmod>
+         <loc>https://qm.utasphys.cloud.edu.au/solutions/assignments/</loc>
+         <lastmod>2023-02-24</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
-         <loc>https://andy-utas.github.io/5-solids/5-1-Bloch/</loc>
-         <lastmod>2023-01-10</lastmod>
+         <loc>https://qm.utasphys.cloud.edu.au/solutions/exerscises/</loc>
+         <lastmod>2023-02-24</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
-         <loc>https://andy-utas.github.io/5-solids/5-2-Bands/</loc>
-         <lastmod>2023-01-10</lastmod>
+         <loc>https://qm.utasphys.cloud.edu.au/solutions/practice-exam/</loc>
+         <lastmod>2023-02-24</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
-         <loc>https://andy-utas.github.io/6-semiconductors/6-1-semiconductors/</loc>
-         <lastmod>2023-01-10</lastmod>
-         <changefreq>daily</changefreq>
-    </url>
-    <url>
-         <loc>https://andy-utas.github.io/6-semiconductors/6-2-devices/</loc>
-         <lastmod>2023-01-10</lastmod>
-         <changefreq>daily</changefreq>
-    </url>
-    <url>
-         <loc>https://andy-utas.github.io/solutions/3-3-solutions/</loc>
-         <lastmod>2023-01-10</lastmod>
-         <changefreq>daily</changefreq>
-    </url>
-    <url>
-         <loc>https://andy-utas.github.io/solutions/assignment1/</loc>
-         <lastmod>2023-01-10</lastmod>
-         <changefreq>daily</changefreq>
-    </url>
-    <url>
-         <loc>https://andy-utas.github.io/solutions/assignment2/</loc>
-         <lastmod>2023-01-10</lastmod>
-         <changefreq>daily</changefreq>
-    </url>
-    <url>
-         <loc>https://andy-utas.github.io/solutions/assignment3/</loc>
-         <lastmod>2023-01-10</lastmod>
-         <changefreq>daily</changefreq>
-    </url>
-    <url>
-         <loc>https://andy-utas.github.io/solutions/assignment4/</loc>
-         <lastmod>2023-01-10</lastmod>
-         <changefreq>daily</changefreq>
-    </url>
-    <url>
-         <loc>https://andy-utas.github.io/solutions/assignment5/</loc>
-         <lastmod>2023-01-10</lastmod>
-         <changefreq>daily</changefreq>
-    </url>
-    <url>
-         <loc>https://andy-utas.github.io/solutions/assignment6/</loc>
-         <lastmod>2023-01-10</lastmod>
-         <changefreq>daily</changefreq>
-    </url>
-    <url>
-         <loc>https://andy-utas.github.io/solutions/assignments/</loc>
-         <lastmod>2023-01-10</lastmod>
-         <changefreq>daily</changefreq>
-    </url>
-    <url>
-         <loc>https://andy-utas.github.io/solutions/exerscises/</loc>
-         <lastmod>2023-01-10</lastmod>
-         <changefreq>daily</changefreq>
-    </url>
-    <url>
-         <loc>https://andy-utas.github.io/solutions/practice-exam/</loc>
-         <lastmod>2023-01-10</lastmod>
-         <changefreq>daily</changefreq>
-    </url>
-    <url>
-         <loc>https://andy-utas.github.io/solutions/solutions/</loc>
-         <lastmod>2023-01-10</lastmod>
+         <loc>https://qm.utasphys.cloud.edu.au/solutions/solutions/</loc>
+         <lastmod>2023-02-24</lastmod>
          <changefreq>daily</changefreq>
     </url>
 </urlset>
