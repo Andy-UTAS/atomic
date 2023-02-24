@@ -1,14 +1,17 @@
 site_name: Quantum Mechanics
 site_url: https://qm.utasphys.cloud.edu.au/
-# repo_url: https://github.com/Andy-UTAS/andy-utas.github.io
-# repo_name:  andy-utas.github.io
+repo_url: https://github.com/Andy-UTAS/qm
+repo_name:  Quantum mechanics
 edit_uri: ""
 
 nav:
     - Home: index.md
     - Course particulars: particulars.md
-    # - '1: An introduction to solid-state physics':
-    #   - '1.1 - The specific heat of solids I': 1-intoduction/1-1-specificheatI.md
+    - '0: Introduction':
+      - '0.1 - Quantum mechanics 101': 00-introduction/0-1-intro.md
+    - '1: Stern-Gerlach Experiments':
+      - '1.1 - The experiment': 01-stern-gerlach/1-1-exp.md
+      - '1.2 - State vectors': 01-stern-gerlach/1-2-statevectors.md
     #   - '1.2 - The specific heat of solids II': 1-intoduction/1-2-specificheatII.md
     #   - '1.3 - Electrons in metals I': 1-intoduction/1-3-emetalsI.md
     #   - '1.4 - Electrons in metals II': 1-intoduction/1-4-emetalsII.md
@@ -64,9 +67,10 @@ theme:
   # Removed for teaching  - navigation.tabs # Use tabs rather than sections
     - navigation.sections # Render sections as groups
   # Removed for teaching  - navigation.indexes # Include section index pages
-    - toc.integrate # Integrate the table of contents into the left index
+    # Removed for teaching  - toc.integrate # Integrate the table of contents into the left index
     - search.highlight
     - content.code.annotate
+    - content.action.view # View source code
     - announce.dismiss
   highlightjs: True
   icon:
@@ -101,8 +105,11 @@ markdown_extensions:
   - pymdownx.snippets: # Allows for a global list of acronyms
       auto_append:
         - includes/abbreviations.md
+  - pymdownx.arithmatex: # Enable MathJax
+      generic: true
   - pymdownx.superfences # Enables nesting of code and content in tabs
-  - pymdownx.tabbed # Enabeles content tabs
+  - pymdownx.tabbed: # Enabeles content tabs
+      alternate_style: true
   - pymdownx.caret
   - pymdownx.keys # Rendering of keyboard keys
   - pymdownx.mark
@@ -114,5 +121,10 @@ markdown_extensions:
   - attr_list
   - footnotes
   - meta
+
+extra_javascript:
+  - javascripts/mathjax.js
+  - https://polyfill.io/v3/polyfill.min.js?features=es6
+  - https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js
 
 copyright: Content prepared and curated by <a href="mailto:andrew.mcculloch@utas.edu.au">A J McCulloch</a>

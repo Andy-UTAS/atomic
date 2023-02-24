@@ -62,7 +62,7 @@ The notes are designed to be consumed in concert to the video content, with cert
 
 The video content is hosted on [Echo360](https://echo360.net.au/) and is available only to those enrolled at the University of Tasmania, and is best accessed through the course [MyLO page](https://mylo.utas.edu.au/d2l/le/content/463489/Home).
 
-??? abstract "_Content download_: table of contents"
+<!-- ??? abstract "_Content download_: table of contents"
 
     A brief summary of the topics discussed in the _content download_ sessions is shown below:
 
@@ -88,7 +88,7 @@ The video content is hosted on [Echo360](https://echo360.net.au/) and is availab
 
     !!! note "Timestamps"
 
-        Timestamps detailing the topics discussed for each video are available in the video descriptions.
+        Timestamps detailing the topics discussed for each video are available in the video descriptions. -->
 
 ---
 
@@ -99,19 +99,20 @@ The video content is hosted on [Echo360](https://echo360.net.au/) and is availab
   <figcaption> You are not on this journey alone: there are many avenues available to you to help you on the journey (depending on your inclination to watch fantasy movies in the 2000s, you may or not take comfort in the support Harry Potter received by those around him).</figcaption>
 </figure>
 
-### "_We are all in this together_"
-
 The course materials as consumed through the _content download_ components are necessarily an individual effort, but in all other facets I strongly encourage collaboration. The structure of _content unpacking_ sessions is deliberately geared towards discussion, the exchange of ideas, and collective problem solving moreso than the execution of a solution finding program.  
 
-> there's something in science like the shine of the Patronus Charm, driving back all sorts of darkness and madness ...
+!!! quote
+    > ... there's something in science like the shine of the Patronus Charm, driving back all sorts of darkness and madness ...
+
+    <p align=right> Eliezer Eudkowsky (Less Wrong), Harry Potter and the methods of rationality
 
 ### Computational resources
 
-[<i class="fab fa-python fa-5x"></i>](https://jove2021.cloud.edu.au/){ .md-button .md-button--primary class="text-center" style="margin-left: 45%"}
+[:fontawesome-brands-python:](https://jove2021.cloud.edu.au/){ .md-button .md-button--primary class="text-center" style="margin-left: 45%; font-size:60px"}
 
 As part of the course, it will be expected that you perform calculation and computations. You are welcome to do this in which ever language you prefer, but it is __strongly__ recommended that you use `Python`, and indeed, this is the only language that will be supported. In order to ensure equitable and easy access to Python computing resources, a [Jupyter Notebook](https://jupyter.org/) server has been established, which allows for one to write and execute code via a web browser. The server is named Jove[^2], and access is through the [JupyterHub portal](https://jove2021.cloud.edu.au/). You will need to create an account to start using the server, but beyond this is should be click and go. Should you experience any problems getting this up and running, please see the _computation_ section of [POLUS](https://polus.utasphys.cloud.edu.au/reference/computation/#cloud-usage).
 
-Should you have a machine upon which you already have, or you wish to deploy, your own instance of `Python`, this is perfectly acceptable, but note that you will have to manually import the distributed materials into Jupyter. This can be effectively accomplished using the [clone functionality of GitHub](https://docs.github.com/en/github/creating-cloning-and-archiving-repositories/cloning-a-repository-from-github/cloning-a-repository) as  this is where the [course content](https://github.com/Andy-UTAS/Solid-state) is hosted.
+Should you have a machine upon which you already have, or you wish to deploy, your own instance of `Python`, this is perfectly acceptable, but note that you will have to manually import the distributed materials into Jupyter. This can be effectively accomplished using the [clone functionality of GitHub](https://docs.github.com/en/github/creating-cloning-and-archiving-repositories/cloning-a-repository-from-github/cloning-a-repository) as  this is where the [course content](https://github.com/Andy-UTAS/qm) is hosted.
 
 [^1]: No, I am not a [shill](#fnref:1 "I think we call them influencers now?"), I just really endorse the book. Although David, if you see this, contact me for my bank deets.
 [^2]: For those wondering, [Jove is an alternate name](https://en.wikipedia.org/wiki/Jupiter_(mythology)) for the Roman god Jupiter.
@@ -120,6 +121,6 @@ Should you have a machine upon which you already have, or you wish to deploy, yo
 
 ## Bug catcher
 
-Finally, this is more of a request than anything else, but should you find any errors in the content - this site, the distributed notebooks, the content download sessions, whatever - please let me know so I can correct the content, which is a major boon for everyone involved. Thanks!
+![](images/Spr_RG_Bug_Catcher.png){align=left} Finally, this is more of a request than anything else, but should you find any errors in the content - this site, the distributed notebooks, the content download sessions, whatever - please let me know so I can correct the content, which is a major boon for everyone involved. Thanks!
 
 --8<-- "includes/abbreviations.md"

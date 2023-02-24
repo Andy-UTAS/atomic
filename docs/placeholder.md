@@ -1,16 +1,10 @@
 # Placeholder
 
-!!! failure  "Empty page"
-
-    This page is a placeholder: the treasure you seek is in another castle
-
-!!! danger  "Unbaked"
-
-    The content here is still very much under development. Please come back soon!
+<Some wisecrack>
 
 ## Introduction
 
-![]()
+![](){ title="Hover over image for description" }
 
 <intro content>
 
@@ -19,12 +13,14 @@
     It is assumed that you have familiarity with the following concepts/techniques:
 
 !!! note  "Text reference"
-    The material covered here is discussed in section(s) $\S$ of [The Oxford Solid State Basics](https://global.oup.com/academic/product/the-oxford-solid-state-basics-9780199680771?cc=au&lang=en&)
+
+    The material covered here is discussed in section(s) $\S1.1$ of [Quantum Mechanics, A Paradigms Approach (2nd edition)](https://www.cambridge.org/wf/academic/subjects/physics/quantum-physics-quantum-information-and-quantum-computation/quantum-mechanics-paradigms-approach?format=AR)
 
 !!! info "Computational content"
 
     The Jupyter notebook associated with this section can be accessed by clicking the icon below:
-    [<i class="fab fa-python fa-5x"></i>](#){ .md-button .md-button--primary class="text-center" style="margin-left: 45%"}
+
+    [:fontawesome-brands-python:](https://jove2021.cloud.edu.au/){ .md-button .md-button--primary class="text-center" style="margin-left: 45%; font-size:60px"}
 
 ---
 
@@ -39,5 +35,13 @@ Content
 ## Exercises
 
 ### Preliminary provocations
+
+### Heavy hitters
+
+---
+
+!!! info "Image credits"
+
+    Header image taken from the PhD thesis [Spinor Bose-Einstein condensates in magnetic field gradients](https://bridges.monash.edu/articles/thesis/Spinor_Bose-Einstein_condensates_in_magnetic_field_gradients/4697395/1)
 
 --8<-- "includes/abbreviations.md"
