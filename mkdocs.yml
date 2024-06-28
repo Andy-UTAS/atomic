@@ -1,45 +1,20 @@
-site_name: Quantum Mechanics
-site_url: https://qm.utasphys.cloud.edu.au/
-repo_url: https://github.com/Andy-UTAS/qm
-repo_name:  Quantum mechanics
+site_name: Atomic physics
+site_url: https://atomic.utasphys.cloud.edu.au/
+repo_url: https://github.com/Andy-UTAS/atomic
+repo_name: Atomic physics
 edit_uri: ""
 
 nav:
     - Home: index.md
     - Course particulars: particulars.md
     - '0: Introduction':
-      - '0.1 - Quantum mechanics 101': 00-introduction/0-1-intro.md
-    - '1: Stern-Gerlach Experiments':
-      - '1.1 - The experiment': 01-stern-gerlach/1-1-exp.md
-      - '1.2 - State vectors': 01-stern-gerlach/1-2-statevectors.md
-    #   - '1.2 - The specific heat of solids II': 1-intoduction/1-2-specificheatII.md
-    #   - '1.3 - Electrons in metals I': 1-intoduction/1-3-emetalsI.md
-    #   - '1.4 - Electrons in metals II': 1-intoduction/1-4-emetalsII.md
-    # - '2: Chemistry 101': 2-chemistry/2-1-chemistry.md
-    # - '3: One-dimensional solids':
-    #   - '3.1 - Vibrations': 3-1d/3-1-vibrations.md
-    #   - '3.2 - The diatomic chain': 3-1d/3-2-diatomic.md
-    #   - '3.3 - The tight binding model': 3-1d/3-3-tightbinding.md
-    # - '4: Crystallography':
-    #   - '4.1 - Crystals': 4-crystal/4-1-realspace.md
-    #   - '4.2 - Crystals in reciprocal space': 4-crystal/4-2-kspace.md
-    #   - '4.3 - Scattering': 4-crystal/4-3-scattering.md
-    # - '5: Electrons in solids':
-    #   - '5.1 - The nearly free electron model': 5-solids/5-1-Bloch.md
-    #   - '5.2 - Band structure': 5-solids/5-2-Bands.md
-    # - '6: Semiconductors':
-    #   - '6.1 - Semiconductors 101': 6-semiconductors/6-1-semiconductors.md
-    #   - '6.2 - Doping and devices': 6-semiconductors/6-2-devices.md
-    # - 'Solutions':
-    #   - 'Assignments': solutions/assignments.md
-    #   - 'Exercises': solutions/exercises.md
-    #   - 'Practice Exam': solutions/practice-exam.md
-    # - '7: Magnetism':
-    #   - 'Empty content': placeholder.md
-    # - '8: Cool stuff':
-    #   - 'Topological insulators': placeholder.md
-    #   - 'Superconductors': placeholder.md
-    #   - 'Quantum simulators': placeholder.md
+      - '0.1 - Atomic physics 101': 00-introduction/0-1-intro.md
+    - '1: Foundational atomic physics':
+      - '1.1 - Early atomic physics': 01-foundational/1-1-early.md
+      - '1.2 - The hydrogen atom': 01-foundational/1-2-hydrogen.md
+      - '1.3 - Calculation methods for real systems': 01-foundational/1-3-methods.md
+      - '1.4 - Test': 01-foundational/1-4-test.md
+    - 'test': 1-5-test.md
     - Additional resources: additional.md
 
 theme:
@@ -68,6 +43,7 @@ theme:
     - navigation.sections # Render sections as groups
   # Removed for teaching  - navigation.indexes # Include section index pages
     # Removed for teaching  - toc.integrate # Integrate the table of contents into the left index
+    - navigation.instant
     - search.highlight
     - content.code.annotate
     - content.action.view # View source code
@@ -122,9 +98,22 @@ markdown_extensions:
   - footnotes
   - meta
 
-extra_javascript:
-  - javascripts/mathjax.js
-  - https://polyfill.io/v3/polyfill.min.js?features=es6
-  - https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js
+hooks:
+  - execute.py
 
-copyright: Content prepared and curated by <a href="mailto:andrew.mcculloch@utas.edu.au">A J McCulloch</a>
+extra_javascript:
+  - scripts/katex.js
+  - scripts/plotlyhelper.js
+  - https://cdnjs.cloudflare.com/ajax/libs/KaTeX/0.16.7/katex.min.js
+  - https://cdnjs.cloudflare.com/ajax/libs/KaTeX/0.16.7/contrib/auto-render.min.js
+  - 'https://cdnjs.cloudflare.com/polyfill/v3/polyfill.min.js?version=4.8.0&features=es6'
+  - 'https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js'
+  - 'https://cdn.plot.ly/plotly-latest.min.js'
+
+extra_css:
+  - https://cdnjs.cloudflare.com/ajax/libs/KaTeX/0.16.7/katex.min.css
+  - 'https://use.fontawesome.com/releases/v5.8.1/css/all.css'
+  - 'styles/thebelab.css'
+
+
+copyright: Content prepared and curated by <a href="mailto:andrew.mcculloch@utas.edu.au">A J McCulloch, CC-BY-SA 4.0.</a>

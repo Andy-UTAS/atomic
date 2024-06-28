@@ -2,20 +2,29 @@
 
 ## Administration
 
-The measurement component of the quantum course will run for six weeks, beginning in week 8 and concluding at the end of semester. In previous years, the quantum mechanics covered advanced wave mechanics in the context of single-particle systems and a subsequent discussion of quantum mechanical systems. In contrast, this course begins with the foundations of quantum mechanics, taking an axiomatic approach to QM theory and using the wavefunction as a tool to model physical phenomena, and the latter part of the course devoted to quantum measurement and a generalised description of quantum states.
+The atomic physics component of the [atomic and nuclear physics](https://www.utas.edu.au/courses/cse/units/kya323-atomic-and-nuclear-physics) course will run for six weeks, beginning in week one and concluding at the end of week six. In previous years, the quantum mechanics covered advanced wave mechanics in the context of single-particle systems and a subsequent discussion of quantum mechanical systems. In contrast, this course begins with the foundations of quantum mechanics, taking an axiomatic approach to QM theory and using the wavefunction as a tool to model physical phenomena, and the latter part of the course devoted to quantum measurement and a generalised description of quantum states.
 
 !!! Danger "Prerequisite knowledge"
 
-    The content covered the measurement component of the course is testing, and without the frim bedrock of requisite knowledge and associated competencies, attempts to construct additional structures may be compromised. It is critical that one is comfortable with the following:
+    The content covered in atomic physics is testing, and without the firm bedrock of requisite knowledge and associated competencies, attempts to construct additional structures may be compromised. It is critical that one is comfortable with the following:
 
     - The principles and machinery of wave mechanics. Explicitly, an understanding of how physical systems and their evolution are modelled using the wave equation, along with a fluency in common examples (plane-wave solutions, travelling waves, etc.).
-    - The foundations of quantum mechanics, including the (time dependent) Schrödinger equation and its solutions for common physical systems, and importantly, you must be comfortable with the physical concepts which underpin the mathematics. Fortunately, you have just completed a 7 week introduction to quantum mechanics and it will be assumed that you are comfortable with the content.
+    - The foundations of quantum mechanics, including the (time dependent) Schrödinger equation and its solutions for common physical systems, and importantly, you must be comfortable with the physical concepts which underpin the mathematics. Fortunately, you have just completed an introductory quantum mechanics course, and it will be assumed that you are comfortable with the content.
 
     It is my intention that *you will be required* to call upon many of the other tools from the toolbox that you have been developing during your studies, with the explicit aim of further honing these tools, and maybe adding a few to the kit.
 
+!!! info "This looks familiar"
+
+    If you are experiencing a sense of _déjà vu_, that might be because you have encountered one of the other websites which are part of the quantum family of sites:
+    - [Quantum mechanics](https://qm.utasphys.cloud.edu.au/)
+    - [Solid-state physics](https://ssp.utasphys.cloud.edu.au/)
+
+    In particular, much of the content from the [quantum site](https://qm.utasphys.cloud.edu.au/) is directly relevant to this course, and it could well be considered a sister site.
+
+
 ### Delivery of content
 
-The course will operate in a flipped-mode configuration, whereby the undergirding principle is that your out-of-class time is used to consume prepared content (e.g. _lectures_) and scheduled times are used for discussions in a problem-based learning framework. I prefer to refer to the lecture-style material as the _content download_, and interactive, active-learning sessions as the _content unpacking_ component.
+The course will be run in a tradiational.
 
 ### Subject matter
 
