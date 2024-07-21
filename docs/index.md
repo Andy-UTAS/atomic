@@ -1,10 +1,10 @@
 # Welcome to the home of quantum mechanics
 
-This site exists to enhance the distribution of course information and content for the measurement component of [KYA321: Quantum Mechanics](https://www.utas.edu.au/courses/cse/units/kya321-quantum-mechanics). All official communication will be though [MyLO](https://mylo.utas.edu.au/)[^1].
+This site exists to enhance the distribution of course information and content for the atomic physics component of [KYA323: Atomic and Nuclear Physics](https://www.utas.edu.au/courses/cse/units/kya323-atomic-and-nuclear-physics). All official communication will be though [MyLO](https://mylo.utas.edu.au/)[^1].
 
 <figure>
   <img src="images/header.jpg" />
-  <figcaption>An <a href="https://en.wikipedia.org/wiki/Quantum_entanglement">entangled</a> photon source for satellite-based <a href="https://en.wikipedia.org/wiki/Quantum_information">quantum communication</a>, developed by the <a href="https://www.iof.fraunhofer.de/en.html">Fraunhofer Institute for Applied Optics and Precision Engineering</a>. As part of this course, we will investigate what it means to make a measurement of a quantum system. We shall develop tools, techniques, and machinery for modelling measurements, and look at real-world quantum systems and their applications. </figcaption>
+  <figcaption>A next-generation trap for strontium ions, recently pulished in the journal <a href='https://www.nature.com/articles/s41586-020-2811-x'>nature</a> . Trapped ion systems are promising candidates for quantum computation and quantum sensing, and this system, developed by the <a href='https://www.ll.mit.edu/'>MIT Lincoln Laboratory</a> demonstrates an important step in the process of making quantum devices suitable for the real-world, namely, making them "simpler" and more robust. As part of this course, we will investigate how atomic physics allows us to understand, model, and construct simple, yet extraordinarily powerful quantum systems. After constructing a foundation in the theory of applied quantum mechanics, we will turn our attention to real-world quantum applications and technology. </figcaption>
 </figure>
 
 ---
@@ -13,18 +13,17 @@ This site exists to enhance the distribution of course information and content f
 
     Quantum mechanics is tough! And this isn't (necessarily) hyperbole: physics is often put in the "hard" basket for a number of reasons, not least due to it being seen as irrelevant or mathematically challenging. Whilst the mathematics can indeed by spicy, once can develop coping mechanisms for this, and at its heart physics is usually intuitive: the apple falls from the tree, like charges repel, and so on. At first glance, quantum mechanics can present very differently, and is rarely accused of being intuitive. There are delights are to be had, but like most truly rewarding endeavours, said delights do not come for free. In undertaking this course, it is expected that:
 
-    - You will view the video content __before__ any scheduled face-to-face sessions
-    - Prescribed problems and reading will be undertaken before any face-to-face sessions
     - You will attend all face-to-face sessions, and actively contribute to discussions and problem solving
+    - Prescribed problems and reading will be undertaken _before_ any face-to-face sessions
     - If you are experiencing difficulties, that you will get in contact as soon as is reasonably possible
 
 !!! info "Course objectives"
 
-    The purpose of the measurements and applications component of the quanutm course is to provide an overview of quantum mechanics, demystifying some of the foundational theory and providing a toolkit for studying both old and new problems. At the conclusion of your journey, you should:
+    The purpose of the atomic component of the atomic and nuclear physics course is to provide a deeper exploration of quantum theory, moving beyond toy examples and developing a toolkit for analysing systems which one would actually encounter in a lab. At the conclusion of your journey, you should:
 
-    - Be familiar with the building blocks of quantum mechanical analysis: state vectors, operators and measurement, and time evolution
-    - Be versed in various aspects of interpretations of quantum mechanics: what does it mean to make a measurement? What is entaglement? Why are the EPR paradox, Bell's inequalities, and _Schrödinger's Cat_ interesting?
-    - Have studied quantum applications, from MRI machines to truly secure communications
+    - Be familiar with the fundamentals of atomic physics, notably atomic structure and atomic transitions
+    - Understand what makes a quantum system behave in a quantum way, and how one can construct experiments to harness the power of quantum mechanics
+    - Have studied diverse quantum applications, from how the GPS network functions, to how to discern different squishy bits in an MRI image, and how to build a quantum computer
     - Have had some fun!
 
 !!! warning "Course expectations: my promises to you"

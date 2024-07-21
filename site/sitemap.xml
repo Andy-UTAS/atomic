@@ -2,47 +2,42 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
     <url>
          <loc>https://atomic.utasphys.cloud.edu.au/</loc>
-         <lastmod>2024-03-26</lastmod>
+         <lastmod>2024-06-28</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
-         <loc>https://atomic.utasphys.cloud.edu.au/1-5-test/</loc>
-         <lastmod>2024-03-26</lastmod>
+         <loc>https://atomic.utasphys.cloud.edu.au/0-1-intro/</loc>
+         <lastmod>2024-06-28</lastmod>
+         <changefreq>daily</changefreq>
+    </url>
+    <url>
+         <loc>https://atomic.utasphys.cloud.edu.au/1-1-early/</loc>
+         <lastmod>2024-06-28</lastmod>
+         <changefreq>daily</changefreq>
+    </url>
+    <url>
+         <loc>https://atomic.utasphys.cloud.edu.au/1-2-hydrogen/</loc>
+         <lastmod>2024-06-28</lastmod>
+         <changefreq>daily</changefreq>
+    </url>
+    <url>
+         <loc>https://atomic.utasphys.cloud.edu.au/1-3-methods/</loc>
+         <lastmod>2024-06-28</lastmod>
+         <changefreq>daily</changefreq>
+    </url>
+    <url>
+         <loc>https://atomic.utasphys.cloud.edu.au/1-4-test/</loc>
+         <lastmod>2024-06-28</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://atomic.utasphys.cloud.edu.au/additional/</loc>
-         <lastmod>2024-03-26</lastmod>
+         <lastmod>2024-06-28</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://atomic.utasphys.cloud.edu.au/particulars/</loc>
-         <lastmod>2024-03-26</lastmod>
-         <changefreq>daily</changefreq>
-    </url>
-    <url>
-         <loc>https://atomic.utasphys.cloud.edu.au/00-introduction/0-1-intro/</loc>
-         <lastmod>2024-03-26</lastmod>
-         <changefreq>daily</changefreq>
-    </url>
-    <url>
-         <loc>https://atomic.utasphys.cloud.edu.au/01-foundational/1-1-early/</loc>
-         <lastmod>2024-03-26</lastmod>
-         <changefreq>daily</changefreq>
-    </url>
-    <url>
-         <loc>https://atomic.utasphys.cloud.edu.au/01-foundational/1-2-hydrogen/</loc>
-         <lastmod>2024-03-26</lastmod>
-         <changefreq>daily</changefreq>
-    </url>
-    <url>
-         <loc>https://atomic.utasphys.cloud.edu.au/01-foundational/1-3-methods/</loc>
-         <lastmod>2024-03-26</lastmod>
-         <changefreq>daily</changefreq>
-    </url>
-    <url>
-         <loc>https://atomic.utasphys.cloud.edu.au/01-foundational/1-4-test/</loc>
-         <lastmod>2024-03-26</lastmod>
+         <lastmod>2024-06-28</lastmod>
          <changefreq>daily</changefreq>
     </url>
 </urlset>

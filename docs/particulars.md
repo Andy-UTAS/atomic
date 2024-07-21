@@ -24,7 +24,7 @@ The atomic physics component of the [atomic and nuclear physics](https://www.uta
 
 ### Delivery of content
 
-The course will be run in a tradiational.
+The course will be run in a traditional.
 
 ### Subject matter
 
@@ -67,37 +67,9 @@ The notes are designed to be consumed in concert to the video content, with cert
 
     Computational content, which is normally just the jupyter notebook associated with the section, also appears at the top of the page, but may also contain links to other software or pertinent computational material.
 
-#### The videos
+#### Slides
 
-The video content is hosted on [Echo360](https://echo360.net.au/) and is available only to those enrolled at the University of Tasmania, and is best accessed through the course [MyLO page](https://mylo.utas.edu.au/d2l/le/content/463489/Home).
 
-<!-- ??? abstract "_Content download_: table of contents"
-
-    A brief summary of the topics discussed in the _content download_ sessions is shown below:
-
-    | Video       | Topic (click for details and timestamps)                   |
-    | ----------- | ------------------------------------ |
-    | [w0v01](https://echo360.net.au/media/869c549b-1931-4270-b435-943f3b155385/public) | An introduction to solid-state physics |
-    | [w1v01](https://echo360.net.au/media/54d72d00-5a24-49a3-bbc4-babd903c46c9/public) | The Einstein model of solids  |
-    | [w1v02](https://echo360.net.au/media/e2bdac93-c9a4-4839-a691-dc9af24ee1b8/public) | The Debye model of solids  |
-    | [w1v03](https://echo360.net.au/media/7253bad5-f5e9-4540-8fb5-8e693fddf613/public) | The Drude model of metals |
-    | [w2v01](https://echo360.net.au/media/9491b718-25c6-4123-b757-9bc31211b228/public) | The Sommerfeld free-electron model |
-    | [w2v02](https://echo360.net.au/media/f19fdb45-3a0f-4556-b02c-7ce29e061592/public)  | Chemistry 101 |
-    | [w3v01](https://echo360.net.au/media/d836fd83-6d43-4702-9cf0-dbd820bfcbe0/public)  | The 1D harmonic chain |
-    | [w3v02](https://echo360.net.au/media/97f94b59-947a-4f14-84df-1e91e8f01ddd/public)  | The quantum chain |
-    | [w3v03](https://echo360.net.au/media/74883cca-458e-476b-8a99-2a2c3ef0ca40/public)  | The diatomic chain |
-    | [w4v01](https://echo360.net.au/media/c8f15462-67ba-4750-ac1a-5b3a236c73b1/public) | The tight binding model |
-    | [w4v02](https://echo360.net.au/media/68464290-10ca-4f5a-92f1-68d842f6e900/public) | Crystals |
-    | [w4v03](https://echo360.net.au/media/0d2d4946-5d42-4bb8-b3da-b57882be1f1c/public) | Crystals in three dimensions |
-    | [w5v01](https://echo360.net.au/media/8e3737b2-7b07-4857-a368-482ab1ac639a/public) | The reciprocal lattice (part I) |
-    | [w5v02](https://echo360.net.au/media/3972a157-587f-49b8-a308-edf0d17e15d8/public) | The reciprocal lattice (part II) |
-    | [w5v03](https://echo360.net.au/media/ab6c99c0-7958-4f9e-af81-4712aef64c7d/public) | Scattering (part I) |
-    | [w5v04](https://echo360.net.au/media/c4e058a1-d7e5-4312-b1cc-1caaa9ee3f73/public) | Scattering (part II) |
-    | [w6v01](https://echo360.net.au/media/2a8e919b-742c-4a2f-8849-d7b8affe7d1e/public) | Scattering (part III) |
-
-    !!! note "Timestamps"
-
-        Timestamps detailing the topics discussed for each video are available in the video descriptions. -->
 
 ---
 

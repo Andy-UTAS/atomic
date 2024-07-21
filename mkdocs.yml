@@ -8,11 +8,11 @@ nav:
     - Home: index.md
     - Course particulars: particulars.md
     - '0: Introduction':
-      - '0.1 - Atomic physics 101': 00-introduction/0-1-intro.md
+      - '0.1 - Atomic physics 101': 0-1-intro.md
     - '1: Foundational atomic physics':
-      - '1.1 - Early atomic physics': 01-foundational/1-1-early.md
-      - '1.2 - The hydrogen atom': 01-foundational/1-2-hydrogen.md
-      - '1.3 - Calculation methods for real systems': 01-foundational/1-3-methods.md
+      - '1.1 - Early atomic physics': 1-1-early.md
+      - '1.2 - The hydrogen atom': 1-2-hydrogen.md
+      - '1.3 - Calculation methods for real systems': 1-3-methods.md
       - '1.4 - Test': 01-foundational/1-4-test.md
     - 'test': 1-5-test.md
     - Additional resources: additional.md
