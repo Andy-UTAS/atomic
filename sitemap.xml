@@ -2,42 +2,62 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
     <url>
          <loc>https://atomic.utasphys.cloud.edu.au/</loc>
-         <lastmod>2024-07-21</lastmod>
+         <lastmod>2024-08-19</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://atomic.utasphys.cloud.edu.au/0-1-intro/</loc>
-         <lastmod>2024-07-21</lastmod>
+         <lastmod>2024-08-19</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://atomic.utasphys.cloud.edu.au/1-1-early/</loc>
-         <lastmod>2024-07-21</lastmod>
+         <lastmod>2024-08-19</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://atomic.utasphys.cloud.edu.au/1-2-hydrogen/</loc>
-         <lastmod>2024-07-21</lastmod>
+         <lastmod>2024-08-19</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://atomic.utasphys.cloud.edu.au/1-3-methods/</loc>
-         <lastmod>2024-07-21</lastmod>
+         <lastmod>2024-08-19</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
-         <loc>https://atomic.utasphys.cloud.edu.au/1-4-test/</loc>
-         <lastmod>2024-07-21</lastmod>
+         <loc>https://atomic.utasphys.cloud.edu.au/2-1-hyperfine/</loc>
+         <lastmod>2024-08-19</lastmod>
+         <changefreq>daily</changefreq>
+    </url>
+    <url>
+         <loc>https://atomic.utasphys.cloud.edu.au/6-2-molecules/</loc>
+         <lastmod>2024-08-19</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://atomic.utasphys.cloud.edu.au/additional/</loc>
-         <lastmod>2024-07-21</lastmod>
+         <lastmod>2024-08-19</lastmod>
+         <changefreq>daily</changefreq>
+    </url>
+    <url>
+         <loc>https://atomic.utasphys.cloud.edu.au/maths/</loc>
+         <lastmod>2024-08-19</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://atomic.utasphys.cloud.edu.au/particulars/</loc>
-         <lastmod>2024-07-21</lastmod>
+         <lastmod>2024-08-19</lastmod>
+         <changefreq>daily</changefreq>
+    </url>
+    <url>
+         <loc>https://atomic.utasphys.cloud.edu.au/s-a-1/</loc>
+         <lastmod>2024-08-19</lastmod>
+         <changefreq>daily</changefreq>
+    </url>
+    <url>
+         <loc>https://atomic.utasphys.cloud.edu.au/s-t-1/</loc>
+         <lastmod>2024-08-19</lastmod>
          <changefreq>daily</changefreq>
     </url>
 </urlset>
