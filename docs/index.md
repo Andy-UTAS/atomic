@@ -1,9 +1,9 @@
-# Welcome to the home of quantum mechanics
+# Welcome to the home of atomic physics
 
-This site exists to enhance the distribution of course information and content for the atomic physics component of [KYA323: Atomic and Nuclear Physics](https://www.utas.edu.au/courses/cse/units/kya323-atomic-and-nuclear-physics). All official communication will be though [MyLO](https://mylo.utas.edu.au/)[^1].
+This site exists to enhance the distribution of course information and content for the atomic physics component of [KYA323: Atomic and Nuclear Physics](https://www.utas.edu.au/courses/cse/units/kya323-atomic-and-nuclear-physics). All official communication will be though [MyLO](https://mylo.utas.edu.au/ "Lol")[^1].
 
 <figure>
-  <img src="images/header.jpg" />
+  <img src="images/header.JPG" />
   <figcaption>A next-generation trap for strontium ions, recently pulished in the journal <a href='https://www.nature.com/articles/s41586-020-2811-x'>nature</a> . Trapped ion systems are promising candidates for quantum computation and quantum sensing, and this system, developed by the <a href='https://www.ll.mit.edu/'>MIT Lincoln Laboratory</a> demonstrates an important step in the process of making quantum devices suitable for the real-world, namely, making them "simpler" and more robust. As part of this course, we will investigate how atomic physics allows us to understand, model, and construct simple, yet extraordinarily powerful quantum systems. After constructing a foundation in the theory of applied quantum mechanics, we will turn our attention to real-world quantum applications and technology. </figcaption>
 </figure>
 

@@ -4,7 +4,7 @@ _Time to do the same experiment lots of times and get different results_
 
 ## Introduction
 
-![](header.png){ title="Stern-Gerlach separation of a Bose-Einstein condensate of Rubdiuim-87" }
+![](../images/01-foundational/1-3-methods/header.png){ title="Stern-Gerlach separation of a Bose-Einstein condensate of Rubdiuim-87" }
 
 
 `Lorem ipsum dolor sit amet`

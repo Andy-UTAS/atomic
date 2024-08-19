@@ -13,9 +13,16 @@ nav:
       - '1.1 - Early atomic physics': 1-1-early.md
       - '1.2 - The hydrogen atom': 1-2-hydrogen.md
       - '1.3 - Calculation methods for real systems': 1-3-methods.md
-      - '1.4 - Test': 01-foundational/1-4-test.md
-    - 'test': 1-5-test.md
+    # - '2: Angular momentum':
+    # - '3: Identical particles':
+    # - '4: The density matrix':
+    # - '5: Applications':
+    # - '6: Molecular physics':
+    - Solutions:
+      - Tutorial 1: s-t-1.md
+      - Assignment 1: s-a-1.md
     - Additional resources: additional.md
+    - Mathematical marvels: maths.md
 
 theme:
   name: material
@@ -46,12 +53,14 @@ theme:
     - navigation.instant
     - search.highlight
     - content.code.annotate
+    - content.code.copy
     - content.action.view # View source code
     - announce.dismiss
   highlightjs: True
   icon:
     repo: fontawesome/brands/git-alt
-#  custom_dir: overrides # Initially here for banner usage, but this was not very good
+    annotation: material/arrow-right-circle
+  custom_dir: overrides # Initially here for banner usage, but this was not very good
 
 plugins:
   - mkdocs-video # allows for video
@@ -95,6 +104,7 @@ markdown_extensions:
   - pymdownx.extra
   - abbr
   - attr_list
+  - md_in_html # Used for annotations
   - footnotes
   - meta
 

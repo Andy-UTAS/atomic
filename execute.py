@@ -56,33 +56,86 @@ class Plugin(BasePlugin):
     def __init__(self):
         self.output_map = {}
 
-    def on_page_read_source(
-        self, page, config, **kwargs
-    ):
+    # This function has been changed to allow a bypass for code blocks, which allows the code to be rendered
+    def on_page_read_source(self, page, config, **kwargs):
         os.environ["PLOTLY_RENDERER"] = "plotly_mimetype"
         src_path = page.file.abs_src_path
         notebook = jupytext.read(src_path)
-        log.info(f"Executing {src_path}")
-        output, resources = exporter.from_notebook_node(
-            notebook,
-            resources={
-                "unique_key": page.file.src_path,
-                # Compute the relative URL
-                "output_files_dir": "_execute_outputs",
-                "metadata": {
-                    "path": Path(src_path).parent
+        log.info(f"Processing {src_path}")
+
+        # Custom logic to bypass execution for certain code blocks
+        source = jupytext.writes(notebook, fmt="md")
+        lines = source.splitlines()
+        new_lines = []
+        skip_execution = False
+
+        for line in lines:
+            if line.startswith("~~~python"):
+                skip_execution = True
+                line = "```python"  # Convert back to normal code block for rendering
+            elif line.startswith("```python"):
+                skip_execution = False
+
+            if skip_execution:
+                new_lines.append(line)
+            else:
+                new_lines.append(line)
+
+        # Re-create the notebook from the modified source
+        modified_source = "\n".join(new_lines)
+        notebook = jupytext.reads(modified_source, fmt="md")
+
+        if not skip_execution:
+            output, resources = exporter.from_notebook_node(
+                notebook,
+                resources={
+                    "unique_key": page.file.src_path,
+                    "output_files_dir": "_execute_outputs",
+                    "metadata": {
+                        "path": Path(src_path).parent
+                    }
                 }
-            }
-        )
-        build_directory = Path(config["site_dir"])
-        nbconvert.writers.FilesWriter(
-            build_directory=str(build_directory)
-        ).write(output, resources, "out.md")
-        out = build_directory / "out.md"
-        source = out.read_text()
-        out.unlink()
-        self.output_map[src_path] = list(resources["outputs"].keys())
+            )
+            build_directory = Path(config["site_dir"])
+            nbconvert.writers.FilesWriter(
+                build_directory=str(build_directory)
+            ).write(output, resources, "out.md")
+            out = build_directory / "out.md"
+            source = out.read_text()
+            out.unlink()
+        else:
+            source = modified_source
+
+        self.output_map[src_path] = list(resources.get("outputs", {}).keys())
         return source
+
+    # def on_page_read_source(
+    #     self, page, config, **kwargs
+    # ):
+    #     os.environ["PLOTLY_RENDERER"] = "plotly_mimetype"
+    #     src_path = page.file.abs_src_path
+    #     notebook = jupytext.read(src_path)
+    #     log.info(f"Executing {src_path}")
+    #     output, resources = exporter.from_notebook_node(
+    #         notebook,
+    #         resources={
+    #             "unique_key": page.file.src_path,
+    #             # Compute the relative URL
+    #             "output_files_dir": "_execute_outputs",
+    #             "metadata": {
+    #                 "path": Path(src_path).parent
+    #             }
+    #         }
+    #     )
+    #     build_directory = Path(config["site_dir"])
+    #     nbconvert.writers.FilesWriter(
+    #         build_directory=str(build_directory)
+    #     ).write(output, resources, "out.md")
+    #     out = build_directory / "out.md"
+    #     source = out.read_text()
+    #     out.unlink()
+    #     self.output_map[src_path] = list(resources["outputs"].keys())
+    #     return source
 
     def on_page_markdown(self, markdown, page, config, files):
         src_path = page.file.abs_src_path
