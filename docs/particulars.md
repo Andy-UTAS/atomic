@@ -15,7 +15,7 @@ The atomic physics component of the [atomic and nuclear physics](https://www.uta
 
 !!! info "This looks familiar"
 
-    If you are experiencing a sense of $\textrm{d\'{e}j\`{a}$ vu, that might be because you have encountered one of the other websites which are part of the quantum family of sites:
+    If you are experiencing a sense of d&#xE9j&#xE0 vu, that might be because you have encountered one of the other websites which are part of the quantum family of sites:
 
     - [Quantum mechanics](https://qm.utasphys.cloud.edu.au/)
     - [Solid-state physics](https://ssp.utasphys.cloud.edu.au/)
