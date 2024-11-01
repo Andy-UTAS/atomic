@@ -27,7 +27,7 @@ configure_plotting()
 
 # Assignment two
 
-The first assignment covers the content from weeks 3 and 4, which includes topics such as identical particles, transitions, the density matrix, and the optical Bloch equations.
+The second assignment covers the content from weeks 3 and 4, which includes topics such as identical particles, transitions, the density matrix, and the optical Bloch equations.
 
 <figure markdown>
 <a href = '../hosted/Assignment2.pdf'> <i class="fas fa-file-pdf fa-3x"></i> </a>

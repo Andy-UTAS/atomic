@@ -19,8 +19,10 @@ nav:
     # - '5: Applications':
     # - '6: Molecular physics':
     - Solutions:
-      - Tutorial 1: s-t-1.md
+      # - Tutorial 1: s-t-1.md
       - Assignment 1: s-a-1.md
+      - Assignment 2: s-a-2.md
+      - Assignment 3: s-a-3.md
     - Additional resources: additional.md
     - Mathematical marvels: maths.md
 
