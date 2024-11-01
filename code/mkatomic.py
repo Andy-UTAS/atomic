@@ -9,7 +9,6 @@ https://gitlab.kwant-project.org/solidstate/lectures/-/blob/master/docs/code/com
 from IPython import get_ipython
 import matplotlib
 
-
 def configure_plotting():
     # Configure matplotlib
     ip = get_ipython()
